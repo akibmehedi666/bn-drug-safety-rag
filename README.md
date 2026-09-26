@@ -107,34 +107,99 @@ ML Project/
 
 ## ৪. কীভাবে প্রজেক্টটি চালাবেন (How to Run)
 
-### ধাপ ১: ডিপেন্ডেন্সি ইনস্টল করা
+### ধাপ ১: ভার্চুয়াল এনভায়রনমেন্ট ও ডিপেন্ডেন্সি ইনস্টল করা
+
+**Linux / macOS:**
 ```bash
+# ১. ভার্চুয়াল এনভায়রনমেন্ট তৈরি ও চালু
 python3 -m venv venv
 source venv/bin/activate
+
+# ২. ডিপেন্ডেন্সি ইনস্টল
 pip install -r requirements.txt
 ```
 
+**Windows (Command Prompt / PowerShell):**
+```cmd
+:: ১. ভার্চুয়াল এনভায়রনমেন্ট তৈরি ও চালু (CMD)
+python -m venv venv
+venv\Scripts\activate
+
+:: PowerShell ব্যবহার করলে:
+:: .\venv\Scripts\Activate.ps1
+
+:: ২. ডিপেন্ডেন্সি ইনস্টল
+pip install -r requirements.txt
+```
+
+---
+
 ### ধাপ ২: Gemini API Key কনফিগার করা
-`.env` ফাইলে আপনার Google Gemini API Key দিন (ঐচ্ছিক — কী না দিলেও অফলাইন ডেমোনস্ট্রেশন মোডে সিস্টেম চলবে):
+`.env.example` কপি করে `.env` ফাইল তৈরি করুন:
+
+**Linux / macOS:**
+```bash
+cp .env.example .env
+```
+
+**Windows (CMD / PowerShell):**
+```cmd
+:: Command Prompt (CMD)
+copy .env.example .env
+
+:: PowerShell
+Copy-Item .env.example .env
+```
+
+এরপর `.env` ফাইলে আপনার Google Gemini API Key বসান (ঐচ্ছিক — কী না দিলেও সিস্টেম অফলাইন রিট্রিভাল মোডে চলবে):
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
+---
+
 ### ধাপ ৩: ওয়েব অ্যাপ্লিকেশন চালু করা
+
+**Linux / macOS:**
 ```bash
-python run.py
-# অথবা: python app/app.py
+python3 run.py
+# অথবা: python3 app/app.py
 ```
-ব্রাউজারে খুলুন: **http://127.0.0.1:5000**
+
+**Windows:**
+```cmd
+python run.py
+:: অথবা: python app\app.py
+```
+
+ব্রাউজারে প্রবেশ করুন: **http://127.0.0.1:5000**
+
+---
 
 ### ধাপ ৪: মেশিন লার্নিং মডেল পুনরায় ট্রেইন করা (ঐচ্ছিক)
+
+**Linux / macOS:**
 ```bash
-python models/train_models.py
+python3 models/train_models.py
 ```
 
+**Windows:**
+```cmd
+python models\train_models.py
+```
+
+---
+
 ### ধাপ ৫: মূল্যায়ন বেঞ্চমার্ক পুনরায় রান করা (ঐচ্ছিক)
+
+**Linux / macOS:**
 ```bash
-python eval/run_evaluation.py
+python3 eval/run_evaluation.py
+```
+
+**Windows:**
+```cmd
+python eval\run_evaluation.py
 ```
 
 ---
