@@ -1,0 +1,384 @@
+import json
+
+EVAL_QUESTIONS = [
+    # --- 30 In-Corpus Questions (Drugs present in MCH 302-Drug Corpus) ---
+    {
+        "id": 1,
+        "question": "গর্ভাবস্থায় জ্বর বা হালকা ব্যথায় প্যারাসিটামল খাওয়া কি নিরাপদ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Paracetamol"
+    },
+    {
+        "id": 2,
+        "question": "স্তন্যদানকালে প্যারাসিটামলের সর্বোচ্চ নিরাপদ মাত্রা বা ডোজ কত?",
+        "query_type": "in-corpus",
+        "expected_drug": "Paracetamol"
+    },
+    {
+        "id": 3,
+        "question": "গর্ভাবস্থার শেষ তিন মাসে আইবুপ্রোফেন খেলে ভ্রূণের কী ধরনের ক্ষতি হতে পারে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Ibuprofen"
+    },
+    {
+        "id": 4,
+        "question": "বুকের দুধ খাওয়ানোর সময় কি ব্যথার জন্য আইবুপ্রোফেন খাওয়া যাবে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Ibuprofen"
+    },
+    {
+        "id": 5,
+        "question": "গর্ভবতী মহিলাদের প্রিক্ল্যাম্পসিয়া প্রতিরোধে কম মাত্রার অ্যাসপিরিন কি দেওয়া যায়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Aspirin"
+    },
+    {
+        "id": 6,
+        "question": "গর্ভধারণের পূর্বে এবং প্রথম তিন মাসে ফলিক অ্যাসিড খাওয়া কেন অপরিহার্য?",
+        "query_type": "in-corpus",
+        "expected_drug": "Folic Acid"
+    },
+    {
+        "id": 7,
+        "question": "গর্ভাবস্থায় রক্তস্বল্পতা প্রতিরোধে আয়রন বা ফেরাস সালফেট খাওয়ার সঠিক নিয়ম কী?",
+        "query_type": "in-corpus",
+        "expected_drug": "Ferrous sulfate"
+    },
+    {
+        "id": 8,
+        "question": "গর্ভাবস্থায় ক্যালসিয়াম কার্বনেট খেলে কি কোষ্ঠকাঠিন্য বা গ্যাসের সমস্যা হতে পারে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Calcium carbonate"
+    },
+    {
+        "id": 9,
+        "question": "গর্ভাবস্থায় ব্যাকটেরিয়াল ইনফেকশনে অ্যামোক্সিসিলিন কি নিরাপদ অ্যান্টিবায়োটিক?",
+        "query_type": "in-corpus",
+        "expected_drug": "Amoxicillin"
+    },
+    {
+        "id": 10,
+        "question": "পেনিসিলিনে অ্যালার্জি থাকলে গর্ভবতী মায়েরা শ্বাসতন্ত্রের সংক্রমণে কি অ্যাজিথ্রোমাইসিন খেতে পারবেন?",
+        "query_type": "in-corpus",
+        "expected_drug": "Azithromycin"
+    },
+    {
+        "id": 11,
+        "question": "গর্ভাবস্থায় মূত্রনালীর ইনফেকশন বা ইউটিআই হলে সেফিক্সিম কি নিরাপদ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Cefixime"
+    },
+    {
+        "id": 12,
+        "question": "গর্ভাবস্থার প্রথম তিন মাসে মেট্রোনিডাজল খাওয়া কি সতর্কতার সাথে প্রযোজ্য?",
+        "query_type": "in-corpus",
+        "expected_drug": "Metronidazole"
+    },
+    {
+        "id": 13,
+        "question": "গর্ভবতী অবস্থায় সিপ্রোফ্লক্সাসিন খাওয়া কেন বারণ, এতে কি ভ্রূণের কার্টিলেজের ক্ষতি হয়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Ciprofloxacin"
+    },
+    {
+        "id": 14,
+        "question": "গর্ভাবস্থার দ্বিতীয় ও তৃতীয় ট্রাইমিস্টারে ডক্সিসাইক্লিন খেলে শিশুর দাঁতে কী স্থায়ী ক্ষতি হয়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Doxycycline"
+    },
+    {
+        "id": 15,
+        "question": "গর্ভাবস্থায় বুকজ্বালা ও তীব্র এসিডিটির জন্য ওমিপ্রাজল কি চিকিৎসকের পরামর্শে খাওয়া যায়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Omeprazole"
+    },
+    {
+        "id": 16,
+        "question": "গর্ভকালীন বমির জন্য ওনডানসেট্রন সেবনের নিয়ম কী?",
+        "query_type": "in-corpus",
+        "expected_drug": "Ondansetron"
+    },
+    {
+        "id": 17,
+        "question": "গর্ভাবস্থায় অ্যালার্জিজনিত সর্দি ও হাঁচিতে সেট্রিজিন কি খাওয়া যাবে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Cetirizine"
+    },
+    {
+        "id": 18,
+        "question": "গর্ভকালীন ডায়াবেটিসে রক্তের সুগার নিয়ন্ত্রণে মেটফরমিন কি নিরাপদ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Metformin"
+    },
+    {
+        "id": 19,
+        "question": "গর্ভকালীন ডায়াবেটিসে ইনসুলিন কি নিরাপদ নাকি এটি গর্ভফুলের মাধ্যমে বাচ্চার শরীরে যায়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Insulin"
+    },
+    {
+        "id": 20,
+        "question": "গর্ভাবস্থায় মেথোট্রেক্সেট সেবন করলে কি মারাত্মক জন্মগত ত্রুটি বা গর্ভপাত হতে পারে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Methotrexate"
+    },
+    {
+        "id": 21,
+        "question": "গর্ভবতী অবস্থায় ব্রণের ওষুধ আইসোট্রেটিনয়িন খাওয়া কি সম্পূর্ণ নিষিদ্ধ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Isotretinoin"
+    },
+    {
+        "id": 22,
+        "question": "গর্ভাবস্থায় উচ্চ রক্তচাপের চিকিৎসায় ল্যাবেটালল কি প্রথম সারির ওষুধ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Labetalol"
+    },
+    {
+        "id": 23,
+        "question": "গর্ভবতী মায়েদের হাইপারটেনশনে নিফেডিপিন কি নিরাপদ?",
+        "query_type": "in-corpus",
+        "expected_drug": "Nifedipine"
+    },
+    {
+        "id": 24,
+        "question": "গর্ভাবস্থায় মৃগীরোগে সোডিয়াম ভালপ্রোয়েট সেবনের প্রধান ঝুঁকিগুলো কী?",
+        "query_type": "in-corpus",
+        "expected_drug": "Sodium valproate"
+    },
+    {
+        "id": 25,
+        "question": "প্রিক্ল্যাম্পসিয়া বা এক্ল্যাম্পসিয়ার খিঁচুনি রোধে ম্যাগনেসিয়াম সালফেট কীভাবে কাজ করে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Magnesium sulfate"
+    },
+    {
+        "id": 26,
+        "question": "প্রসব-পরবর্তী রক্তক্ষরণ (PPH) বন্ধে মিসোপ্রোস্টল ব্যবহারের নির্দেশনা কী?",
+        "query_type": "in-corpus",
+        "expected_drug": "Misoprostol"
+    },
+    {
+        "id": 27,
+        "question": "ডেলিভারির পর অতিরিক্ত রক্তপাত রোধে মিথাইলএরগোমেট্রিন কি ব্যবহৃত হয়?",
+        "query_type": "in-corpus",
+        "expected_drug": "Methylergometrine"
+    },
+    {
+        "id": 28,
+        "question": "স্তন্যদানকালে গ্যাস্ট্রিকের জন্য রেনিটিডিন বা ফ্যামোটিডিন কি খাওয়া যাবে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Famotidine"
+    },
+    {
+        "id": 29,
+        "question": "গর্ভবতী মা কি রক্ত জমাট বাঁধা রোধে ওয়ারফারিন খেতে পারবেন নাকি এটি টেরাটোজেনিক?",
+        "query_type": "in-corpus",
+        "expected_drug": "Warfarin"
+    },
+    {
+        "id": 30,
+        "question": "বাইপোলার রোগের ওষুধ লিথিয়াম গর্ভাবস্থায় খেলে শিশুর হার্টের কি সমস্যা হতে পারে?",
+        "query_type": "in-corpus",
+        "expected_drug": "Lithium"
+    },
+
+    # --- 15 Out-of-Corpus Questions (Drugs completely absent from 302-drug MCH Corpus) ---
+    {
+        "id": 31,
+        "question": "গর্ভকালীন সময়ে থ্যালিডোমাইড (Thalidomide) খেলে শিশুর হাত-পা বিকলাঙ্গ (Phocomelia) হওয়ার ঝুঁকি কেমন?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Thalidomide"
+    },
+    {
+        "id": 32,
+        "question": "গর্ভাবস্থায় উচ্চ রক্তচাপের এসিই ইনহিবিটর লিসিনোপ্রিল (Lisinopril) খাওয়া কি নিরাপদ?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Lisinopril"
+    },
+    {
+        "id": 33,
+        "question": "করোনা ভাইরাসের ওষুধ রেমডেসিভির (Remdesivir) কি গর্ভবতী মায়েদের জন্য নিরাপদ?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Remdesivir"
+    },
+    {
+        "id": 34,
+        "question": "স্তন্যদানকালে কোভিডের ওষুধ প্যাক্সলোভিড (Paxlovid) খেলে কি দুধের মাধ্যমে শিশুর ক্ষতি হয়?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Paxlovid"
+    },
+    {
+        "id": 35,
+        "question": "ওজন কমানোর ওষুধ ওজেম্পিক বা সেমাগ্লুটাইড (Ozempic / Semaglutide) কি গর্ভবতী অবস্থায় নেওয়া যায়?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Semaglutide"
+    },
+    {
+        "id": 36,
+        "question": "গর্ভাবস্থায় মুখের সৌন্দর্য বর্ধনে বোটক্স বা বটুলিনাম টক্সিন (Botox / Botulinum Toxin) ইনজেকশন কি নিরাপদ?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Botox"
+    },
+    {
+        "id": 37,
+        "question": "স্তন্যদানকালে কেটামিন (Ketamine) অ্যানাস্থেসিয়া বা ডিপ্রেশনের চিকিৎসায় শিশুর ওপর কি প্রভাব ফেলে?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Ketamine"
+    },
+    {
+        "id": 38,
+        "question": "পালমোনারি হাইপারটেনশনে সিলডেনাফিল (Sildenafil) গর্ভাবস্থায় কি ডাক্তারের পরামর্শে ব্যবহারযোগ্য?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Sildenafil"
+    },
+    {
+        "id": 39,
+        "question": "গর্ভবতী অবস্থায় চুল পড়ার চিকিৎসায় মিনোক্সিডিল (Oral Minoxidil) খেলে ভ্রূণের কী ক্ষতি হয়?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Minoxidil"
+    },
+    {
+        "id": 40,
+        "question": "গাউটের তীব্র ব্যথায় কোলচিসিন (Colchicine) ওষুধটি গর্ভবতীদের জন্য কেন ঝুঁকিপূর্ণ?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Colchicine"
+    },
+    {
+        "id": 41,
+        "question": "অটোইমিউন ডিজিজে ব্যবহৃত হাইড্রোক্সিক্লোরোকুইন (Hydroxychloroquine) কি স্তন্যদানকালে নিরাপদ?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Hydroxychloroquine"
+    },
+    {
+        "id": 42,
+        "question": "গর্ভাবস্থায় অতিরিক্ত ওবেসিটির ওষুধ অরলিস্ট্যাট (Orlistat) খেলে কি পুষ্টি ঘাটতি হতে পারে?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Orlistat"
+    },
+    {
+        "id": 43,
+        "question": "গর্ভকালীন সময়ে হেপাটাইটিস সি-এর ওষুধ সফোসবুভির (Sofosbuvir) কি ভ্রূণের ক্ষতি করে?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Sofosbuvir"
+    },
+    {
+        "id": 44,
+        "question": "স্তন্যদানকালে মাইগ্রেনের নতুন ওষুধ উব্রোগিপ্যান্ট (Ubrogepant) গ্রহণ করা কি সমীচীন?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Ubrogepant"
+    },
+    {
+        "id": 45,
+        "question": "গর্ভাবস্থায় রক্তকণিকা বৃদ্ধির ওষুধ ফিলগ্রাস্টিম (Filgrastim) ব্যবহারে কি জন্মগত ত্রুটির ঝুঁকি থাকে?",
+        "query_type": "out-of-corpus",
+        "expected_drug": "Filgrastim"
+    },
+
+    # --- 15 Ambiguous / Edge-case Questions ---
+    {
+        "id": 46,
+        "question": "প্রেগন্যান্সিতে নাপা বা এইস খেলে বাচ্চার কি কোনো ক্ষতি হওয়ার সম্ভাবনা আছে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Paracetamol"
+    },
+    {
+        "id": 47,
+        "question": "পেটে খুব ব্যথা আর মাঝে মাঝে বমি হচ্ছে, আমি কি ঘরে থাকা কোনো অ্যান্টিবায়োটিক খেতে পারি?",
+        "query_type": "ambiguous",
+        "expected_drug": None
+    },
+    {
+        "id": 48,
+        "question": "আইবুপ্রুফেন কি প্রথম মাসে একটু বেশি মাত্রায় খেলে সমস্যা হয় নাকি শুধু শেষ মাসে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Ibuprofen"
+    },
+    {
+        "id": 49,
+        "question": "বাচ্চাকে বুকের দুধ খাওয়াচ্ছি, প্রচণ্ড সর্দি লেগেছে, কোন ওষুধটা খেলে বাচ্চার একদম ক্ষতি হবে না?",
+        "query_type": "ambiguous",
+        "expected_drug": None
+    },
+    {
+        "id": 50,
+        "question": "ডায়াবেটিস ধরা পড়েছে গর্ভকালে, ইনসুলিন নিতে ভয় লাগছে, শুধু মেটফরমিন খেলেই কি নিরাপদ?",
+        "query_type": "ambiguous",
+        "expected_drug": "Insulin / Metformin"
+    },
+    {
+        "id": 51,
+        "question": "দাঁতের ব্যথায় খুব কষ্ট পাচ্ছি, ৩ মাসের গর্ভবতী অবস্থায় ডক্সিসাইক্লিন খেলে বাচ্চার হাড়ের গঠন কি নষ্ট হয়ে যাবে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Doxycycline"
+    },
+    {
+        "id": 52,
+        "question": "গর্ভাবস্থায় কি ক্যালসিয়াম আর আয়রন ট্যাবলেট একসাথে একই সময়ে খাওয়া উচিত?",
+        "query_type": "ambiguous",
+        "expected_drug": "Calcium / Iron"
+    },
+    {
+        "id": 53,
+        "question": "সিপ্রোসিন ৫০০ খেলে কি বুকের দুধে ওষুধের গন্ধ বা ক্ষতিকর কিছু মিশে যেতে পারে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Ciprofloxacin"
+    },
+    {
+        "id": 54,
+        "question": "জ্বরের প্যারাসিটামলের সাথে ওমিপ্রাজল গ্যাস্ট্রিকের ওষুধ খেলে কি পেটে কোনো পার্শ্বপ্রতিক্রিয়া হবে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Paracetamol / Omeprazole"
+    },
+    {
+        "id": 55,
+        "question": "প্রেগন্যান্সির নবম মাসে তীব্র কোমর ব্যথায় আইবুপ্রোফেন খেলে নরমাল ডেলিভারিতে রক্তক্ষরণ হতে পারে কি?",
+        "query_type": "ambiguous",
+        "expected_drug": "Ibuprofen"
+    },
+    {
+        "id": 56,
+        "question": "গর্ভাবস্থায় যে কোনো সাধারণ কাশির সিরাপ খাওয়া কি সম্পূর্ণ নিরাপদ?",
+        "query_type": "ambiguous",
+        "expected_drug": None
+    },
+    {
+        "id": 57,
+        "question": "প্রেসার হঠাৎ বেড়ে গেলে কি ফার্মেসি থেকে নিজের ইচ্ছায় ল্যাবেটালল বা নিফেডিপিন কিনে খাওয়া যাবে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Labetalol / Nifedipine"
+    },
+    {
+        "id": 58,
+        "question": "স্তন্যদানকালে কোনো ব্যথানাশক ওষুধ ডাক্তারের পরামর্শ ছাড়া খাওয়া কি উচিত?",
+        "query_type": "ambiguous",
+        "expected_drug": None
+    },
+    {
+        "id": 59,
+        "question": "গর্ভাবস্থায় কোষ্ঠকাঠিন্যের জন্য ইসবগুলের ভুসি নাকি সিরাপ কোনটা বেশি নিরাপদ?",
+        "query_type": "ambiguous",
+        "expected_drug": None
+    },
+    {
+        "id": 60,
+        "question": "গর্ভকালে খিঁচুনি হলে ঘরে বসে কি কোনো প্রাথমিক ওষুধ দেওয়া যায় নাকি সরাসরি হাসপাতালে নিতে হবে?",
+        "query_type": "ambiguous",
+        "expected_drug": "Magnesium sulfate"
+    }
+]
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DEFAULT_EVAL_FILE = str(BASE_DIR / "eval" / "eval_questions.json")
+
+def save_eval_questions(filepath=None):
+    if filepath is None:
+        filepath = DEFAULT_EVAL_FILE
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(EVAL_QUESTIONS, f, ensure_ascii=False, indent=2)
+    print(f"Saved {len(EVAL_QUESTIONS)} evaluation questions to {filepath}")
+
+if __name__ == "__main__":
+    save_eval_questions()
