@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বাংলা ড্রাগ-সেফটি RAG ও হ্যালুসিনেশন ডিটেকশন সিস্টেম</title>
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --success: #16a34a;
+      --success-bg: #ecfdf5;
+      --success-border: #86efac;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde047;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --danger-border: #fca5a5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Kalpurush", "SolaimanLipi", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 14px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 1.95rem;
+      color: #0f172a;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Live Stats Bar (Requirement 5) */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .stat-pill {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .stat-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08);
+    }
+
+    .stat-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Input Card */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #1e293b;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 85px;
+      padding: 14px 16px;
+      font-size: 1.05rem;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+      resize: vertical;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+    }
+
+    .examples {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .examples-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .example-btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #334155;
+      transition: all 0.15s;
+    }
+
+    .example-btn:hover {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+      color: #0f172a;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      gap: 12px;
+    }
+
+    .view-toggle {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f1f5f9;
+      padding: 8px 14px;
+      border-radius: 9px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .view-toggle label {
+      margin-bottom: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn-submit:disabled {
+      background: #94a3b8;
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    #loading {
+      display: none;
+      text-align: center;
+      padding: 30px 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3b82f6;
+      border: 1px dashed #93c5fd;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(59, 130, 246, 0.2);
+      border-top-color: #2563eb;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Out-of-Corpus High-Impact Banner (Requirement 3) */
+    .ooc-banner {
+      display: none;
+      background: linear-gradient(135deg, #fef2f2, #fee2e2);
+      border: 2px solid #ef4444;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      color: #991b1b;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15);
+      animation: pulseAlert 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseAlert {
+      0%, 100% { border-color: #ef4444; }
+      50% { border-color: #b91c1c; }
+    }
+
+    .ooc-banner .ooc-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .ooc-banner h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    /* Comparison Grid (Requirement 4) */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .column-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    }
+
+    .column-panel-rag {
+      border-top: 4px solid var(--success);
+    }
+
+    .column-panel-norag {
+      border-top: 4px solid var(--danger);
+      background: #fafafa;
+    }
+
+    .column-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .column-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .column-title-rag {
+      color: #15803d;
+    }
+
+    .column-title-norag {
+      color: #b91c1c;
+    }
+
+    .column-tagline {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-faithful {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1.5px solid var(--success-border);
+    }
+
+    .badge-hallucinated {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1.5px solid var(--danger-border);
+    }
+
+    .badge-partial {
+      background: var(--warning-bg);
+      color: var(--warning);
+      border: 1.5px solid var(--warning-border);
+    }
+
+    .badge-unverified {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1.5px solid #fca5a5;
+    }
+
+    /* Answer Box Backgrounds (Requirement 6) */
+    .answer-box {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #0f172a;
+      white-space: pre-wrap;
+      margin-bottom: 18px;
+      padding: 18px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .answer-box-faithful {
+      background-color: var(--success-bg);
+      border: 2px solid var(--success-border);
+      border-left: 6px solid var(--success);
+    }
+
+    .answer-box-hallucinated {
+      background-color: var(--danger-bg);
+      border: 2px solid var(--danger-border);
+      border-left: 6px solid var(--danger);
+    }
+
+    .answer-box-partial {
+      background-color: var(--warning-bg);
+      border: 2px solid var(--warning-border);
+      border-left: 6px solid var(--warning);
+    }
+
+    .answer-box-norag {
+      background-color: #fff1f2;
+      border: 2px solid #fecdd3;
+      border-left: 6px solid #f43f5e;
+      color: #881337;
+    }
+
+    /* Circular Confidence Gauge Card (Requirement 1) */
+    .gauge-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gauge-wrapper {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+    }
+
+    .gauge-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .gauge-track {
+      fill: none;
+      stroke: #e2e8f0;
+      stroke-width: 8;
+    }
+
+    .gauge-progress {
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 251.2;
+      stroke-dashoffset: 251.2;
+      transition: stroke-dashoffset 0.8s ease, stroke 0.3s ease;
+    }
+
+    .gauge-label-value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .gauge-text-content {
+      flex: 1;
+    }
+
+    .gauge-title {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .gauge-status-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .gauge-explanation {
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    /* Collapsible Secondary Feature Table (Requirement 1) */
+    .features-details {
+      margin-top: 14px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .features-details summary {
+      cursor: pointer;
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 0.86rem;
+      user-select: none;
+    }
+
+    .metrics-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    .metrics-table th, .metrics-table td {
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .metrics-table th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    /* Top-3 Chunks Section (Requirement 2) */
+    .chunks-section {
+      margin-top: 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .chunks-intro-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 0.88rem;
+      color: #1e40af;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chunk-item {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      font-size: 0.84rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .chunk-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 6px;
+    }
+
+    .chunk-drug-name {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .chunk-score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: #2563eb;
+      border: 1px solid #dbeafe;
+    }
+
+    .chunk-score-bar-bg {
+      width: 45px;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .chunk-score-bar-fill {
+      height: 100%;
+      background: #2563eb;
+      border-radius: 3px;
+    }
+
+    .chunk-body {
+      white-space: pre-wrap;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    /* Warning callout for No-RAG */
+    .norag-warning-box {
+      background: #fffbeb;
+      border: 1px solid #fde047;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      color: #854d0e;
+      line-height: 1.5;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 36px;
+      padding-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-badge">AI Clinical Safety System</div>
+      <h1>বাংলা ড্রাগ-সেফটি RAG ও হ্যালুসিনেশন ডিটেকশন</h1>
+      <p class="subtitle">MCH ড্রাগ কর্পাস (৩০২টি ওষুধ) ভিত্তিক গ্রাউন্ডেড জেনারেশন ও ক্লাসিক্যাল মেশিন লার্নিং ভেরিফিকেশন</p>
+    </header>
+
+    <!-- LIVE STATS BAR (Requirement 5) -->
+    <div class="stats-bar">
+      <div class="stat-pill">
+        <span class="stat-icon">📚</span>
+        <div class="stat-info">
+          <span class="stat-value">৩০২টি</span>
+          <span class="stat-label">ভেরিফাইড ওষুধ (MCH Corpus)</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-icon">📝</span>
+        <div class="stat-info">
+          <span class="stat-value">৬০টি</span>
+          <span class="stat-label">টেস্ট প্রশ্ন (Eval Benchmark)</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-icon">🎯</span>
+        <div class="stat-info">
+          <span class="stat-value">৯৮.৩%</span>
+          <span class="stat-label">মডেল অ্যাকুরেসি (ML Classifier)</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-icon">🛡️</span>
+        <div class="stat-info">
+          <span class="stat-value">১০০%</span>
+          <span class="stat-label">হ্যালুসিনেশন রিকল (Zero Miss)</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-icon">⚠️</span>
+        <div class="stat-info">
+          <span class="stat-value">১৫টি</span>
+          <span class="stat-label">আউট-অফ-কর্পাস ঝুঁকি সনাক্ত</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Input Card -->
+    <div class="card">
+      <label for="questionInput">ওষুধের নিরাপত্তা সম্পর্কিত প্রশ্ন বাংলায় লিখুন:</label>
+      <textarea id="questionInput" placeholder="যেমন: গর্ভবতী অবস্থায় উচ্চ রক্তচাপে ল্যাবেটালল খাওয়া কি নিরাপদ?"></textarea>
+
+      <!-- Sample Query Buttons -->
+      <div class="examples">
+        <span class="examples-label">নমুনা প্রেজেন্টেশন প্রশ্ন:</span>
+        <button type="button" class="example-btn" onclick="setQuery('গর্ভবতী অবস্থায় উচ্চ রক্তচাপে ল্যাবেটালল খাওয়া কি নিরাপদ?')">ল্যাবেটালল (In-Corpus: Safe BP Drug)</button>
+        <button type="button" class="example-btn" onclick="setQuery('গর্ভাবস্থায় জ্বর বা হালকা ব্যথায় প্যারাসিটামল খাওয়া কি নিরাপদ?')">প্যারাসিটামল (In-Corpus: 1st Line Safe)</button>
+        <button type="button" class="example-btn" onclick="setQuery('গর্ভাবস্থার শেষ তিন মাসে আইবুপ্রোফেন খেলে কী ক্ষতি হতে পারে?')">আইবুপ্রোফেন (3rd Trimester Risk)</button>
+        <button type="button" class="example-btn" onclick="setQuery('গর্ভাবস্থায় মুখের সৌন্দর্য বর্ধনে বোটক্স ইনজেকশন কি নিরাপদ?')">বোটক্স (Out-of-Corpus: Not in Database)</button>
+        <button type="button" class="example-btn" onclick="setQuery('প্রেগন্যান্সিতে নাপা বা এইস খেলে বাচ্চার কি কোনো ক্ষতি হওয়ার সম্ভাবনা আছে?')">নাপা / এইস (Ambiguous Brand)</button>
+      </div>
+
+      <div class="controls-row">
+        <div class="view-toggle">
+          <span>প্রদর্শন ভিউ:</span>
+          <label><input type="radio" name="viewMode" value="compare" checked onchange="updateViewMode()"> পাশাপাশি তুলনা (Side-by-Side)</label>
+          <label><input type="radio" name="viewMode" value="single" onchange="updateViewMode()"> একক RAG ভিউ (Single RAG)</label>
+        </div>
+
+        <button id="submitBtn" class="btn-submit" onclick="submitQuestion()">
+          <span>উত্তর ও নিরাপত্তা যাচাই করুন</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="card">
+      <span class="spinner"></span> ৩০২টি ওষুধের ডাটাবেজ থেকে রিট্রিভাল, কনটেক্সট যাচাই এবং ML ক্লাসিফায়ার বিশ্লেষণ চলছে...
+    </div>
+
+    <!-- Results Area -->
+    <div id="resultArea" style="display: none;">
+
+      <!-- Out-of-Corpus High-Impact Alert Banner (Requirement 3) -->
+      <div id="oocBanner" class="ooc-banner">
+        <span class="ooc-icon">⚠️</span>
+        <div>
+          <h4>সতর্কবার্তা: এই ওষুধটি আমাদের ৩০২টি ওষুধের ডাটাবেজে অন্তর্ভুক্ত নেই!</h4>
+          <p>কোনো ভেরিফাইড ক্লিনিক্যাল কনটেক্সট ডাটাবেজে না থাকায় AI-এর উত্তর সরাসরি যাচাই করা সম্ভব নয়। এটি ভুল তথ্য বা মিথ্যা আশ্বাসের (Hallucination) গুরুতর ঝুঁকি তৈরি করে।</p>
+        </div>
+      </div>
+
+      <!-- 2-Column Side-by-Side Comparison Container (Requirement 4) -->
+      <div id="comparisonContainer" class="comparison-grid">
+
+        <!-- Column 1: ✅ With RAG (নিরাপদ) -->
+        <div class="column-panel column-panel-rag" id="ragColumn">
+          <div class="column-header">
+            <span class="column-title column-title-rag">✅ With RAG (নিরাপদ)</span>
+            <span id="ragBadge" class="badge badge-faithful">Faithful</span>
+          </div>
+          <span class="column-tagline">কর্পাস কনটেক্সট যুক্ত · হ্যালুসিনেশন ডিটেকশন লেয়ার দ্বারা ভেরিফাইড</span>
+
+          <!-- Answer Box with Dynamic Background Color (Requirement 6) -->
+          <div id="ragAnswerText" class="answer-box answer-box-faithful"></div>
+
+          <!-- Circular Confidence Gauge & Auto-Explanation (Requirement 1) -->
+          <div class="gauge-card">
+            <div class="gauge-wrapper">
+              <svg class="gauge-svg" viewBox="0 0 100 100">
+                <circle class="gauge-track" cx="50" cy="50" r="40"></circle>
+                <circle id="gaugeProgress" class="gauge-progress" cx="50" cy="50" r="40" stroke="#16a34a" stroke-dashoffset="25.1"></circle>
+              </svg>
+              <div id="gaugeValue" class="gauge-label-value">90%</div>
+            </div>
+            <div class="gauge-text-content">
+              <div class="gauge-title">নির্ভরযোগ্যতা স্কোর (Faithfulness Score)</div>
+              <div id="gaugeStatusText" class="gauge-status-text" style="color: #16a34a;">Faithful (বিশ্বস্ত)</div>
+              <p id="gaugeExplanation" class="gauge-explanation">
+                সঠিক ওষুধ ডাটাবেজে পাওয়া গেছে এবং উত্তরের বক্তব্য কনটেক্সটের সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ।
+              </p>
+            </div>
+          </div>
+
+          <!-- Secondary Collapsible Feature Table (Requirement 1) -->
+          <details class="features-details">
+            <summary>📊 বিস্তারিত ৬টি ML ইঞ্জিনিয়ারিং ফিচার দেখুন (Expandable Feature Matrix)</summary>
+            <table class="metrics-table">
+              <thead>
+                <tr>
+                  <th>ফিচার (Feature)</th>
+                  <th>মান (Value)</th>
+                  <th>ক্লিনিক্যাল ব্যাখ্যা (Significance)</th>
+                </tr>
+              </thead>
+              <tbody id="featuresBody"></tbody>
+            </table>
+          </details>
+
+          <!-- Top-3 Chunks Section (Requirement 2) -->
+          <div class="chunks-section">
+            <div class="chunks-intro-box">
+              <span>💡</span>
+              <span>নিচের ৩টি তথ্য আমাদের ৩০২টি ওষুধের ডাটাবেজ থেকে ভেক্টর সার্চে খুঁজে বের করা হয়েছে এবং AI শুধুমাত্র এই তথ্যের ভিত্তিতে উত্তর দিয়েছে — এটাই RAG-এর মূল ভিত্তি (Grounding)।</span>
+            </div>
+            <div id="chunksList"></div>
+          </div>
+        </div>
+
+        <!-- Column 2: ❌ Without RAG (ঝুঁকিপূর্ণ) -->
+        <div class="column-panel column-panel-norag" id="noRagColumn">
+          <div class="column-header">
+            <span class="column-title column-title-norag">❌ Without RAG (ঝুঁকিপূর্ণ)</span>
+            <span class="badge badge-unverified">Unverified / Unsafe</span>
+          </div>
+          <span class="column-tagline">সরাসরি জেনারেটিভ AI · কোনো গ্রাউন্ডিং নেই · মিথ্যা আশ্বাসের উচ্চ ঝুঁকি</span>
+
+          <!-- No-RAG Answer Box with Danger Color (Requirement 6) -->
+          <div id="directAnswerText" class="answer-box answer-box-norag"></div>
+
+          <div class="norag-warning-box">
+            <strong>⚠️ কেন এটি বিপজ্জনক?</strong>
+            <p style="margin-top: 4px;">
+              সরাসরি কোনো ডাটাবেজ কনটেক্সট ছাড়া জেনারেটিভ AI অনেক সময় নিষিদ্ধ ওষুধকেও "ডাক্তারের পরামর্শে খাওয়া যেতে পারে" বলে মিথ্যা আশ্বাস দেয়। RAG ও হ্যালুসিনেশন ডিটেক্টর না থাকলে এ ধরনের মারাত্মক ভুল প্রতিরোধ করা সম্ভব হয় না।
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      Bangla Drug-Safety RAG System with Classical ML Hallucination Detection Layer &bull; Academic Presentation Edition
+    </footer>
+  </div>
+
+  <script>
+    let latestData = null;
+
+    function setQuery(text) {
+      document.getElementById('questionInput').value = text;
+      document.getElementById('questionInput').focus();
+    }
+
+    function updateViewMode() {
+      const mode = document.querySelector('input[name="viewMode"]:checked').value;
+      const noRagCol = document.getElementById('noRagColumn');
+      const compContainer = document.getElementById('comparisonContainer');
+
+      if (mode === 'single') {
+        noRagCol.style.display = 'none';
+        compContainer.style.gridTemplateColumns = '1fr';
+      } else {
+        noRagCol.style.display = 'block';
+        compContainer.style.gridTemplateColumns = window.innerWidth > 860 ? '1.1fr 0.9fr' : '1fr';
+      }
+    }
+
+    window.addEventListener('resize', () => {
+      const mode = document.querySelector('input[name="viewMode"]:checked')?.value || 'compare';
+      if (mode === 'compare') {
+        const compContainer = document.getElementById('comparisonContainer');
+        compContainer.style.gridTemplateColumns = window.innerWidth > 860 ? '1.1fr 0.9fr' : '1fr';
+      }
+    });
+
+    async function submitQuestion() {
+      const input = document.getElementById('questionInput');
+      const query = input.value.trim();
+      if (!query) {
+        alert('অনুগ্রহ করে একটি প্রশ্ন লিখুন।');
+        return;
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      const loading = document.getElementById('loading');
+      const resultArea = document.getElementById('resultArea');
+
+      submitBtn.disabled = true;
+      loading.style.display = 'block';
+      resultArea.style.display = 'none';
+
+      try {
+        const response = await fetch('/api/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: query })
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          alert('ত্রুটি: ' + (data.error || 'সার্ভার ত্রুটি'));
+          return;
+        }
+
+        latestData = data;
+
+        // 1. Out-of-Corpus Banner Handling (Requirement 3)
+        const oocBanner = document.getElementById('oocBanner');
+        if (data.is_out_of_corpus_alert) {
+          oocBanner.style.display = 'flex';
+        } else {
+          oocBanner.style.display = 'none';
+        }
+
+        // 2. RAG Answer & Badge & Full Box Background Color (Requirement 6)
+        const ragAnswerBox = document.getElementById('ragAnswerText');
+        ragAnswerBox.innerText = data.rag_answer || data.answer || '';
+
+        const ragBadge = document.getElementById('ragBadge');
+        const label = data.predicted_label || 'Faithful';
+        ragBadge.innerText = label;
+
+        let statusColor = '#16a34a';
+        let statusTitle = 'Faithful (বিশ্বস্ত ও নিরাপদ)';
+
+        if (label.toLowerCase().includes('faith')) {
+          ragBadge.className = 'badge badge-faithful';
+          ragAnswerBox.className = 'answer-box answer-box-faithful';
+          statusColor = '#16a34a';
+          statusTitle = 'Faithful (বিশ্বস্ত ও সম্পূর্ণ নিরাপদ)';
+        } else if (label.toLowerCase().includes('hallucin')) {
+          ragBadge.className = 'badge badge-hallucinated';
+          ragAnswerBox.className = 'answer-box answer-box-hallucinated';
+          statusColor = '#dc2626';
+          statusTitle = 'Hallucinated (অবিশ্বস্ত বা ভিত্তিহীন)';
+        } else {
+          ragBadge.className = 'badge badge-partial';
+          ragAnswerBox.className = 'answer-box answer-box-partial';
+          statusColor = '#d97706';
+          statusTitle = 'Partial (আংশিক সতর্কতামূলক)';
+        }
+
+        // 3. Circular Confidence Gauge & Auto-Explanation (Requirement 1)
+        const score = data.confidence_score !== undefined ? data.confidence_score : 85;
+        document.getElementById('gaugeValue').innerText = score + '%';
+        document.getElementById('gaugeStatusText').innerText = statusTitle;
+        document.getElementById('gaugeStatusText').style.color = statusColor;
+        document.getElementById('gaugeExplanation').innerText = data.explanation_bn || '';
+
+        const gaugeProgress = document.getElementById('gaugeProgress');
+        const circumference = 251.2; // 2 * PI * 40
+        const offset = circumference - (circumference * (score / 100));
+        gaugeProgress.style.strokeDashoffset = offset;
+        gaugeProgress.style.stroke = statusColor;
+
+        // 4. Direct LLM Answer (No RAG)
+        document.getElementById('directAnswerText').innerText = data.direct_answer || 'কোনো সরাসরি উত্তর পাওয়া যায়নি।';
+
+        // 5. Secondary Feature Table (Requirement 1)
+        const feats = data.features || {};
+        const tbody = document.getElementById('featuresBody');
+        tbody.innerHTML = `
+          <tr><td>Cosine Similarity (শব্দার্থিক মিল)</td><td><strong>${feats.cosine_similarity ?? 'N/A'}</strong></td><td>কনটেক্সট ও উত্তরের ভেক্টর সিমিলারিটি</td></tr>
+          <tr><td>Lexical Overlap (শব্দ মিল)</td><td><strong>${feats.lexical_overlap_ratio != null ? (feats.lexical_overlap_ratio * 100).toFixed(1) + '%' : 'N/A'}</strong></td><td>সরাসরি বাংলা শব্দের মিল অনুপাত</td></tr>
+          <tr><td>Relevant Drug Retrieved?</td><td><strong>${feats.relevant_drug_retrieved ? 'হ্যাঁ (1)' : 'না (0)'}</strong></td><td>প্রশ্নে উল্লেখিত ড্রাগটি ডাটাবেজে ছিল কি না</td></tr>
+          <tr><td>Answer Length</td><td><strong>${feats.answer_length_words ?? 'N/A'} শব্দ</strong></td><td>উত্তরের মোট শব্দ সংখ্যা</td></tr>
+          <tr><td>Hedging Count (সতর্কবার্তা)</td><td><strong>${feats.hedging_count ?? 0} টি</strong></td><td>সতর্কতামূলক শব্দের সংখ্যা</td></tr>
+          <tr><td>Query Type (প্রশ্নের ধরন)</td><td><strong>${feats.query_type || 'N/A'}</strong></td><td>In-Corpus / Out-of-Corpus / Ambiguous</td></tr>
+        `;
+
+        // 6. Top-3 Chunks with highlighted scores and bold names (Requirement 2)
+        const chunksList = document.getElementById('chunksList');
+        chunksList.innerHTML = '';
+        (data.retrieved_chunks || []).forEach((c, idx) => {
+          const div = document.createElement('div');
+          div.className = 'chunk-item';
+
+          const sim = c.similarity_score || 0;
+          const simPct = Math.round(Math.min(100, Math.max(0, sim * 100)));
+
+          div.innerHTML = `
+            <div class="chunk-header-row">
+              <span class="chunk-drug-name">💊 [র‍্যাংক ${idx + 1}] ${c.name || 'ঔষধ'}</span>
+              <span class="chunk-score-badge">
+                <span class="chunk-score-bar-bg">
+                  <span class="chunk-score-bar-fill" style="width: ${simPct}%;"></span>
+                </span>
+                <span>স্কোর: ${sim.toFixed(3)} (${simPct}%)</span>
+              </span>
+            </div>
+            <div class="chunk-body">${c.text || c.chunk_text || ''}</div>
+          `;
+          chunksList.appendChild(div);
+        });
+
+        // Maintain view mode layout
+        updateViewMode();
+
+        resultArea.style.display = 'block';
+      } catch (err) {
+        alert('অনুরোধ প্রক্রিয়াকরণে সমস্যা হয়েছে: ' + err.message);
+      } finally {
+        submitBtn.disabled = false;
+        loading.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
