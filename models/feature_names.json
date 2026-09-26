@@ -1,0 +1,10 @@
+[
+  "cosine_similarity",
+  "lexical_overlap_ratio",
+  "relevant_drug_retrieved",
+  "answer_length_words",
+  "hedging_count",
+  "query_type_ambiguous",
+  "query_type_in-corpus",
+  "query_type_out-of-corpus"
+]
