@@ -1,0 +1,26 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Environment Variables
+.env
+.env.local
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Project Context (Excluded as per user request)
+PROJECT_CONTEXT.md
+project_context.md
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*lock*
