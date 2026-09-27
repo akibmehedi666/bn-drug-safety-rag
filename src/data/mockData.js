@@ -234,7 +234,7 @@ export const drugsDatabase = [
   },
   {
     id: "seclo",
-    keywords: ["seclo", "omeprazole", "gastric", "losectil", "pep", "acidity", "heartburn", "সেকলো", "ওমেপ্রাজল", "গ্যাস্ট্রিক", "এসিডিটি"],
+    keywords: ["seclo", "omeprazole", "gastric", "losectil", "pep", "acidity", "heartburn", "সেকলো", "সেক্লো", "ওমেপ্রাজল", "ওমিপ্রাজল", "গ্যাস্ট্রিক", "এসিডিটি"],
     nameEn: "Seclo / Omeprazole (20mg)",
     nameBn: "সেকলো / ওমেপ্রাজল (২০ মিগ্রা)",
     genericEn: "Omeprazole",

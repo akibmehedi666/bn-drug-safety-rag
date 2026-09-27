@@ -67,12 +67,44 @@ export const AppProvider = ({ children }) => {
     if (!cleanQ) return null;
 
     setIsSearchingRag(true);
-    let matchedLocal = drugsDatabase.find(d => 
-      d.keywords.some(k => k.toLowerCase().includes(cleanQ.toLowerCase())) ||
-      d.nameEn.toLowerCase().includes(cleanQ.toLowerCase()) ||
-      d.nameBn.toLowerCase().includes(cleanQ.toLowerCase()) ||
-      d.genericEn.toLowerCase().includes(cleanQ.toLowerCase())
-    );
+    const qLower = cleanQ.toLowerCase();
+    const tokens = qLower.split(/[\s,?!;.:/\\()]+/).filter(w => w.length >= 3);
+
+    let matchedLocal = drugsDatabase.find(d => {
+      const genEn = (d.genericEn || '').toLowerCase();
+      const genBn = (d.genericBn || '').toLowerCase();
+      const nameEn = (d.nameEn || '').toLowerCase();
+      const nameBn = (d.nameBn || '').toLowerCase();
+
+      // 1. Direct name / generic match in query string
+      if (
+        (genEn && qLower.includes(genEn)) ||
+        (genBn && qLower.includes(genBn)) ||
+        (nameEn && qLower.includes(nameEn)) ||
+        (nameBn && qLower.includes(nameBn)) ||
+        tokens.some(t => genEn.includes(t) || genBn.includes(t))
+      ) {
+        return true;
+      }
+
+      // 2. Keyword check: does query contain keyword, or does any token match keyword
+      if (d.keywords && d.keywords.some(k => {
+        const kLower = k.toLowerCase();
+        return qLower.includes(kLower) || tokens.some(t => t === kLower || (t.length >= 4 && kLower.includes(t)));
+      })) {
+        return true;
+      }
+
+      // 3. Brand name check
+      if (d.brandNames && d.brandNames.some(b => {
+        const bLower = b.toLowerCase();
+        return qLower.includes(bLower) || tokens.some(t => t === bLower);
+      })) {
+        return true;
+      }
+
+      return false;
+    });
 
     try {
       // Attempt querying Flask Python RAG backend
