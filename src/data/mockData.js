@@ -202,16 +202,34 @@ export const drugsDatabase = [
     brandNames: ["Napa", "Ace", "Pyrex", "Renova"],
     safetyRating: "safe", // safe, caution, unsafe
     trustLevel: "verified",
+    confidenceScore: 96,
+    predictedLabel: "Faithful",
     trustBadgeTextEn: "Verified Safe from DGDA & MedEx",
     trustBadgeTextBn: "ডিজিডিএ ও মেডেক্স অনুমোদিত — ব্যবহার নিরাপদ",
     sourceEn: "Source: MedEx BD, DGDA Pregnancy Category B (FDA)",
     sourceBn: "উৎস: মেডেক্স বিডি, ডিজিডিএ গর্ভাবস্থা ক্যাটাগরি বি",
-    answerEn: "Paracetamol (Napa/Ace) is considered the first-line and safest choice for fever and mild-to-moderate pain during all trimesters of pregnancy and breastfeeding when taken at standard doses.",
-    answerBn: "প্যারাসিটামল (নাপা/এস) গর্ভাবস্থার ১ম, ২য় ও ৩য় ত্রৈমাসিক এবং স্তন্যদানকালে সাধারণ জ্বর ও ব্যথার জন্য সর্বাধিক ব্যবহৃত এবং নিরাপদ প্রথম সারির ওষুধ। তবে অতিরিক্ত মাত্রায় বা দীর্ঘমেয়াদে খাওয়া যাবে না।",
+    answerEn: "Paracetamol (Napa/Ace) is considered the first-line and safest choice for fever and mild-to-moderate pain during all trimesters of pregnancy and breastfeeding when taken at standard doses. Keep daily intake strictly under 3000mg.",
+    answerBn: "প্যারাসিটামল (নাপা/এস) গর্ভাবস্থার ১ম, ২য় ও ৩য় ত্রৈমাসিক এবং স্তন্যদানকালে সাধারণ জ্বর ও ব্যথার জন্য সর্বাধিক ব্যবহৃত এবং নিরাপদ প্রথম সারির ওষুধ। তবে অতিরিক্ত মাত্রায় বা দীর্ঘমেয়াদে খাওয়া যাবে না; ২৪ ঘণ্টায় সর্বোচ্চ ৩-৪টি (৩০০০ মিগ্রা) ট্যাবলেটের মধ্যে সীমিত রাখুন।",
+    directAnswer: "গর্ভাবস্থায় হালকা জ্বর বা ব্যথায় নাপা বা প্যারাসিটামল খাওয়া যেতে পারে। ডাক্তারের সাথে কথা বলে প্রয়োজনমতো সাধারণ ডোজে এটি সেবন করা সাধারণত নিরাপদ। কোনো সমস্যা হলে ডাক্তারের কাছে যান।",
+    directAnswerEn: "Napa or paracetamol can be taken for mild fever or aches during pregnancy. Consult your doctor and take standard doses as needed. If problems persist, visit a doctor.",
+    explanationBn: "প্যারাসিটামল (নাপা/এস) আমাদের ৩০২টি ওষুধের ডাটাবেজে উপস্থিত এবং ডিজিডিএ নির্দেশিকার সাথে উত্তরের মিল ৯২% শব্দার্থিক ও ৫৪% আক্ষরিকভাবে সম্পূর্ণ প্রমাণিত।",
     trimesterNoteEn: "Safe in 1st, 2nd, and 3rd trimesters. Keep daily dosage strictly under 3000mg.",
     trimesterNoteBn: "১ম, ২য় ও ৩য় ত্রৈমাসিকে নিরাপদ। তবে ২৪ ঘণ্টায় সর্বোচ্চ ৩-৪টির বেশি ট্যাবলেট খাওয়া উচিত নয়।",
     breastfeedingNoteEn: "Safe during lactation; passes into breast milk in negligible, safe amounts.",
     breastfeedingNoteBn: "স্তন্যদানকালে নিরাপদ; বুকের দুধে খুব সামান্য পরিমাণে যায় যা শিশুর জন্য ক্ষতিকর নয়।",
+    features: {
+      cosine_similarity: 0.92,
+      lexical_overlap_ratio: 0.54,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 46,
+      hedging_count: 2,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Paracetamol (Napa/Ace) - DGDA Category B", similarity_score: 0.924, text: "প্যারাসিটামল গর্ভাবস্থার ১ম, ২য় ও ৩য় ত্রৈমাসিকে অনুমোদিত ও নিরাপদ। দৈনিক সর্বোচ্চ মাত্রা ৩০০০ মিলিগ্রামের বেশি হওয়া উচিত নয়।" },
+      { name: "Paracetamol Clinical Indications", similarity_score: 0.865, text: "জ্বর ও ব্যথায় প্রথম পছন্দের ওষুধ। স্তন্যদানকালে বুকের দুধে অত্যন্ত নগণ্য পরিমাণে নিঃসরিত হয়, যা শিশুর জন্য নিরাপদ।" },
+      { name: "DGDA Maternal Drug Registry 2026", similarity_score: 0.791, text: "ঔষধ প্রশাসন অধিদপ্তর (DGDA) কর্তৃক গর্ভাবস্থা ও স্তন্যদানকালে সাধারণ ব্যথানাশক হিসেবে অনুমোদিত।" }
+    ],
     saferAlternatives: []
   },
   {
@@ -224,16 +242,34 @@ export const drugsDatabase = [
     brandNames: ["Seclo", "Losectil", "Esonix", "Xeldrin"],
     safetyRating: "safe",
     trustLevel: "verified",
+    confidenceScore: 94,
+    predictedLabel: "Faithful",
     trustBadgeTextEn: "Verified Safe for Pregnancy Gastritis",
     trustBadgeTextBn: "গর্ভাবস্থায় এসিডিটিতে নিরাপদ — ডিজিডিএ অনুমোদিত",
     sourceEn: "Source: MedEx BD, DGDA Guidelines 2026",
     sourceBn: "উৎস: মেডেক্স বিডি, ডিজিডিএ নির্দেশিকা ২০২৬",
     answerEn: "Omeprazole (Seclo) is widely prescribed for pregnancy heartburn and acid reflux. Extensive clinical studies show no increased risk of congenital malformations.",
-    answerBn: "গর্ভকালীন তীব্র এসিডিটি, বুকজ্বালা ও গ্যাস্ট্রিকের জন্য সেকলো (ওমেপ্রাজল) নিরাপদ ও বহুল ব্যবহৃত ওষুধ। ভ্রূণের উপর এর কোনো ক্ষতিকর প্রভাব পাওয়া যায়নি।",
+    answerBn: "গর্ভকালীন তীব্র এসিডিটি, বুকজ্বালা ও গ্যাস্ট্রিকের জন্য সেকলো (ওমেপ্রাজল) নিরাপদ ও বহুল ব্যবহৃত ওষুধ। ভ্রূণের অঙ্গ গঠনে এর কোনো ক্ষতিকর প্রভাব পাওয়া যায়নি। সকালে খালি পেটে সেবন কার্যকর।",
+    directAnswer: "গর্ভাবস্থায় গ্যাস্ট্রিক বা বুকজ্বালা হলে ওমেপ্রাজল খাওয়া যেতে পারে। তবে যেকোনো ওষুধ খাওয়ার আগে চিকিৎসকের মতামত নেওয়া উচিত এবং বেশি দিন একটানা খাওয়া ঠিক নয়।",
+    directAnswerEn: "Omeprazole can be taken for gastric problems or heartburn in pregnancy. However, you should consult a doctor before taking medicines and avoid long-term use.",
+    explanationBn: "ওমেপ্রাজল (সেকলো) ৩০২ ড্রাগ ডাটাবেজ থেকে সফলভাবে রিকল করা হয়েছে। এর সেফটি প্রোফাইল ও ডোজ ডিজিডিএ ক্লিনিক্যাল নির্দেশিকার সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ।",
     trimesterNoteEn: "Safe across all trimesters. Best taken 20 minutes before morning breakfast.",
     trimesterNoteBn: "গর্ভাবস্থার সব পর্যায়েই নিরাপদ। সকালে খাবারের ২০ মিনিট আগে এক গ্লাস পানি দিয়ে খাওয়া ভালো।",
     breastfeedingNoteEn: "Safe during breastfeeding.",
     breastfeedingNoteBn: "স্তন্যদানকালে নিরাপদ।",
+    features: {
+      cosine_similarity: 0.89,
+      lexical_overlap_ratio: 0.48,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 40,
+      hedging_count: 1,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Omeprazole (Seclo/Losectil) - PPI", similarity_score: 0.895, text: "গর্ভাবস্থায় গ্যাস্ট্রিক এসিড রিফ্লাক্স ও বুকজ্বালা নিরাময়ে ওমেপ্রাজল নিরাপদ। কোনো জন্মগত ত্রুটির ঝুঁকি পাওয়া যায়নি।" },
+      { name: "Dosage & Administration", similarity_score: 0.832, text: "সকালে খালি পেটে ২০ মিগ্রা ক্যাপসুল সেবন উপযোগী। ১ম, ২য় ও ৩য় ত্রৈমাসিকে চিকিৎসকের অনুমোদিত।" },
+      { name: "MedEx Maternal Safety Monograph", similarity_score: 0.768, text: "স্তন্যদানকালে নিরাপদ। ভ্রূণের অঙ্গ গঠনে কোনো বিরূপ প্রভাব নেই।" }
+    ],
     saferAlternatives: []
   },
   {
@@ -246,16 +282,34 @@ export const drugsDatabase = [
     brandNames: ["Flexi", "Mobic", "Clofenac", "Naproxen"],
     safetyRating: "unsafe",
     trustLevel: "verified",
+    confidenceScore: 95,
+    predictedLabel: "Faithful",
     trustBadgeTextEn: "NOT Recommended in Pregnancy — High Risk",
     trustBadgeTextBn: "গর্ভাবস্থায় ব্যবহার নিষিদ্ধ — উচ্চ ঝুঁকিপূর্ণ",
     sourceEn: "Source: DGDA Safety Alert & FDA Pregnancy Warning (Category C/D)",
     sourceBn: "উৎস: ডিজিডিএ সেফটি অ্যালার্ট ও এফডিএ সতর্কবার্তা (ক্যাটাগরি ডি)",
-    answerEn: "Aceclofenac (Flexi) is an NSAID painkiller and is STRICTLY NOT RECOMMENDED during pregnancy, especially in the 3rd trimester. It can cause premature closure of the fetal ductus arteriosus and kidney issues in the unborn baby.",
-    answerBn: "ফ্লেক্সি (এসিক্লোফেনাক) একটি এনএসএআইডি ব্যথানাশক যা গর্ভাবস্থায় বিশেষ করে ৩য় ত্রৈমাসিকে অত্যন্ত ঝুঁকিপূর্ণ। এটি গর্ভস্থ শিশুর হৃদযন্ত্র ও কিডনির মারাত্মক ক্ষতি করতে পারে এবং প্রসব জটিলতা বাড়ায়।",
+    answerEn: "Aceclofenac (Flexi) is an NSAID painkiller and is STRICTLY NOT RECOMMENDED during pregnancy, especially in the 3rd trimester. It can cause premature closure of the fetal ductus arteriosus and kidney impairment in the unborn baby.",
+    answerBn: "ফ্লেক্সি (এসিক্লোফেনাক) একটি এনএসএআইডি ব্যথানাশক যা গর্ভাবস্থায় বিশেষ করে ৩য় ত্রৈমাসিকে সম্পূর্ণ নিষিদ্ধ ও মারাত্মক ঝুঁকিপূর্ণ। এটি গর্ভস্থ শিশুর হৃদযন্ত্রের ডাক্টাস আর্টারিওসাস অকালে বন্ধ করে দিতে পারে এবং নবজাতকের কিডনির ক্ষতি করে।",
+    directAnswer: "ফ্লেক্সি (এসিক্লোফেনাক) একটি তীব্র ব্যথানাশক। গর্ভাবস্থায় কোমর বা জয়েন্টের ব্যথায় ডাক্তারের প্রেসক্রিপশন থাকলে কম ডোজে সাময়িক খাওয়া যেতে পারে, তবে একটু সতর্কতার সাথে খাবেন।",
+    directAnswerEn: "Flexi (Aceclofenac) is a strong painkiller. During pregnancy, it may be taken temporarily in low doses for back or joint pain if prescribed by a doctor, but use with caution.",
+    explanationBn: "ফ্লেক্সি (এসিক্লোফেনাক) একটি এনএসএআইডি (NSAID)। RAG সিস্টেম ডিজিডিএ ও এফডিএ ক্যাটাগরি ডি এর ভিত্তিতে কঠোর নিষেধাজ্ঞা সঠিকভাবে শনাক্ত করেছে, যা সরাসরি LLM-এর বিপজ্জনক মিথ্যা আশ্বাস (False Reassurance) প্রতিহত করে।",
     trimesterNoteEn: "Unsafe in 1st, 2nd, and strictly contraindicated in 3rd trimester.",
     trimesterNoteBn: "১ম ও ২য় ত্রৈমাসিকে এড়িয়ে চলুন এবং ৩য় ত্রৈমাসিকে সম্পূর্ণ নিষিদ্ধ।",
     breastfeedingNoteEn: "Not recommended during breastfeeding.",
     breastfeedingNoteBn: "স্তন্যদানকালে খাওয়া উচিত নয়।",
+    features: {
+      cosine_similarity: 0.91,
+      lexical_overlap_ratio: 0.58,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 49,
+      hedging_count: 3,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Aceclofenac (Flexi) - Strict Contraindication", similarity_score: 0.912, text: "গর্ভাবস্থায় এসিক্লোফেনাক সম্পূর্ণ নিষিদ্ধ (বিশেষ করে ৩য় ত্রৈমাসিক)। এটি ভ্রূণের ডাক্টাস আর্টারিওসাস অকালে বন্ধ করতে পারে এবং কিডনির জটিলতা সৃষ্টি করে।" },
+      { name: "FDA Pregnancy Category D Warning", similarity_score: 0.874, text: "অ্যামনিওটিক তরল কমে যাওয়া (অলিগোহাইড্রামনিওস) এবং প্রসবকালে অতিরিক্ত রক্তক্ষরণের ঝুঁকি বাড়ায়। নিরাপদ বিকল্প হিসেবে প্যারাসিটামল ব্যবহার্য।" },
+      { name: "DGDA NSAID Safety Advisory", similarity_score: 0.810, text: "গর্ভবতী মায়েদের জন্য যেকোনো সিস্টেমিক এনএসএআইডি ড্রাগ উচ্চ ঝুঁকিপূর্ণ হিসেবে চিহ্নিত।" }
+    ],
     saferAlternatives: [
       {
         nameEn: "Paracetamol (Napa / Ace)",
@@ -290,16 +344,33 @@ export const drugsDatabase = [
     brandNames: ["Entacyd", "Flatameal", "Alucid"],
     safetyRating: "safe",
     trustLevel: "verified",
+    confidenceScore: 91,
+    predictedLabel: "Faithful",
     trustBadgeTextEn: "Verified Safe for Instant Heartburn Relief",
     trustBadgeTextBn: "তাৎক্ষণিক গ্যাস্ট্রিকের জন্য নিরাপদ — ডিজিডিএ অনুমোদিত",
     sourceEn: "Source: MedEx BD & DGDA Maternal Health Guidelines",
     sourceBn: "উৎস: মেডেক্স বিডি ও ডিজিডিএ মাতৃত্ব নির্দেশিকা",
     answerEn: "Antacids like Entacyd are safe for short-term relief of pregnancy stomach acid and indigestion because they act locally in the stomach and are not absorbed heavily into the bloodstream.",
     answerBn: "এন্টাসিড প্লাস গর্ভাবস্থায় তাৎক্ষণিক বুকজ্বালা ও বদহজমে সম্পূর্ণ নিরাপদ। এটি পেটের এসিডকে নিষ্ক্রিয় করে এবং রক্তে প্রবেশ করে না।",
+    directAnswer: "এন্টাসিড সিরাপ বা ট্যাবলেট বদহজমে খাওয়া যায়। পেটে গ্যাস হলে খাওয়ার পর চিবিয়ে খাবেন। সমস্যা বেশি হলে ডাক্তার দেখান।",
+    directAnswerEn: "Antacid syrup or tablet can be taken for indigestion. Chew after meals if bloated. Consult a doctor if problems persist.",
+    explanationBn: "এন্টাসিড প্লাস রক্তের মাধ্যমে ভ্রূণে পৌঁছায় না। এর লোকাল কার্যকারিতা ও নিরাপত্তা ডাটাবেজের সাথে সম্পূর্ণ সামঞ্জস্যপূর্ণ।",
     trimesterNoteEn: "Safe in all trimesters. Avoid continuous long-term overuse to prevent constipation.",
     trimesterNoteBn: "সব ত্রৈমাসিকেই নিরাপদ। তবে দীর্ঘদিন একটানা খেলে কোষ্ঠকাঠিন্য হতে পারে।",
     breastfeedingNoteEn: "Safe during lactation.",
     breastfeedingNoteBn: "স্তন্যদানকালে সম্পূর্ণ নিরাপদ।",
+    features: {
+      cosine_similarity: 0.86,
+      lexical_overlap_ratio: 0.44,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 36,
+      hedging_count: 1,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Antacid Plus Chewable - Local Action", similarity_score: 0.862, text: "অ্যালুমিনিয়াম ও ম্যাগনেসিয়াম হাইড্রোক্সাইড রক্তে শোষিত হয় না, তাই গর্ভাবস্থায় স্বল্পমেয়াদে সেবন সম্পূর্ণ নিরাপদ।" },
+      { name: "MedEx Maternal Heartburn Guidelines", similarity_score: 0.798, text: "তীব্র গ্যাস্ট্রিকের জ্বালাপোড়া কমাতে তাৎক্ষণিক কার্যকর।" }
+    ],
     saferAlternatives: []
   },
   {
@@ -312,16 +383,33 @@ export const drugsDatabase = [
     brandNames: ["Filwel Preg", "Pregnacare", "Aristovit M"],
     safetyRating: "safe",
     trustLevel: "verified",
+    confidenceScore: 98,
+    predictedLabel: "Faithful",
     trustBadgeTextEn: "Highly Recommended Prenatal Supplement",
     trustBadgeTextBn: "অত্যন্ত প্রয়োজনীয় গর্ভকালীন ভিটামিন সাপ্লিমেন্ট",
     sourceEn: "Source: DGDA & WHO Maternal Supplementation Standards",
     sourceBn: "উৎস: ডিজিডিএ এবং বিশ্ব স্বাস্থ্য সংস্থা (WHO) নির্দেশিকা",
     answerEn: "Prenatal vitamins like Filwel Preg are essential during pregnancy to provide key nutrients like Folic Acid (prevents neural tube defects), Iron (prevents maternal anemia), and Calcium for fetal bone development.",
     answerBn: "ফিলওয়েল প্রেগ গর্ভাবস্থায় শিশু ও মায়ের সুস্বাস্থ্যের জন্য একটি অত্যন্ত প্রয়োজনীয় সাপ্লিমেন্ট। এতে থাকা ফলিক এসিড শিশুর জন্মগত ত্রুটি রোধ করে এবং আয়রন মায়ের রক্তস্বল্পতা দূর করে।",
+    directAnswer: "ফিলওয়েল প্রেগ গর্ভকালীন মাল্টিভিটামিন। এতে ফলিক এসিড ও আয়রন থাকে যা মা ও শিশুর জন্য ভালো। ডাক্তারের পরামর্শ অনুযায়ী প্রতিদিন একটি করে খাবেন।",
+    directAnswerEn: "Filwel Preg is a prenatal multivitamin with folic acid and iron which is good for mother and baby. Take one daily per doctor recommendation.",
+    explanationBn: "বিশ্ব স্বাস্থ্য সংস্থা (WHO) ও ডিজিডিএ নির্দেশিকা অনুযায়ী গর্ভকালীন মাইক্রোনিউট্রিয়েন্ট সাপ্লিমেন্টেশনের সাথে উত্তরের মিল শতভাগ নির্ভরযোগ্য।",
     trimesterNoteEn: "Essential from pre-conception through 3rd trimester and breastfeeding.",
     trimesterNoteBn: "গর্ভধারণের শুরু থেকে প্রসবের পর পর্যন্ত চিকিৎসকের পরামর্শে গ্রহণ করা উচিত।",
     breastfeedingNoteEn: "Recommended to continue during lactation to restore maternal nutrition.",
     breastfeedingNoteBn: "স্তন্যদানকালে খেলে মায়ের শরীরে ভিটামিনের ঘাটতি পূরণ হয়।",
+    features: {
+      cosine_similarity: 0.94,
+      lexical_overlap_ratio: 0.62,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 42,
+      hedging_count: 1,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Filwel Preg - WHO Prenatal Micronutrient Standard", similarity_score: 0.945, text: "ফলিক এসিড স্নায়ুতন্ত্রের ত্রুটি রোধ করে ও আয়রন রক্তস্বল্পতা দূর করে। প্রথম ত্রৈমাসিক থেকে স্তন্যদানকাল পর্যন্ত অপরিহার্য।" },
+      { name: "DGDA Micronutrient Formulary", similarity_score: 0.880, text: "গর্ভবতী মায়েদের দৈনিক পুষ্টি চাহিদা পূরণে অনুমোদিত প্রথম সারির সাপ্লিমেন্ট।" }
+    ],
     saferAlternatives: []
   },
   {
@@ -334,16 +422,32 @@ export const drugsDatabase = [
     brandNames: ["Indever", "Angilol"],
     safetyRating: "caution",
     trustLevel: "limited",
+    confidenceScore: 86,
+    predictedLabel: "Partial",
     trustBadgeTextEn: "Use with Caution — Specialist Doctor Supervision Needed",
     trustBadgeTextBn: "বিশেষ সতর্কতার প্রয়োজন — গাইনি চিকিৎসকের পরামর্শ আবশ্যক",
     sourceEn: "Source: MedEx BD, FDA Pregnancy Category C",
     sourceBn: "উৎস: মেডেক্স বিডি, এফডিএ গর্ভাবস্থা ক্যাটাগরি সি",
     answerEn: "Propranolol (Indever) can be used for maternal hypertension or heart conditions only under strict specialist oversight. It requires monitoring as it may cause fetal growth restriction or low neonatal blood sugar.",
-    answerBn: "ইনডেভার (প্রোপ্রানোলল) গর্ভাবস্থায় অনিয়ন্ত্রিত উচ্চ রক্তচাপে ব্যবহার করা গেলেও এটি চিকিৎসকের কড়া নজরদারিতে খেতে হবে। এটি শিশুর ওজন কমা বা রক্তে শর্করা কমার ঝুঁকি তৈরি করতে পারে।",
+    answerBn: "ইনডেভার (প্রোপ্রানোলল) গর্ভাবস্থায় অনিয়ন্ত্রিত উচ্চ রক্তচাপে ব্যবহার করা গেলেও এটি চিকিৎসকের কড়া নজরদারিতে খেতে হবে। এটি শিশুর ওজন কমা বা রক্তে শর্করা কমার ঝুঁকি তৈরি করতে পারে। বিকল্প হিসেবে ল্যাবেটালল অধিক নিরাপদ।",
+    directAnswer: "ইনডেভার প্রেসারের ওষুধ। গর্ভবতী অবস্থায় প্রেসার বাড়লে ডাক্তারের প্রেসক্রিপশনে এটি খাওয়া যায়। তবে প্রেসার মেপে ডোজ ঠিক করতে হবে।",
+    directAnswerEn: "Indever is a blood pressure medicine. During pregnancy, it can be taken under prescription if blood pressure rises. Monitor blood pressure closely.",
+    explanationBn: "ইনডেভার (প্রোপ্রানোলল) গর্ভাবস্থায় বিশেষ নজরদারিতে সীমিতভাবে ব্যবহার্য। প্রথম সারির বিকল্প ওষুধ হিসেবে ল্যাবেটালল বা মিথাইলডোপা বেশি সুপারিশ করা হয়।",
     trimesterNoteEn: "Requires dosage monitoring in 2nd & 3rd trimesters.",
     trimesterNoteBn: "২য় ও ৩য় ত্রৈমাসিকে নিয়মিত শিশুর বৃদ্ধি ও মায়ের প্রেশার মেপে খাওয়া উচিত।",
     breastfeedingNoteEn: "Monitored use; consult your pediatrician.",
     breastfeedingNoteBn: "স্তন্যদানকালে ডাক্তারের পরামর্শ ছাড়া খাবেন না।",
+    features: {
+      cosine_similarity: 0.81,
+      lexical_overlap_ratio: 0.42,
+      relevant_drug_retrieved: 1,
+      answer_length_words: 46,
+      hedging_count: 4,
+      query_type: "in-corpus"
+    },
+    retrievedChunks: [
+      { name: "Propranolol (Indever) - Beta Blocker Monitoring", similarity_score: 0.812, text: "২য় ও ৩য় ত্রৈমাসিকে নবজাতকের ওজন হ্রাস ও হাইপোগ্লাইসেমিয়ার ঝুঁকি থাকে। বিশেষজ্ঞের নিবিড় তত্ত্বাবধান ছাড়া অনুচিত।" }
+    ],
     saferAlternatives: [
       {
         nameEn: "Labetalol / Methyldopa (Doctor Prescribed)",
@@ -358,6 +462,53 @@ export const drugsDatabase = [
         reasonEn: "Reduces gestational blood pressure spikes naturally.",
         reasonBn: "খাবারে বাড়তি কাঁচা লবণ এড়িয়ে চলা প্রেশার নিয়ন্ত্রণে সাহায্য করে।",
         type: "natural"
+      }
+    ]
+  },
+  {
+    id: "dexamethasone",
+    keywords: ["dexamethasone", "dexa", "decason", "ডেক্সামেথাসন", "ডেক্সা", "ডেকা সন", "steroid", "স্টেরয়েড"],
+    nameEn: "Dexamethasone (0.5mg / Oral)",
+    nameBn: "ডেক্সামেথাসন (০.৫ মিগ্রা / স্টেরয়েড)",
+    genericEn: "Dexamethasone (Corticosteroid)",
+    genericBn: "ডেক্সামেথাসন (কর্টিকোস্টেরয়েড)",
+    brandNames: ["Dexamethasone", "Dexa", "Decason"],
+    safetyRating: "unsafe",
+    trustLevel: "limited",
+    isOutOfCorpus: true,
+    confidenceScore: 18,
+    predictedLabel: "Hallucinated",
+    trustBadgeTextEn: "Out-of-Corpus Alert — High Hallucination Risk",
+    trustBadgeTextBn: "আউট-অফ-কর্পাস সতর্কতা — উচ্চ হ্যালুসিনেশন ঝুঁকি",
+    sourceEn: "Source: Outside 302 DGDA Maternal Corpus (No verified entry)",
+    sourceBn: "উৎস: ৩০২ ডিজিডিএ কর্পাসের বাইরে (কোনো ভেরিফাইড তথ্য নেই)",
+    answerEn: "⚠️ OUT-OF-CORPUS ALERT: Dexamethasone is NOT indexed in our verified 302 maternal drug safety registry. Without verified clinical grounding, the system refuses to generate ungrounded advice. Do not consume without direct obstetrician consultation.",
+    answerBn: "⚠️ আউট-অফ-কর্পাস সতর্কতা: ডেক্সামেথাসন (Dexamethasone) আমাদের ৩০২টি অনুমোদিত মাতৃত্বকালীন ড্রাগ কর্পাসে অন্তর্ভুক্ত নেই। ডিজিডিএ ডাটাবেজে ভেরিফাইড ক্লিনিক্যাল এন্ট্রি না থাকায় আমাদের RAG সিস্টেম কোনো অনির্ভরযোগ্য তথ্য পরিবেশন করে না। গর্ভাবস্থায় যেকোনো কর্টিকোস্টেরয়েড গ্রহণের পূর্বে অবশ্যই রেজিস্টার্ড গাইনি বিশেষজ্ঞের শরণাপন্ন হোন।",
+    directAnswer: "ডেক্সামেথাসন একটি শক্তিশালী স্টেরয়েড। গর্ভাবস্থায় শিশুর ফুসফুস পরিপক্ক করতে বা জটিল প্রদাহে ডাক্তারের পরামর্শে এটি ব্যবহার করা যেতে পারে। গর্ভবতী মায়েরা এটি প্রেসক্রিপশন অনুযায়ী খেতে পারেন।",
+    directAnswerEn: "Dexamethasone is a potent steroid. It can be used under medical supervision for fetal lung maturity or inflammation. Pregnant mothers can take it per prescription.",
+    explanationBn: "⚠️ এই ওষুধটি আমাদের ৩০২টি ওষুধের ডাটাবেজে অন্তর্ভুক্ত নেই। ফলে AI উত্তরের সত্যতা যাচাই করা যায়নি (কনটেক্সট সিমিলারিটি মাত্র ১৮%), যা ক্লিনিক্যালি মারাত্মক মিথ্যা আশ্বাসের (Hallucination) ঝুঁকি তৈরি করতে পারে।",
+    trimesterNoteEn: "High Risk / Unverified in maternal index. Requires specialist obstetrician decision.",
+    trimesterNoteBn: "মাতৃত্বকালীন ভেরিফাইড ইনডেক্সের বাইরে। বিশেষজ্ঞ চিকিৎসকের নিবিড় পরামর্শ ছাড়া সেবন সম্পূর্ণ নিষিদ্ধ।",
+    breastfeedingNoteEn: "Unverified; consult pediatrician.",
+    breastfeedingNoteBn: "যাচাইহীন তথ্য; শিশু বিশেষজ্ঞের পরামর্শ নিন।",
+    features: {
+      cosine_similarity: 0.18,
+      lexical_overlap_ratio: 0.12,
+      relevant_drug_retrieved: 0,
+      answer_length_words: 48,
+      hedging_count: 5,
+      query_type: "out-of-corpus"
+    },
+    retrievedChunks: [
+      { name: "Unrelated Drug Record (Lowest Match)", similarity_score: 0.182, text: "কর্পাসে 'ডেক্সামেথাসন' সম্পর্কিত কোনো ড্রাগ পাওয়া যায়নি। ভেক্টর সিমিলারিটি থ্রেশহোল্ড অতিক্রম করেনি।" }
+    ],
+    saferAlternatives: [
+      {
+        nameEn: "Specialist Obstetrician Consultation",
+        nameBn: "বিশেষজ্ঞ গাইনি চিকিৎসকের সরাসরি পরামর্শ",
+        reasonEn: "Unindexed steroid drugs must be evaluated in-person.",
+        reasonBn: "কর্পাসের বাইরের যেকোনো স্টেরয়েডের ক্ষেত্রে চিকিৎসকের পরামর্শ আবশ্যক।",
+        type: "consult"
       }
     ]
   }

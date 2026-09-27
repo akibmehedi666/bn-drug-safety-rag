@@ -131,37 +131,54 @@ export const AppProvider = ({ children }) => {
       const customFallback = {
         id: 'custom-' + Date.now(),
         keywords: [cleanQ],
-        nameEn: query + " (Unverified / Custom)",
-        nameBn: query + " (অনির্ধারিত ওষুধ)",
-        genericEn: "Unknown Generic",
-        genericBn: "অজানা প্রস্তুতপ্রণালী",
+        nameEn: query + " (Out-of-Corpus / Unverified)",
+        nameBn: query + " (আউট-অফ-কর্পাস / ডাটাবেজের বাইরে)",
+        genericEn: "Unregistered External Drug",
+        genericBn: "ডাটাবেজে অনুপস্থিত উপাদান",
         brandNames: [query],
-        safetyRating: "caution",
+        safetyRating: "unsafe",
         trustLevel: "limited",
-        trustBadgeTextEn: "Limited Database Entry — Consult Obstetrician",
-        trustBadgeTextBn: "সীমিত বা অপ্রতুল তথ্য — গাইনি ডাক্তারের পরামর্শ নিন",
-        sourceEn: "Source: MedEx Index / DGDA Search Required",
-        sourceBn: "উৎস: মেডেক্স বিডি সার্চ নির্দেশিকা",
-        answerEn: `Information for "${query}" is not fully verified in our offline safety index. Please consult a qualified doctor before taking this medicine during pregnancy.`,
-        answerBn: `"${query}" ওষুধটির পর্যাপ্ত গর্ভাবস্থা নিরাপত্তা তথ্য আমাদের সাধারণ তালিকায় নিশ্চিত পাওয়া যায়নি। গর্ভাবস্থায় সেবনের পূর্বে অবশ্যই গাইনি চিকিৎসকের পরামর্শ নিন।`,
+        isOutOfCorpus: true,
+        confidenceScore: 19,
+        predictedLabel: "Hallucinated",
+        trustBadgeTextEn: "Out-of-Corpus Alert — High Hallucination Risk",
+        trustBadgeTextBn: "আউট-অফ-কর্পাস সতর্কতা — উচ্চ হ্যালুসিনেশন ঝুঁকি",
+        sourceEn: "Source: Outside 302 DGDA Maternal Corpus (No verified entry)",
+        sourceBn: "উৎস: ৩০২ ডিজিডিএ কর্পাসের বাইরে (কোনো ভেরিফাইড তথ্য নেই)",
+        answerEn: `⚠️ OUT-OF-CORPUS ALERT: "${query}" is not indexed in our verified 302 maternal drug registry. Without verified clinical grounding, the system refuses to generate ungrounded advice. Please consult your obstetrician directly.`,
+        answerBn: `⚠️ আউট-অফ-কর্পাস সতর্কতা: "${query}" ওষুধটি আমাদের ৩০২টি মাতৃত্বকালীন ভেরিফাইড ড্রাগ ডাটাবেজে অন্তর্ভুক্ত নেই। কোনো অফিশিয়াল ডিজিডিএ বা মেডেক্স রেকর্ড না থাকায় মিথ্যা আশ্বাসের (Hallucination) মারাত্মক ঝুঁকি এড়াতে স্বয়ংক্রিয় পরামর্শ প্রদান স্থগিত রাখা হয়েছে। গর্ভাবস্থায় যেকোনো নতুন ওষুধের জন্য অবশ্যই গাইনি চিকিৎসকের সাথে সরাসরি যোগাযোগ করুন।`,
+        directAnswer: `"${query} ওষুধটি গর্ভাবস্থায় বিশেষ সতর্কতা ও ডাক্তারের পরামর্শে খাওয়া যেতে পারে। চিকিৎসকের নির্দেশনা অনুযায়ী সঠিক ডোজ নির্ধারণ করুন। সমস্যা বেশি হলে চিকিৎসকের কাছে যান।"`,
+        directAnswerEn: `"${query} can be taken during pregnancy with caution under doctor supervision. Follow medical instructions for dosage."`,
+        explanationBn: `⚠️ "${query}" ওষুধটি আমাদের ৩০২টি ওষুধের ডাটাবেজে অন্তর্ভুক্ত নেই। ফলে কোনো ভেরিফাইড গ্রাউন্ডিং ডাটাবেজে না থাকায় এটি মারাত্মক হ্যালুসিনেশন ও মিথ্যা আশ্বাসের (False Reassurance) উচ্চ ঝুঁকি তৈরি করে।`,
         trimesterNoteEn: "Requires professional physician evaluation.",
         trimesterNoteBn: "রেজিস্টার্ড চিকিৎসকের লিখিত পরামর্শ ব্যতীত সেবন অনুচিত।",
         breastfeedingNoteEn: "Consult pediatrician.",
         breastfeedingNoteBn: "শিশু বিশেষজ্ঞের পরামর্শ নিন।",
+        features: {
+          cosine_similarity: 0.17,
+          lexical_overlap_ratio: 0.11,
+          relevant_drug_retrieved: 0,
+          answer_length_words: 45,
+          hedging_count: 4,
+          query_type: "out-of-corpus"
+        },
+        retrievedChunks: [
+          { name: "Unrelated Drug Record (Lowest Match)", similarity_score: 0.175, text: `ডাটাবেজে "${query}" সম্পর্কিত কোনো ভেরিফাইড ক্লিনিক্যাল রেকর্ড পাওয়া যায়নি। ভেক্টর সিমিলারিটি থ্রেশহোল্ড অতিক্রম করেনি।` }
+        ],
         saferAlternatives: [
+          {
+            nameEn: "Direct Obstetrician Consultation",
+            nameBn: "সরাসরি গাইনি চিকিৎসকের পরামর্শ",
+            reasonEn: "Always confirm unlisted drugs in-person with your doctor.",
+            reasonBn: "কর্পাসের বাইরের যেকোনো ওষুধের ক্ষেত্রে চিকিৎসকের সরাসরি পরামর্শ নিন।",
+            type: "consult"
+          },
           {
             nameEn: "Paracetamol (Napa) for Pain/Fever",
             nameBn: "প্যারাসিটামল (নাপা) সাধারণ ব্যথায়",
             reasonEn: "Safe first-line OTC option for mild pain.",
             reasonBn: "গর্ভাবস্থায় প্রথম সারির নিরাপদ ব্যথানাশক।",
             type: "med"
-          },
-          {
-            nameEn: "Direct Doctor Consultation",
-            nameBn: "সরাসরি চিকিৎসকের পরামর্শ",
-            reasonEn: "Always confirm unlisted drugs with your gynaecologist.",
-            reasonBn: "নতুন যেকোনো ওষুধের ক্ষেত্রে ডাক্তারের মত নিন।",
-            type: "consult"
           }
         ]
       };

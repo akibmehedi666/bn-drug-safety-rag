@@ -76,17 +76,21 @@ export const AskScreen = () => {
           <div className="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none text-xs">
             {drugsDatabase.map((drug) => {
               const isSelected = activeDrug && activeDrug.id === drug.id;
+              const isOOC = drug.isOutOfCorpus;
               return (
                 <button
                   key={drug.id}
                   onClick={() => handleSelectDrug(drug)}
-                  className={`whitespace-nowrap px-3 py-1.5 rounded-full font-medium transition-all shadow-2xs active:scale-95 border ${
+                  className={`whitespace-nowrap px-3 py-1.5 rounded-full font-medium transition-all shadow-2xs active:scale-95 border flex items-center gap-1.5 ${
                     isSelected
                       ? 'bg-maternal-500 text-white border-maternal-600 shadow-warm-sm'
+                      : isOOC
+                      ? 'bg-rose-50 text-rose-800 border-rose-300 hover:bg-rose-100 font-semibold'
                       : 'bg-cream-card text-gray-700 border-maternal-200/80 hover:border-maternal-400'
                   }`}
                 >
-                  {lang === 'bn' ? drug.brandNames[0] : drug.brandNames[0]}
+                  {isOOC && <span className="text-[10px] bg-rose-200 text-rose-900 px-1.5 py-0.5 rounded-full font-bold">Out-of-Corpus</span>}
+                  <span>{lang === 'bn' ? drug.brandNames[0] : drug.brandNames[0]}</span>
                 </button>
               );
             })}
