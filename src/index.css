@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Outfit', 'Hind Siliguri', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Custom smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF6F0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E8B4A8;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D44C36;
+  }
+}
+
+/* Pulse animation for voice input visualizer */
+@keyframes wave-pulse {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1.2); }
+}
+
+.animate-wave-1 { animation: wave-pulse 1s infinite ease-in-out; }
+.animate-wave-2 { animation: wave-pulse 1s infinite ease-in-out 0.2s; }
+.animate-wave-3 { animation: wave-pulse 1s infinite ease-in-out 0.4s; }
+.animate-wave-4 { animation: wave-pulse 1s infinite ease-in-out 0.1s; }
+.animate-wave-5 { animation: wave-pulse 1s infinite ease-in-out 0.3s; }
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(255, 253, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav {
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
