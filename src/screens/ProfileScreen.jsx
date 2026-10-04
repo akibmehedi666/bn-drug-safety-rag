@@ -4,8 +4,9 @@ import { useApp } from '../context/AppContext';
 
 export const ProfileScreen = () => {
   const { lang, t, profile, updateProfile } = useApp();
-  const [stage, setStage] = useState(profile.stage);
-  const [week, setWeek] = useState(profile.week);
+  const [name, setName] = useState(profile.name || '');
+  const [stage, setStage] = useState(profile.stage || '1st');
+  const [week, setWeek] = useState(profile.week || 4);
   const [allergies, setAllergies] = useState(profile.allergies || []);
   const [conditions, setConditions] = useState(profile.conditions || []);
   const [savedToast, setSavedToast] = useState(false);
@@ -23,7 +24,7 @@ export const ProfileScreen = () => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    updateProfile({ stage, week, allergies, conditions });
+    updateProfile({ name, stage, week, allergies, conditions, isSetupDone: true });
     setSavedToast(true);
     setTimeout(() => setSavedToast(false), 3000);
   };
@@ -51,6 +52,20 @@ export const ProfileScreen = () => {
 
       <form onSubmit={handleSave} className="space-y-6">
         
+        {/* Mother's Name (Optional) */}
+        <div className="bg-cream-card p-5 rounded-3xl border border-maternal-200/70 shadow-warm-sm space-y-2">
+          <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+            {lang === 'bn' ? 'মায়ের নাম (ঐচ্ছিক)' : "Mother's Name (Optional)"}
+          </label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder={lang === 'bn' ? 'আপনার নাম লিখুন' : 'Enter your name'}
+            className="w-full bg-white px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:border-maternal-500 outline-hidden text-gray-900"
+          />
+        </div>
+
         {/* Stage Selector */}
         <div className="bg-cream-card p-5 rounded-3xl border border-maternal-200/70 shadow-warm-sm space-y-3">
           <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">

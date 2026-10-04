@@ -160,22 +160,29 @@ def generate_answer_gemini(prompt: str, model: str = None) -> str:
         raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable is not set.")
 
     client = genai.Client(api_key=api_key)
-    model_name = model or os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    models_to_try = [
+        model,
+        os.getenv("GEMINI_MODEL"),
+        "gemini-3.8-flash",
+        "gemini-3.5-flash",
+        "gemini-2.5-flash",
+        "gemini-flash-latest"
+    ]
+    models_to_try = [m for m in dict.fromkeys(models_to_try) if m]
 
-    try:
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt
-        )
-        return response.text.strip()
-    except Exception as e:
-        fallback_model = "gemini-1.5-flash"
-        print(f"Warning: Gemini model {model_name} error ({e}). Trying fallback {fallback_model}...")
-        response = client.models.generate_content(
-            model=fallback_model,
-            contents=prompt
-        )
-        return response.text.strip()
+    last_err = None
+    for m in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=m,
+                contents=prompt
+            )
+            return response.text.strip()
+        except Exception as e:
+            last_err = e
+            print(f"Gemini model {m} error ({e}). Trying next fallback model...")
+
+    raise last_err
 
 
 def generate_answer(prompt: str, model: str = None, allow_offline_fallback: bool = True) -> str:
@@ -232,19 +239,38 @@ def generate_direct_llm_answer(query: str, model: str = None) -> str:
     gemini_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY", "").strip()
     anthropic_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
 
+    last_error = None
+
     # 1. Try Gemini API directly without grounding context
     if gemini_key and gemini_key != "":
+        candidate_models = [model] if model else [
+            os.getenv("GEMINI_MODEL"),
+            "gemini-3.8-flash",
+            "gemini-3.5-flash",
+            "gemini-2.5-flash",
+            "gemini-flash-latest"
+        ]
+        candidate_models = [m for m in dict.fromkeys(candidate_models) if m]
+
         try:
             from google import genai
             client = genai.Client(api_key=gemini_key)
-            model_name = model or os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-            response = client.models.generate_content(
-                model=model_name,
-                contents=f"নিচের চিকিৎসা বিষয়ক প্রশ্নের সরাসরি বাংলায় উত্তর দিন:\n\n{query}"
-            )
-            return response.text.strip()
+            for m in candidate_models:
+                try:
+                    response = client.models.generate_content(
+                        model=m,
+                        contents=f"নিচের চিকিৎসা বিষয়ক প্রশ্নের সরাসরি বাংলায় উত্তর দিন:\n\n{query}"
+                    )
+                    return response.text.strip()
+                except Exception as m_err:
+                    last_error = str(m_err)
+                    print(f"Direct Gemini API error with model {m}: {m_err}")
+                    if "403" in last_error or "400" in last_error or "INVALID" in last_error:
+                        # Auth/Key issue, other models won't succeed either
+                        break
         except Exception as e:
-            print(f"Direct Gemini API error: {e}")
+            last_error = str(e)
+            print(f"Direct Gemini client initialization error: {e}")
 
     # 2. Try Anthropic API directly without grounding context
     if anthropic_key and anthropic_key != "" and "your_anthropic" not in anthropic_key:
@@ -261,32 +287,16 @@ def generate_direct_llm_answer(query: str, model: str = None) -> str:
         except Exception as e:
             print(f"Direct Anthropic API error: {e}")
 
-    # 3. Realistic unconstrained LLM demonstration output
-    q_lower = query.lower()
-    if "প্যারাসিটামল" in q_lower or "paracetamol" in q_lower:
-        return (
-            "প্যারাসিটামল গর্ভাবস্থায় এবং স্তন্যপানকালে সাধারণত ব্যথানাশক ও জ্বর কমানোর জন্য ব্যবহৃত হয়। "
-            "সাধারণত ৫০০ মি.গ্রা. ট্যাবলেট দিনে ২ থেকে ৩ বার খাবারের পর গ্রহণ করা যায়। তবে যেকোনো ওষুধ সেবনের আগে চিকিৎসকের পরামর্শ নেওয়া ভালো।"
-        )
-    elif "মেথোট্রেক্সেট" in q_lower or "methotrexate" in q_lower:
-        return (
-            "মেথোট্রেক্সেট একটি শক্তিশালী অ্যান্টি-মেটাবোলাইট ওষুধ যা বাত ও কিছু চর্মরোগের চিকিৎসায় ব্যবহৃত হয়। "
-            "গর্ভাবস্থায় এটি কেবল বিশেষজ্ঞ ডাক্তারের বিশেষ নির্দেশনায় ও সতর্ক পর্যবেক্ষণে নেওয়া যেতে পারে, তবে বেশি মাত্রায় সেবন করলে ভ্রূণের জন্মগত ত্রুটি বা অন্যান্য সমস্যা হওয়ার ঝুঁকি থাকে।"
-        )
-    elif "নাপা" in q_lower or "এইস" in q_lower or "napa" in q_lower or "ace" in q_lower:
-        return (
-            "নাপা বা এইস মূলত প্যারাসিটামলের বহুল পরিচিত ব্র্যান্ড। গর্ভাবস্থায় যেকোনো শারীরিক ব্যথা বা জ্বরে নাপা সেবন করা নিরাপদ বলে মনে করা হয়। "
-            "প্রয়োজনে দিনে ৩ বার পর্যন্ত এটি খাওয়া যায়।"
-        )
-    elif "আইবুপ্রোফেন" in q_lower or "ibuprofen" in q_lower:
-        return (
-            "আইবুপ্রোফেন একটি বহুল ব্যবহৃত ব্যথানাশক ওষুধ। গর্ভাবস্থায় তীব্র ব্যথা বা কোমরের ব্যথায় স্বল্প মাত্রায় এটি ব্যবহার করা যেতে পারে, তবে দীর্ঘমেয়াদে খাওয়া এড়িয়ে চলা উচিত।"
-        )
-    else:
-        return (
-            f"আপনার প্রশ্নের বিষয়ে বলা যায়, গর্ভাবস্থায় বা স্তন্যদানকালে ওষুধ সেবনের পূর্বে একজন রেজিস্টার্ড চিকিৎসকের সাথে পরামর্শ করা বাঞ্ছনীয়। "
-            f"রোগের তীব্রতার ওপর ভিত্তি করে চিকিৎসক উপযুক্ত ওষুধ ও মাত্রা নির্ধারণ করবেন।"
-        )
+    # 3. If an API key was provided but failed, show specific reason
+    if last_error:
+        if "403" in last_error:
+            return "LLM comparison unavailable (Gemini API 403: Project denied access or restricted key)"
+        if "400" in last_error or "API_KEY_INVALID" in last_error:
+            return "LLM comparison unavailable (Gemini API 400: API key is invalid)"
+        return f"LLM comparison unavailable (Gemini API error: {last_error[:60]})"
+
+    # 4. If no LLM API key is available
+    return "LLM comparison unavailable (API key not set)"
 
 
 def log_interaction(record: dict, log_file: str = LOGS_FILE):

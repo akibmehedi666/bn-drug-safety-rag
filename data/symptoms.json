@@ -1,0 +1,130 @@
+[
+  {
+    "id": "nausea",
+    "titleEn": "Morning Sickness & Nausea",
+    "titleBn": "সকালের বমি ভাব ও অরূচি",
+    "trimesterTag": "1st Trimester Common",
+    "descEn": "Nausea and vomiting during early pregnancy triggered by hormonal shifts.",
+    "descBn": "গর্ভাবস্থার শুরুর দিকে হরমোনের পরিবর্তনের কারণে সকালের দিকে বা খাবারের গন্ধে বমি ভাব হওয়া অত্যন্ত স্বাভাবিক।",
+    "selfCareEn": [
+      "Eat dry toast, muri (puffed rice), or plain biscuits right after waking up before getting out of bed.",
+      "Take small, frequent light meals instead of 3 heavy meals.",
+      "Sip ginger tea or warm lemon water slowly.",
+      "Avoid oily, deep-fried, and heavily spiced Bangladeshi street foods."
+    ],
+    "selfCareBn": [
+      "সকালে বিছানা থেকে ওঠার আগে ২-৩টি শুকনো মুড়ি, টোস্ট বা বিস্কুট মুখে দিন।",
+      "একবারে বেশি না খেয়ে সারাদিনে অল্প অল্প করে বার বার সুষম খাবার খান।",
+      "আদা চা বা হালকা লেবু পানি ধীরে ধীরে চুমুক দিয়ে পান করুন।",
+      "অতিরিক্ত তেল-মসলাযুক্ত খাবার ও ছাঁকা তেলে ভাজা খাবার পুরোপুরি এড়িয়ে চলুন।"
+    ],
+    "redFlagEn": [
+      "Unable to keep any water or fluids down for more than 24 hours.",
+      "Severe weight loss, extreme dizziness, or dark yellow concentrated urine.",
+      "Vomiting blood or coffee-ground material."
+    ],
+    "redFlagBn": [
+      "২৪ ঘণ্টার বেশি সময় ধরে কোনো পানি বা তরল পেটে না টিকলে ও ঘন ঘন বমি হলে।",
+      "চোখে অন্ধকার দেখা, চরম দুর্বলতা বা প্রস্রাবের পরিমাণ আশঙ্কাজনকভাবে কমে গেলে।",
+      "বমির সাথে রক্ত দেখা দিলে অবিলম্বে হাসপাতালে ভর্তি হোন।"
+    ],
+    "source": "",
+    "reviewed": false
+  },
+  {
+    "id": "heartburn",
+    "titleEn": "Heartburn & Acid Reflux (Gastric)",
+    "titleBn": "বুকজ্বালা ও এসিডিটি (গ্যাস্ট্রিক)",
+    "trimesterTag": "2nd & 3rd Trimester",
+    "descEn": "Burning sensation in chest or throat caused by stomach acid being pushed up by growing uterus.",
+    "descBn": "গর্ভস্থ শিশু বড় হওয়ার কারণে পেটে চাপ পড়ে এবং পাকস্থলীর এসিড ওপরে উঠে বুক ও গলা জ্বালাপোড়া করে।",
+    "selfCareEn": [
+      "Do not lie down immediately after dinner; wait at least 1.5 to 2 hours.",
+      "Elevate your head with an extra pillow while sleeping.",
+      "Sip cold pasteurized milk or chew safe antacids (Entacyd).",
+      "Avoid carbonated soft drinks, raw chilies, and tea/coffee on an empty stomach."
+    ],
+    "selfCareBn": [
+      "রাতে খাওয়ার সাথে সাথেই শুয়ে পড়বেন না; অন্তত ২ ঘণ্টা বসে বা হেঁটে সময় দিন।",
+      "ঘুমানোর সময় মাথার নিচে দুটি বালিশ দিয়ে মাথা কিছুটা উঁচু রাখুন।",
+      "ঠাণ্ডা দুধ পান করুন বা ডাক্তারের পরামর্শে এন্টাসিড চিবিয়ে খান।",
+      "খালি পেটে চা-কফি, কাঁচা মরিচ ও তেলের ভাজাপোড়া একদম বন্ধ রাখুন।"
+    ],
+    "redFlagEn": [
+      "Severe crushing chest pain spreading to left arm or neck.",
+      "Difficulty swallowing or severe pain when food passes down.",
+      "Black tarry stools or persistent vomiting."
+    ],
+    "redFlagBn": [
+      "বুকের তীব্র ব্যথা যদি বাঁ হাত বা ঘাড়ে ছড়িয়ে পড়ে।",
+      "খাবার গিলতে তীব্র কষ্ট হলে বা মল পুরোপুরি কালো হলে।",
+      "তীব্র পেটের ব্যথায় অস্থির লাগলে দ্রুত চিকিৎসকের কাছে যান।"
+    ],
+    "source": "",
+    "reviewed": false
+  },
+  {
+    "id": "swelling",
+    "titleEn": "Swollen Feet & Ankles (Edema)",
+    "titleBn": "পা ও গোড়ালি ফোলা (এডিমিয়া)",
+    "trimesterTag": "3rd Trimester Common",
+    "descEn": "Mild swelling of feet and ankles caused by fluid retention and vein pressure.",
+    "descBn": "গর্ভাবস্থার শেষের দিকে শরীরে পানি জমে ও রক্ত সঞ্চালনের চাপে পা ও গোড়ালি কিছুটা ফোলা স্বাভাবিক ঘটনা।",
+    "selfCareEn": [
+      "Elevate your feet on a cushion when sitting or resting.",
+      "Avoid standing or sitting cross-legged for long stretches.",
+      "Wear comfortable, non-tight soft footwear.",
+      "Drink plenty of clean water (at least 2.5 - 3 liters daily)."
+    ],
+    "selfCareBn": [
+      "বসার সময় বা ঘুমানোর সময় পায়ের নিচে একটি বালিশ দিয়ে পা কিছুটা উঁচুতে রাখুন।",
+      "একটানা পা ঝুলিয়ে বসে থাকবেন না বা দীর্ঘক্ষণ দাঁড়িয়ে থাকবেন না।",
+      "নরম আরামদায়ক ফ্ল্যাট জুতো ব্যবহার করুন।",
+      "পর্যাপ্ত নিরাপদ পানি (দিনে অন্তত ৮-১০ গ্লাস) পান করুন।"
+    ],
+    "redFlagEn": [
+      "SUDDEN swelling of face, hands, or around eyes.",
+      "Severe persistent headache, blurred vision, or seeing spots.",
+      "High blood pressure reading (>140/90 mmHg) — WARNING FOR PREECLAMPSIA."
+    ],
+    "redFlagBn": [
+      "হঠাৎ করে মুখমণ্ডল, হাত বা চোখের চারপাশ অস্বাভাবিকভাবে ফুলে গেলে।",
+      "তীব্র মাথা ব্যথা, চোখে ঝাপসা দেখা বা আলোর প্রাবল্য সহ্য করতে না পারা।",
+      "রক্তচাপ বেড়ে ১৪০/৯০ এর উপরে গেলে (এটি প্রি-এক্ল্যাম্পসিয়ার লক্ষণ হতে পারে)।"
+    ],
+    "source": "",
+    "reviewed": false
+  },
+  {
+    "id": "backpain",
+    "titleEn": "Lower Backache & Pelvic Strain",
+    "titleBn": "কোমর ব্যথা ও তলপেটের টান",
+    "trimesterTag": "All Trimesters",
+    "descEn": "Hormonal loosening of ligaments combined with shift in center of gravity.",
+    "descBn": "গর্ভাবস্থায় হরমোনের প্রভাবে জয়েন্ট ও লিগামেন্ট নরম হয়ে যায় এবং গর্ভের ওজনের কারণে কোমরে চাপ সৃষ্টি হয়।",
+    "selfCareEn": [
+      "Bend from your knees, not from your waist when picking up objects.",
+      "Sleep on your left side with a pillow between your knees.",
+      "Use warm water bag compresses for 10-15 minutes.",
+      "Avoid wearing high-heeled shoes."
+    ],
+    "selfCareBn": [
+      "নিচে কিছু কুড়াতে কোমর না বাঁকিয়ে হাঁটু ভাজ করে বসুন।",
+      "ঘুমানোর সময় বাম পাশ ফিরে শোন এবং দুই হাঁটুর মাঝখানে পাতলা বালিশ রাখুন।",
+      "কোমরে সুতি কাপড়ে হালকা গরম পানির শেঁক নিন।",
+      "উঁচু হিলের জুতো পরা বন্ধ রাখুন।"
+    ],
+    "redFlagEn": [
+      "Rhythmic cramping or pain accompanied by vaginal bleeding or fluid leaking.",
+      "Fever, chills, or severe burning sensation during urination.",
+      "Numbness or loss of feeling in legs or pelvic area."
+    ],
+    "redFlagBn": [
+      "কোমর ব্যথার সাথে তলপেটে কামড়ানি বা যোনিপথে রক্তপাত / পানি ভাঙা শুরু হলে।",
+      "ব্যথার সাথে জ্বর আসা বা প্রস্রাবে তীব্র জ্বালাপোড়া (ইউরিন ইনফেকশন)।",
+      "পায়ে অবশ ভাব এলে বা প্রসব বেদনার মতো নিয়মিত বিরতিতে ব্যথা হলে।"
+    ],
+    "source": "",
+    "reviewed": false
+  }
+]

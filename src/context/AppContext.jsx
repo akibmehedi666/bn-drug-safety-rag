@@ -1,31 +1,70 @@
-import React, { createContext, useContext, useState } from 'react';
-import { uiTranslations, initialProfile, drugsDatabase, defaultTrackerItems } from '../data/mockData';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+import { uiTranslations, initialProfile, prenatalSupplementSuggestions } from '../data/mockData';
 
 const AppContext = createContext();
 
+// Format date to local YYYY-MM-DD
+export const getLocalDateString = (dateObj = new Date()) => {
+  const d = new Date(dateObj);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 export const AppProvider = ({ children }) => {
-  const [lang, setLang] = useState('bn'); // Default to Bengali for local authenticity
+  // Persisted state via useLocalStorage
+  const [lang, setLang] = useLocalStorage('gorbhomaya_lang', 'bn');
+  const [profile, setProfile] = useLocalStorage('gorbhomaya_profile', initialProfile);
+  const [bookmarkedIds, setBookmarkedIds] = useLocalStorage('gorbhomaya_bookmarks', []);
+  const [trackerItems, setTrackerItems] = useLocalStorage('gorbhomaya_tracker_items', []);
+  const [trackerHistory, setTrackerHistory] = useLocalStorage('gorbhomaya_tracker_history', {});
+
+  // Ephemeral UI state
   const [activeTab, setActiveTab] = useState('home');
-  const [profile, setProfile] = useState(initialProfile);
-  const [bookmarkedIds, setBookmarkedIds] = useState(['napa', 'filwel']);
-  const [trackerItems, setTrackerItems] = useState(defaultTrackerItems);
-  const [streakDays, setStreakDays] = useState(7);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDrug, setActiveDrug] = useState(drugsDatabase[0]); // Default to Napa
+  const [activeDrug, setActiveDrug] = useState(null);
   const [isVoiceOpen, setIsVoiceOpen] = useState(false);
-
-  const [ragResult, setRagResult] = useState(null);
   const [isSearchingRag, setIsSearchingRag] = useState(false);
+  const [searchError, setSearchError] = useState(null);
+  const [drugsList, setDrugsList] = useState([]);
+  const [isLoadingDrugs, setIsLoadingDrugs] = useState(false);
 
-  // Translations shortcut
-  const t = uiTranslations[lang];
+  // Translations
+  const t = uiTranslations[lang] || uiTranslations.bn;
 
+  // Language toggle
   const toggleLanguage = () => {
-    setLang(prev => prev === 'bn' ? 'en' : 'bn');
+    setLang(prev => (prev === 'bn' ? 'en' : 'bn'));
   };
 
+  // Fetch real 302-drug corpus list from Flask backend
+  useEffect(() => {
+    let isMounted = true;
+    const loadDrugs = async () => {
+      setIsLoadingDrugs(true);
+      try {
+        const res = await fetch('/api/drugs');
+        if (res.ok) {
+          const data = await res.json();
+          if (isMounted && data.drugs && Array.isArray(data.drugs)) {
+            setDrugsList(data.drugs);
+          }
+        }
+      } catch (err) {
+        console.warn('Could not load backend /api/drugs list, will retry on demand.', err);
+      } finally {
+        if (isMounted) setIsLoadingDrugs(false);
+      }
+    };
+    loadDrugs();
+    return () => { isMounted = false; };
+  }, []);
+
+  // Profile operations
   const setWeek = (weekNum) => {
-    const w = Math.min(Math.max(Number(weekNum) || 1, 1), 40);
+    const w = Math.min(Math.max(Number(weekNum) || 1, 1), 42);
     let stage = '1st';
     if (w >= 28) stage = '3rd';
     else if (w >= 13) stage = '2nd';
@@ -33,194 +72,231 @@ export const AppProvider = ({ children }) => {
     setProfile(prev => ({ ...prev, week: w, stage }));
   };
 
+  const updateProfile = (updates) => {
+    setProfile(prev => ({ ...prev, ...updates }));
+  };
+
+  // Bookmarking
   const toggleBookmark = (drugId) => {
+    if (!drugId) return;
     setBookmarkedIds(prev => 
       prev.includes(drugId) ? prev.filter(id => id !== drugId) : [...prev, drugId]
     );
   };
 
-  const isBookmarked = (drugId) => bookmarkedIds.includes(drugId);
+  const isBookmarked = (drugId) => drugId ? bookmarkedIds.includes(drugId) : false;
 
-  const toggleTrackerItem = (id) => {
-    setTrackerItems(prev => prev.map(item => {
-      if (item.id === id) {
-        return { ...item, done: !item.done };
-      }
-      return item;
+  // Tracker operations
+  const todayStr = getLocalDateString();
+
+  // Compute items for today with their current 'done' status
+  const currentTrackerItems = useMemo(() => {
+    const todayCompleted = trackerHistory[todayStr] || {};
+    return trackerItems.map(item => ({
+      ...item,
+      done: !!todayCompleted[item.id]
     }));
+  }, [trackerItems, trackerHistory, todayStr]);
+
+  const toggleTrackerItem = (id, targetDate = todayStr) => {
+    setTrackerHistory(prev => {
+      const dayRecord = { ...(prev[targetDate] || {}) };
+      if (dayRecord[id]) {
+        delete dayRecord[id];
+      } else {
+        dayRecord[id] = true;
+      }
+      return {
+        ...prev,
+        [targetDate]: dayRecord
+      };
+    });
   };
 
-  const addTrackerItem = (nameEn, nameBn, time) => {
+  const addTrackerItem = (nameEn, nameBn, time, nutrientKey = null) => {
     const newItem = {
-      id: Date.now(),
-      nameEn,
-      nameBn: nameBn || nameEn,
+      id: 'med_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+      nameEn: nameEn.trim(),
+      nameBn: (nameBn || nameEn).trim(),
       time: time || 'morning',
-      done: false
+      nutrientKey: nutrientKey || null
     };
     setTrackerItems(prev => [...prev, newItem]);
   };
 
+  const removeTrackerItem = (id) => {
+    setTrackerItems(prev => prev.filter(item => item.id !== id));
+    // Also clean up today's record if present
+    setTrackerHistory(prev => {
+      const updated = { ...prev };
+      for (const d of Object.keys(updated)) {
+        if (updated[d] && updated[d][id]) {
+          const dayCopy = { ...updated[d] };
+          delete dayCopy[id];
+          updated[d] = dayCopy;
+        }
+      }
+      return updated;
+    });
+  };
+
+  // Real Streak & Adherence Computation
+  const { streakDays, adherencePct } = useMemo(() => {
+    if (trackerItems.length === 0) {
+      return { streakDays: 0, adherencePct: 0 };
+    }
+
+    const scheduledCount = trackerItems.length;
+
+    // Helper: is a specific date fully completed?
+    const isDayFullyCompleted = (dStr) => {
+      const dayRecord = trackerHistory[dStr];
+      if (!dayRecord) return false;
+      const completedIds = Object.keys(dayRecord).filter(k => dayRecord[k]);
+      return trackerItems.every(item => completedIds.includes(item.id));
+    };
+
+    // Calculate streak backwards from today or yesterday
+    let streak = 0;
+    const todayComplete = isDayFullyCompleted(todayStr);
+
+    if (todayComplete) {
+      streak = 1;
+    }
+
+    // Step backwards day by day
+    let checkDate = new Date();
+    // Start checking from yesterday
+    checkDate.setDate(checkDate.getDate() - 1);
+
+    while (true) {
+      const dStr = getLocalDateString(checkDate);
+      if (isDayFullyCompleted(dStr)) {
+        streak += 1;
+        checkDate.setDate(checkDate.getDate() - 1);
+      } else {
+        // Missed day halts streak
+        break;
+      }
+    }
+
+    // Adherence %: calculate over past 30 days or all recorded days
+    let totalScheduled = 0;
+    let totalCompleted = 0;
+
+    // Look at past 14 days
+    for (let i = 0; i < 14; i++) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const dStr = getLocalDateString(d);
+      const dayRecord = trackerHistory[dStr] || {};
+      const completedOnDay = Object.keys(dayRecord).filter(k => dayRecord[k]).length;
+
+      // Only count days where user had supplements configured or took anything
+      if (i === 0 || completedOnDay > 0) {
+        totalScheduled += scheduledCount;
+        totalCompleted += Math.min(completedOnDay, scheduledCount);
+      }
+    }
+
+    const calculatedAdherence = totalScheduled > 0 
+      ? Math.round((totalCompleted / totalScheduled) * 100) 
+      : (todayComplete ? 100 : 0);
+
+    return {
+      streakDays: streak,
+      adherencePct: calculatedAdherence
+    };
+  }, [trackerItems, trackerHistory, todayStr]);
+
+  // Drug Query via real RAG Flask API
   const searchDrug = async (query) => {
-    const cleanQ = query.trim();
+    const cleanQ = (query || '').trim();
     setSearchQuery(query);
+    setSearchError(null);
     if (!cleanQ) return null;
 
     setIsSearchingRag(true);
-    const qLower = cleanQ.toLowerCase();
-    const tokens = qLower.split(/[\s,?!;.:/\\()]+/).filter(w => w.length >= 3);
-
-    let matchedLocal = drugsDatabase.find(d => {
-      const genEn = (d.genericEn || '').toLowerCase();
-      const genBn = (d.genericBn || '').toLowerCase();
-      const nameEn = (d.nameEn || '').toLowerCase();
-      const nameBn = (d.nameBn || '').toLowerCase();
-
-      // 1. Direct name / generic match in query string
-      if (
-        (genEn && qLower.includes(genEn)) ||
-        (genBn && qLower.includes(genBn)) ||
-        (nameEn && qLower.includes(nameEn)) ||
-        (nameBn && qLower.includes(nameBn)) ||
-        tokens.some(t => genEn.includes(t) || genBn.includes(t))
-      ) {
-        return true;
-      }
-
-      // 2. Keyword check: does query contain keyword, or does any token match keyword
-      if (d.keywords && d.keywords.some(k => {
-        const kLower = k.toLowerCase();
-        return qLower.includes(kLower) || tokens.some(t => t === kLower || (t.length >= 4 && kLower.includes(t)));
-      })) {
-        return true;
-      }
-
-      // 3. Brand name check
-      if (d.brandNames && d.brandNames.some(b => {
-        const bLower = b.toLowerCase();
-        return qLower.includes(bLower) || tokens.some(t => t === bLower);
-      })) {
-        return true;
-      }
-
-      return false;
-    });
 
     try {
-      // Attempt querying Flask Python RAG backend
-      const res = await fetch('http://127.0.0.1:5000/api/query', {
+      const res = await fetch('/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: cleanQ })
+        body: JSON.stringify({ 
+          question: cleanQ,
+          profile: {
+            stage: profile.stage,
+            week: profile.week,
+            allergies: profile.allergies || [],
+            conditions: profile.conditions || []
+          }
+        })
       });
 
-      if (res.ok) {
-        const data = await res.json();
-        setRagResult(data);
-        
-        // Construct drug card object from RAG API response
-        const ragDrug = {
-          id: 'rag-' + Date.now(),
-          keywords: [cleanQ],
-          nameEn: data.question + " (RAG Grounded)",
-          nameBn: data.question + " (RAG ভেরিফাইড)",
-          genericEn: data.retrieved_chunks?.[0]?.name || "302 MCH Drug Corpus",
-          genericBn: data.retrieved_chunks?.[0]?.name || "৩০২ ড্রাগস ডাটাবেজ",
-          brandNames: [cleanQ],
-          safetyRating: data.predicted_label === 'Faithful' ? 'safe' : data.predicted_label === 'Hallucinated' ? 'unsafe' : 'caution',
-          trustLevel: 'verified',
-          trustBadgeTextEn: `RAG Confidence: ${data.confidence_score}% (${data.predicted_label})`,
-          trustBadgeTextBn: `RAG কনফিডেন্স স্কর: ${data.confidence_score}% (${data.predicted_label === 'Faithful' ? 'বিশ্বস্ত' : data.predicted_label === 'Hallucinated' ? 'হ্যালুসিনেটেড' : 'আংশিক'})`,
-          sourceEn: "Bangla Drug-Safety RAG & Random Forest Classifier (98.3% Precision)",
-          sourceBn: "বাংলা ড্রাগ-সেফটি RAG ও র্যান্ডম ফরেস্ট হ্যালুসিনেশন ফিল্টার (৯৮.৩% প্রিসিশন)",
-          answerEn: data.answer,
-          answerBn: data.answer,
-          directAnswer: data.direct_answer,
-          explanationBn: data.explanation_bn,
-          trimesterNoteEn: data.explanation_bn || "Verified against MCH 302 Drug Corpus.",
-          trimesterNoteBn: data.explanation_bn || "৩০২টি ওষুধের ভেরিফাইড ডাটাবেজ থেকে সংগৃহীত।",
-          breastfeedingNoteEn: "Refer to retrieved clinical context.",
-          breastfeedingNoteBn: "সংগৃহীত ক্লিনিক্যাল রেকর্ড অনুযায়ী যাচাইকৃত।",
-          features: data.features,
-          retrievedChunks: data.retrieved_chunks,
-          saferAlternatives: matchedLocal ? matchedLocal.saferAlternatives : []
-        };
-
-        setActiveDrug(ragDrug);
-        setIsSearchingRag(false);
-        return ragDrug;
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || `Server responded with status ${res.status}`);
       }
-    } catch (e) {
-      console.log('RAG API server offline or unreachable, using local database fallback.', e);
-    }
 
-    setIsSearchingRag(false);
+      const data = await res.json();
+      
+      const isOOC = !!data.is_out_of_corpus_alert;
+      const label = data.predicted_label || 'Partial';
+      
+      let safetyRating = 'caution';
+      if (label === 'Faithful') safetyRating = 'safe';
+      else if (label === 'Hallucinated' || isOOC) safetyRating = 'unsafe';
 
-    if (matchedLocal) {
-      setActiveDrug(matchedLocal);
-      return matchedLocal;
-    } else {
-      const customFallback = {
-        id: 'custom-' + Date.now(),
-        keywords: [cleanQ],
-        nameEn: query + " (Out-of-Corpus / Unverified)",
-        nameBn: query + " (আউট-অফ-কর্পাস / ডাটাবেজের বাইরে)",
-        genericEn: "Unregistered External Drug",
-        genericBn: "ডাটাবেজে অনুপস্থিত উপাদান",
-        brandNames: [query],
-        safetyRating: "unsafe",
-        trustLevel: "limited",
-        isOutOfCorpus: true,
-        confidenceScore: 19,
-        predictedLabel: "Hallucinated",
-        trustBadgeTextEn: "Out-of-Corpus Alert — High Hallucination Risk",
-        trustBadgeTextBn: "আউট-অফ-কর্পাস সতর্কতা — উচ্চ হ্যালুসিনেশন ঝুঁকি",
-        sourceEn: "Source: Outside 302 DGDA Maternal Corpus (No verified entry)",
-        sourceBn: "উৎস: ৩০২ ডিজিডিএ কর্পাসের বাইরে (কোনো ভেরিফাইড তথ্য নেই)",
-        answerEn: `⚠️ OUT-OF-CORPUS ALERT: "${query}" is not indexed in our verified 302 maternal drug registry. Without verified clinical grounding, the system refuses to generate ungrounded advice. Please consult your obstetrician directly.`,
-        answerBn: `⚠️ আউট-অফ-কর্পাস সতর্কতা: "${query}" ওষুধটি আমাদের ৩০২টি মাতৃত্বকালীন ভেরিফাইড ড্রাগ ডাটাবেজে অন্তর্ভুক্ত নেই। কোনো অফিশিয়াল ডিজিডিএ বা মেডেক্স রেকর্ড না থাকায় মিথ্যা আশ্বাসের (Hallucination) মারাত্মক ঝুঁকি এড়াতে স্বয়ংক্রিয় পরামর্শ প্রদান স্থগিত রাখা হয়েছে। গর্ভাবস্থায় যেকোনো নতুন ওষুধের জন্য অবশ্যই গাইনি চিকিৎসকের সাথে সরাসরি যোগাযোগ করুন।`,
-        directAnswer: `"${query} ওষুধটি গর্ভাবস্থায় বিশেষ সতর্কতা ও ডাক্তারের পরামর্শে খাওয়া যেতে পারে। চিকিৎসকের নির্দেশনা অনুযায়ী সঠিক ডোজ নির্ধারণ করুন। সমস্যা বেশি হলে চিকিৎসকের কাছে যান।"`,
-        directAnswerEn: `"${query} can be taken during pregnancy with caution under doctor supervision. Follow medical instructions for dosage."`,
-        explanationBn: `⚠️ "${query}" ওষুধটি আমাদের ৩০২টি ওষুধের ডাটাবেজে অন্তর্ভুক্ত নেই। ফলে কোনো ভেরিফাইড গ্রাউন্ডিং ডাটাবেজে না থাকায় এটি মারাত্মক হ্যালুসিনেশন ও মিথ্যা আশ্বাসের (False Reassurance) উচ্চ ঝুঁকি তৈরি করে।`,
-        trimesterNoteEn: "Requires professional physician evaluation.",
-        trimesterNoteBn: "রেজিস্টার্ড চিকিৎসকের লিখিত পরামর্শ ব্যতীত সেবন অনুচিত।",
-        breastfeedingNoteEn: "Consult pediatrician.",
-        breastfeedingNoteBn: "শিশু বিশেষজ্ঞের পরামর্শ নিন।",
-        features: {
-          cosine_similarity: 0.17,
-          lexical_overlap_ratio: 0.11,
-          relevant_drug_retrieved: 0,
-          answer_length_words: 45,
-          hedging_count: 4,
-          query_type: "out-of-corpus"
-        },
-        retrievedChunks: [
-          { name: "Unrelated Drug Record (Lowest Match)", similarity_score: 0.175, text: `ডাটাবেজে "${query}" সম্পর্কিত কোনো ভেরিফাইড ক্লিনিক্যাল রেকর্ড পাওয়া যায়নি। ভেক্টর সিমিলারিটি থ্রেশহোল্ড অতিক্রম করেনি।` }
-        ],
-        saferAlternatives: [
+      const ragDrug = {
+        id: 'query-' + Date.now(),
+        nameEn: data.question,
+        nameBn: data.question,
+        genericEn: data.retrieved_chunks?.[0]?.name || (isOOC ? 'Unlisted External Drug' : '302 MCH Drug Corpus'),
+        genericBn: data.retrieved_chunks?.[0]?.name || (isOOC ? 'ডাটাবেজে অনুপস্থিত উপাদান' : '৩০২ মাতৃত্বকালীন কর্পাস'),
+        safetyRating,
+        confidenceScore: data.confidence_score,
+        predictedLabel: label,
+        isOutOfCorpus: isOOC,
+        sourceEn: 'Bangla Drug-Safety RAG & Random Forest Classifier (98.3% Accuracy)',
+        sourceBn: 'বাংলা ড্রাগ-সেফটি RAG ও র্যান্ডম ফরেস্ট ফিল্টার (৯৮.৩% প্রিসিশন)',
+        answerEn: data.answer,
+        answerBn: data.answer,
+        directAnswer: data.direct_answer,
+        explanationBn: data.explanation_bn,
+        trimesterNoteEn: data.explanation_bn || 'Verified against DGDA 302 Drug Corpus.',
+        trimesterNoteBn: data.explanation_bn || '৩০২টি ওষুধের ডিজিডিএ অনুমোদিত ডাটাবেজ থেকে যাচাইকৃত।',
+        breastfeedingNoteEn: 'Refer to retrieved clinical context.',
+        breastfeedingNoteBn: 'সংগৃহীত ক্লিনিক্যাল রেকর্ড অনুযায়ী যাচাইকৃত।',
+        features: data.features,
+        retrievedChunks: data.retrieved_chunks || [],
+        personalizedWarnings: data.personalized_warnings || [],
+        saferAlternatives: isOOC ? [
           {
-            nameEn: "Direct Obstetrician Consultation",
-            nameBn: "সরাসরি গাইনি চিকিৎসকের পরামর্শ",
-            reasonEn: "Always confirm unlisted drugs in-person with your doctor.",
-            reasonBn: "কর্পাসের বাইরের যেকোনো ওষুধের ক্ষেত্রে চিকিৎসকের সরাসরি পরামর্শ নিন।",
-            type: "consult"
+            nameEn: 'Direct Obstetrician Consultation',
+            nameBn: 'সরাসরি গাইনি চিকিৎসকের পরামর্শ',
+            reasonEn: 'Unlisted external medicines require in-person prescription verification.',
+            reasonBn: 'ডাটাবেজে অনুপস্থিত যেকোনো ওষুধের ক্ষেত্রে চিকিৎসকের সরাসরি পরামর্শ নিন।',
+            type: 'consult'
           },
           {
-            nameEn: "Paracetamol (Napa) for Pain/Fever",
-            nameBn: "প্যারাসিটামল (নাপা) সাধারণ ব্যথায়",
-            reasonEn: "Safe first-line OTC option for mild pain.",
-            reasonBn: "গর্ভাবস্থায় প্রথম সারির নিরাপদ ব্যথানাশক।",
-            type: "med"
+            nameEn: 'Paracetamol (Napa / Ace)',
+            nameBn: 'প্যারাসিটামল (নাপা / এইস)',
+            reasonEn: 'Standard first-line OTC antipyretic & analgesic in pregnancy.',
+            reasonBn: 'গর্ভকালীন সাধারণ জ্বর ও ব্যথায় প্রথম পছন্দের নিরাপদ ওষুধ।',
+            type: 'med'
           }
-        ]
+        ] : []
       };
-      setActiveDrug(customFallback);
-      return customFallback;
-    }
-  };
 
-  const updateProfile = (newProfile) => {
-    setProfile(prev => ({ ...prev, ...newProfile }));
+      setActiveDrug(ragDrug);
+      setIsSearchingRag(false);
+      return ragDrug;
+    } catch (err) {
+      console.error('Error during /api/query:', err);
+      setSearchError(err.message || 'Could not connect to drug safety service.');
+      setIsSearchingRag(false);
+      return null;
+    }
   };
 
   return (
@@ -236,17 +312,23 @@ export const AppProvider = ({ children }) => {
       bookmarkedIds,
       toggleBookmark,
       isBookmarked,
-      trackerItems,
+      trackerItems: currentTrackerItems,
+      rawTrackerItems: trackerItems,
       toggleTrackerItem,
       addTrackerItem,
+      removeTrackerItem,
       streakDays,
+      adherencePct,
       searchQuery,
       setSearchQuery,
       activeDrug,
       setActiveDrug,
       searchDrug,
-      ragResult,
       isSearchingRag,
+      searchError,
+      drugsList,
+      isLoadingDrugs,
+      prenatalSupplementSuggestions,
       isVoiceOpen,
       setIsVoiceOpen
     }}>

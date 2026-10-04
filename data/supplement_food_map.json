@@ -1,0 +1,124 @@
+{
+  "iron": {
+    "nutrientEn": "Iron",
+    "nutrientBn": "আয়রন / লৌহ",
+    "keywords": [
+      "iron",
+      "fefol",
+      "ferrous",
+      "আয়রন",
+      "ফেরাস",
+      "ফেফল"
+    ],
+    "richFoodsEn": [
+      "Green banana (Kanchakala)",
+      "Dates (Khajur)",
+      "Danta & Lal Shak",
+      "Shing fish",
+      "Red meat"
+    ],
+    "richFoodsBn": [
+      "কাঁচাকলা",
+      "খেজুর",
+      "ডাটা ও লাল শাক",
+      "শিং মাছ",
+      "লাল মাংস"
+    ],
+    "eatWithEn": "Take your iron supplement or eat iron-rich foods with Vitamin C sources (amla, guava, lemon). This doubles iron absorption.",
+    "eatWithBn": "আয়রন সাপ্লিমেন্ট বা আয়রনসমৃদ্ধ খাবার সবসময় ভিটামিন সি যুক্ত খাবারের সাথে খান (আমলকী, পেয়ারা, লেবু)। এতে আয়রন শোষণ দ্বিগুণ হয়।",
+    "avoidWithEn": "Avoid tea, coffee, and milk within 2 hours of iron dose. These block iron absorption significantly.",
+    "avoidWithBn": "আয়রন খাওয়ার ২ ঘণ্টার মধ্যে চা, কফি ও দুধ খাবেন না। এগুলো আয়রন শোষণে বাধা দেয়।",
+    "missedDoseTipEn": "If you miss your iron supplement, eat iron-rich foods today: green banana, dates, red lal shak, shing fish. Food is not a replacement — talk to your doctor about catching up.",
+    "missedDoseTipBn": "আজ আয়রন সাপ্লিমেন্ট না খেতে পারলে আয়রনসমৃদ্ধ খাবার খান: কাঁচাকলা, খেজুর, লাল শাক, শিং মাছ। তবে খাবার সাপ্লিমেন্টের বিকল্প নয় — ডাক্তারের পরামর্শ নিন।",
+    "reviewed": false
+  },
+  "folic_acid": {
+    "nutrientEn": "Folic Acid (Folate)",
+    "nutrientBn": "ফলিক এসিড",
+    "keywords": [
+      "folic",
+      "folate",
+      "folison",
+      "ফলিক",
+      "ফলিসন"
+    ],
+    "richFoodsEn": [
+      "Danta & Lal Shak (Amaranth greens)",
+      "Dark green leafy vegetables",
+      "Amla",
+      "Legumes (lentils, daal)"
+    ],
+    "richFoodsBn": [
+      "ডাটা ও লাল শাক",
+      "গাঢ় সবুজ শাকসবজি",
+      "আমলকী",
+      "ডাল (মসুর, মুগ)"
+    ],
+    "eatWithEn": "Folate-rich foods are best eaten lightly cooked to preserve the vitamin. Pair with Vitamin C foods.",
+    "eatWithBn": "ফোলেট সমৃদ্ধ খাবার হালকা রান্না করে খাওয়া ভালো। ভিটামিন সি যুক্ত খাবারের সাথে খেলে আরও কার্যকর।",
+    "avoidWithEn": "Avoid overcooking green vegetables — high heat destroys folate. Avoid raw alcohol (strictly prohibited in pregnancy).",
+    "avoidWithBn": "সবুজ শাকসবজি বেশি সময় ধরে রান্না করবেন না — অতিরিক্ত তাপে ফলিক এসিড নষ্ট হয়।",
+    "missedDoseTipEn": "If you miss folic acid, eat folate-rich foods: lal shak, danta shak, lentil daal. Food is not a replacement — talk to your doctor.",
+    "missedDoseTipBn": "আজ ফলিক এসিড না খেতে পারলে ফোলেটসমৃদ্ধ খাবার খান: লাল শাক, ডাটা শাক, মসুর ডাল। খাবার সাপ্লিমেন্টের বিকল্প নয় — ডাক্তারের পরামর্শ নিন।",
+    "reviewed": false
+  },
+  "calcium": {
+    "nutrientEn": "Calcium",
+    "nutrientBn": "ক্যালসিয়াম",
+    "keywords": [
+      "calcium",
+      "calbo",
+      "ক্যালসিয়াম",
+      "ক্যালবো"
+    ],
+    "richFoodsEn": [
+      "Pasteurized milk (1-2 glasses daily)",
+      "Milk pudding / Firni / Semai",
+      "Small fish with bones (Mola fish)",
+      "Sesame seeds (til)"
+    ],
+    "richFoodsBn": [
+      "পাস্তুরিত দুধ (দিনে ১-২ গ্লাস)",
+      "পায়েস / ফিরনি / সেমাই",
+      "মলা মাছ (কাঁটাসহ)",
+      "তিলের বীজ"
+    ],
+    "eatWithEn": "Calcium is best absorbed when taken with Vitamin D (sunlight exposure helps). Take calcium tablet with a meal.",
+    "eatWithBn": "ক্যালসিয়াম সবচেয়ে ভালো শোষিত হয় যদি ভিটামিন ডি (সূর্যালোক) থাকে। ক্যালসিয়াম ট্যাবলেট খাবারের সাথে খান।",
+    "avoidWithEn": "Keep iron and calcium doses 2 hours apart — they compete for absorption. Avoid excessive tea/spinach near calcium doses.",
+    "avoidWithBn": "আয়রন ও ক্যালসিয়াম ট্যাবলেট একসাথে বা কাছাকাছি সময়ে খাবেন না (অন্তত ২ ঘণ্টার ব্যবধান রাখুন) — দুটো একই পথে শোষিত হয়।",
+    "missedDoseTipEn": "If you miss calcium supplement, eat calcium-rich foods: boiled milk, small whole fish (Mola), sesame seeds. Food is not a replacement — talk to your doctor.",
+    "missedDoseTipBn": "আজ ক্যালসিয়াম না খেতে পারলে ক্যালসিয়ামসমৃদ্ধ খাবার খান: দুধ, মলা মাছ, তিলের বীজ। খাবার সাপ্লিমেন্টের বিকল্প নয় — ডাক্তারের পরামর্শ নিন।",
+    "reviewed": false
+  },
+  "vitamin_d": {
+    "nutrientEn": "Vitamin D",
+    "nutrientBn": "ভিটামিন ডি",
+    "keywords": [
+      "vitamin d",
+      "d-rise",
+      "cholecalciferol",
+      "ভিটামিন ডি",
+      "ডি-রাইজ"
+    ],
+    "richFoodsEn": [
+      "Boiled egg yolk (Deshi egg)",
+      "Fatty fish (hilsha, tuna)",
+      "Fortified milk",
+      "Safe sunlight exposure 15-20 min/day"
+    ],
+    "richFoodsBn": [
+      "সেদ্ধ ডিমের কুসুম (দেশি ডিম)",
+      "তৈলাক্ত মাছ (ইলিশ, টুনা)",
+      "ফর্টিফাইড দুধ",
+      "দিনে ১৫-২০ মিনিট সরাসরি সূর্যালোক"
+    ],
+    "eatWithEn": "Vitamin D is fat-soluble — best absorbed when taken with a fatty meal (egg, fish, milk). Sunlight is the main source.",
+    "eatWithBn": "ভিটামিন ডি চর্বিতে দ্রবণীয় — ডিম, মাছ বা দুধজাতীয় খাবারের সাথে খেলে ভালো শোষিত হয়। সূর্যালোকই সবচেয়ে ভালো উৎস।",
+    "avoidWithEn": "Avoid taking Vitamin D on an empty stomach. It needs dietary fat to be absorbed properly.",
+    "avoidWithBn": "খালি পেটে ভিটামিন ডি খাবেন না। শোষণের জন্য খাবারের চর্বির প্রয়োজন।",
+    "missedDoseTipEn": "If you miss Vitamin D, try to get 15-20 minutes of morning sunlight and eat egg yolk or fatty fish. Food is not a replacement — talk to your doctor.",
+    "missedDoseTipBn": "আজ ভিটামিন ডি না খেতে পারলে সকালের সূর্যালোকে ১৫-২০ মিনিট থাকুন এবং ডিমের কুসুম বা তৈলাক্ত মাছ খান। খাবার সাপ্লিমেন্টের বিকল্প নয় — ডাক্তারের পরামর্শ নিন।",
+    "reviewed": false
+  }
+}

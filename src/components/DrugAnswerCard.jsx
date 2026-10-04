@@ -176,6 +176,25 @@ export const DrugAnswerCard = ({ drug }) => {
         </div>
       </div>
 
+      {/* ⚠️ PROMINENT PERSONALIZED WARNING CARD (TASK 2) */}
+      {drug.personalizedWarnings && drug.personalizedWarnings.length > 0 && (
+        <div className="bg-amber-50 border-2 border-amber-400 rounded-2xl p-4 sm:p-5 text-amber-950 shadow-sm space-y-2.5">
+          <div className="flex items-center gap-2 text-amber-900 font-extrabold text-sm sm:text-base">
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+            <span>
+              {lang === 'bn' ? '⚠️ আপনার প্রোফাইলভিত্তিক ব্যক্তিগত সতর্কতা:' : '⚠️ Personalized Health Warnings from Your Profile:'}
+            </span>
+          </div>
+          <div className="space-y-1.5 sm:pl-7">
+            {drug.personalizedWarnings.map((w, idx) => (
+              <div key={idx} className="p-2.5 rounded-xl bg-white/95 border border-amber-300 text-xs sm:text-sm font-medium leading-relaxed text-amber-900 flex items-start gap-2 shadow-2xs">
+                <span>{lang === 'bn' ? (w.bn || w.en) : (w.en || w.bn)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Primary Trust Badge Component */}
       <TrustBadge drug={drug} />
 
@@ -253,9 +272,25 @@ export const DrugAnswerCard = ({ drug }) => {
               </span>
 
               {/* Direct LLM Answer Box */}
-              <div className="bg-[#FFF1F2] border-2 border-[#FECDD3] border-l-4 border-l-[#F43F5E] text-[#881337] p-4 rounded-xl text-sm sm:text-base leading-relaxed font-normal whitespace-pre-line">
-                {drug.directAnswer || (lang === 'bn' ? 'কোনো সরাসরি উত্তর পাওয়া যায়নি।' : 'No direct ungrounded answer available.')}
-              </div>
+              {(!drug.directAnswer || drug.directAnswer.toLowerCase().includes('unavailable') || drug.directAnswer.toLowerCase().includes('api key')) ? (
+                <div className="bg-amber-50/70 border-2 border-dashed border-amber-300 text-amber-900 p-4 rounded-xl text-xs sm:text-sm leading-relaxed space-y-1.5">
+                  <div className="font-bold flex items-center gap-1.5 text-amber-950">
+                    <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
+                    <span>
+                      {drug.directAnswer || (lang === 'bn' ? 'সরাসরি এলএলএম তুলনা অনুপলব্ধ' : 'LLM comparison unavailable')}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-amber-800/90">
+                    {lang === 'bn'
+                      ? 'রোগীর নিরাপত্তার স্বার্থে অনুমাননির্ভর ডেমো উত্তর বন্ধ রাখা হয়েছে। Google AI Studio থেকে সক্রিয় Gemini API কী যুক্ত করুন।'
+                      : 'Ungrounded direct comparison requires an active Gemini API key from Google AI Studio. Fake demonstration answers are disabled.'}
+                  </p>
+                </div>
+              ) : (
+                <div className="bg-[#FFF1F2] border-2 border-[#FECDD3] border-l-4 border-l-[#F43F5E] text-[#881337] p-4 rounded-xl text-sm sm:text-base leading-relaxed font-normal whitespace-pre-line">
+                  {drug.directAnswer}
+                </div>
+              )}
             </div>
 
             {/* Why This Is Dangerous Callout */}

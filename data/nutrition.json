@@ -1,0 +1,214 @@
+[
+  {
+    "id": "kanchakala",
+    "nameEn": "Kanchakala (Green Banana)",
+    "nameBn": "কাঁচাকলা (কাঁচা কলা)",
+    "category": "iron",
+    "categoryLabelEn": "Iron & Digest Support",
+    "categoryLabelBn": "আয়রন ও হজম সহায়ক",
+    "trimesters": [
+      "1st",
+      "2nd",
+      "3rd"
+    ],
+    "img": "🍌",
+    "whyEn": "Rich in plant iron, dietary fiber, and potassium. Helps relieve pregnancy diarrhea and morning nausea.",
+    "whyBn": "প্রচুর আয়রন, ফাইবার ও পটাশিয়াম সমৃদ্ধ। গর্ভকালীন পাতলা পায়খানা ও বমি ভাব কমাতে দারুণ কার্যকরী।",
+    "prepEn": "Boiled and mashed (Kanchakala Bharta) with mustard oil and cumin, or light curry with Shing mach.",
+    "prepBn": "কাঁচাকলা সেদ্ধ ভর্তা অথবা শিং মাছের সাথে পাতলা ঝোল রান্না করে খাওয়া অত্যন্ত পুষ্টিকর।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "iron"
+    ],
+    "eatWith": [
+      "vitamin_c_foods"
+    ],
+    "avoidWith": []
+  },
+  {
+    "id": "danta_shak",
+    "nameEn": "Danta & Lal Shak (Amaranth Greens)",
+    "nameBn": "ডাটা ও লাল শাক",
+    "category": "folate",
+    "categoryLabelEn": "Folate & Hemoglobin Booster",
+    "categoryLabelBn": "ফলিক এসিড ও হিমোগ্লোবিন বৃদ্ধিকারক",
+    "trimesters": [
+      "1st",
+      "2nd"
+    ],
+    "img": "🥬",
+    "whyEn": "High natural Folic Acid to support neural tube development in babies and iron to build maternal hemoglobin.",
+    "whyBn": "প্রচুর প্রাকৃতিক ফলিক এসিড ও আয়রন রয়েছে যা শিশুর মস্তিষ্কের বিকাশ ঘটায় এবং মায়ের রক্তশূন্যতা প্রতিরোধ করে।",
+    "prepEn": "Lightly sauteed with garlic and onions; do not overcook to retain vitamin C & folate.",
+    "prepBn": "রসুন ও পেঁয়াজ দিয়ে হালকা ভাজি করে খাবেন। বেশি সময় ধরে কড়া করে ভাজলে ভিটামিন নষ্ট হয়ে যায়।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "folic_acid",
+      "iron"
+    ],
+    "eatWith": [],
+    "avoidWith": []
+  },
+  {
+    "id": "shing_mach",
+    "nameEn": "Shing & Magur Mach (Stinging Catfish)",
+    "nameBn": "শিং ও মাগুর মাছ",
+    "category": "protein",
+    "categoryLabelEn": "Protein & Muscle Recovery",
+    "categoryLabelBn": "সহজপ্রাচ্য প্রোটিন ও শক্তিদায়ক",
+    "trimesters": [
+      "1st",
+      "2nd",
+      "3rd",
+      "lactation"
+    ],
+    "img": "🐟",
+    "whyEn": "Easily digestible high-quality protein, essential for fetal organ growth and recovering maternal strength.",
+    "whyBn": "খুব সহজে হজমযোগ্য মানসম্মত প্রোটিন ও আয়রন। দুর্বলতা কাটাতে এবং গর্ভস্থ শিশুর অঙ্গ গঠনে সেরা খাবার।",
+    "prepEn": "Light watery soup (Jhol) cooked with papaya, raw banana, and minimal spices.",
+    "prepBn": "কাঁচা পেঁপে ও কাঁচাকলা দিয়ে হালকা মশলায় পাতলা সিঙি মাছের ঝোল পেট ঠাণ্ডা রাখে।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [],
+    "eatWith": [],
+    "avoidWith": []
+  },
+  {
+    "id": "deshi_egg",
+    "nameEn": "Deshi Egg (Boiled Poultry/Duck Egg)",
+    "nameBn": "দেশি ডিম (সেদ্ধ)",
+    "category": "protein",
+    "categoryLabelEn": "Choline & Protein",
+    "categoryLabelBn": "কোলিন ও সেরা প্রোটিন",
+    "trimesters": [
+      "1st",
+      "2nd",
+      "3rd",
+      "lactation"
+    ],
+    "img": "🥚",
+    "whyEn": "Contains Choline which boosts baby brain development and complete amino acids for maternal health.",
+    "whyBn": "ডিমের কুসুমে কোলিন থাকে যা শিশুর মেধা ও মগজের গঠনে সহায়ক। মায়ের দৈনিক প্রোটিনের চাহিদা মেটায়।",
+    "prepEn": "Hard boil thoroughly. Avoid raw or half-boiled eggs to prevent Salmonella infection.",
+    "prepBn": "অবশ্যই ভালোভাবে শক্ত করে সেদ্ধ করে খাবেন। গর্ভাবস্থায় হাফ-বয়েল ডিম খাওয়া বিপজ্জনক।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "vitamin_d"
+    ],
+    "eatWith": [],
+    "avoidWith": []
+  },
+  {
+    "id": "milk_calcium",
+    "nameEn": "Deshi Pasteurized Milk / Milk Pudding",
+    "nameBn": "খাঁটি তরল দুধ বা ক্ষীর",
+    "category": "calcium",
+    "categoryLabelEn": "Calcium & Fetal Bone Structure",
+    "categoryLabelBn": "ক্যালসিয়াম ও হাড়ের গঠন",
+    "trimesters": [
+      "1st",
+      "2nd",
+      "3rd",
+      "lactation"
+    ],
+    "img": "🥛",
+    "whyEn": "Primary calcium source preventing maternal bone density loss and supporting baby's skeleton development.",
+    "whyBn": "মায়ের কোমর ও পিঠের হাড় শক্ত রাখে এবং গর্ভের শিশুর সুন্দর কঙ্কাল গঠনে প্রধান সাহায্যকারী।",
+    "prepEn": "Boil well. Drink 1-2 glasses daily, or take as homemade Firni/Semai with low sugar.",
+    "prepBn": "ভালোভাবে ফুটিয়ে দিনে ১-২ গ্লাস পান করুন অথবা হালকা মিষ্টি দিয়ে পায়েস তৈরি করে খান।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "calcium"
+    ],
+    "eatWith": [],
+    "avoidWith": [
+      "iron"
+    ]
+  },
+  {
+    "id": "dates_khajur",
+    "nameEn": "Deshi & Gulf Dates (Khajur)",
+    "nameBn": "খেজুর",
+    "category": "iron",
+    "categoryLabelEn": "Natural Energy & Labor Support",
+    "categoryLabelBn": "প্রাকৃতিক শক্তি ও হিমোগ্লোবিন",
+    "trimesters": [
+      "2nd",
+      "3rd",
+      "lactation"
+    ],
+    "img": "🌴",
+    "whyEn": "Loaded with potassium, iron, and fiber. Natural sugar combats pregnancy fatigue; 3rd trimester use supports easier labor.",
+    "whyBn": "প্রচুর পটাশিয়াম, ফাইবার ও আয়রন সমৃদ্ধ। ৩য় ত্রৈমাসিকে নিয়মিত খেলে স্বাভাবিক প্রসবের সম্ভাবনা বাড়ে ও শক্তি যোগায়।",
+    "prepEn": "Eat 2-3 clean dates daily in the morning or as an afternoon snack.",
+    "prepBn": "প্রতিদিন সকালে বা বিকালে ২-৩টি পরিষ্কার খেজুর ভালো করে ধুয়ে খান।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "iron"
+    ],
+    "eatWith": [
+      "vitamin_c_foods"
+    ],
+    "avoidWith": []
+  },
+  {
+    "id": "amla_vitamin_c",
+    "nameEn": "Amla & Guava (Vitamin C Sources)",
+    "nameBn": "আমলকী ও পেয়ারা (ভিটামিন সি)",
+    "category": "folate",
+    "categoryLabelEn": "Vitamin C & Iron Absorption",
+    "categoryLabelBn": "ভিটামিন সি ও আয়রন শোষণ সহায়ক",
+    "trimesters": [
+      "1st",
+      "2nd",
+      "3rd",
+      "lactation"
+    ],
+    "img": "🍈",
+    "whyEn": "Very high in Vitamin C which significantly boosts iron absorption from food and supplements. Eat alongside iron-rich meals.",
+    "whyBn": "অত্যন্ত উচ্চ ভিটামিন সি সমৃদ্ধ যা খাবার ও আয়রন ট্যাবলেট থেকে আয়রন শোষণ বহুগুণ বৃদ্ধি করে। আয়রন সাপ্লিমেন্টের সাথে বা পরে খাওয়া ভালো।",
+    "prepEn": "Eat raw amla with a pinch of salt, or as fresh juice. Guava can be eaten directly. Best eaten at time of iron tablet.",
+    "prepBn": "কাঁচা আমলকী লবণ দিয়ে খান বা রস করুন। পেয়ারা সরাসরি খাওয়া যায়। আয়রন ট্যাবলেটের সময় খাওয়া সবচেয়ে উপকারী।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "iron",
+      "folic_acid"
+    ],
+    "eatWith": [
+      "iron"
+    ],
+    "avoidWith": []
+  },
+  {
+    "id": "lemon_water",
+    "nameEn": "Lemon Water (Morning Nausea Relief)",
+    "nameBn": "লেবু পানি (বমি ভাব দূর করে)",
+    "category": "folate",
+    "categoryLabelEn": "Nausea Relief & Vitamin C",
+    "categoryLabelBn": "বমি ভাব নিরাময় ও ভিটামিন সি",
+    "trimesters": [
+      "1st",
+      "2nd"
+    ],
+    "img": "🍋",
+    "whyEn": "Lemon's citric acid calms nausea and provides Vitamin C. Sipping lemon water in the morning is a safe, drug-free remedy.",
+    "whyBn": "লেবুর সাইট্রিক এসিড বমি ভাব কমায় এবং ভিটামিন সি সরবরাহ করে। সকালে ঘুম থেকে উঠে লেবু পানি পান করা সম্পূর্ণ নিরাপদ ও কার্যকর উপায়।",
+    "prepEn": "Squeeze half a lemon in warm water with a pinch of ginger or honey. Sip slowly.",
+    "prepBn": "আধা চা-চামচ লেবুর রস গরম পানিতে মিশিয়ে সকালে আস্তে আস্তে চুমুক দিয়ে পান করুন।",
+    "source": "",
+    "reviewed": false,
+    "supplementLinks": [
+      "iron"
+    ],
+    "eatWith": [
+      "iron"
+    ],
+    "avoidWith": []
+  }
+]
