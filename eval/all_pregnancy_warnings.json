@@ -1,0 +1,2418 @@
+[
+  {
+    "id": 1,
+    "name": "ফেরাস সালফেট (আয়রন) (Ferrous sulfate)",
+    "generic": "Ferrous sulfate",
+    "brand": "ফেফল / Fefol",
+    "pw": "সাধারণত নিরাপদ, নিয়মিত গর্ভকালীন সাপ্লিমেন্ট (Generally safe; standard antenatal supplement)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 2,
+    "name": "ফলিক এসিড (Folic acid)",
+    "generic": "Folic acid",
+    "brand": "ফলিসন / Folison",
+    "pw": "নিরাপদ এবং সুপারিশকৃত (নিউরাল টিউব ত্রুটি প্রতিরোধ করে) (Safe and recommended (prevents neural tube defects))",
+    "contra": "অনির্ণীত অ্যানিমিয়া বা ফলিক অ্যাসিডের প্রতি অতিসংবেদনশীলতা ছাড়া সাধারণত কোনো কঠোর বাধা নেই।"
+  },
+  {
+    "id": 3,
+    "name": "ক্যালসিয়াম কার্বনেট (Calcium carbonate)",
+    "generic": "Calcium carbonate",
+    "brand": "ক্যালবো-ডি / Calbo-D",
+    "pw": "নিরাপদ, নিয়মিত সাপ্লিমেন্ট (Safe; standard supplementation)",
+    "contra": "হাইপারক্যালসেমিয়া (রক্তে অতিরিক্ত ক্যালসিয়াম) এবং কিডনিতে পাথর থাকলে ব্যবহার নিষিদ্ধ।"
+  },
+  {
+    "id": 4,
+    "name": "ভিটামিন ডি৩ (Cholecalciferol)",
+    "generic": "Cholecalciferol",
+    "brand": "ডি-রাইজ / D-Rise",
+    "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe within recommended doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 5,
+    "name": "পাইরিডক্সিন (ভিটামিন বি৬) (Pyridoxine)",
+    "generic": "Pyridoxine",
+    "brand": "ভিটাবেক্স-৬ / Vitabex-6",
+    "pw": "নিরাপদ; গর্ভকালীন বমি বমি ভাবের প্রথম সারির চিকিৎসা (Safe; first-line for nausea/vomiting in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 6,
+    "name": "মেটোক্লোপ্রামাইড (Metoclopramide)",
+    "generic": "Metoclopramide",
+    "brand": "ম্যাক্সোলন / Maxolon",
+    "pw": "সাধারণত নিরাপদ বলে বিবেচিত (Generally considered safe; used for hyperemesis)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 7,
+    "name": "অনডানসেট্রন (Ondansetron)",
+    "generic": "Ondansetron",
+    "brand": "ইমেসেট / Emeset",
+    "pw": "প্রথম ত্রৈমাসিকে ক্লেফট প্যালেট ঝুঁকি নিয়ে সীমিত/মিশ্র তথ্য (Limited/mixed data on cleft palate risk with 1st-trimester use)",
+    "contra": "কনজেনিটাল লং কিউটি সিন্ড্রোম এবং অ্যাপোমোরফিনের সাথে একযোগে সেবন সম্পূর্ণ নিষিদ্ধ।"
+  },
+  {
+    "id": 8,
+    "name": "প্রোমেথাজিন (Promethazine)",
+    "generic": "Promethazine",
+    "brand": "ফেনারগান / Phenergan",
+    "pw": "দীর্ঘদিনের ব্যবহারের রেকর্ড; প্রসবকালে সতর্কতা প্রয়োজন (Long track record; caution at term (neonatal sedation))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 9,
+    "name": "প্যারাসিটামল (Acetaminophen)",
+    "generic": "Acetaminophen",
+    "brand": "নাপা / Napa",
+    "pw": "নিরাপদ; গর্ভাবস্থায় প্রথম সারির ব্যথা-জ্বরের ওষুধ (Safe; first-line analgesic/antipyretic in pregnancy)",
+    "contra": "তীব্র লিভারের রোগ (Severe hepatic impairment) বা প্যারাসিটামলের প্রতি অতিসংবেদনশীলতা থাকলে সেবন নিষিদ্ধ।"
+  },
+  {
+    "id": 10,
+    "name": "আইবুপ্রোফেন (Ibuprofen)",
+    "generic": "Ibuprofen",
+    "brand": "ফেনিল / Fenil",
+    "pw": "তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid in 3rd trimester (premature ductus closure))",
+    "contra": "পেপটিক আলসার, সক্রিয় গ্যাস্ট্রোইনটেস্টাইনাল রক্তপাত, গুরুতর কিডনি বা হৃদরোগ থাকলে এটি সেবন নিষিদ্ধ।"
+  },
+  {
+    "id": 11,
+    "name": "অ্যাসপিরিন (কম মাত্রা) (Acetylsalicylic acid)",
+    "generic": "Acetylsalicylic acid",
+    "brand": "ইকোস্প্রিন / Ecosprin",
+    "pw": "কম মাত্রায় ক্লিনিক্যালি ব্যবহৃত; উচ্চ মাত্রা এড়িয়ে চলুন (Low-dose used clinically (pre-eclampsia prevention); high-dose avoided)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 12,
+    "name": "ডাইক্লোফেনাক (Diclofenac)",
+    "generic": "Diclofenac",
+    "brand": "ডাইক্লোরান / Dicloran",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester (NSAID class effect))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 13,
+    "name": "অ্যামোক্সিসিলিন (Amoxicillin)",
+    "generic": "Amoxicillin",
+    "brand": "মক্সাসিল / Moxacil",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used in pregnancy)",
+    "contra": "পেনিসিলিন গোত্রের যেকোনো অ্যান্টিবায়োটিকের প্রতি অ্যালার্জি থাকলে কঠোরভাবে নিষিদ্ধ।"
+  },
+  {
+    "id": 14,
+    "name": "অ্যাজিথ্রোমাইসিন (Azithromycin)",
+    "generic": "Azithromycin",
+    "brand": "এজিন / Azin",
+    "pw": "অ্যান্টিবায়োটিক প্রয়োজন হলে সাধারণত নিরাপদ (Generally considered safe when antibiotic needed)",
+    "contra": "ম্যাক্রোলাইড গোত্রের ওষুধের প্রতি অতিসংবেদনশীলতা এবং লিভারের গুরুতর সমস্যায় নিষিদ্ধ।"
+  },
+  {
+    "id": 15,
+    "name": "সেফালেক্সিন (Cephalexin)",
+    "generic": "Cephalexin",
+    "brand": "সেফলেক্স / Ceflex",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 16,
+    "name": "নাইট্রোফুরানটয়িন (Nitrofurantoin)",
+    "generic": "Nitrofurantoin",
+    "brand": "",
+    "pw": "প্রসবের কাছাকাছি সময়ে সাধারণত এড়িয়ে চলা হয় (Generally avoided near term (neonatal hemolysis risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 17,
+    "name": "সিপ্রোফ্লক্সাসিন (Ciprofloxacin)",
+    "generic": "Ciprofloxacin",
+    "brand": "সিপ্রোসিন / Ciprocin",
+    "pw": "সাধারণত এড়িয়ে চলা হয় (Generally avoided (fluoroquinolone cartilage concerns))",
+    "contra": "ফ্লুরোকুইনোলোন এলার্জি এবং টেনডন সমস্যার পূর্ব ইতিহাস থাকলে এটি নিষিদ্ধ।"
+  },
+  {
+    "id": 18,
+    "name": "ডক্সিসাইক্লিন (Doxycycline)",
+    "generic": "Doxycycline",
+    "brand": "ডক্সিক্যাপ / Doxicap",
+    "pw": "এড়িয়ে চলা হয় (টেট্রাসাইক্লিন শ্রেণি) (Avoided (tetracycline class - teeth/bone effects))",
+    "contra": "টেট্রাসাইক্লিন গোত্রের অ্যালার্জি এবং ৮ বছরের কম বয়সী শিশুদের ক্ষেত্রে নিষিদ্ধ।"
+  },
+  {
+    "id": 19,
+    "name": "মেট্রোনিডাজল (Metronidazole)",
+    "generic": "Metronidazole",
+    "brand": "ফ্ল্যাজিল / Flagyl",
+    "pw": "প্রথম ত্রৈমাসিকে সতর্কতা (Caution in 1st trimester; used later if needed)",
+    "contra": "মেট্রোনিডাজলের প্রতি অ্যালার্জি এবং সেবনকালীন অবস্থায় অ্যালকোহল গ্রহণ সম্পূর্ণরূপে নিষিদ্ধ।"
+  },
+  {
+    "id": 20,
+    "name": "কো-ট্রাইমক্সাজল (Sulfamethoxazole/Trimethoprim)",
+    "generic": "Sulfamethoxazole/Trimethoprim",
+    "brand": "সালমেক্স / Sulmex",
+    "pw": "প্রসবের কাছাকাছি সময়ে এড়িয়ে চলা হয় (Avoided near term (kernicterus risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 21,
+    "name": "ল্যাবেটালল (Labetalol)",
+    "generic": "Labetalol",
+    "brand": "ট্রেট / Trate",
+    "pw": "নিরাপদ; গর্ভকালীন উচ্চ রক্তচাপের প্রথম সারির ওষুধ (Considered safe; first-line for pregnancy hypertension)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 22,
+    "name": "মিথাইলডোপা (Methyldopa)",
+    "generic": "Methyldopa",
+    "brand": "অ্যালডোমেট / Aldomet",
+    "pw": "দীর্ঘদিনের নিরাপত্তা রেকর্ড (Long safety record; first-line agent)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 23,
+    "name": "নিফেডিপিন (Nifedipine)",
+    "generic": "Nifedipine",
+    "brand": "নিফেডিন / Nifedin",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 24,
+    "name": "এনালাপ্রিল (Enalapril)",
+    "generic": "Enalapril",
+    "brand": "এনাপ্রিল / Enapril",
+    "pw": "নিষিদ্ধ (এসিই ইনহিবিটর) (CONTRAINDICATED (ACE inhibitor - fetal renal toxicity))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 25,
+    "name": "মেটফরমিন (Metformin)",
+    "generic": "Metformin",
+    "brand": "কমিড / Comid",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe; used for gestational diabetes)",
+    "contra": "গুরুতর কিডনি রোগ, ডায়াবেটিক কিটোঅ্যাসিডোসিস এবং মেটাবলিক অ্যাসিডোসিসে নিষিদ্ধ।"
+  },
+  {
+    "id": 26,
+    "name": "ইনসুলিন (Insulin (various))",
+    "generic": "Insulin (various)",
+    "brand": "নভোমিক্স / Novomix",
+    "pw": "নিরাপদ; চিকিৎসার মানদণ্ড (Safe; standard of care)",
+    "contra": "হাইপোগ্লাইসেমিয়া (রক্তে শর্করার মাত্রা কমে যাওয়া) অবস্থায় গ্রহণ নিষিদ্ধ।"
+  },
+  {
+    "id": 27,
+    "name": "সিউডোএফেড্রিন (Pseudoephedrine)",
+    "generic": "Pseudoephedrine",
+    "brand": "রাইনিল / Rhinil",
+    "pw": "প্রথম ত্রৈমাসিকে সতর্কতা (Caution 1st trimester (gastroschisis association))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 28,
+    "name": "ডেক্সট্রোমেথরফান (Dextromethorphan)",
+    "generic": "Dextromethorphan",
+    "brand": "টুসক্যাল / Tuscal",
+    "pw": "সীমিত তথ্য; স্বল্পমেয়াদে কম ঝুঁকিপূর্ণ (Limited data; generally low risk short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 29,
+    "name": "গুয়াইফেনেসিন (Guaifenesin)",
+    "generic": "Guaifenesin",
+    "brand": "মিউকোলাইট / Mucolyte",
+    "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকিপূর্ণ (Limited data; generally low risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 30,
+    "name": "সেটিরিজিন (Cetirizine)",
+    "generic": "Cetirizine",
+    "brand": "আলাট্রল / Alatrol",
+    "pw": "দ্বিতীয় প্রজন্মের অ্যান্টিহিস্টামিন; ভালো তথ্য (Second-gen antihistamine; reassuring data)",
+    "contra": "সেট্রিজিন বা হাইড্রোক্সিজিনের প্রতি অ্যালার্জি এবং তীব্র কিডনি ফেইলিওরে পরিহার্য।"
+  },
+  {
+    "id": 31,
+    "name": "লোরাটাডিন (Loratadine)",
+    "generic": "Loratadine",
+    "brand": "লোরাটিন / Loratin",
+    "pw": "সাধারণত ভালো তথ্য (Generally reassuring data)",
+    "contra": "লোরাটাডিনের প্রতি সংবেদনশীলতা এবং ২ বছরের কম বয়সী শিশুদের ক্ষেত্রে সাধারণত নির্দেশিত নয়।"
+  },
+  {
+    "id": 32,
+    "name": "ক্লোরফেনিরামিন মালিয়েট (Chlorpheniramine maleate)",
+    "generic": "Chlorpheniramine maleate",
+    "brand": "পিরিটন / Piriton",
+    "pw": "দীর্ঘদিনের ব্যবহারের রেকর্ড (Long track record, generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 33,
+    "name": "ডাইফেনহাইড্রামিন (Diphenhydramine)",
+    "generic": "Diphenhydramine",
+    "brand": "বেনাড্রিল / Benadryl",
+    "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally considered safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 34,
+    "name": "প্যারাসিটামল সিরাপ (শিশু) (Acetaminophen (Pediatric))",
+    "generic": "Acetaminophen (Pediatric)",
+    "brand": "নাপা সিরাপ / Napa Syrup",
+    "pw": "N/A - শিশুর জন্য (N/A - pediatric dosing, not maternal)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 35,
+    "name": "অ্যামোক্সিসিলিন সাসপেনশন (শিশু) (Amoxicillin (Pediatric))",
+    "generic": "Amoxicillin (Pediatric)",
+    "brand": "মক্সাসিল সিরাপ / Moxacil Syrup",
+    "pw": "N/A - শিশুর ডোজিং প্রশ্ন (N/A - pediatric dosing question)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 36,
+    "name": "খাবার স্যালাইন (ওআরএস) (Oral rehydration salts)",
+    "generic": "Oral rehydration salts",
+    "brand": "ওরস্যালাইন / Orsaline",
+    "pw": "নিরাপদ - সিস্টেমিকভাবে শোষিত হয় না (Safe - not systemically absorbed)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 37,
+    "name": "জিংক সালফেট (Zinc sulfate)",
+    "generic": "Zinc sulfate",
+    "brand": "জিনকিড / Zinkid",
+    "pw": "শিশুর থেরাপিউটিক মাত্রায় নিরাপদ (Safe at pediatric therapeutic doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 38,
+    "name": "ভিটামিন এ (রেটিনল) (Retinol)",
+    "generic": "Retinol",
+    "brand": "ভিটামিন এ ক্যাপসুল / Vitamin A Capsule",
+    "pw": "সতর্কতা - উচ্চ মাত্রা টেরাটোজেনিক (CAUTION - high-dose is teratogenic; follow WHO/BD protocols exactly)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 39,
+    "name": "ওমিপ্রাজল (Omeprazole)",
+    "generic": "Omeprazole",
+    "brand": "সেক্লো / Seclo",
+    "pw": "সাধারণত নিরাপদ (Generally considered safe)",
+    "contra": "ওমিপ্রাজল বা অন্যান্য প্রোটন পাম্প ইনহিবিটরের প্রতি পরিচিত অ্যালার্জি থাকলে নিষিদ্ধ।"
+  },
+  {
+    "id": 40,
+    "name": "লোপেরামাইড (Loperamide)",
+    "generic": "Loperamide",
+    "brand": "ইমোডিয়াম / Imodium",
+    "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকিপূর্ণ (Limited data; generally low risk short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 41,
+    "name": "ডমপেরিডন (Domperidone)",
+    "generic": "Domperidone",
+    "brand": "মোটিগাট / Motigut",
+    "pw": "গর্ভাবস্থায় নিরাপত্তা তথ্য সীমিত (Limited safety data in pregnancy)",
+    "contra": "পরিপাকতন্ত্রে রক্তক্ষরণ, অন্ত্রে ফুটো বা বাধা এবং হৃদযন্ত্রের কিউটি প্রোলংগেশন থাকলে নিষিদ্ধ।"
+  },
+  {
+    "id": 42,
+    "name": "সাইমেথিকন (Simethicone)",
+    "generic": "Simethicone",
+    "brand": "ডিসফ্ল্যাটিল / Disflatyl",
+    "pw": "নিরাপদ - সিস্টেমিকভাবে শোষিত হয় না (Safe - not systemically absorbed)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 43,
+    "name": "ন্যাপ্রোক্সেন (Naproxen)",
+    "generic": "Naproxen",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 44,
+    "name": "মেফেনামিক এসিড (Mefenamic acid)",
+    "generic": "Mefenamic acid",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 45,
+    "name": "কিটোরোলাক (Ketorolac)",
+    "generic": "Ketorolac",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 46,
+    "name": "ইনডোমেথাসিন (Indomethacin)",
+    "generic": "Indomethacin",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (বিশেষ পর্যবেক্ষণে ব্যবহৃত) (Avoided (used only for specific tocolysis under monitoring))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 47,
+    "name": "সেলেকক্সিব (Celecoxib)",
+    "generic": "Celecoxib",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 48,
+    "name": "পিরোক্সিকাম (Piroxicam)",
+    "generic": "Piroxicam",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 49,
+    "name": "মেলোক্সিকাম (Meloxicam)",
+    "generic": "Meloxicam",
+    "brand": "",
+    "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 50,
+    "name": "কোডিন (Codeine)",
+    "generic": "Codeine",
+    "brand": "",
+    "pw": "সতর্কতা (নবজাতকের শ্বাসকষ্টের ঝুঁকি) (Caution (neonatal respiratory depression risk near term))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 51,
+    "name": "মরফিন (Morphine)",
+    "generic": "Morphine",
+    "brand": "",
+    "pw": "গুরুতর ব্যথায় সতর্কতার সাথে ব্যবহৃত (Used cautiously for severe pain; caution near delivery)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 52,
+    "name": "পেথিডিন (Pethidine)",
+    "generic": "Pethidine",
+    "brand": "",
+    "pw": "প্রসবকালে ব্যবহৃত; নবজাতকের ঝুঁকি সতর্কতা (Used in labor; caution re: neonatal respiratory depression)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 53,
+    "name": "ফেন্টানিল (Fentanyl)",
+    "generic": "Fentanyl",
+    "brand": "",
+    "pw": "অ্যানেস্থেসিয়া/প্রসবকালে তত্ত্বাবধানে ব্যবহৃত (Used in anesthesia/labor under monitoring)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 54,
+    "name": "অক্সিকোডোন (Oxycodone)",
+    "generic": "Oxycodone",
+    "brand": "",
+    "pw": "সতর্কতা; ওপিওয়েড শ্রেণির ঝুঁকি (Caution; opioid class risks)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 55,
+    "name": "ট্রামাডল (Tramadol)",
+    "generic": "Tramadol",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 56,
+    "name": "অ্যাম্পিসিলিন (Ampicillin)",
+    "generic": "Ampicillin",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 57,
+    "name": "অ্যামোক্সিসিলিন-ক্লাভুলানেট (Amoxicillin-clavulanate)",
+    "generic": "Amoxicillin-clavulanate",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 58,
+    "name": "ফ্লুক্লোক্সাসিলিন (Flucloxacillin)",
+    "generic": "Flucloxacillin",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 59,
+    "name": "পেনিসিলিন ভি (Penicillin V)",
+    "generic": "Penicillin V",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 60,
+    "name": "পিপারাসিলিন-টাজোব্যাকটাম (Piperacillin-tazobactam)",
+    "generic": "Piperacillin-tazobactam",
+    "brand": "",
+    "pw": "গুরুতর সংক্রমণে ব্যবহৃত; নিরাপদ বিবেচিত (Used for severe infections; considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 61,
+    "name": "সেফুরোক্সিম (Cefuroxime)",
+    "generic": "Cefuroxime",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 62,
+    "name": "সেফিক্সিম (Cefixime)",
+    "generic": "Cefixime",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "সেফালোস্পোরিন গোত্রের অ্যান্টিবায়োটিকের প্রতি অ্যালার্জি থাকলে ব্যবহার নিষিদ্ধ।"
+  },
+  {
+    "id": 63,
+    "name": "সেফট্রায়াক্সোন (Ceftriaxone)",
+    "generic": "Ceftriaxone",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 64,
+    "name": "সেফডিনির (Cefdinir)",
+    "generic": "Cefdinir",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 65,
+    "name": "এরিথ্রোমাইসিন (Erythromycin)",
+    "generic": "Erythromycin",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 66,
+    "name": "ক্লারিথ্রোমাইসিন (Clarithromycin)",
+    "generic": "Clarithromycin",
+    "brand": "",
+    "pw": "কিছু তথ্য উদ্বেগ রয়েছে; সতর্কতা (Some data concerns; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 67,
+    "name": "রোক্সিথ্রোমাইসিন (Roxithromycin)",
+    "generic": "Roxithromycin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 68,
+    "name": "লেভোফ্লক্সাসিন (Levofloxacin)",
+    "generic": "Levofloxacin",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 69,
+    "name": "অফ্লক্সাসিন (Ofloxacin)",
+    "generic": "Ofloxacin",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))",
+    "contra": "ফ্লুরোকুইনোলোন এলার্জি এবং টেনডন সমস্যার পূর্ব ইতিহাস থাকলে এটি নিষিদ্ধ।"
+  },
+  {
+    "id": 70,
+    "name": "মক্সিফ্লক্সাসিন (Moxifloxacin)",
+    "generic": "Moxifloxacin",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 71,
+    "name": "টেট্রাসাইক্লিন (Tetracycline)",
+    "generic": "Tetracycline",
+    "brand": "",
+    "pw": "এড়ানো হয় (দাঁত/হাড়ের প্রভাব) (Avoided (teeth/bone effects))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 72,
+    "name": "মিনোসাইক্লিন (Minocycline)",
+    "generic": "Minocycline",
+    "brand": "",
+    "pw": "এড়ানো হয় (Avoided (tetracycline class))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 73,
+    "name": "ক্লিন্ডামাইসিন (Clindamycin)",
+    "generic": "Clindamycin",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 74,
+    "name": "ভ্যানকোমাইসিন (Vancomycin)",
+    "generic": "Vancomycin",
+    "brand": "",
+    "pw": "গুরুতর সংক্রমণে ব্যবহৃত (Used for severe infections; generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 75,
+    "name": "লাইনজোলিড (Linezolid)",
+    "generic": "Linezolid",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 76,
+    "name": "জেন্টামাইসিন (Gentamicin)",
+    "generic": "Gentamicin",
+    "brand": "",
+    "pw": "পর্যবেক্ষণে ব্যবহৃত (দীর্ঘমেয়াদে শ্রবণ ঝুঁকি) (Used with monitoring (ototoxicity risk with prolonged use))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 77,
+    "name": "অ্যামিকাসিন (Amikacin)",
+    "generic": "Amikacin",
+    "brand": "",
+    "pw": "পর্যবেক্ষণে ব্যবহৃত (Used with monitoring (ototoxicity risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 78,
+    "name": "রিফাম্পিসিন (Rifampicin)",
+    "generic": "Rifampicin",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় যক্ষ্মায় ব্যবহৃত; নিরাপদ বিবেচিত (Used for TB in pregnancy; generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 79,
+    "name": "আইসোনিয়াজিড (Isoniazid)",
+    "generic": "Isoniazid",
+    "brand": "",
+    "pw": "যক্ষ্মায় ব্যবহৃত; পাইরিডক্সিনের সাথে দিন (Used for TB; give with pyridoxine to prevent neuropathy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 80,
+    "name": "পাইরাজিনামাইড (Pyrazinamide)",
+    "generic": "Pyrazinamide",
+    "brand": "",
+    "pw": "ডব্লিউএইচও নিয়ম অনুযায়ী যক্ষ্মায় ব্যবহৃত (Used for TB in pregnancy per WHO regimen)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 81,
+    "name": "ইথামবুটল (Ethambutol)",
+    "generic": "Ethambutol",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় যক্ষ্মায় ব্যবহৃত (Used for TB in pregnancy; considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 82,
+    "name": "ফ্লুকোনাজল (Fluconazole)",
+    "generic": "Fluconazole",
+    "brand": "",
+    "pw": "উচ্চ মাত্রা এড়ানো হয়; কম মাত্রায় সাধারণত গ্রহণযোগ্য (High-dose avoided (teratogenic); low-dose short course generally ok)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 83,
+    "name": "ক্লোট্রিমাজল (Clotrimazole)",
+    "generic": "Clotrimazole",
+    "brand": "",
+    "pw": "নিরাপদ (স্থানীয় ব্যবহার) (Safe (topical/vaginal))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 84,
+    "name": "নিস্ট্যাটিন (Nystatin)",
+    "generic": "Nystatin",
+    "brand": "",
+    "pw": "নিরাপদ (শোষিত হয় না) (Safe (not absorbed))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 85,
+    "name": "ইট্রাকোনাজল (Itraconazole)",
+    "generic": "Itraconazole",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (Generally avoided)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 86,
+    "name": "টার্বিনাফাইন (Terbinafine)",
+    "generic": "Terbinafine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 87,
+    "name": "গ্রিসিওফালভিন (Griseofulvin)",
+    "generic": "Griseofulvin",
+    "brand": "",
+    "pw": "এড়ানো হয় (Avoided (teratogenic in animal studies))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 88,
+    "name": "কিটোকোনাজল (Ketoconazole)",
+    "generic": "Ketoconazole",
+    "brand": "",
+    "pw": "মুখে খাওয়ার ফর্ম সাধারণত এড়ানো হয় (Oral form generally avoided)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 89,
+    "name": "অ্যাসাইক্লোভির (Acyclovir)",
+    "generic": "Acyclovir",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 90,
+    "name": "ওসেলটামিভির (Oseltamivir)",
+    "generic": "Oseltamivir",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় ফ্লুতে ব্যবহৃত; নিরাপদ বিবেচিত (Considered safe; used for flu in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 91,
+    "name": "ভ্যালাসাইক্লোভির (Valacyclovir)",
+    "generic": "Valacyclovir",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 92,
+    "name": "জিডোভুডিন (Zidovudine)",
+    "generic": "Zidovudine",
+    "brand": "",
+    "pw": "এইচআইভি প্রতিরোধে ব্যবহৃত; সাধারণত নিরাপদ (Used in pregnancy for HIV PMTCT; generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 93,
+    "name": "লামিভুডিন (Lamivudine)",
+    "generic": "Lamivudine",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় এইচআইভি/হেপাটাইটিস বি চিকিৎসায় ব্যবহৃত (Used in pregnancy for HIV/Hepatitis B per protocol)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 94,
+    "name": "টেনোফোভির (Tenofovir)",
+    "generic": "Tenofovir",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় এইচআইভি/হেপাটাইটিস বি চিকিৎসায় ব্যবহৃত (Used in pregnancy for HIV/Hepatitis B per protocol)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 95,
+    "name": "এফাভিরেঞ্জ (Efavirenz)",
+    "generic": "Efavirenz",
+    "brand": "",
+    "pw": "প্রথম ত্রৈমাসিকে সতর্কতা ঐতিহাসিকভাবে; বর্তমান নির্দেশনা যাচাই করুন (Historically cautioned in 1st trimester; current guidance evolving - verify current WHO stance)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 96,
+    "name": "রিবাভাইরিন (Ribavirin)",
+    "generic": "Ribavirin",
+    "brand": "",
+    "pw": "নিষিদ্ধ (টেরাটোজেনিক) (CONTRAINDICATED (teratogenic))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 97,
+    "name": "ক্লোরোকুইন (Chloroquine)",
+    "generic": "Chloroquine",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 98,
+    "name": "কুইনাইন (Quinine)",
+    "generic": "Quinine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (high-dose risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 99,
+    "name": "আর্টেমিসিনিন কম্বিনেশন থেরাপি (Artemisinin combination therapy)",
+    "generic": "Artemisinin combination therapy",
+    "brand": "",
+    "pw": "দ্বিতীয়/তৃতীয় ত্রৈমাসিকে ব্যবহৃত; প্রথমে সতর্কতা (Used in 2nd/3rd trimester; caution in 1st)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 100,
+    "name": "মেফ্লোকুইন (Mefloquine)",
+    "generic": "Mefloquine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 101,
+    "name": "অ্যালবেন্ডাজল (Albendazole)",
+    "generic": "Albendazole",
+    "brand": "",
+    "pw": "প্রথম ত্রৈমাসিকে এড়ানো হয় (Avoided in 1st trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 102,
+    "name": "মেবেন্ডাজল (Mebendazole)",
+    "generic": "Mebendazole",
+    "brand": "",
+    "pw": "প্রথম ত্রৈমাসিকে এড়ানো হয় (Avoided in 1st trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 103,
+    "name": "আইভারমেকটিন (Ivermectin)",
+    "generic": "Ivermectin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 104,
+    "name": "প্রাজিকোয়ান্টেল (Praziquantel)",
+    "generic": "Praziquantel",
+    "brand": "",
+    "pw": "ডব্লিউএইচও প্রয়োজনে নিরাপদ বিবেচনা করে (WHO considers safe when needed)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 105,
+    "name": "ডাইইথাইলকার্বামাজিন (Diethylcarbamazine)",
+    "generic": "Diethylcarbamazine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 106,
+    "name": "লোসারটান (Losartan)",
+    "generic": "Losartan",
+    "brand": "",
+    "pw": "নিষিদ্ধ (এআরবি) (CONTRAINDICATED (ARB - fetal renal toxicity like ACEi))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 107,
+    "name": "অ্যামলোডিপিন (Amlodipine)",
+    "generic": "Amlodipine",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 108,
+    "name": "অ্যাটেনোলল (Atenolol)",
+    "generic": "Atenolol",
+    "brand": "",
+    "pw": "সতর্কতা (বৃদ্ধি সীমাবদ্ধতার ঝুঁকি) (Caution (IUGR risk with prolonged use))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 109,
+    "name": "প্রোপ্রানোলল (Propranolol)",
+    "generic": "Propranolol",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used cautiously; monitor neonate for hypoglycemia)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 110,
+    "name": "ডিগক্সিন (Digoxin)",
+    "generic": "Digoxin",
+    "brand": "",
+    "pw": "নিরাপদ; ভ্রূণের অ্যারিদমিয়ায় ব্যবহৃত (Generally safe; used for fetal arrhythmia)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 111,
+    "name": "অ্যামিওডারোন (Amiodarone)",
+    "generic": "Amiodarone",
+    "brand": "",
+    "pw": "এড়ানো হয় (ভ্রূণের থাইরয়েড প্রভাব) (Avoided (fetal thyroid effects))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 112,
+    "name": "ভেরাপামিল (Verapamil)",
+    "generic": "Verapamil",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 113,
+    "name": "ফুরোসেমাইড (Furosemide)",
+    "generic": "Furosemide",
+    "brand": "",
+    "pw": "প্রয়োজনে ব্যবহৃত; সতর্কতা (Used when needed; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 114,
+    "name": "হাইড্রোক্লোরোথিয়াজাইড (Hydrochlorothiazide)",
+    "generic": "Hydrochlorothiazide",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 115,
+    "name": "স্পাইরোনোল্যাকটোন (Spironolactone)",
+    "generic": "Spironolactone",
+    "brand": "",
+    "pw": "এড়ানো হয় (অ্যান্টি-অ্যান্ড্রোজেনিক প্রভাব) (Avoided (anti-androgenic effects))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 116,
+    "name": "আইসোসরবাইড ডাইনাইট্রেট (Isosorbide dinitrate)",
+    "generic": "Isosorbide dinitrate",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 117,
+    "name": "নাইট্রোগ্লিসারিন (Nitroglycerin)",
+    "generic": "Nitroglycerin",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (also used as tocolytic))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 118,
+    "name": "ক্লোনিডিন (Clonidine)",
+    "generic": "Clonidine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 119,
+    "name": "ডক্সাজোসিন (Doxazosin)",
+    "generic": "Doxazosin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 120,
+    "name": "ম্যানিটল (Mannitol)",
+    "generic": "Mannitol",
+    "brand": "",
+    "pw": "নির্দিষ্ট ক্ষেত্রে সতর্কতার সাথে ব্যবহৃত (Used with caution in specific indications)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 121,
+    "name": "টরসেমাইড (Torsemide)",
+    "generic": "Torsemide",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 122,
+    "name": "অ্যাটোরভাস্ট্যাটিন (Atorvastatin)",
+    "generic": "Atorvastatin",
+    "brand": "",
+    "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 123,
+    "name": "সিমভাস্ট্যাটিন (Simvastatin)",
+    "generic": "Simvastatin",
+    "brand": "",
+    "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 124,
+    "name": "রোসুভাস্ট্যাটিন (Rosuvastatin)",
+    "generic": "Rosuvastatin",
+    "brand": "",
+    "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 125,
+    "name": "ওয়ারফারিন (Warfarin)",
+    "generic": "Warfarin",
+    "brand": "",
+    "pw": "নিষিদ্ধ (ভ্রূণের বিকৃতির ঝুঁকি) (CONTRAINDICATED (warfarin embryopathy))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 126,
+    "name": "হেপারিন (Heparin)",
+    "generic": "Heparin",
+    "brand": "",
+    "pw": "নিরাপদ (প্লাসেন্টা অতিক্রম করে না) (Safe (doesn't cross placenta))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 127,
+    "name": "এনোক্সাপারিন (Enoxaparin)",
+    "generic": "Enoxaparin",
+    "brand": "",
+    "pw": "নিরাপদ; গর্ভাবস্থায় পছন্দনীয় (Safe; preferred anticoagulant in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 128,
+    "name": "অ্যাপিক্সাবান (Apixaban)",
+    "generic": "Apixaban",
+    "brand": "",
+    "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 129,
+    "name": "রিভারোক্সাবান (Rivaroxaban)",
+    "generic": "Rivaroxaban",
+    "brand": "",
+    "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 130,
+    "name": "ড্যাবিগাট্রান (Dabigatran)",
+    "generic": "Dabigatran",
+    "brand": "",
+    "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 131,
+    "name": "ক্লোপিডোগ্রেল (Clopidogrel)",
+    "generic": "Clopidogrel",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 132,
+    "name": "গ্লিবেনক্লামাইড (Glibenclamide)",
+    "generic": "Glibenclamide",
+    "brand": "",
+    "pw": "কখনো ব্যবহৃত; নবজাতকের ঝুঁকি সতর্কতা (Sometimes used; caution re: neonatal hypoglycemia)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 133,
+    "name": "গ্লিমেপিরাইড (Glimepiride)",
+    "generic": "Glimepiride",
+    "brand": "",
+    "pw": "সাধারণত এড়ানো হয় (Generally avoided; limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 134,
+    "name": "সিটাগ্লিপটিন (Sitagliptin)",
+    "generic": "Sitagliptin",
+    "brand": "",
+    "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 135,
+    "name": "এমপাগ্লিফ্লোজিন (Empagliflozin)",
+    "generic": "Empagliflozin",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় এড়ানো হয় (Avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 136,
+    "name": "পাইওগ্লিটাজোন (Pioglitazone)",
+    "generic": "Pioglitazone",
+    "brand": "",
+    "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 137,
+    "name": "অ্যাকারবোজ (Acarbose)",
+    "generic": "Acarbose",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 138,
+    "name": "লেভোথাইরক্সিন (Levothyroxine)",
+    "generic": "Levothyroxine",
+    "brand": "",
+    "pw": "নিরাপদ ও অপরিহার্য; মাত্রা বাড়াতে হতে পারে (Safe and essential; dose often needs increasing)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 139,
+    "name": "কার্বিমাজল (Carbimazole)",
+    "generic": "Carbimazole",
+    "brand": "",
+    "pw": "সতর্কতা (প্রথম ত্রৈমাসিকে টেরাটোজেনিক) (Caution (teratogenic 1st trimester - aplasia cutis))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 140,
+    "name": "প্রোপাইলথায়োইউরাসিল (Propylthiouracil)",
+    "generic": "Propylthiouracil",
+    "brand": "",
+    "pw": "প্রথম ত্রৈমাসিকে পছন্দনীয়; যকৃতের ঝুঁকি (Preferred over carbimazole in 1st trimester; hepatotoxicity risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 141,
+    "name": "প্রেডনিসোলন (Prednisolone)",
+    "generic": "Prednisolone",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 142,
+    "name": "ডেক্সামেথাসোন (Dexamethasone)",
+    "generic": "Dexamethasone",
+    "brand": "",
+    "pw": "ভ্রূণের ফুসফুস পরিপক্কতায় ব্যবহৃত (Used for fetal lung maturity; caution long-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 143,
+    "name": "বিটামেথাসোন (Betamethasone)",
+    "generic": "Betamethasone",
+    "brand": "",
+    "pw": "ভ্রূণের ফুসফুস পরিপক্কতায় ব্যবহৃত (Used for fetal lung maturity)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 144,
+    "name": "হাইড্রোকর্টিসোন (Hydrocortisone (systemic))",
+    "generic": "Hydrocortisone (systemic)",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদে নিরাপদ (Safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 145,
+    "name": "মিথাইলপ্রেডনিসোলন (Methylprednisolone)",
+    "generic": "Methylprednisolone",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 146,
+    "name": "ট্রায়ামসিনোলন (Triamcinolone)",
+    "generic": "Triamcinolone",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 147,
+    "name": "সালবিউটামল (Salbutamol)",
+    "generic": "Salbutamol",
+    "brand": "",
+    "pw": "নিরাপদ; গর্ভাবস্থায় হাঁপানির প্রথম সারির ওষুধ (Safe; first-line for asthma in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 148,
+    "name": "বুডেসোনাইড (ইনহেলার) (Budesonide (inhaled))",
+    "generic": "Budesonide (inhaled)",
+    "brand": "",
+    "pw": "নিরাপদ; পছন্দনীয় ইনহেলড স্টেরয়েড (Safe; preferred inhaled steroid)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 149,
+    "name": "মন্টেলুকাস্ট (Montelukast)",
+    "generic": "Montelukast",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 150,
+    "name": "থিওফাইলিন (Theophylline)",
+    "generic": "Theophylline",
+    "brand": "",
+    "pw": "সতর্কতা; সংকীর্ণ থেরাপিউটিক সীমা (Caution; narrow therapeutic index)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 151,
+    "name": "ইপ্রাট্রোপিয়াম (Ipratropium)",
+    "generic": "Ipratropium",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 152,
+    "name": "ফরমোটেরল (Formoterol)",
+    "generic": "Formoterol",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতার সাথে ব্যবহার (Limited data; cautious use)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 153,
+    "name": "ফ্লুটিকাসোন (ইনহেলার) (Fluticasone (inhaled))",
+    "generic": "Fluticasone (inhaled)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 154,
+    "name": "বেক্লোমেথাসোন (ইনহেলার) (Beclomethasone (inhaled))",
+    "generic": "Beclomethasone (inhaled)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 155,
+    "name": "টারবিউটালিন (Terbutaline)",
+    "generic": "Terbutaline",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (also used as tocolytic))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 156,
+    "name": "ফেক্সোফেনাডিন (Fexofenadine)",
+    "generic": "Fexofenadine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; দ্বিতীয় প্রজন্মের বিকল্প (Limited data; second-gen alternative)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 157,
+    "name": "ডেসলোরাটাডিন (Desloratadine)",
+    "generic": "Desloratadine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সাধারণত ভালো (Limited data; generally reassuring)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 158,
+    "name": "হাইড্রক্সিজিন (Hydroxyzine)",
+    "generic": "Hydroxyzine",
+    "brand": "",
+    "pw": "সতর্কতা; ঘুম আনার প্রভাব (Caution; sedating antihistamine)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 159,
+    "name": "মেক্লিজিন (Meclizine)",
+    "generic": "Meclizine",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 160,
+    "name": "ফিনাইলএফ্রিন (Phenylephrine)",
+    "generic": "Phenylephrine",
+    "brand": "",
+    "pw": "সতর্কতা; সীমিত তথ্য (Caution; limited data on efficacy/safety)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 161,
+    "name": "ব্রমহেক্সিন (Bromhexine)",
+    "generic": "Bromhexine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 162,
+    "name": "অ্যামব্রক্সল (Ambroxol)",
+    "generic": "Ambroxol",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 163,
+    "name": "র‍্যানিটিডিন (Ranitidine)",
+    "generic": "Ranitidine",
+    "brand": "",
+    "pw": "দ্রষ্টব্য: ২০২০ সাল থেকে অনেক বাজারে প্রত্যাহার করা হয়েছে - বর্তমান স্থানীয় প্রাপ্যতা যাচাই করুন (NOTE: withdrawn in many markets since 2020 (NDMA contamination) - verify current local availability/status)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 164,
+    "name": "প্যান্টোপ্রাজল (Pantoprazole)",
+    "generic": "Pantoprazole",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 165,
+    "name": "এসোমিপ্রাজল (Esomeprazole)",
+    "generic": "Esomeprazole",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 166,
+    "name": "অ্যালুমিনিয়াম হাইড্রক্সাইড (Aluminum hydroxide)",
+    "generic": "Aluminum hydroxide",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 167,
+    "name": "ম্যাগনেসিয়াম হাইড্রক্সাইড (Magnesium hydroxide)",
+    "generic": "Magnesium hydroxide",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 168,
+    "name": "ল্যাকটুলোজ (Lactulose)",
+    "generic": "Lactulose",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 169,
+    "name": "বিসাকোডিল (Bisacodyl)",
+    "generic": "Bisacodyl",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 170,
+    "name": "সুক্রালফেট (Sucralfate)",
+    "generic": "Sucralfate",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (ন্যূনতম শোষণ) (Considered safe (minimal absorption))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 171,
+    "name": "ডাইসাইক্লোমিন (Dicyclomine)",
+    "generic": "Dicyclomine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 172,
+    "name": "সারট্রালিন (Sertraline)",
+    "generic": "Sertraline",
+    "brand": "",
+    "pw": "গর্ভাবস্থা/স্তন্যদানে পছন্দনীয় এসএসআরআই (Preferred SSRI in pregnancy/breastfeeding)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 173,
+    "name": "ফ্লুওক্সেটিন (Fluoxetine)",
+    "generic": "Fluoxetine",
+    "brand": "",
+    "pw": "ব্যবহৃত তবে দীর্ঘ অর্ধায়ু (Used but longer half-life; some neonatal adaptation syndrome)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 174,
+    "name": "অ্যামিট্রিপটাইলিন (Amitriptyline)",
+    "generic": "Amitriptyline",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution, older TCA)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 175,
+    "name": "এসসিটালোপ্রাম (Escitalopram)",
+    "generic": "Escitalopram",
+    "brand": "",
+    "pw": "সারট্রালিনের মতো; সাধারণত ব্যবহৃত (Similar to sertraline; generally used)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 176,
+    "name": "ভেনলাফ্যাক্সিন (Venlafaxine)",
+    "generic": "Venlafaxine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 177,
+    "name": "বুপ্রোপিয়ন (Bupropion)",
+    "generic": "Bupropion",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 178,
+    "name": "মির্টাজাপিন (Mirtazapine)",
+    "generic": "Mirtazapine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 179,
+    "name": "ডুলোক্সেটিন (Duloxetine)",
+    "generic": "Duloxetine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 180,
+    "name": "ডায়াজিপাম (Diazepam)",
+    "generic": "Diazepam",
+    "brand": "",
+    "pw": "সতর্কতা (নবজাতকের শিথিলতা সিন্ড্রোম) (Caution (floppy infant syndrome; avoid near term))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 181,
+    "name": "লোরাজিপাম (Lorazepam)",
+    "generic": "Lorazepam",
+    "brand": "",
+    "pw": "ডায়াজিপামের মতো সতর্কতা (Caution similar to diazepam)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 182,
+    "name": "আলপ্রাজোলাম (Alprazolam)",
+    "generic": "Alprazolam",
+    "brand": "",
+    "pw": "সতর্কতা; বেনজোডায়াজিপাইন ঝুঁকি (Caution; benzodiazepine class risks)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 183,
+    "name": "ক্লোনাজিপাম (Clonazepam)",
+    "generic": "Clonazepam",
+    "brand": "",
+    "pw": "সতর্কতা; বেনজোডায়াজিপাইন ঝুঁকি (Caution; benzodiazepine class risks)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 184,
+    "name": "জোলপিডেম (Zolpidem)",
+    "generic": "Zolpidem",
+    "brand": "",
+    "pw": "সীমিত তথ্য; স্বল্পমেয়াদী সতর্কতা (Limited data; short-term caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 185,
+    "name": "বুসপিরোন (Buspirone)",
+    "generic": "Buspirone",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 186,
+    "name": "হ্যালোপেরিডল (Haloperidol)",
+    "generic": "Haloperidol",
+    "brand": "",
+    "pw": "প্রয়োজনে সতর্কতার সাথে ব্যবহৃত (Used with caution when necessary)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 187,
+    "name": "অলানজাপিন (Olanzapine)",
+    "generic": "Olanzapine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution; metabolic monitoring)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 188,
+    "name": "রিসপেরিডোন (Risperidone)",
+    "generic": "Risperidone",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 189,
+    "name": "কুইটিয়াপিন (Quetiapine)",
+    "generic": "Quetiapine",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 190,
+    "name": "সোডিয়াম ভালপ্রোয়েট (Sodium valproate)",
+    "generic": "Sodium valproate",
+    "brand": "",
+    "pw": "নিষিদ্ধ (উচ্চ টেরাটোজেনিক ঝুঁকি) (CONTRAINDICATED (high teratogenic risk - neural tube defects))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 191,
+    "name": "ফেনিটোইন (Phenytoin)",
+    "generic": "Phenytoin",
+    "brand": "",
+    "pw": "সতর্কতা (ভ্রূণের হাইডানটোইন সিন্ড্রোম) (Caution (fetal hydantoin syndrome))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 192,
+    "name": "কার্বামাজেপিন (Carbamazepine)",
+    "generic": "Carbamazepine",
+    "brand": "",
+    "pw": "সতর্কতা (নিউরাল টিউব ত্রুটির ঝুঁকি) (Caution (neural tube defect risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 193,
+    "name": "ল্যামোট্রিজিন (Lamotrigine)",
+    "generic": "Lamotrigine",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় পছন্দনীয় (Preferred anticonvulsant in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 194,
+    "name": "লেভেটিরাসিটাম (Levetiracetam)",
+    "generic": "Levetiracetam",
+    "brand": "",
+    "pw": "পছন্দনীয়, ক্রমবর্ধমান নিরাপত্তা তথ্য (Preferred, growing safety data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 195,
+    "name": "ফেনোবারবিটাল (Phenobarbital)",
+    "generic": "Phenobarbital",
+    "brand": "",
+    "pw": "সতর্কতা (পুরনো এইডি, কিছু ঝুঁকি) (Caution (older AED, some risk))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 196,
+    "name": "টোপিরামেট (Topiramate)",
+    "generic": "Topiramate",
+    "brand": "",
+    "pw": "সতর্কতা (ক্লেফট ঠোঁট/তালু ঝুঁকি) (Caution (cleft lip/palate risk, low birth weight))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 197,
+    "name": "গ্যাবাপেন্টিন (Gabapentin)",
+    "generic": "Gabapentin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 198,
+    "name": "প্রেগাবালিন (Pregabalin)",
+    "generic": "Pregabalin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 199,
+    "name": "লিথিয়াম (Lithium)",
+    "generic": "Lithium",
+    "brand": "",
+    "pw": "সতর্কতা (হৃদযন্ত্রের ত্রুটির ঝুঁকি); পর্যবেক্ষণ প্রয়োজন (Caution (cardiac defects - Ebstein's anomaly); needs monitoring)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 200,
+    "name": "কম্বাইন্ড ওরাল কন্ট্রাসেপটিভ (Combined oral contraceptive)",
+    "generic": "Combined oral contraceptive",
+    "brand": "",
+    "pw": "গর্ভাবস্থা নিশ্চিত হলে বন্ধ করুন (Not used once pregnant - discontinue if pregnancy confirmed)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 201,
+    "name": "প্রোজেস্টিন-ওনলি পিল (Progestin-only pill)",
+    "generic": "Progestin-only pill",
+    "brand": "",
+    "pw": "N/A - গর্ভাবস্থায় ব্যবহারের জন্য নয় (N/A - contraceptive, not for use once pregnant)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 202,
+    "name": "মেড্রোক্সিপ্রোজেস্টেরন ইনজেকশন (Medroxyprogesterone injection)",
+    "generic": "Medroxyprogesterone injection",
+    "brand": "",
+    "pw": "N/A - গর্ভনিরোধক (N/A - contraceptive)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 203,
+    "name": "লেভোনরজেস্ট্রেল (জরুরি গর্ভনিরোধক) (Levonorgestrel (emergency contraception))",
+    "generic": "Levonorgestrel (emergency contraception)",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় ব্যবহারের জন্য নয় (Not for use once pregnant)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 204,
+    "name": "ইস্ট্রোজেন (এইচআরটি) (Estrogen (HRT))",
+    "generic": "Estrogen (HRT)",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় প্রযোজ্য নয় (Not applicable/used in pregnancy context)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 205,
+    "name": "ক্লোমিফিন (Clomiphene)",
+    "generic": "Clomiphene",
+    "brand": "",
+    "pw": "N/A - উর্বরতা ওষুধ, গর্ভাবস্থা নিশ্চিত হলে বন্ধ (N/A - fertility drug, discontinued once pregnancy confirmed)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 206,
+    "name": "প্রোজেস্টেরন সাপ্লিমেন্ট (Progesterone (supplement))",
+    "generic": "Progesterone (supplement)",
+    "brand": "",
+    "pw": "লুটিয়াল সাপোর্ট/অকাল প্রসব প্রতিরোধে ব্যবহৃত (Used for luteal support/preterm labor prevention; considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 207,
+    "name": "অক্সিটোসিন (Oxytocin)",
+    "generic": "Oxytocin",
+    "brand": "",
+    "pw": "প্রসব প্ররোচনা/ত্বরান্বিতকরণে পর্যবেক্ষণে ব্যবহৃত (Used for labor induction/augmentation under monitoring)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 208,
+    "name": "মিসোপ্রোস্টল (Misoprostol)",
+    "generic": "Misoprostol",
+    "brand": "",
+    "pw": "প্রসব প্ররোচনা/রক্তক্ষরণ ব্যবস্থাপনায় ব্যবহৃত; অনির্দেশিত ব্যবহার বিপজ্জনক (Used for labor induction/PPH management OR can cause abortion if misused - HIGH RISK if unsupervised)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 209,
+    "name": "ম্যাগনেসিয়াম সালফেট (Magnesium sulfate)",
+    "generic": "Magnesium sulfate",
+    "brand": "",
+    "pw": "প্রি-এক্লাম্পসিয়া/একলাম্পসিয়া খিঁচুনি প্রতিরোধে ব্যবহৃত (Used for pre-eclampsia/eclampsia seizure prevention; standard of care)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 210,
+    "name": "অ্যাটোসিবান (Atosiban)",
+    "generic": "Atosiban",
+    "brand": "",
+    "pw": "অকাল প্রসব বিলম্বে ব্যবহৃত (Used as tocolytic for preterm labor)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 211,
+    "name": "হাইড্রোকর্টিসোন ক্রিম (Hydrocortisone cream)",
+    "generic": "Hydrocortisone cream",
+    "brand": "",
+    "pw": "নিরাপদ (স্থানীয় ব্যবহার) (Safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 212,
+    "name": "ক্লোবেটাসল (Clobetasol)",
+    "generic": "Clobetasol",
+    "brand": "",
+    "pw": "ব্যাপক ব্যবহারে সতর্কতা (Caution with extensive use)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 213,
+    "name": "আইসোট্রেটিনয়িন (Isotretinoin)",
+    "generic": "Isotretinoin",
+    "brand": "",
+    "pw": "নিষিদ্ধ (গুরুতর টেরাটোজেনিক) (CONTRAINDICATED (severe teratogen))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 214,
+    "name": "ট্রেটিনোইন (স্থানীয়) (Tretinoin (topical))",
+    "generic": "Tretinoin (topical)",
+    "brand": "",
+    "pw": "সতর্কতা; ন্যূনতম শোষণ তবে এড়ানো হয় (Caution; minimal absorption but avoided)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 215,
+    "name": "ক্লোট্রিমাজল ক্রিম (Clotrimazole cream)",
+    "generic": "Clotrimazole cream",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 216,
+    "name": "পারমেথ্রিন (Permethrin)",
+    "generic": "Permethrin",
+    "brand": "",
+    "pw": "স্ক্যাবিস/উকুন চিকিৎসায় নিরাপদ বিবেচিত (Considered safe for scabies/lice treatment)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 217,
+    "name": "বেনজোয়াইল পারঅক্সাইড (Benzoyl peroxide)",
+    "generic": "Benzoyl peroxide",
+    "brand": "",
+    "pw": "নিরাপদ বিবেচিত (স্থানীয়) (Considered safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 218,
+    "name": "সালিসাইলিক এসিড (স্থানীয়) (Salicylic acid (topical))",
+    "generic": "Salicylic acid (topical)",
+    "brand": "",
+    "pw": "সীমিত/ছোট এলাকায় ব্যবহার কম ঝুঁকিপূর্ণ (Limited/small-area use generally considered low risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 219,
+    "name": "ভিটামিন বি১২ (Vitamin B12)",
+    "generic": "Vitamin B12",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 220,
+    "name": "ভিটামিন সি (Vitamin C)",
+    "generic": "Vitamin C",
+    "brand": "",
+    "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 221,
+    "name": "ভিটামিন ই (Vitamin E)",
+    "generic": "Vitamin E",
+    "brand": "",
+    "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 222,
+    "name": "ভিটামিন কে (Vitamin K)",
+    "generic": "Vitamin K",
+    "brand": "",
+    "pw": "নিরাপদ; নবজাতকদের নিয়মিত দেওয়া হয় (Safe; given to newborns routinely)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 223,
+    "name": "বায়োটিন (Biotin)",
+    "generic": "Biotin",
+    "brand": "",
+    "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 224,
+    "name": "জিংক সাপ্লিমেন্ট (প্রাপ্তবয়স্ক) (Zinc supplement (adult))",
+    "generic": "Zinc supplement (adult)",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 225,
+    "name": "ম্যাগনেসিয়াম সাপ্লিমেন্ট (Magnesium supplement)",
+    "generic": "Magnesium supplement",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 226,
+    "name": "কপার সাপ্লিমেন্ট (Copper supplement)",
+    "generic": "Copper supplement",
+    "brand": "",
+    "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe at recommended doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 227,
+    "name": "মাল্টিভিটামিন (প্রাপ্তবয়স্ক) (Multivitamin (adult))",
+    "generic": "Multivitamin (adult)",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 228,
+    "name": "মেথোট্রেক্সেট (Methotrexate)",
+    "generic": "Methotrexate",
+    "brand": "",
+    "pw": "নিষিদ্ধ (গুরুতর টেরাটোজেনিক) (CONTRAINDICATED (severe teratogen, abortifacient))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 229,
+    "name": "সাইক্লোফসফামাইড (Cyclophosphamide)",
+    "generic": "Cyclophosphamide",
+    "brand": "",
+    "pw": "নিষিদ্ধ (CONTRAINDICATED)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 230,
+    "name": "অ্যাজাথায়োপ্রিন (Azathioprine)",
+    "generic": "Azathioprine",
+    "brand": "",
+    "pw": "অটোইমিউন রোগে সতর্কতার সাথে ব্যবহৃত (Used cautiously in autoimmune conditions; relatively safer option)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 231,
+    "name": "টাক্রোলিমাস (Tacrolimus)",
+    "generic": "Tacrolimus",
+    "brand": "",
+    "pw": "প্রতিস্থাপনের পর সতর্কতার সাথে ব্যবহৃত (Used cautiously post-transplant)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 232,
+    "name": "মাইকোফেনোলেট (Mycophenolate)",
+    "generic": "Mycophenolate",
+    "brand": "",
+    "pw": "নিষিদ্ধ (টেরাটোজেনিক) (CONTRAINDICATED (teratogenic))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 233,
+    "name": "সুমাট্রিপটান (Sumatriptan)",
+    "generic": "Sumatriptan",
+    "brand": "",
+    "pw": "তুলনামূলকভাবে নিরাপদ বিবেচিত (Considered relatively safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 234,
+    "name": "এরগোটামিন (Ergotamine)",
+    "generic": "Ergotamine",
+    "brand": "",
+    "pw": "নিষিদ্ধ (জরায়ু সংকোচনকারী) (CONTRAINDICATED (uterotonic, vasoconstrictive))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 235,
+    "name": "ব্যাক্লোফেন (Baclofen)",
+    "generic": "Baclofen",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 236,
+    "name": "সাইক্লোবেনজাপ্রিন (Cyclobenzaprine)",
+    "generic": "Cyclobenzaprine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 237,
+    "name": "মেথোকার্বামল (Methocarbamol)",
+    "generic": "Methocarbamol",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 238,
+    "name": "লিডোকেইন (Lidocaine)",
+    "generic": "Lidocaine",
+    "brand": "",
+    "pw": "নিরাপদ; সাধারণভাবে ব্যবহৃত (Safe; commonly used)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 239,
+    "name": "বুপিভাকেইন (Bupivacaine)",
+    "generic": "Bupivacaine",
+    "brand": "",
+    "pw": "নিরাপদ; প্রসবকালীন এপিডুরালে ব্যবহৃত (Safe; commonly used in labor epidurals)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 240,
+    "name": "ক্লোরামফেনিকল চোখের ড্রপ (Chloramphenicol eye drops)",
+    "generic": "Chloramphenicol eye drops",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topically)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 241,
+    "name": "জাইলোমেটাজোলিন (নাসাল স্প্রে) (Xylometazoline (nasal spray))",
+    "generic": "Xylometazoline (nasal spray)",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদী ব্যবহারে সতর্কতা (Short-term use caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 242,
+    "name": "সিপ্রোফ্লক্সাসিন কানের ড্রপ (Ciprofloxacin ear drops)",
+    "generic": "Ciprofloxacin ear drops",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়, ন্যূনতম শোষণ) (Generally safe topically (minimal systemic absorption))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 243,
+    "name": "টিমোলল চোখের ড্রপ (Timolol eye drops)",
+    "generic": "Timolol eye drops",
+    "brand": "",
+    "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (some systemic absorption possible))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 244,
+    "name": "ট্রোপিকামাইড (চোখের ড্রপ) (Tropicamide (eye drops))",
+    "generic": "Tropicamide (eye drops)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topically)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 245,
+    "name": "পোভিডোন-আয়োডিন (Povidone-iodine)",
+    "generic": "Povidone-iodine",
+    "brand": "",
+    "pw": "দীর্ঘমেয়াদী/বড় এলাকায় ব্যবহারে সতর্কতা (Caution with prolonged/large-area use (iodine absorption, fetal thyroid))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 246,
+    "name": "ক্লোরহেক্সিডিন (Chlorhexidine)",
+    "generic": "Chlorhexidine",
+    "brand": "",
+    "pw": "নিরাপদ বিবেচিত (স্থানীয়) (Considered safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 247,
+    "name": "নিম (Neem)",
+    "generic": "Neem",
+    "brand": "",
+    "pw": "সীমিত/কোনো আনুষ্ঠানিক তথ্য নেই - সতর্কতা প্রয়োজন (Limited/no formal safety data - caution advised)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 248,
+    "name": "হলুদ (সাপ্লিমেন্ট মাত্রা) (Turmeric (supplement dose))",
+    "generic": "Turmeric (supplement dose)",
+    "brand": "",
+    "pw": "রান্নায় ব্যবহার নিরাপদ; উচ্চ মাত্রার সাপ্লিমেন্টে সীমিত তথ্য (Culinary use safe; high-dose supplement use has limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 249,
+    "name": "আদা (সাপ্লিমেন্ট মাত্রা) (Ginger (supplement dose))",
+    "generic": "Ginger (supplement dose)",
+    "brand": "",
+    "pw": "মাঝারি ব্যবহারে বমি বমি ভাবের জন্য সাধারণত নিরাপদ (Generally considered safe for nausea in moderate use)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 250,
+    "name": "মেথি (Fenugreek)",
+    "generic": "Fenugreek",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় সতর্কতা (জরায়ু উদ্দীপক প্রভাব) (Caution in pregnancy (uterine stimulant properties reported))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 251,
+    "name": "মৌরি (Fennel)",
+    "generic": "Fennel",
+    "brand": "",
+    "pw": "রান্নায় ব্যবহার নিরাপদ; উচ্চ মাত্রায় সতর্কতা (Culinary use safe; high-dose supplement caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 252,
+    "name": "টিডিএপি টিকা (Tdap vaccine)",
+    "generic": "Tdap vaccine",
+    "brand": "",
+    "pw": "প্রতিটি গর্ভাবস্থায় সুপারিশকৃত (Recommended during pregnancy (each pregnancy))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 253,
+    "name": "ইনফ্লুয়েঞ্জা টিকা (নিষ্ক্রিয়) (Influenza vaccine (inactivated))",
+    "generic": "Influenza vaccine (inactivated)",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় সুপারিশকৃত (Recommended during pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 254,
+    "name": "এমএমআর টিকা (জীবিত) (MMR vaccine (live))",
+    "generic": "MMR vaccine (live)",
+    "brand": "",
+    "pw": "নিষিদ্ধ (জীবিত টিকা) (CONTRAINDICATED during pregnancy (live vaccine))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 255,
+    "name": "প্যারাসিটামল + ক্যাফেইন (Paracetamol + Caffeine (combo))",
+    "generic": "Paracetamol + Caffeine (combo)",
+    "brand": "",
+    "pw": "প্যারাসিটামলের মতো সতর্কতা; ক্যাফেইন সীমিত করুন (Same caution as paracetamol; limit caffeine intake)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 256,
+    "name": "সেটিরিজিন + সিউডোএফেড্রিন (Cetirizine + Pseudoephedrine (combo))",
+    "generic": "Cetirizine + Pseudoephedrine (combo)",
+    "brand": "",
+    "pw": "সিউডোএফেড্রিনের কারণে সতর্কতা (Caution due to pseudoephedrine component)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 257,
+    "name": "লোরাটাডিন + সিউডোএফেড্রিন (Loratadine + Pseudoephedrine (combo))",
+    "generic": "Loratadine + Pseudoephedrine (combo)",
+    "brand": "",
+    "pw": "সিউডোএফেড্রিনের কারণে সতর্কতা (Caution due to pseudoephedrine component)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 258,
+    "name": "অ্যান্টাসিড কম্বো (Antacid combo (Al-Mg-Simethicone))",
+    "generic": "Antacid combo (Al-Mg-Simethicone)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 259,
+    "name": "কাশির সিরাপ কম্বো (Dextromethorphan + Guaifenesin (cough syrup))",
+    "generic": "Dextromethorphan + Guaifenesin (cough syrup)",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 260,
+    "name": "ওমেগা-৩ (মাছের তেল) (Omega-3 (Fish oil))",
+    "generic": "Omega-3 (Fish oil)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ; প্রায়ই সুপারিশকৃত (Generally safe; often recommended)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 261,
+    "name": "প্রোবায়োটিক (Probiotics (Lactobacillus))",
+    "generic": "Probiotics (Lactobacillus)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 262,
+    "name": "আয়রন পলিম্যালটোজ কমপ্লেক্স (Iron polymaltose complex)",
+    "generic": "Iron polymaltose complex",
+    "brand": "",
+    "pw": "ফেরাস লবণের নিরাপদ বিকল্প বিবেচিত (Considered safe alternative to ferrous salts)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 263,
+    "name": "ভিটামিন বি-কমপ্লেক্স (Vitamin B-complex)",
+    "generic": "Vitamin B-complex",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 264,
+    "name": "ক্যালসিয়াম + ভিটামিন ডি কম্বো (Calcium + Vitamin D combo)",
+    "generic": "Calcium + Vitamin D combo",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 265,
+    "name": "মাল্টিভিটামিন গামি (Multivitamin gummies)",
+    "generic": "Multivitamin gummies",
+    "brand": "",
+    "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe at recommended doses)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 266,
+    "name": "মিনোক্সিডিল (স্থানীয়) (Minoxidil (topical))",
+    "generic": "Minoxidil (topical)",
+    "brand": "",
+    "pw": "সতর্কতা - গর্ভাবস্থায় এড়িয়ে চলুন (Caution - avoid in pregnancy (limited safety data))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 267,
+    "name": "ফিনাস্টেরাইড (Finasteride)",
+    "generic": "Finasteride",
+    "brand": "",
+    "pw": "নিষিদ্ধ - গর্ভবতী নারীদের জন্য বিপজ্জনক (CONTRAINDICATED for women who are/may become pregnant (fetal harm to male fetus))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 268,
+    "name": "হাইড্রোকুইনোন (Hydroquinone)",
+    "generic": "Hydroquinone",
+    "brand": "",
+    "pw": "সতর্কতা; গর্ভাবস্থায় ব্যাপক ব্যবহার এড়িয়ে চলুন (Caution; avoid extensive use in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 269,
+    "name": "অ্যাডাপালিন (Adapalene)",
+    "generic": "Adapalene",
+    "brand": "",
+    "pw": "সতর্কতা; গর্ভাবস্থায় এড়ানো হয় (Caution; topical retinoid, avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 270,
+    "name": "মেলাটোনিন (Melatonin)",
+    "generic": "Melatonin",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 271,
+    "name": "জোপিক্লোন (Zopiclone)",
+    "generic": "Zopiclone",
+    "brand": "",
+    "pw": "সতর্কতা; নিদ্রাকারক শ্রেণির ঝুঁকি (Caution; sedative-hypnotic class risks)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 272,
+    "name": "অরলিস্ট্যাট (Orlistat)",
+    "generic": "Orlistat",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় সুপারিশ করা হয় না (Not recommended in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 273,
+    "name": "ফেন্টারমিন (Phentermine)",
+    "generic": "Phentermine",
+    "brand": "",
+    "pw": "নিষিদ্ধ (গর্ভাবস্থায়) (CONTRAINDICATED in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 274,
+    "name": "ডাইক্লোফেনাক জেল (Diclofenac gel (topical))",
+    "generic": "Diclofenac gel (topical)",
+    "brand": "",
+    "pw": "কম শোষণ; তবুও তৃতীয় ত্রৈমাসিকে সতর্কতা (Minimal absorption; generally considered lower risk than oral, but caution 3rd trimester)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 275,
+    "name": "মেন্থল/মিথাইল স্যালিসাইলেট বাম (Menthol/methyl salicylate balm)",
+    "generic": "Menthol/methyl salicylate balm",
+    "brand": "",
+    "pw": "ব্যাপক ব্যবহারে সতর্কতা (Caution with extensive use (salicylate absorption))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 276,
+    "name": "ক্যাপসাইসিন ক্রিম (Capsaicin cream)",
+    "generic": "Capsaicin cream",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally considered safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 277,
+    "name": "প্যানক্রিয়াটিন (Pancreatin)",
+    "generic": "Pancreatin",
+    "brand": "",
+    "pw": "নিরাপদ বলে বিবেচিত (Considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 278,
+    "name": "অ্যাক্টিভেটেড চারকোল (Activated charcoal)",
+    "generic": "Activated charcoal",
+    "brand": "",
+    "pw": "মাঝেমধ্যে ব্যবহারে সাধারণত নিরাপদ (Generally safe for occasional use)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 279,
+    "name": "ইসবগুলের ভুসি (Ispaghula husk (Isabgol))",
+    "generic": "Ispaghula husk (Isabgol)",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 280,
+    "name": "নাসাল স্যালাইন স্প্রে (Nasal saline spray)",
+    "generic": "Nasal saline spray",
+    "brand": "",
+    "pw": "নিরাপদ - প্রথম পছন্দ (Safe - first-line option)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 281,
+    "name": "অক্সিমেটাজোলিন নাসাল স্প্রে (Oxymetazoline nasal spray)",
+    "generic": "Oxymetazoline nasal spray",
+    "brand": "",
+    "pw": "স্বল্পমেয়াদী ব্যবহারে সতর্কতা (Short-term use caution (rebound congestion))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 282,
+    "name": "বেক্লোমেথাসোন নাসাল স্প্রে (Beclomethasone nasal spray)",
+    "generic": "Beclomethasone nasal spray",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 283,
+    "name": "মুপিরোসিন (স্থানীয়) (Mupirocin (topical))",
+    "generic": "Mupirocin (topical)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 284,
+    "name": "ফুসিডিক এসিড (স্থানীয়) (Fusidic acid (topical))",
+    "generic": "Fusidic acid (topical)",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topical)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 285,
+    "name": "ভিটামিন ডি ড্রপ (শিশু) (Vitamin D drops (infant))",
+    "generic": "Vitamin D drops (infant)",
+    "brand": "",
+    "pw": "N/A - শিশুর সাপ্লিমেন্ট (N/A - pediatric supplementation)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 286,
+    "name": "রাবিপ্রাজল (Rabeprazole)",
+    "generic": "Rabeprazole",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (Generally considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 287,
+    "name": "মেন্থল লজেঞ্জ (Menthol lozenges)",
+    "generic": "Menthol lozenges",
+    "brand": "",
+    "pw": "নিরাপদ (Safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 288,
+    "name": "টেলমিসারটান (Telmisartan)",
+    "generic": "Telmisartan",
+    "brand": "",
+    "pw": "নিষিদ্ধ (এআরবি শ্রেণি) (CONTRAINDICATED (ARB class))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 289,
+    "name": "পেরিনডোপ্রিল (Perindopril)",
+    "generic": "Perindopril",
+    "brand": "",
+    "pw": "নিষিদ্ধ (এসিই ইনহিবিটর শ্রেণি) (CONTRAINDICATED (ACE inhibitor class))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 290,
+    "name": "ড্যাপাগ্লিফ্লোজিন (Dapagliflozin)",
+    "generic": "Dapagliflozin",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় এড়ানো হয় (Avoided in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 291,
+    "name": "লিরাগ্লুটাইড (Liraglutide)",
+    "generic": "Liraglutide",
+    "brand": "",
+    "pw": "গর্ভাবস্থায় এড়ানো হয়; সীমিত তথ্য (Avoided in pregnancy; limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 292,
+    "name": "ট্রাজোডোন (Trazodone)",
+    "generic": "Trazodone",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 293,
+    "name": "ভরটিওক্সেটিন (Vortioxetine)",
+    "generic": "Vortioxetine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 294,
+    "name": "ফসফোমাইসিন (Fosfomycin)",
+    "generic": "Fosfomycin",
+    "brand": "",
+    "pw": "নিরাপদ বিবেচিত; গর্ভাবস্থায় মূত্রনালীর সংক্রমণে ব্যবহৃত (Considered safe; used for UTI in pregnancy)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 295,
+    "name": "আইভাব্রাডিন (Ivabradine)",
+    "generic": "Ivabradine",
+    "brand": "",
+    "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 296,
+    "name": "রানোলাজিন (Ranolazine)",
+    "generic": "Ranolazine",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 297,
+    "name": "কলচিসিন (Colchicine)",
+    "generic": "Colchicine",
+    "brand": "",
+    "pw": "সতর্কতা; উচ্চ মাত্রায় কিছু ঝুঁকি (Caution; some teratogenicity concerns at high dose)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 298,
+    "name": "অ্যালোপিউরিনল (Allopurinol)",
+    "generic": "Allopurinol",
+    "brand": "",
+    "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 299,
+    "name": "মিথাইলএরগোমেট্রিন (Methylergometrine)",
+    "generic": "Methylergometrine",
+    "brand": "",
+    "pw": "শুধুমাত্র প্রসবের পরে ব্যবহৃত (প্রসবের আগে নিষিদ্ধ) (Used ONLY postpartum (contraindicated before delivery - uterotonic))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 300,
+    "name": "কার্বোপ্রস্ট (Carboprost)",
+    "generic": "Carboprost",
+    "brand": "",
+    "pw": "শুধুমাত্র প্রসবোত্তর রক্তক্ষরণ নিয়ন্ত্রণে ব্যবহৃত (Used ONLY postpartum for hemorrhage control)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 301,
+    "name": "ট্রানেক্সামিক এসিড (Tranexamic acid)",
+    "generic": "Tranexamic acid",
+    "brand": "",
+    "pw": "রক্তক্ষরণ নিয়ন্ত্রণে ব্যবহৃত; নিরাপদ বিবেচিত (Used for bleeding control incl. postpartum hemorrhage; considered safe)",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  },
+  {
+    "id": 302,
+    "name": "ফেরাস ফিউমারেট (Ferrous fumarate)",
+    "generic": "Ferrous fumarate",
+    "brand": "",
+    "pw": "সাধারণত নিরাপদ (বিকল্প আয়রন লবণ) (Generally safe; standard antenatal supplement (alternative iron salt))",
+    "contra": "অতিসংবেদনশীলতা (Allergy) থাকলে বা চিকিৎসকের সুস্পষ্ট পরামর্শ ব্যতীত অননুমোদিত মাত্রায় ব্যবহার পরিহার করুন।"
+  }
+]

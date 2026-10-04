@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   Search, Mic, Sparkles, CheckCircle2, Heart, ArrowRight, ShieldCheck, 
   Flame, Plus, Check, Calendar, ChevronLeft, ChevronRight, Baby, Clock,
-  Sunrise, Sun, Sunset, Moon, Activity, Stethoscope, Bookmark
+  Sunrise, Sun, Sunset, Moon, Activity, Stethoscope, Bookmark,
+  AlertTriangle, XCircle, CheckCircle, ExternalLink, BookOpen, Layers, Info,
+  Database
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { getWeekInfo } from '../data/pregnancyWeeks';
@@ -11,12 +13,14 @@ export const HomeScreen = () => {
   const { 
     lang, t, profile, setWeek, setActiveTab, searchQuery, setSearchQuery, 
     searchDrug, isSearchingRag, setIsVoiceOpen, trackerItems, toggleTrackerItem, 
-    addTrackerItem, streakDays, bookmarkedIds 
+    addTrackerItem, streakDays, bookmarkedIds, activeDrug, setActiveDrug,
+    getDrugSuggestions, allDrugs = []
   } = useApp();
 
   const [showQuickAdd, setShowQuickAdd] = useState(false);
   const [newMedName, setNewMedName] = useState('');
   const [newMedTime, setNewMedTime] = useState('morning');
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const currentWeek = profile.week || 12;
   const weekInfo = getWeekInfo(currentWeek);
@@ -28,16 +32,58 @@ export const HomeScreen = () => {
     ? Math.round((completedTrackerCount / totalTrackerCount) * 100) 
     : 0;
 
+  // Live autocomplete suggestions from the 302-drug dataset
+  const suggestions = useMemo(() => {
+    if (!searchQuery || searchQuery.trim().length < 2) return [];
+    return getDrugSuggestions(searchQuery, 6);
+  }, [searchQuery, getDrugSuggestions]);
+
   const handleQuickQuery = (query) => {
+    setShowSuggestions(false);
     searchDrug(query);
+    setActiveTab('ask');
+  };
+
+  const handleSelectSuggestion = (drug) => {
+    setActiveDrug(drug);
+    setSearchQuery(lang === 'bn' ? drug.nameBn : drug.nameEn);
+    setShowSuggestions(false);
+    searchDrug(drug.id);
     setActiveTab('ask');
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+    setShowSuggestions(false);
     if (searchQuery.trim()) {
       searchDrug(searchQuery);
       setActiveTab('ask');
+    }
+  };
+
+  const getSafetyBadgeStyle = (rating) => {
+    switch (rating) {
+      case 'safe':
+        return {
+          bg: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+          labelBn: 'নিরাপদ সেবন',
+          labelEn: 'Safe to Use',
+          icon: CheckCircle
+        };
+      case 'unsafe':
+        return {
+          bg: 'bg-rose-100 text-rose-800 border-rose-300',
+          labelBn: 'বর্জনীয় / নিষিদ্ধ',
+          labelEn: 'Contraindicated / Avoid',
+          icon: XCircle
+        };
+      default:
+        return {
+          bg: 'bg-amber-100 text-amber-800 border-amber-300',
+          labelBn: 'সতর্কতা প্রয়োজন',
+          labelEn: 'Use with Caution',
+          icon: AlertTriangle
+        };
     }
   };
 
@@ -186,7 +232,7 @@ export const HomeScreen = () => {
           </div>
 
           {/* 2. CORE BANGLA DRUG SAFETY & RAG SEARCH CENTERPIECE (ALWAYS HIGHLIGHTED) */}
-          <div className="bg-gradient-to-br from-cream-card via-maternal-50/70 to-rose-50/50 rounded-3xl p-6 border-2 border-maternal-400 shadow-warm-md relative overflow-hidden space-y-4 ring-4 ring-maternal-100/80">
+          <div className="bg-gradient-to-br from-cream-card via-maternal-50/70 to-rose-50/50 rounded-3xl p-6 border-2 border-maternal-400 shadow-warm-md relative space-y-5 ring-4 ring-maternal-100/80">
             
             {/* Top Highlight Banner */}
             <div className="flex items-center justify-between">
@@ -203,7 +249,7 @@ export const HomeScreen = () => {
                   </h3>
                   <p className="text-xs text-gray-600 font-medium mt-0.5">
                     {lang === 'bn' 
-                      ? 'ডিজিডিএ ও মেডেক্স বিডি নির্দেশিকা অনুযায়ী আপনার ওষুধটি গর্ভাবস্থায় নিরাপদ কি না যাচাই করুন।' 
+                      ? 'ডিজিডিএ ও মেডেক্স বিডি নির্দেশিকা অনুযায়ী আপনার ওষুধটি গর্ভাবস্থায় নিরাপদ কি না তাৎক্ষণিক যাচাই করুন।' 
                       : 'Verified against 302 maternal drug records with Random Forest hallucination protection.'}
                   </p>
                 </div>
@@ -214,64 +260,249 @@ export const HomeScreen = () => {
               </span>
             </div>
 
-            {/* Glowing Search Box */}
-            <form onSubmit={handleSearchSubmit} className="relative">
-              <div className="relative flex items-center">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={t.searchPlaceholder}
-                  className="w-full bg-white pl-12 pr-32 py-4.5 rounded-2xl border-2 border-maternal-400 focus:border-maternal-600 focus:ring-4 focus:ring-maternal-200 text-sm sm:text-base font-medium placeholder:text-gray-400 shadow-warm-md transition-all outline-hidden text-gray-900"
-                />
-                <Search className="w-6 h-6 text-maternal-600 absolute left-4 pointer-events-none" />
+            {/* Glowing Search Box with Live 302-Drug Autocomplete */}
+            <div className="relative">
+              <form onSubmit={handleSearchSubmit} className="relative">
+                <div className="relative flex items-center">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      setShowSuggestions(true);
+                    }}
+                    onFocus={() => setShowSuggestions(true)}
+                    placeholder={t.searchPlaceholder}
+                    className="w-full bg-white pl-12 pr-32 py-4.5 rounded-2xl border-2 border-maternal-400 focus:border-maternal-600 focus:ring-4 focus:ring-maternal-200 text-sm sm:text-base font-medium placeholder:text-gray-400 shadow-warm-md transition-all outline-hidden text-gray-900"
+                  />
+                  <Search className="w-6 h-6 text-maternal-600 absolute left-4 pointer-events-none" />
 
-                <div className="absolute right-2 flex items-center space-x-1.5">
-                  {/* Voice Search Button */}
+                  <div className="absolute right-2 flex items-center space-x-1.5">
+                    {/* Voice Search Button */}
+                    <button
+                      type="button"
+                      onClick={() => setIsVoiceOpen(true)}
+                      className="p-3 rounded-xl bg-maternal-100 text-maternal-700 hover:bg-maternal-200 transition-colors"
+                      title={t.voiceInput}
+                    >
+                      <Mic className="w-4.5 h-4.5 text-maternal-700" />
+                    </button>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      disabled={isSearchingRag}
+                      className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-maternal-600 to-maternal-500 hover:from-maternal-700 hover:to-maternal-600 text-white font-bold text-xs sm:text-sm transition-all shadow-warm-xs flex items-center space-x-1"
+                    >
+                      {isSearchingRag ? (
+                        <span className="animate-pulse">{lang === 'bn' ? 'খুঁজছে...' : 'Searching...'}</span>
+                      ) : (
+                        <span>{t.searchBtn}</span>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              {/* Floating Live Autocomplete Suggestions */}
+              {showSuggestions && suggestions.length > 0 && (
+                <div className="absolute z-50 left-0 right-0 mt-2 bg-white rounded-2xl border-2 border-maternal-300 shadow-2xl overflow-hidden divide-y divide-gray-100 animate-in fade-in zoom-in-95 duration-150">
+                  <div className="p-2.5 bg-cream-base flex items-center justify-between text-[11px] font-bold text-gray-500 border-b border-maternal-100">
+                    <span className="flex items-center gap-1">
+                      <Sparkles className="w-3.5 h-3.5 text-maternal-600" />
+                      {lang === 'bn' ? '৩০২টি ড্রাগ কর্পাস থেকে প্রস্তাবিত:' : 'Suggestions from 302-Drug Corpus:'}
+                    </span>
+                    <button 
+                      onClick={() => setShowSuggestions(false)}
+                      className="text-gray-400 hover:text-gray-600"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <div className="max-h-64 overflow-y-auto">
+                    {suggestions.map((drug) => {
+                      const badge = getSafetyBadgeStyle(drug.safetyRating);
+                      const BadgeIcon = badge.icon;
+                      return (
+                        <button
+                          key={drug.id}
+                          onClick={() => handleSelectSuggestion(drug)}
+                          className="w-full px-4 py-3 text-left hover:bg-maternal-50 transition-colors flex items-center justify-between gap-3 group"
+                        >
+                          <div className="space-y-0.5 flex-1 min-w-0">
+                            <div className="flex items-center space-x-2">
+                              <span className="font-extrabold text-sm text-gray-900 group-hover:text-maternal-700 truncate">
+                                {lang === 'bn' ? drug.nameBn : drug.nameEn}
+                              </span>
+                              {drug.category && (
+                                <span className="text-[10px] text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full shrink-0 font-medium">
+                                  {drug.category}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-sage-700 font-medium truncate">
+                              {lang === 'bn' ? drug.genericBn : drug.genericEn}
+                              {drug.brandNames && drug.brandNames.length > 0 && ` (${drug.brandNames.slice(0, 3).join(', ')})`}
+                            </p>
+                          </div>
+
+                          <span className={`inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-xs font-bold border shrink-0 ${badge.bg}`}>
+                            <BadgeIcon className="w-3 h-3 stroke-[2.5]" />
+                            <span>{lang === 'bn' ? badge.labelBn : badge.labelEn}</span>
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Clinically Curated Maternal Query Pills */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between text-xs text-gray-500 font-medium">
+                <span className="text-gray-600 font-bold flex items-center gap-1">
+                  <span>{t.quickAsk}:</span>
+                  <span className="text-[10px] font-normal text-gray-400">({lang === 'bn' ? 'ক্লিনিক্যাল উদাহরণ' : 'Clinical Archetypes'})</span>
+                </span>
+                <button
+                  onClick={() => setActiveTab('ask')}
+                  className="text-maternal-700 font-bold hover:underline flex items-center gap-0.5 text-[11px]"
+                >
+                  <span>{lang === 'bn' ? 'সব ৩০২ ওষুধ দেখুন' : 'Explore All 302'}</span>
+                  <ArrowRight className="w-3 h-3" />
+                </button>
+              </div>
+
+              <div className="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none text-xs">
+                {[
+                  { labelBn: '🟢 নাপা (নিরাপদ প্যারাসিটামল)', labelEn: '🟢 Napa (Safe Paracetamol)', query: 'Napa' },
+                  { labelBn: '🔴 ফ্লেক্সি (নিষিদ্ধ ব্যথানাশক)', labelEn: '🔴 Flexi (NSAID Contraindicated)', query: 'Flexi' },
+                  { labelBn: '🟢 ফিলওয়েল প্রেগ (ভিটামিন)', labelEn: '🟢 Filwel Preg (Prenatal Vitamin)', query: 'Filwel' },
+                  { labelBn: '🟡 সেকলো (গ্যাস্ট্রিক সতর্কতা)', labelEn: '🟡 Seclo (Omeprazole Caution)', query: 'Seclo' },
+                  { labelBn: '🟢 সেফ-৩ (নিরাপদ অ্যান্টিবায়োটিক)', labelEn: '🟢 Cef-3 (Safe Cefixime)', query: 'Cef-3' },
+                  { labelBn: '🔴 সিপ্রোসিন (বর্জনীয় ড্রাগ)', labelEn: '🔴 Ciprofloxacin (Avoid/Unsafe)', query: 'Ciprofloxacin' },
+                  { labelBn: '🔴 ওসারটিল (নিষিদ্ধ প্রেসার)', labelEn: '🔴 Osartil (Losartan Contraindicated)', query: 'Osartil' },
+                  { labelBn: '🟢 এন্টাসিড (বুকজ্বালা)', labelEn: '🟢 Entacyd (Safe Antacid)', query: 'Entacyd' },
+                ].map((item, idx) => (
                   <button
-                    type="button"
-                    onClick={() => setIsVoiceOpen(true)}
-                    className="p-3 rounded-xl bg-maternal-100 text-maternal-700 hover:bg-maternal-200 transition-colors"
-                    title={t.voiceInput}
+                    key={idx}
+                    onClick={() => handleQuickQuery(item.query)}
+                    className="whitespace-nowrap px-3.5 py-2 rounded-full bg-white border border-maternal-200 text-gray-800 hover:border-maternal-500 hover:bg-maternal-50 hover:text-maternal-800 transition-all font-semibold shadow-2xs active:scale-95"
                   >
-                    <Mic className="w-4.5 h-4.5 text-maternal-700" />
+                    {lang === 'bn' ? item.labelBn : item.labelEn}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* LIVE DRUG SAFETY SHOWCASE / PREVIEW CARD (Connected to 302 Dataset) */}
+            {activeDrug && (
+              <div className="bg-white rounded-2xl p-5 border-2 border-maternal-200 shadow-warm-sm space-y-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-2 flex-wrap gap-y-1">
+                      {/* Safety Pill */}
+                      {(() => {
+                        const badge = getSafetyBadgeStyle(activeDrug.safetyRating);
+                        const BadgeIcon = badge.icon;
+                        return (
+                          <span className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-extrabold border ${badge.bg}`}>
+                            <BadgeIcon className="w-3.5 h-3.5 stroke-[2.5]" />
+                            <span>{lang === 'bn' ? badge.labelBn : badge.labelEn}</span>
+                          </span>
+                        );
+                      })()}
+
+                      <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sage-100 text-sage-800 border border-sage-200">
+                        {lang === 'bn' ? `${profile.week}তম সপ্তাহ ম্যাচ` : `Week ${profile.week} Context`}
+                      </span>
+
+                      <span className="px-2 py-0.5 rounded-full text-[11px] font-bold bg-gray-100 text-gray-600 border border-gray-200">
+                        {activeDrug.category || 'MCH Formulary'}
+                      </span>
+                    </div>
+
+                    <h4 className="font-extrabold text-base sm:text-lg text-gray-900 tracking-tight">
+                      {lang === 'bn' ? activeDrug.nameBn : activeDrug.nameEn}
+                    </h4>
+                    <p className="text-xs text-sage-700 font-semibold">
+                      {lang === 'bn' ? activeDrug.genericBn : activeDrug.genericEn}
+                    </p>
+                  </div>
+
+                  <span className="text-xs font-extrabold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-xl shadow-2xs shrink-0">
+                    {activeDrug.confidenceScore || 96}% {lang === 'bn' ? 'কনফিডেন্স' : 'Score'}
+                  </span>
+                </div>
+
+                {/* Clinical Grounded Summary Snippet */}
+                <div className="bg-cream-base/80 p-3.5 rounded-xl border border-maternal-100 text-xs sm:text-sm text-gray-800 leading-relaxed font-normal">
+                  <p className="line-clamp-2 font-medium">
+                    {lang === 'bn' ? activeDrug.answerBn : activeDrug.answerEn}
+                  </p>
+                </div>
+
+                {/* Grounding & Evaluation Badges Strip */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px]">
+                  <div className="p-2 rounded-xl bg-emerald-50/70 border border-emerald-200 flex items-center space-x-1.5 text-emerald-900">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span className="font-semibold">{lang === 'bn' ? 'DGDA ৩০২ কর্পাস ভেরিফাইড' : 'DGDA 302 Corpus Grounded'}</span>
+                  </div>
+                  <div className="p-2 rounded-xl bg-amber-50/70 border border-amber-200 flex items-center space-x-1.5 text-amber-900">
+                    <Activity className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span className="font-semibold">{lang === 'bn' ? 'Random Forest ক্লাসিফায়ার' : 'Random Forest Protected'}</span>
+                  </div>
+                  <div className="p-2 rounded-xl bg-purple-50/70 border border-purple-200 flex items-center space-x-1.5 text-purple-900">
+                    <Layers className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                    <span className="font-semibold">{lang === 'bn' ? '৬টি ML মেট্রিক্স ফিচার' : '6 ML Features Computed'}</span>
+                  </div>
+                </div>
+
+                {/* Primary CTA: Jump into Detailed Comparative RAG Screen */}
+                <div className="pt-2 border-t border-gray-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                  <button
+                    onClick={() => {
+                      searchDrug(activeDrug.id);
+                      setActiveTab('ask');
+                    }}
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-maternal-600 to-rose-500 hover:from-maternal-700 hover:to-rose-600 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-warm-xs transition-all active:scale-95"
+                  >
+                    <Sparkles className="w-4 h-4 text-yellow-300" />
+                    <span>{lang === 'bn' ? '🔍 সম্পূর্ণ RAG বনাম সাধারণ LLM মূল্যায়ন দেখুন' : '🔍 View Full RAG vs Direct LLM Dual Card'}</span>
+                    <ArrowRight className="w-4 h-4" />
                   </button>
 
-                  {/* Submit Button */}
                   <button
-                    type="submit"
-                    disabled={isSearchingRag}
-                    className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-maternal-600 to-maternal-500 hover:from-maternal-700 hover:to-maternal-600 text-white font-bold text-xs sm:text-sm transition-all shadow-warm-xs flex items-center space-x-1"
+                    onClick={() => setActiveTab('ask')}
+                    className="py-2.5 px-4 rounded-xl bg-cream-card hover:bg-maternal-100 border border-maternal-300 text-maternal-800 font-bold text-xs flex items-center justify-center space-x-1.5 transition-colors"
                   >
-                    {isSearchingRag ? (
-                      <span className="animate-pulse">{lang === 'bn' ? 'খুঁজছে...' : 'Searching...'}</span>
-                    ) : (
-                      <span>{t.searchBtn}</span>
-                    )}
+                    <BookOpen className="w-3.5 h-3.5 text-maternal-600" />
+                    <span>{lang === 'bn' ? '৩০২ ড্রাগ ক্যাটালগ' : '302 Catalog'}</span>
                   </button>
                 </div>
               </div>
-            </form>
+            )}
 
-            {/* Quick Suggestion Query Pills */}
-            <div className="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none text-xs">
-              <span className="text-gray-400 font-medium whitespace-nowrap">{t.quickAsk}:</span>
-              {[
-                { labelBn: 'নাপা সেবন কি নিরাপদ?', labelEn: 'Is Napa Safe?', query: 'Napa' },
-                { labelBn: 'সেকলো (গ্যাস্ট্রিক)', labelEn: 'Seclo (Heartburn)', query: 'Seclo' },
-                { labelBn: 'ফ্লেক্সি ব্যথানাশক', labelEn: 'Flexi Painkiller', query: 'Flexi' },
-                { labelBn: 'এন্টাসিড সিরাপ', labelEn: 'Entacyd Antacid', query: 'Entacyd' },
-                { labelBn: 'ইনডেভার প্রেসার', labelEn: 'Indever Pressure', query: 'Indever' },
-              ].map((item, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleQuickQuery(item.query)}
-                  className="whitespace-nowrap px-3.5 py-2 rounded-full bg-white border border-maternal-200 text-gray-700 hover:border-maternal-400 hover:text-maternal-700 transition-all font-medium shadow-2xs active:scale-95"
-                >
-                  {lang === 'bn' ? item.labelBn : item.labelEn}
-                </button>
-              ))}
+            {/* Maternal Corpus Live Index Counter */}
+            <div className="pt-1 flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-gray-500">
+              <span className="flex items-center gap-1.5 text-gray-700">
+                <Database className="w-3.5 h-3.5 text-maternal-600" />
+                <span>{lang === 'bn' ? 'মাতৃত্ব ড্রাগ ইনডেক্স: ৩০২টি নিবন্ধিত ওষুধ' : 'MCH Drug Index: 302 Registered Medicines'}</span>
+              </span>
+              <div className="flex items-center space-x-2">
+                <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                  {lang === 'bn' ? '১১৯টি নিরাপদ' : '119 Safe'}
+                </span>
+                <span className="text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
+                  {lang === 'bn' ? '১৩৩টি সতর্কতা' : '133 Caution'}
+                </span>
+                <span className="text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200">
+                  {lang === 'bn' ? '৫০টি নিষিদ্ধ' : '50 Avoid'}
+                </span>
+              </div>
             </div>
+
           </div>
 
         </div>

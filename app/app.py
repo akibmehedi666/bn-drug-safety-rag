@@ -16,6 +16,7 @@ from py_src.feature_engineering import (
     compute_lexical_overlap,
     check_relevant_drug_retrieved,
     count_hedging_words,
+    is_word_in_text,
     KNOWN_DRUGS
 )
 
@@ -58,7 +59,7 @@ def infer_query_type(question: str) -> str:
     matched = False
     for drug in KNOWN_DRUGS:
         for term in drug["terms"]:
-            if term.lower() in q_lower:
+            if is_word_in_text(term, q_lower):
                 matched = True
                 break
         if matched:

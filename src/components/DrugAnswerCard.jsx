@@ -17,10 +17,183 @@ import {
   Database, 
   Activity, 
   XCircle,
-  ExternalLink
+  ExternalLink,
+  Baby,
+  Syringe,
+  Tag,
+  FlaskConical
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import TrustBadge from './TrustBadge';
+
+/* ─────────────────────────────────────────────────────────────────
+   DrugClinicalProfile — shows ALL dataset attributes in one panel
+───────────────────────────────────────────────────────────────── */
+const DrugClinicalProfile = ({ drug, lang }) => {
+  const [expanded, setExpanded] = useState(true);
+
+  // Determine pregnancy safety pill style
+  const getPregnancyStyle = () => {
+    const txt = (drug.pregnancyWarning || drug.trimesterNoteEn || '').toLowerCase();
+    if (txt.includes('safe') || txt.includes('নিরাপদ')) return { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-emerald-300', dot: 'bg-emerald-500', label: lang === 'bn' ? '✅ নিরাপদ' : '✅ Safe' };
+    if (txt.includes('contraindicated') || txt.includes('নিষিদ্ধ') || txt.includes('avoid')) return { bg: 'bg-rose-100', text: 'text-rose-800', border: 'border-rose-300', dot: 'bg-rose-500', label: lang === 'bn' ? '🚫 নিষিদ্ধ' : '🚫 Contraindicated' };
+    return { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300', dot: 'bg-amber-500', label: lang === 'bn' ? '⚠️ সতর্কতা' : '⚠️ Caution' };
+  };
+
+  const getLactationStyle = () => {
+    const txt = (drug.lactationWarning || drug.breastfeedingNoteEn || '').toLowerCase();
+    if (txt.includes('compatible') || txt.includes('safe') || txt.includes('নিরাপদ') || txt.includes('সামঞ্জস্য')) return { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-emerald-300', label: lang === 'bn' ? '✅ সামঞ্জস্যপূর্ণ' : '✅ Compatible' };
+    if (txt.includes('avoided') || txt.includes('নিষিদ্ধ') || txt.includes('এড়ান')) return { bg: 'bg-rose-100', text: 'text-rose-800', border: 'border-rose-300', label: lang === 'bn' ? '🚫 এড়িয়ে চলুন' : '🚫 Avoid' };
+    return { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300', label: lang === 'bn' ? '⚠️ সতর্কতা' : '⚠️ Caution' };
+  };
+
+  const pregStyle = getPregnancyStyle();
+  const lactStyle = getLactationStyle();
+
+  const indications = lang === 'bn'
+    ? (drug.indicationsBn || drug.answerBn || drug.trimesterNoteBn || '')
+    : (drug.indicationsEn || drug.answerEn || drug.trimesterNoteEn || '');
+
+  const pregnancyText = lang === 'bn'
+    ? (drug.pregnancyWarning || drug.trimesterNoteBn || '')
+    : (drug.pregnancyWarning || drug.trimesterNoteEn || '');
+
+  const lactationText = lang === 'bn'
+    ? (drug.lactationWarning || drug.breastfeedingNoteBn || '')
+    : (drug.lactationWarning || drug.breastfeedingNoteEn || '');
+
+  const contraText = lang === 'bn'
+    ? (drug.contraindicationsBn || drug.contraindications || '')
+    : (drug.contraindicationsEn || drug.contraindications || '');
+
+  const dosageText = lang === 'bn'
+    ? (drug.dosageBn || drug.dosage || '')
+    : (drug.dosageEn || drug.dosage || '');
+
+  const sideEffectsText = lang === 'bn'
+    ? (drug.sideEffectsBn || drug.sideEffects || '')
+    : (drug.sideEffectsEn || drug.sideEffects || '');
+
+  return (
+    <div className="bg-white rounded-2xl border-2 border-maternal-200/80 shadow-warm-sm overflow-hidden">
+      {/* Header bar */}
+      <button
+        onClick={() => setExpanded(e => !e)}
+        className="w-full flex items-center justify-between px-4 sm:px-5 py-3.5 bg-gradient-to-r from-maternal-50 to-sage-50 border-b border-maternal-100 hover:from-maternal-100 transition-colors"
+      >
+        <span className="flex items-center gap-2 font-bold text-sm text-maternal-900">
+          <FlaskConical className="w-4 h-4 text-maternal-600" />
+          {lang === 'bn' ? '💊 সম্পূর্ণ ক্লিনিক্যাল ড্রাগ প্রোফাইল (৩০২ কর্পাস থেকে)' : '💊 Full Clinical Drug Profile (from 302-Drug Corpus)'}
+        </span>
+        {expanded ? <ChevronUp className="w-4 h-4 text-maternal-600" /> : <ChevronDown className="w-4 h-4 text-maternal-600" />}
+      </button>
+
+      {expanded && (
+        <div className="p-4 sm:p-5 space-y-4">
+
+          {/* Safety Pills Row */}
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">
+              {lang === 'bn' ? 'নিরাপত্তা:' : 'Safety:'}
+            </span>
+            <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${pregStyle.bg} ${pregStyle.text} ${pregStyle.border}`}>
+              <Baby className="w-3.5 h-3.5" />
+              {lang === 'bn' ? 'গর্ভাবস্থা:' : 'Pregnancy:'} {pregStyle.label}
+            </span>
+            <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${lactStyle.bg} ${lactStyle.text} ${lactStyle.border}`}>
+              <HeartPulse className="w-3.5 h-3.5" />
+              {lang === 'bn' ? 'স্তন্যদান:' : 'Breastfeeding:'} {lactStyle.label}
+            </span>
+            {drug.category && (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border bg-blue-50 text-blue-800 border-blue-200">
+                <Tag className="w-3.5 h-3.5" />
+                {drug.category}
+              </span>
+            )}
+          </div>
+
+          {/* 2-column grid of clinical details */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+
+            {/* Indications / Uses */}
+            {indications && (
+              <div className="bg-emerald-50/60 rounded-xl p-3.5 border border-emerald-100 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-emerald-900 text-xs uppercase tracking-wider">
+                  <Stethoscope className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'ব্যবহার / নির্দেশনা' : 'Indications / Uses'}
+                </div>
+                <p className="text-xs text-emerald-900 leading-relaxed">{indications}</p>
+              </div>
+            )}
+
+            {/* Pregnancy Safety Detail */}
+            {pregnancyText && (
+              <div className={`rounded-xl p-3.5 border space-y-1.5 ${pregStyle.bg} ${pregStyle.border}`}>
+                <div className={`flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider ${pregStyle.text}`}>
+                  <Baby className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'গর্ভাবস্থায় ব্যবহার' : 'Pregnancy Safety'}
+                </div>
+                <p className={`text-xs leading-relaxed ${pregStyle.text}`}>{pregnancyText}</p>
+              </div>
+            )}
+
+            {/* Breastfeeding Safety */}
+            {lactationText && (
+              <div className={`rounded-xl p-3.5 border space-y-1.5 ${lactStyle.bg} ${lactStyle.border}`}>
+                <div className={`flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider ${lactStyle.text}`}>
+                  <HeartPulse className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'স্তন্যদানকালে ব্যবহার' : 'Breastfeeding / Lactation'}
+                </div>
+                <p className={`text-xs leading-relaxed ${lactStyle.text}`}>{lactationText}</p>
+              </div>
+            )}
+
+            {/* Contraindications */}
+            {contraText && (
+              <div className="bg-rose-50/60 rounded-xl p-3.5 border border-rose-100 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-rose-900 text-xs uppercase tracking-wider">
+                  <AlertTriangle className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'বিপরীত নির্দেশনা / নিষেধাজ্ঞা' : 'Contraindications'}
+                </div>
+                <p className="text-xs text-rose-900 leading-relaxed">{contraText}</p>
+              </div>
+            )}
+
+            {/* Dosage */}
+            {dosageText && (
+              <div className="bg-blue-50/60 rounded-xl p-3.5 border border-blue-100 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-blue-900 text-xs uppercase tracking-wider">
+                  <Syringe className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'মাত্রা / ডোজ' : 'Dosage / Administration'}
+                </div>
+                <p className="text-xs text-blue-900 leading-relaxed">{dosageText}</p>
+              </div>
+            )}
+
+            {/* Side Effects */}
+            {sideEffectsText && (
+              <div className="bg-amber-50/60 rounded-xl p-3.5 border border-amber-100 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-amber-900 text-xs uppercase tracking-wider">
+                  <AlertCircle className="w-3.5 h-3.5" />
+                  {lang === 'bn' ? 'পার্শ্বপ্রতিক্রিয়া' : 'Side Effects'}
+                </div>
+                <p className="text-xs text-amber-900 leading-relaxed">{sideEffectsText}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Source footer */}
+          <div className="text-[11px] text-gray-400 font-medium flex items-center gap-1.5 pt-1 border-t border-gray-100">
+            <Database className="w-3 h-3" />
+            {lang === 'bn' ? drug.sourceBn || 'উৎস: DGDA ও MedEx ৩০২ মাতৃত্ব ড্রাগ কর্পাস' : drug.sourceEn || 'Source: DGDA & MedEx 302 Maternal Drug Corpus'}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+
 
 export const DrugAnswerCard = ({ drug }) => {
   const { lang, t, isBookmarked, toggleBookmark, profile } = useApp();
@@ -197,6 +370,11 @@ export const DrugAnswerCard = ({ drug }) => {
 
       {/* Primary Trust Badge Component */}
       <TrustBadge drug={drug} />
+
+      {/* ========================================================================= */}
+      {/* CLINICAL DRUG PROFILE — All dataset attributes in one glance               */}
+      {/* ========================================================================= */}
+      <DrugClinicalProfile drug={drug} lang={lang} />
 
       {/* ========================================================================= */}
       {/* 1. TOP PART: SIDE-BY-SIDE DUAL ANSWER (RAG vs LLM) - Follows Main Branch   */}

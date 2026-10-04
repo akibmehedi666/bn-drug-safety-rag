@@ -93,6 +93,7 @@ def retrieve(query: str, top_k: int = 3, corpus_path: str = CORPUS_FILE, embeddi
     dense_similarities = np.dot(embeddings, query_emb)
 
     q_lower = query.lower()
+    q_tokens = set(re.findall(r"[\w\u0980-\u09FF]+", q_lower))
     combined_scores = []
     for idx, drug in enumerate(corpus):
         name = drug.get("name", "").lower()
@@ -101,7 +102,7 @@ def retrieve(query: str, top_k: int = 3, corpus_path: str = CORPUS_FILE, embeddi
         # Clean tokens to match drug mentions
         terms = [re.sub(r"[^\w\u0980-\u09FF]", "", w) for w in full_search.split()]
         terms = [t for t in terms if len(t) >= 3]
-        lexical_boost = 0.75 if any(t in q_lower for t in terms) else 0.0
+        lexical_boost = 0.75 if any(t in q_tokens for t in terms) else 0.0
         final_score = float(dense_similarities[idx] + lexical_boost)
         combined_scores.append((final_score, idx))
 
