@@ -1,3 +1,5 @@
+import { drugs302Database } from './drugs302Data';
+
 export const uiTranslations = {
   en: {
     appName: "GorbhoMaya",
@@ -89,23 +91,6 @@ export const uiTranslations = {
     selfCareTips: "Gentle Home Self-Care Remedies",
     redFlagWarning: "RED FLAG — See a Doctor Immediately If:",
     notDiagnosticDisclaimer: "This guide is strictly educational. If in pain or doubt, call your doctor or hospital.",
-    // First run and setup
-    setupTitle: "Welcome to GorbhoMaya",
-    setupSubtitle: "Set your pregnancy week and daily supplements to personalize safety alerts and tracking",
-    saveAndContinue: "Save and Get Started",
-    commonPrenatalSupplements: "Common Prenatal Supplements (One-Tap Add)",
-    emptyTrackerPrompt: "No daily medicines or supplements added yet. Tap below to add your essential prenatal vitamins.",
-    adherenceRate: "Adherence Rate",
-    streakDaysCount: "Day Streak",
-    missedDosesNote: "Food is not a replacement for a prescribed supplement. Talk to your doctor.",
-    forYourSupplements: "For Your Current Supplements",
-    supplementFoodAdvice: "Food alternatives and optimal meal timing for your prescribed vitamins",
-    richFoodSources: "Rich Bangladeshi Food Sources",
-    eatWithAdvice: "Best to Take With",
-    avoidWithAdvice: "Foods to Avoid Near Dose",
-    missedDoseAlternative: "Nutritional Support if Dose Missed",
-    personalizedWarningsTitle: "Personalized Maternal Health Alert",
-
   },
   bn: {
     appName: "গর্ভমায়া",
@@ -197,44 +182,233 @@ export const uiTranslations = {
     selfCareTips: "ঘরে বসেই ঘরেলু আরামদায়ক পরিচর্যা",
     redFlagWarning: "জরুরি সতর্কতা — অবিলম্বে ডাক্তারের কাছে যাবেন যদি:",
     notDiagnosticDisclaimer: "এই গাইডটি তথ্য ও সচেতনতার জন্য। যেকোনো তীব্র ব্যথায় বা রক্তপাতে অবিলম্বে নিকটস্থ হাসপাতালে যোগাযোগ করুন।",
-    // First run and setup
-    setupTitle: "গর্ভমায়ায় আপনাকে স্বাগতম",
-    setupSubtitle: "আপনার গর্ভাবস্থার বর্তমান সপ্তাহ ও নিয়মিত সাপ্লিমেন্ট যুক্ত করে ব্যক্তিগত স্বাস্থ্যসেবা শুরু করুন",
-    saveAndContinue: "সংরক্ষণ করে শুরু করুন",
-    commonPrenatalSupplements: "প্রচলিত গর্ভকালীন সাপ্লিমেন্ট (এক ট্যাপে যোগ করুন)",
-    emptyTrackerPrompt: "এখনও কোনো ওষুধ বা ভিটামিন যোগ করা হয়নি। নিয়মিত সেবন ট্র্যাক করতে নিচের প্রয়োজনীয় ভিটামিনগুলো এক ট্যাপে যোগ করুন।",
-    adherenceRate: "ধারাবাহিকতা হার",
-    streakDaysCount: "দিনের স্ট্রিক",
-    missedDosesNote: "খাবার কোনোভাবেই ডাক্তারের প্রেসক্রাইব করা সাপ্লিমেন্টের বিকল্প নয়। চিকিৎসকের পরামর্শ নিন।",
-    forYourSupplements: "আপনার বর্তমান সাপ্লিমেন্টের জন্য পুষ্টি টিপস",
-    supplementFoodAdvice: "প্রেসক্রাইব করা ভিটামিনগুলোর সাথে সঠিক খাবার ও সময় নির্বাচন",
-    richFoodSources: "সহজলভ্য দেশি খাবারের উৎস",
-    eatWithAdvice: "যে খাবারের সাথে খাওয়া ভালো",
-    avoidWithAdvice: "ওষুধ খাওয়ার আশেপাশে যে খাবার এড়াবেন",
-    missedDoseAlternative: "ডোজ মিস হলে পুষ্টিকর খাবারের পরামর্শ",
-    personalizedWarningsTitle: "ব্যক্তিগতকৃত মাতৃত্বকালীন স্বাস্থ্য সতর্কতা",
-
   }
 };
 
 export const initialProfile = {
-  name: "",
-  stage: "1st",
-  week: 4,
-  allergies: [],
-  conditions: [],
-  isSetupDone: false
+  name: "সুমি বেগম / Sumi Begum",
+  stage: "2nd", // 1st, 2nd, 3rd, lactation
+  week: 24,
+  allergies: ["Penicillin", "Dust"],
+  conditions: ["Mild Anemia"],
 };
 
-// Common prenatal supplement templates for one-tap adding
-export const prenatalSupplementSuggestions = [
-  { id: 'folic_acid', nameEn: 'Folic Acid 5mg', nameBn: 'ফলিক এসিড ৫ মিগ্রা', time: 'morning', nutrientKey: 'folic_acid' },
-  { id: 'iron_cap', nameEn: 'Iron & Folic Acid Capsule', nameBn: 'আয়রন ও ফলিক এসিড ক্যাপসুল', time: 'evening', nutrientKey: 'iron' },
-  { id: 'calcium_vit_d', nameEn: 'Calcium 500mg + Vitamin D3', nameBn: 'ক্যালসিয়াম + ভিটামিন ডি৩', time: 'night', nutrientKey: 'calcium' },
-  { id: 'vitamin_d', nameEn: 'Vitamin D3 Drops / Cap', nameBn: 'ভিটামিন ডি৩ ক্যাপসুল', time: 'afternoon', nutrientKey: 'vitamin_d' }
+export const drugsDatabase = drugs302Database;
+
+export const nutritionDatabase = [
+  {
+    id: "kanchakala",
+    nameEn: "Kanchakala (Green Banana)",
+    nameBn: "কাঁচাকলা (কাঁচা কলা)",
+    category: "iron",
+    categoryLabelEn: "Iron & Digest Support",
+    categoryLabelBn: "আয়রন ও হজম সহায়ক",
+    trimesters: ["1st", "2nd", "3rd"],
+    img: "🍌",
+    whyEn: "Rich in plant iron, dietary fiber, and potassium. Helps relieve pregnancy diarrhea and morning nausea.",
+    whyBn: "প্রচুর আয়রন, ফাইবার ও পটাশিয়াম সমৃদ্ধ। গর্ভকালীন পাতলা পায়খানা ও বমি ভাব কমাতে দারুণ কার্যকরী।",
+    prepEn: "Boiled and mashed (Kanchakala Bharta) with mustard oil and cumin, or light curry with Shing mach.",
+    prepBn: "কাঁচাকলা সেদ্ধ ভর্তা অথবা শিং মাছের সাথে পাতলা ঝোল রান্না করে খাওয়া অত্যন্ত পুষ্টিকর।"
+  },
+  {
+    id: "danta_shak",
+    nameEn: "Danta & Lal Shak (Amaranth Greens)",
+    nameBn: "ডাটা ও লাল শাক",
+    category: "folate",
+    categoryLabelEn: "Folate & Hemoglobin Booster",
+    categoryLabelBn: "ফলিক এসিড ও হিমোগ্লোবিন বৃদ্ধিকারক",
+    trimesters: ["1st", "2nd"],
+    img: "🥬",
+    whyEn: "High natural Folic Acid to support neural tube development in babies and iron to build maternal hemoglobin.",
+    whyBn: "প্রচুর প্রাকৃতিক ফলিক এসিড ও আয়রন রয়েছে যা শিশুর মস্তিষ্কের বিকাশ ঘটায় এবং মায়ের রক্তশূন্যতা প্রতিরোধ করে।",
+    prepEn: "Lightly sauted with garlic and onions; do not overcook to retain vitamin C & folate.",
+    prepBn: "রসুন ও পেঁয়াজ দিয়ে হালকা ভাজি করে খাবেন। বেশি সময় ধরে কড়া করে ভাজলে ভিটামিন নষ্ট হয়ে যায়।"
+  },
+  {
+    id: "shing_mach",
+    nameEn: "Shing & Magur Mach (Stinging Catfish)",
+    nameBn: "শিং ও মাগুর মাছ",
+    category: "protein",
+    categoryLabelEn: "Protein & Muscle Recovery",
+    categoryLabelBn: "সহজপ্রাচ্য প্রোটিন ও শক্তিদায়ক",
+    trimesters: ["1st", "2nd", "3rd", "lactation"],
+    img: "🐟",
+    whyEn: "Easily digestible high-quality protein, essential for fetal organ growth and recovering maternal strength.",
+    whyBn: "খুব সহজে হজমযোগ্য মানসম্মত প্রোটিন ও আয়রন। দুর্বলতা কাটাতে এবং গর্ভস্থ শিশুর অঙ্গ গঠনে সেরা খাবার।",
+    prepEn: "Light watery soup (Jhol) cooked with papaya, raw banana, and minimal spices.",
+    prepBn: "কাঁচা পেঁপে ও কাঁচাকলা দিয়ে হালকা মশলায় পাতলা সিঙি মাছের ঝোল পেট ঠাণ্ডা রাখে।"
+  },
+  {
+    id: "deshi_egg",
+    nameEn: "Deshi Egg (Boiled Poultry/Duck Egg)",
+    nameBn: "দেশি ডিম (সেদ্ধ)",
+    category: "protein",
+    categoryLabelEn: "Choline & Protein",
+    categoryLabelBn: "কোলিন ও সেরা প্রোটিন",
+    trimesters: ["1st", "2nd", "3rd", "lactation"],
+    img: "🥚",
+    whyEn: "Contains Choline which boosts baby brain development and complete amino acids for maternal health.",
+    whyBn: "ডিমের কুসুমে কোলিন থাকে যা শিশুর মেধা ও মগজের গঠনে সহায়ক। মায়ের দৈনিক প্রোটিনের চাহিদা মেটায়।",
+    prepEn: "Hard boil thoroughly. Avoid raw or half-boiled eggs to prevent Salmonella infection.",
+    prepBn: "অবশ্যই ভালোভাবে শক্ত করে সেদ্ধ করে খাবেন। গর্ভাবস্থায় হাফ-বয়েল ডিম খাওয়া বিপজ্জনক।"
+  },
+  {
+    id: "milk_calcium",
+    nameEn: "Deshi Pasteurized Milk / Milk Pudding",
+    nameBn: "খাঁটি তরল দুধ বা ক্ষীর",
+    category: "calcium",
+    categoryLabelEn: "Calcium & Fetal Bone Structure",
+    categoryLabelBn: "ক্যালসিয়াম ও হাড়ের গঠন",
+    trimesters: ["1st", "2nd", "3rd", "lactation"],
+    img: "🥛",
+    whyEn: "Primary calcium source preventing maternal bone density loss and supporting baby's skeleton development.",
+    whyBn: "মায়ের কোমর ও পিঠের হাড় শক্ত রাখে এবং গর্ভের শিশুর সুন্দর কঙ্কাল গঠনে প্রধান সাহায্যকারী।",
+    prepEn: "Boil well. Drink 1-2 glasses daily, or take as homemade Firni/Semai with low sugar.",
+    prepBn: "ভালোভাবে ফুটিয়ে দিনে ১-২ গ্লাস পান করুন অথবা হালকা মিষ্টি দিয়ে পায়েস তৈরি করে খান।"
+  },
+  {
+    id: "dates_khajur",
+    nameEn: "Deshi & Gulf Dates (Khajur)",
+    nameBn: "খেজুর",
+    category: "iron",
+    categoryLabelEn: "Natural Energy & Labor Support",
+    categoryLabelBn: "প্রাকৃতিক শক্তি ও হিমোগ্লোবিন",
+    trimesters: ["2nd", "3rd", "lactation"],
+    img: "🌴",
+    whyEn: "Loaded with potassium, iron, and fiber. Natural sugar combats pregnancy fatigue; 3rd trimester use supports easier labor.",
+    whyBn: "প্রচুর পটাশিয়াম, ফাইবার ও আয়রন সমৃদ্ধ। ৩য় ত্রৈমাসিকে নিয়মিত খেলে স্বাভাবিক প্রসবের সম্ভাবনা বাড়ে ও শক্তি যোগায়।",
+    prepEn: "Eat 2-3 clean dates daily in the morning or as a afternoon snack.",
+    prepBn: "প্রতিদিন সকালে বা বিকালে ২-৩টি পরিষ্কার খেজুর ভালো করে ধুয়ে খান।"
+  }
 ];
 
-export const drugsDatabase = [];
-export const defaultTrackerItems = [];
-export const nutritionDatabase = [];
-export const symptomsDatabase = [];
+export const symptomsDatabase = [
+  {
+    id: "nausea",
+    titleEn: "Morning Sickness & Nausea",
+    titleBn: "সকালের বমি ভাব ও অরূচি",
+    trimesterTag: "1st Trimester Common",
+    descEn: "Nausea and vomiting during early pregnancy triggered by hormonal shifts.",
+    descBn: "গর্ভাবস্থার শুরুর দিকে হরমোনের পরিবর্তনের কারণে সকালের দিকে বা খাবারের গন্ধে বমি ভাব হওয়া অত্যন্ত স্বাভাবিক।",
+    selfCareEn: [
+      "Eat dry toast, muri (puffed rice), or plain biscuits right after waking up before getting out of bed.",
+      "Take small, frequent light meals instead of 3 heavy meals.",
+      "Sip ginger tea or warm lemon water slowly.",
+      "Avoid oily, deep-fried, and heavily spiced Bangladeshi street foods."
+    ],
+    selfCareBn: [
+      "সকালে বিছানা থেকে ওঠার আগে ২-৩টি শুকনো মুড়ি, টোস্ট বা বিস্কুট মুখে দিন।",
+      "একবারে বেশি না খেয়ে সারাদিনে অল্প অল্প করে বার বার সুষম খাবার খান।",
+      "আদা চা বা হালকা লেবু পানি ধীরে ধীরে চুমুক দিয়ে পান করুন।",
+      "অতিরিক্ত তেল-মসলাযুক্ত খাবার ও ছাঁকা তেলে ভাজা খাবার পুরোপুরি এড়িয়ে চলুন।"
+    ],
+    redFlagEn: [
+      "Unable to keep any water or fluids down for more than 24 hours.",
+      "Severe weight loss, extreme dizziness, or dark yellow concentrated urine.",
+      "Vomiting blood or coffee-ground material."
+    ],
+    redFlagBn: [
+      "২৪ ঘণ্টার বেশি সময় ধরে কোনো পানি বা তরল পেটে না টিকলে ও ঘন ঘন বমি হলে।",
+      "চোখে অন্ধকার দেখা, চরম দুর্বলতা বা প্রস্রাবের পরিমাণ আশঙ্কাজনকভাবে কমে গেলে।",
+      "বমির সাথে রক্ত দেখা দিলে অবিলম্বে হাসপাতালে ভর্তি হোন।"
+    ]
+  },
+  {
+    id: "heartburn",
+    titleEn: "Heartburn & Acid Reflux (Gastric)",
+    titleBn: "বুকজ্বালা ও এসিডিটি (গ্যাস্ট্রিক)",
+    trimesterTag: "2nd & 3rd Trimester",
+    descEn: "Burning sensation in chest or throat caused by stomach acid being pushed up by growing uterus.",
+    descBn: "গর্ভস্থ শিশু বড় হওয়ার কারণে পেটে চাপ পড়ে এবং পাকস্থলীর এসিড ওপরে উঠে বুক ও গলা জ্বালাপোড়া করে।",
+    selfCareEn: [
+      "Do not lie down immediately after dinner; wait at least 1.5 to 2 hours.",
+      "Elevate your head with an extra pillow while sleeping.",
+      "Sip cold pasteurized milk or chew safe antacids (Entacyd).",
+      "Avoid carbonated soft drinks, raw chilies, and tea/coffee on an empty stomach."
+    ],
+    selfCareBn: [
+      "রাতে খাওয়ার সাথে সাথেই শুয়ে পড়বেন না; অন্তত ২ ঘণ্টা বসে বা হেঁটে সময় দিন।",
+      "ঘুমানোর সময় মাথার নিচে দুটি বালিশ দিয়ে মাথা কিছুটা উঁচু রাখুন।",
+      "ঠাণ্ডা দুধ পান করুন বা ডাক্তারের পরামর্শে এন্টাসিড চিবিয়ে খান।",
+      "খালি পেটে চা-কফি, কাঁচা মরিচ ও তেলের ভাজাপোড়া একদম বন্ধ রাখুন।"
+    ],
+    redFlagEn: [
+      "Severe crushing chest pain spreading to left arm or neck.",
+      "Difficulty swallowing or severe pain when food passes down.",
+      "Black tarry stools or persistent vomiting."
+    ],
+    redFlagBn: [
+      "বুকের তীব্র ব্যথা যদি বাঁ হাত বা ঘাড়ে ছড়িয়ে পড়ে।",
+      "খাবার গিলতে তীব্র কষ্ট হলে বা মল পুরোপুরি কালো হলে।",
+      "তীব্র পেটের ব্যথায় অস্থির লাগলে দ্রুত চিকিৎসকের কাছে যান।"
+    ]
+  },
+  {
+    id: "swelling",
+    titleEn: "Swollen Feet & Ankles (Edema)",
+    titleBn: "পা ও গোড়ালি ফোলা (এডিমিয়া)",
+    trimesterTag: "3rd Trimester Common",
+    descEn: "Mild swelling of feet and ankles caused by fluid retention and vein pressure.",
+    descBn: "গর্ভাবস্থার শেষের দিকে শরীরে পানি জমে ও রক্ত সঞ্চালনের চাপে পা ও গোড়ালি কিছুটা ফোলা স্বাভাবিক ঘটনা।",
+    selfCareEn: [
+      "Elevate your feet on a cushion when sitting or resting.",
+      "Avoid standing or sitting cross-legged for long stretches.",
+      "Wear comfortable, non-tight soft footwear.",
+      "Drink plenty of clean water (at least 2.5 - 3 liters daily)."
+    ],
+    selfCareBn: [
+      "বসার সময় বা ঘুমানোর সময় পায়ের নিচে একটি বালিশ দিয়ে পা কিছুটা উঁচুতে রাখুন।",
+      "একটানা পা ঝুলিয়ে বসে থাকবেন না বা দীর্ঘক্ষণ দাঁড়িয়ে থাকবেন না।",
+      "নরম আরামদায়ক ফ্ল্যাট জুতো ব্যবহার করুন।",
+      "পর্যাপ্ত নিরাপদ পানি (দিনে অন্তত ৮-১০ গ্লাস) পান করুন।"
+    ],
+    redFlagEn: [
+      "SUDDEN swelling of face, hands, or around eyes.",
+      "Severe persistent headache, blurred vision, or seeing spots.",
+      "High blood pressure reading (>140/90 mmHg) — WARNING FOR PREECLAMPSIA."
+    ],
+    redFlagBn: [
+      "হঠাৎ করে মুখমণ্ডল, হাত বা চোখের চারপাশ অস্বাভাবিকভাবে ফুলে গেলে।",
+      "তীব্র মাথা ব্যথা, চোখে ঝাপসা দেখা বা আলোর প্রাবল্য সহ্য করতে না পারা।",
+      "রক্তচাপ বেড়ে ১৪০/৯০ এর উপরে গেলে (এটি প্রি-এক্ল্যাম্পসিয়ার লক্ষণ হতে পারে)।"
+    ]
+  },
+  {
+    id: "backpain",
+    titleEn: "Lower Backache & Pelvic Strain",
+    titleBn: "কোমর ব্যথা ও তলপেটের টান",
+    trimesterTag: "All Trimesters",
+    descEn: "Hormonal loosening of ligaments combined with shift in center of gravity.",
+    descBn: "গর্ভাবস্থায় হরমোনের প্রভাবে জয়েন্ট ও লিগামেন্ট নরম হয়ে যায় এবং গর্ভের ওজনের কারণে কোমরে চাপ সৃষ্টি হয়।",
+    selfCareEn: [
+      "Bend from your knees, not from your waist when picking up objects.",
+      "Sleep on your left side with a pillow between your knees.",
+      "Use warm water bag compresses for 10-15 minutes.",
+      "Avoid wearing high-heeled shoes."
+    ],
+    selfCareBn: [
+      "নিচে কিছু কুড়াতে কোমর না বাঁকিয়ে হাঁটু ভাজ করে বসুন।",
+      "ঘুমানোর সময় বাম পাশ ফিরে শোন এবং দুই হাঁটুর মাঝখানে পাতলা বালিশ রাখুন।",
+      "কোমরে সুতি কাপড়ে হালকা গরম পানির শেঁক নিন।",
+      "উঁচু হিলের জুতো পরা বন্ধ রাখুন।"
+    ],
+    redFlagEn: [
+      "Rhythmic cramping or pain accompanied by vaginal bleeding or fluid leaking.",
+      "Fever, chills, or severe burning sensation during urination.",
+      "Numbness or loss of feeling in legs or pelvic area."
+    ],
+    redFlagBn: [
+      "কোমর ব্যথার সাথে তলপেটে কামড়ানি বা যোনিপথে রক্তপাত / পানি ভাঙা শুরু হলে।",
+      "ব্যথার সাথে জ্বর আসা বা প্রস্রাবে তীব্র জ্বালাপোড়া (ইউরিন ইনফেকশন)।",
+      "পায়ে অবশ ভাব এলে বা প্রসব বেদনার মতো নিয়মিত বিরতিতে ব্যথা হলে।"
+    ]
+  }
+];
+
+export const defaultTrackerItems = [
+  { id: 1, nameEn: "Folic Acid 5mg (1st trimester)", nameBn: "ফলিক এসিড ৫ মিগ্রা (সকাল)", time: "morning", done: true },
+  { id: 2, nameEn: "Filwel Preg Prenatal Vitamin", nameBn: "ফিলওয়েল প্রেগ ভিটামিন (দুপুর)", time: "afternoon", done: true },
+  { id: 3, nameEn: "Calcium + Vit D3 500mg", nameBn: "ক্যালসিয়াম ট্যাবলেট (রাত)", time: "night", done: false },
+  { id: 4, nameEn: "Iron-Folic Acid Cap (Coral-D)", nameBn: "আয়রন ক্যাপসুল (বিকাল)", time: "evening", done: false },
+  { id: 5, nameEn: "3 Liters Safe Drinking Water", nameBn: "৩ লিটার নিরাপদ পানি পান", time: "morning", done: true }
+];

@@ -1,0 +1,143 @@
+{
+  "total": 302,
+  "safe": 106,
+  "caution": 156,
+  "unsafe": 40,
+  "samples": [
+    {
+      "id": 1,
+      "name": "ফেরাস সালফেট (আয়রন) (Ferrous sulfate)",
+      "generic": "Ferrous sulfate",
+      "brand": "ফেফল / Fefol",
+      "rating": "safe",
+      "pregnancy_warning": "সাধারণত নিরাপদ, নিয়মিত গর্ভকালীন সাপ্লিমেন্ট (Generally safe; standard antenatal supplement)",
+      "lactation_warning": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 2,
+      "name": "ফলিক এসিড (Folic acid)",
+      "generic": "Folic acid",
+      "brand": "ফলিসন / Folison",
+      "rating": "safe",
+      "pregnancy_warning": "নিরাপদ এবং সুপারিশকৃত (নিউরাল টিউব ত্রুটি প্রতিরোধ করে) (Safe and recommended (prevents neural tube defects))",
+      "lactation_warning": "নিরাপদ, স্তন্যদানকালে সুপারিশকৃত (Safe; recommended during lactation)"
+    },
+    {
+      "id": 3,
+      "name": "ক্যালসিয়াম কার্বনেট (Calcium carbonate)",
+      "generic": "Calcium carbonate",
+      "brand": "ক্যালবো-ডি / Calbo-D",
+      "rating": "unsafe",
+      "pregnancy_warning": "নিরাপদ, নিয়মিত সাপ্লিমেন্ট (Safe; standard supplementation)",
+      "lactation_warning": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 4,
+      "name": "ভিটামিন ডি৩ (Cholecalciferol)",
+      "generic": "Cholecalciferol",
+      "brand": "ডি-রাইজ / D-Rise",
+      "rating": "safe",
+      "pregnancy_warning": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe within recommended doses)",
+      "lactation_warning": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe within recommended doses)"
+    },
+    {
+      "id": 5,
+      "name": "পাইরিডক্সিন (ভিটামিন বি৬) (Pyridoxine)",
+      "generic": "Pyridoxine",
+      "brand": "ভিটাবেক্স-৬ / Vitabex-6",
+      "rating": "safe",
+      "pregnancy_warning": "নিরাপদ; গর্ভকালীন বমি বমি ভাবের প্রথম সারির চিকিৎসা (Safe; first-line for nausea/vomiting in pregnancy)",
+      "lactation_warning": "নিরাপদ, তবে খুব বেশি মাত্রায় দুধ কমাতে পারে (Safe; avoid very high doses (may reduce milk supply))"
+    },
+    {
+      "id": 6,
+      "name": "মেটোক্লোপ্রামাইড (Metoclopramide)",
+      "generic": "Metoclopramide",
+      "brand": "ম্যাক্সোলন / Maxolon",
+      "rating": "safe",
+      "pregnancy_warning": "সাধারণত নিরাপদ বলে বিবেচিত (Generally considered safe; used for hyperemesis)",
+      "lactation_warning": "সামঞ্জস্যপূর্ণ; শিশুর ঝিমুনি লক্ষ্য রাখুন (Compatible; monitor infant for drowsiness)"
+    },
+    {
+      "id": 7,
+      "name": "অনডানসেট্রন (Ondansetron)",
+      "generic": "Ondansetron",
+      "brand": "ইমেসেট / Emeset",
+      "rating": "unsafe",
+      "pregnancy_warning": "প্রথম ত্রৈমাসিকে ক্লেফট প্যালেট ঝুঁকি নিয়ে সীমিত/মিশ্র তথ্য (Limited/mixed data on cleft palate risk with 1st-trimester use)",
+      "lactation_warning": "স্বল্পমেয়াদী ব্যবহার গ্রহণযোগ্য বিবেচিত (Short-term use considered acceptable)"
+    },
+    {
+      "id": 8,
+      "name": "প্রোমেথাজিন (Promethazine)",
+      "generic": "Promethazine",
+      "brand": "ফেনারগান / Phenergan",
+      "rating": "caution",
+      "pregnancy_warning": "দীর্ঘদিনের ব্যবহারের রেকর্ড; প্রসবকালে সতর্কতা প্রয়োজন (Long track record; caution at term (neonatal sedation))",
+      "lactation_warning": "সামঞ্জস্যপূর্ণ; দীর্ঘমেয়াদী ব্যবহারে সতর্কতা (Compatible; caution with prolonged use)"
+    },
+    {
+      "id": 9,
+      "name": "প্যারাসিটামল (Acetaminophen)",
+      "generic": "Acetaminophen",
+      "brand": "নাপা / Napa",
+      "rating": "unsafe",
+      "pregnancy_warning": "নিরাপদ; গর্ভাবস্থায় প্রথম সারির ব্যথা-জ্বরের ওষুধ (Safe; first-line analgesic/antipyretic in pregnancy)",
+      "lactation_warning": "নিরাপদ, স্তন্যদানের সাথে সামঞ্জস্যপূর্ণ (Safe; compatible with breastfeeding)"
+    },
+    {
+      "id": 10,
+      "name": "আইবুপ্রোফেন (Ibuprofen)",
+      "generic": "Ibuprofen",
+      "brand": "ফেনিল / Fenil",
+      "rating": "unsafe",
+      "pregnancy_warning": "তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid in 3rd trimester (premature ductus closure))",
+      "lactation_warning": "স্বল্পমেয়াদী ব্যবহারে সাধারণত সামঞ্জস্যপূর্ণ (Generally compatible short-term)"
+    },
+    {
+      "id": 11,
+      "name": "অ্যাসপিরিন (কম মাত্রা) (Acetylsalicylic acid)",
+      "generic": "Acetylsalicylic acid",
+      "brand": "ইকোস্প্রিন / Ecosprin",
+      "rating": "caution",
+      "pregnancy_warning": "কম মাত্রায় ক্লিনিক্যালি ব্যবহৃত; উচ্চ মাত্রা এড়িয়ে চলুন (Low-dose used clinically (pre-eclampsia prevention); high-dose avoided)",
+      "lactation_warning": "কম মাত্রায় সাধারণত সামঞ্জস্যপূর্ণ (Low-dose generally compatible)"
+    },
+    {
+      "id": 12,
+      "name": "ডাইক্লোফেনাক (Diclofenac)",
+      "generic": "Diclofenac",
+      "brand": "ডাইক্লোরান / Dicloran",
+      "rating": "caution",
+      "pregnancy_warning": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester (NSAID class effect))",
+      "lactation_warning": "সীমিত তথ্য; স্বল্পমেয়াদী কম মাত্রা গ্রহণযোগ্য (Limited data; short-term low dose often compatible)"
+    },
+    {
+      "id": 13,
+      "name": "অ্যামোক্সিসিলিন (Amoxicillin)",
+      "generic": "Amoxicillin",
+      "brand": "মক্সাসিল / Moxacil",
+      "rating": "unsafe",
+      "pregnancy_warning": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used in pregnancy)",
+      "lactation_warning": "স্তন্যদানের সাথে সামঞ্জস্যপূর্ণ (Compatible with breastfeeding)"
+    },
+    {
+      "id": 14,
+      "name": "অ্যাজিথ্রোমাইসিন (Azithromycin)",
+      "generic": "Azithromycin",
+      "brand": "এজিন / Azin",
+      "rating": "unsafe",
+      "pregnancy_warning": "অ্যান্টিবায়োটিক প্রয়োজন হলে সাধারণত নিরাপদ (Generally considered safe when antibiotic needed)",
+      "lactation_warning": "সামঞ্জস্যপূর্ণ (Compatible)"
+    },
+    {
+      "id": 15,
+      "name": "সেফালেক্সিন (Cephalexin)",
+      "generic": "Cephalexin",
+      "brand": "সেফলেক্স / Ceflex",
+      "rating": "safe",
+      "pregnancy_warning": "নিরাপদ বলে বিবেচিত (Considered safe)",
+      "lactation_warning": "সামঞ্জস্যপূর্ণ (Compatible)"
+    }
+  ]
+}

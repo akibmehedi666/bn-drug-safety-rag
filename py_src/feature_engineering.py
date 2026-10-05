@@ -70,6 +70,15 @@ def load_known_drugs_from_corpus(corpus_path: str = None) -> list:
 KNOWN_DRUGS = load_known_drugs_from_corpus()
 
 
+def is_word_in_text(term: str, text: str) -> bool:
+    """Check if term appears as a distinct word/token in text (supports English & Bengali)."""
+    if not term or not text:
+        return False
+    escaped = re.escape(term.lower())
+    pattern = rf"(^|[^\w\u0980-\u09FF]){escaped}($|[^\w\u0980-\u09FF])"
+    return bool(re.search(pattern, text.lower()))
+
+
 def tokenize_bengali(text: str) -> list:
     """Split Bengali text into words, removing punctuation."""
     if not text:
@@ -99,7 +108,7 @@ def check_relevant_drug_retrieved(question: str, retrieved_chunks: list) -> int:
 
     for drug in KNOWN_DRUGS:
         for term in drug["terms"]:
-            if term.lower() in q_lower:
+            if is_word_in_text(term, q_lower):
                 detected_drug_terms.append(drug["generic"].lower())
                 break
 

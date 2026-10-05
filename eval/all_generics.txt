@@ -1,0 +1,302 @@
+[  1] Gen: Ferrous sulfate                | Bn: ফেরাস সালফেট (আয়রন)           | Brand: ফেফল / Fefol              | Cat: Antenatal Supplements
+[  2] Gen: Folic acid                     | Bn: ফলিক এসিড                      | Brand: ফলিসন / Folison           | Cat: Antenatal Supplements
+[  3] Gen: Calcium carbonate              | Bn: ক্যালসিয়াম কার্বনেট           | Brand: ক্যালবো-ডি / Calbo-D      | Cat: Antenatal Supplements
+[  4] Gen: Cholecalciferol                | Bn: ভিটামিন ডি৩                    | Brand: ডি-রাইজ / D-Rise          | Cat: Antenatal Supplements
+[  5] Gen: Pyridoxine                     | Bn: পাইরিডক্সিন (ভিটামিন বি৬)      | Brand: ভিটাবেক্স-৬ / Vitabex-6   | Cat: Antiemetics
+[  6] Gen: Metoclopramide                 | Bn: মেটোক্লোপ্রামাইড               | Brand: ম্যাক্সোলন / Maxolon      | Cat: Antiemetics
+[  7] Gen: Ondansetron                    | Bn: অনডানসেট্রন                    | Brand: ইমেসেট / Emeset           | Cat: Antiemetics
+[  8] Gen: Promethazine                   | Bn: প্রোমেথাজিন                    | Brand: ফেনারগান / Phenergan      | Cat: Antiemetics
+[  9] Gen: Acetaminophen                  | Bn: প্যারাসিটামল                   | Brand: নাপা / Napa               | Cat: Analgesics/Antipyretics
+[ 10] Gen: Ibuprofen                      | Bn: আইবুপ্রোফেন                    | Brand: ফেনিল / Fenil             | Cat: Analgesics/Antipyretics
+[ 11] Gen: Acetylsalicylic acid           | Bn: অ্যাসপিরিন (কম মাত্রা)         | Brand: ইকোস্প্রিন / Ecosprin     | Cat: Analgesics/Antipyretics
+[ 12] Gen: Diclofenac                     | Bn: ডাইক্লোফেনাক                   | Brand: ডাইক্লোরান / Dicloran     | Cat: Analgesics/Antipyretics
+[ 13] Gen: Amoxicillin                    | Bn: অ্যামোক্সিসিলিন                | Brand: মক্সাসিল / Moxacil        | Cat: Antibiotics
+[ 14] Gen: Azithromycin                   | Bn: অ্যাজিথ্রোমাইসিন               | Brand: এজিন / Azin               | Cat: Antibiotics
+[ 15] Gen: Cephalexin                     | Bn: সেফালেক্সিন                    | Brand: সেফলেক্স / Ceflex         | Cat: Antibiotics
+[ 16] Gen: Nitrofurantoin                 | Bn: নাইট্রোফুরানটয়িন              | Brand:                           | Cat: Antibiotics
+[ 17] Gen: Ciprofloxacin                  | Bn: সিপ্রোফ্লক্সাসিন               | Brand: সিপ্রোসিন / Ciprocin      | Cat: Antibiotics
+[ 18] Gen: Doxycycline                    | Bn: ডক্সিসাইক্লিন                  | Brand: ডক্সিক্যাপ / Doxicap      | Cat: Antibiotics
+[ 19] Gen: Metronidazole                  | Bn: মেট্রোনিডাজল                   | Brand: ফ্ল্যাজিল / Flagyl        | Cat: Antibiotics
+[ 20] Gen: Sulfamethoxazole/Trimethoprim  | Bn: কো-ট্রাইমক্সাজল                | Brand: সালমেক্স / Sulmex         | Cat: Antibiotics
+[ 21] Gen: Labetalol                      | Bn: ল্যাবেটালল                     | Brand: ট্রেট / Trate             | Cat: Antihypertensives
+[ 22] Gen: Methyldopa                     | Bn: মিথাইলডোপা                     | Brand: অ্যালডোমেট / Aldomet      | Cat: Antihypertensives
+[ 23] Gen: Nifedipine                     | Bn: নিফেডিপিন                      | Brand: নিফেডিন / Nifedin         | Cat: Antihypertensives
+[ 24] Gen: Enalapril                      | Bn: এনালাপ্রিল                     | Brand: এনাপ্রিল / Enapril        | Cat: Antihypertensives
+[ 25] Gen: Metformin                      | Bn: মেটফরমিন                       | Brand: কমিড / Comid              | Cat: Antidiabetics
+[ 26] Gen: Insulin (various)              | Bn: ইনসুলিন                        | Brand: নভোমিক্স / Novomix        | Cat: Antidiabetics
+[ 27] Gen: Pseudoephedrine                | Bn: সিউডোএফেড্রিন                  | Brand: রাইনিল / Rhinil           | Cat: Common Cold/Flu (OTC)
+[ 28] Gen: Dextromethorphan               | Bn: ডেক্সট্রোমেথরফান               | Brand: টুসক্যাল / Tuscal         | Cat: Common Cold/Flu (OTC)
+[ 29] Gen: Guaifenesin                    | Bn: গুয়াইফেনেসিন                  | Brand: মিউকোলাইট / Mucolyte      | Cat: Common Cold/Flu (OTC)
+[ 30] Gen: Cetirizine                     | Bn: সেটিরিজিন                      | Brand: আলাট্রল / Alatrol         | Cat: Antihistamines
+[ 31] Gen: Loratadine                     | Bn: লোরাটাডিন                      | Brand: লোরাটিন / Loratin         | Cat: Antihistamines
+[ 32] Gen: Chlorpheniramine maleate       | Bn: ক্লোরফেনিরামিন মালিয়েট        | Brand: পিরিটন / Piriton          | Cat: Antihistamines
+[ 33] Gen: Diphenhydramine                | Bn: ডাইফেনহাইড্রামিন               | Brand: বেনাড্রিল / Benadryl      | Cat: Antihistamines
+[ 34] Gen: Acetaminophen (Pediatric)      | Bn: প্যারাসিটামল সিরাপ (শিশু)      | Brand: নাপা সিরাপ / Napa Syrup   | Cat: Pediatric-Dosing Drugs
+[ 35] Gen: Amoxicillin (Pediatric)        | Bn: অ্যামোক্সিসিলিন সাসপেনশন (শিশু) | Brand: মক্সাসিল সিরাপ / Moxacil Syrup | Cat: Pediatric-Dosing Drugs
+[ 36] Gen: Oral rehydration salts         | Bn: খাবার স্যালাইন (ওআরএস)         | Brand: ওরস্যালাইন / Orsaline     | Cat: Pediatric-Dosing Drugs
+[ 37] Gen: Zinc sulfate                   | Bn: জিংক সালফেট                    | Brand: জিনকিড / Zinkid           | Cat: Pediatric-Dosing Drugs
+[ 38] Gen: Retinol                        | Bn: ভিটামিন এ (রেটিনল)             | Brand: ভিটামিন এ ক্যাপসুল / Vitamin A Capsule | Cat: Pediatric-Dosing Drugs
+[ 39] Gen: Omeprazole                     | Bn: ওমিপ্রাজল                      | Brand: সেক্লো / Seclo            | Cat: GI/Other Common MCH Drugs
+[ 40] Gen: Loperamide                     | Bn: লোপেরামাইড                     | Brand: ইমোডিয়াম / Imodium       | Cat: GI/Other Common MCH Drugs
+[ 41] Gen: Domperidone                    | Bn: ডমপেরিডন                       | Brand: মোটিগাট / Motigut         | Cat: GI/Other Common MCH Drugs
+[ 42] Gen: Simethicone                    | Bn: সাইমেথিকন                      | Brand: ডিসফ্ল্যাটিল / Disflatyl  | Cat: GI/Other Common MCH Drugs
+[ 43] Gen: Naproxen                       | Bn: ন্যাপ্রোক্সেন                  | Brand:                           | Cat: Analgesics/NSAIDs
+[ 44] Gen: Mefenamic acid                 | Bn: মেফেনামিক এসিড                 | Brand:                           | Cat: Analgesics/NSAIDs
+[ 45] Gen: Ketorolac                      | Bn: কিটোরোলাক                      | Brand:                           | Cat: Analgesics/NSAIDs
+[ 46] Gen: Indomethacin                   | Bn: ইনডোমেথাসিন                    | Brand:                           | Cat: Analgesics/NSAIDs
+[ 47] Gen: Celecoxib                      | Bn: সেলেকক্সিব                     | Brand:                           | Cat: Analgesics/NSAIDs
+[ 48] Gen: Piroxicam                      | Bn: পিরোক্সিকাম                    | Brand:                           | Cat: Analgesics/NSAIDs
+[ 49] Gen: Meloxicam                      | Bn: মেলোক্সিকাম                    | Brand:                           | Cat: Analgesics/NSAIDs
+[ 50] Gen: Codeine                        | Bn: কোডিন                          | Brand:                           | Cat: Opioids/Pain Management
+[ 51] Gen: Morphine                       | Bn: মরফিন                          | Brand:                           | Cat: Opioids/Pain Management
+[ 52] Gen: Pethidine                      | Bn: পেথিডিন                        | Brand:                           | Cat: Opioids/Pain Management
+[ 53] Gen: Fentanyl                       | Bn: ফেন্টানিল                      | Brand:                           | Cat: Opioids/Pain Management
+[ 54] Gen: Oxycodone                      | Bn: অক্সিকোডোন                     | Brand:                           | Cat: Opioids/Pain Management
+[ 55] Gen: Tramadol                       | Bn: ট্রামাডল                       | Brand:                           | Cat: Opioids/Pain Management
+[ 56] Gen: Ampicillin                     | Bn: অ্যাম্পিসিলিন                  | Brand:                           | Cat: Antibiotics (Extended)
+[ 57] Gen: Amoxicillin-clavulanate        | Bn: অ্যামোক্সিসিলিন-ক্লাভুলানেট    | Brand:                           | Cat: Antibiotics (Extended)
+[ 58] Gen: Flucloxacillin                 | Bn: ফ্লুক্লোক্সাসিলিন              | Brand:                           | Cat: Antibiotics (Extended)
+[ 59] Gen: Penicillin V                   | Bn: পেনিসিলিন ভি                   | Brand:                           | Cat: Antibiotics (Extended)
+[ 60] Gen: Piperacillin-tazobactam        | Bn: পিপারাসিলিন-টাজোব্যাকটাম       | Brand:                           | Cat: Antibiotics (Extended)
+[ 61] Gen: Cefuroxime                     | Bn: সেফুরোক্সিম                    | Brand:                           | Cat: Antibiotics (Extended)
+[ 62] Gen: Cefixime                       | Bn: সেফিক্সিম                      | Brand:                           | Cat: Antibiotics (Extended)
+[ 63] Gen: Ceftriaxone                    | Bn: সেফট্রায়াক্সোন                | Brand:                           | Cat: Antibiotics (Extended)
+[ 64] Gen: Cefdinir                       | Bn: সেফডিনির                       | Brand:                           | Cat: Antibiotics (Extended)
+[ 65] Gen: Erythromycin                   | Bn: এরিথ্রোমাইসিন                  | Brand:                           | Cat: Antibiotics (Extended)
+[ 66] Gen: Clarithromycin                 | Bn: ক্লারিথ্রোমাইসিন               | Brand:                           | Cat: Antibiotics (Extended)
+[ 67] Gen: Roxithromycin                  | Bn: রোক্সিথ্রোমাইসিন               | Brand:                           | Cat: Antibiotics (Extended)
+[ 68] Gen: Levofloxacin                   | Bn: লেভোফ্লক্সাসিন                 | Brand:                           | Cat: Antibiotics (Extended)
+[ 69] Gen: Ofloxacin                      | Bn: অফ্লক্সাসিন                    | Brand:                           | Cat: Antibiotics (Extended)
+[ 70] Gen: Moxifloxacin                   | Bn: মক্সিফ্লক্সাসিন                | Brand:                           | Cat: Antibiotics (Extended)
+[ 71] Gen: Tetracycline                   | Bn: টেট্রাসাইক্লিন                 | Brand:                           | Cat: Antibiotics (Extended)
+[ 72] Gen: Minocycline                    | Bn: মিনোসাইক্লিন                   | Brand:                           | Cat: Antibiotics (Extended)
+[ 73] Gen: Clindamycin                    | Bn: ক্লিন্ডামাইসিন                 | Brand:                           | Cat: Antibiotics (Extended)
+[ 74] Gen: Vancomycin                     | Bn: ভ্যানকোমাইসিন                  | Brand:                           | Cat: Antibiotics (Extended)
+[ 75] Gen: Linezolid                      | Bn: লাইনজোলিড                      | Brand:                           | Cat: Antibiotics (Extended)
+[ 76] Gen: Gentamicin                     | Bn: জেন্টামাইসিন                   | Brand:                           | Cat: Antibiotics (Extended)
+[ 77] Gen: Amikacin                       | Bn: অ্যামিকাসিন                    | Brand:                           | Cat: Antibiotics (Extended)
+[ 78] Gen: Rifampicin                     | Bn: রিফাম্পিসিন                    | Brand:                           | Cat: Antibiotics (Extended)
+[ 79] Gen: Isoniazid                      | Bn: আইসোনিয়াজিড                   | Brand:                           | Cat: Antibiotics (Extended)
+[ 80] Gen: Pyrazinamide                   | Bn: পাইরাজিনামাইড                  | Brand:                           | Cat: Antibiotics (Extended)
+[ 81] Gen: Ethambutol                     | Bn: ইথামবুটল                       | Brand:                           | Cat: Antibiotics (Extended)
+[ 82] Gen: Fluconazole                    | Bn: ফ্লুকোনাজল                     | Brand:                           | Cat: Antifungals
+[ 83] Gen: Clotrimazole                   | Bn: ক্লোট্রিমাজল                   | Brand:                           | Cat: Antifungals
+[ 84] Gen: Nystatin                       | Bn: নিস্ট্যাটিন                    | Brand:                           | Cat: Antifungals
+[ 85] Gen: Itraconazole                   | Bn: ইট্রাকোনাজল                    | Brand:                           | Cat: Antifungals
+[ 86] Gen: Terbinafine                    | Bn: টার্বিনাফাইন                   | Brand:                           | Cat: Antifungals
+[ 87] Gen: Griseofulvin                   | Bn: গ্রিসিওফালভিন                  | Brand:                           | Cat: Antifungals
+[ 88] Gen: Ketoconazole                   | Bn: কিটোকোনাজল                     | Brand:                           | Cat: Antifungals
+[ 89] Gen: Acyclovir                      | Bn: অ্যাসাইক্লোভির                 | Brand:                           | Cat: Antivirals
+[ 90] Gen: Oseltamivir                    | Bn: ওসেলটামিভির                    | Brand:                           | Cat: Antivirals
+[ 91] Gen: Valacyclovir                   | Bn: ভ্যালাসাইক্লোভির               | Brand:                           | Cat: Antivirals
+[ 92] Gen: Zidovudine                     | Bn: জিডোভুডিন                      | Brand:                           | Cat: Antivirals
+[ 93] Gen: Lamivudine                     | Bn: লামিভুডিন                      | Brand:                           | Cat: Antivirals
+[ 94] Gen: Tenofovir                      | Bn: টেনোফোভির                      | Brand:                           | Cat: Antivirals
+[ 95] Gen: Efavirenz                      | Bn: এফাভিরেঞ্জ                     | Brand:                           | Cat: Antivirals
+[ 96] Gen: Ribavirin                      | Bn: রিবাভাইরিন                     | Brand:                           | Cat: Antivirals
+[ 97] Gen: Chloroquine                    | Bn: ক্লোরোকুইন                     | Brand:                           | Cat: Antimalarials
+[ 98] Gen: Quinine                        | Bn: কুইনাইন                        | Brand:                           | Cat: Antimalarials
+[ 99] Gen: Artemisinin combination therapy | Bn: আর্টেমিসিনিন কম্বিনেশন থেরাপি  | Brand:                           | Cat: Antimalarials
+[100] Gen: Mefloquine                     | Bn: মেফ্লোকুইন                     | Brand:                           | Cat: Antimalarials
+[101] Gen: Albendazole                    | Bn: অ্যালবেন্ডাজল                  | Brand:                           | Cat: Anthelmintics
+[102] Gen: Mebendazole                    | Bn: মেবেন্ডাজল                     | Brand:                           | Cat: Anthelmintics
+[103] Gen: Ivermectin                     | Bn: আইভারমেকটিন                    | Brand:                           | Cat: Anthelmintics
+[104] Gen: Praziquantel                   | Bn: প্রাজিকোয়ান্টেল               | Brand:                           | Cat: Anthelmintics
+[105] Gen: Diethylcarbamazine             | Bn: ডাইইথাইলকার্বামাজিন            | Brand:                           | Cat: Anthelmintics
+[106] Gen: Losartan                       | Bn: লোসারটান                       | Brand:                           | Cat: Cardiovascular
+[107] Gen: Amlodipine                     | Bn: অ্যামলোডিপিন                   | Brand:                           | Cat: Cardiovascular
+[108] Gen: Atenolol                       | Bn: অ্যাটেনোলল                     | Brand:                           | Cat: Cardiovascular
+[109] Gen: Propranolol                    | Bn: প্রোপ্রানোলল                   | Brand:                           | Cat: Cardiovascular
+[110] Gen: Digoxin                        | Bn: ডিগক্সিন                       | Brand:                           | Cat: Cardiovascular
+[111] Gen: Amiodarone                     | Bn: অ্যামিওডারোন                   | Brand:                           | Cat: Cardiovascular
+[112] Gen: Verapamil                      | Bn: ভেরাপামিল                      | Brand:                           | Cat: Cardiovascular
+[113] Gen: Furosemide                     | Bn: ফুরোসেমাইড                     | Brand:                           | Cat: Cardiovascular
+[114] Gen: Hydrochlorothiazide            | Bn: হাইড্রোক্লোরোথিয়াজাইড         | Brand:                           | Cat: Cardiovascular
+[115] Gen: Spironolactone                 | Bn: স্পাইরোনোল্যাকটোন              | Brand:                           | Cat: Cardiovascular
+[116] Gen: Isosorbide dinitrate           | Bn: আইসোসরবাইড ডাইনাইট্রেট         | Brand:                           | Cat: Cardiovascular
+[117] Gen: Nitroglycerin                  | Bn: নাইট্রোগ্লিসারিন               | Brand:                           | Cat: Cardiovascular
+[118] Gen: Clonidine                      | Bn: ক্লোনিডিন                      | Brand:                           | Cat: Cardiovascular
+[119] Gen: Doxazosin                      | Bn: ডক্সাজোসিন                     | Brand:                           | Cat: Cardiovascular
+[120] Gen: Mannitol                       | Bn: ম্যানিটল                       | Brand:                           | Cat: Cardiovascular
+[121] Gen: Torsemide                      | Bn: টরসেমাইড                       | Brand:                           | Cat: Cardiovascular
+[122] Gen: Atorvastatin                   | Bn: অ্যাটোরভাস্ট্যাটিন             | Brand:                           | Cat: Statins/Lipid-Lowering
+[123] Gen: Simvastatin                    | Bn: সিমভাস্ট্যাটিন                 | Brand:                           | Cat: Statins/Lipid-Lowering
+[124] Gen: Rosuvastatin                   | Bn: রোসুভাস্ট্যাটিন                | Brand:                           | Cat: Statins/Lipid-Lowering
+[125] Gen: Warfarin                       | Bn: ওয়ারফারিন                     | Brand:                           | Cat: Anticoagulants
+[126] Gen: Heparin                        | Bn: হেপারিন                        | Brand:                           | Cat: Anticoagulants
+[127] Gen: Enoxaparin                     | Bn: এনোক্সাপারিন                   | Brand:                           | Cat: Anticoagulants
+[128] Gen: Apixaban                       | Bn: অ্যাপিক্সাবান                  | Brand:                           | Cat: Anticoagulants
+[129] Gen: Rivaroxaban                    | Bn: রিভারোক্সাবান                  | Brand:                           | Cat: Anticoagulants
+[130] Gen: Dabigatran                     | Bn: ড্যাবিগাট্রান                  | Brand:                           | Cat: Anticoagulants
+[131] Gen: Clopidogrel                    | Bn: ক্লোপিডোগ্রেল                  | Brand:                           | Cat: Anticoagulants
+[132] Gen: Glibenclamide                  | Bn: গ্লিবেনক্লামাইড                | Brand:                           | Cat: Antidiabetics (Extended)
+[133] Gen: Glimepiride                    | Bn: গ্লিমেপিরাইড                   | Brand:                           | Cat: Antidiabetics (Extended)
+[134] Gen: Sitagliptin                    | Bn: সিটাগ্লিপটিন                   | Brand:                           | Cat: Antidiabetics (Extended)
+[135] Gen: Empagliflozin                  | Bn: এমপাগ্লিফ্লোজিন                | Brand:                           | Cat: Antidiabetics (Extended)
+[136] Gen: Pioglitazone                   | Bn: পাইওগ্লিটাজোন                  | Brand:                           | Cat: Antidiabetics (Extended)
+[137] Gen: Acarbose                       | Bn: অ্যাকারবোজ                     | Brand:                           | Cat: Antidiabetics (Extended)
+[138] Gen: Levothyroxine                  | Bn: লেভোথাইরক্সিন                  | Brand:                           | Cat: Thyroid
+[139] Gen: Carbimazole                    | Bn: কার্বিমাজল                     | Brand:                           | Cat: Thyroid
+[140] Gen: Propylthiouracil               | Bn: প্রোপাইলথায়োইউরাসিল           | Brand:                           | Cat: Thyroid
+[141] Gen: Prednisolone                   | Bn: প্রেডনিসোলন                    | Brand:                           | Cat: Corticosteroids (Systemic)
+[142] Gen: Dexamethasone                  | Bn: ডেক্সামেথাসোন                  | Brand:                           | Cat: Corticosteroids (Systemic)
+[143] Gen: Betamethasone                  | Bn: বিটামেথাসোন                    | Brand:                           | Cat: Corticosteroids (Systemic)
+[144] Gen: Hydrocortisone (systemic)      | Bn: হাইড্রোকর্টিসোন                | Brand:                           | Cat: Corticosteroids (Systemic)
+[145] Gen: Methylprednisolone             | Bn: মিথাইলপ্রেডনিসোলন              | Brand:                           | Cat: Corticosteroids (Systemic)
+[146] Gen: Triamcinolone                  | Bn: ট্রায়ামসিনোলন                 | Brand:                           | Cat: Corticosteroids (Systemic)
+[147] Gen: Salbutamol                     | Bn: সালবিউটামল                     | Brand:                           | Cat: Respiratory/Asthma
+[148] Gen: Budesonide (inhaled)           | Bn: বুডেসোনাইড (ইনহেলার)           | Brand:                           | Cat: Respiratory/Asthma
+[149] Gen: Montelukast                    | Bn: মন্টেলুকাস্ট                   | Brand:                           | Cat: Respiratory/Asthma
+[150] Gen: Theophylline                   | Bn: থিওফাইলিন                      | Brand:                           | Cat: Respiratory/Asthma
+[151] Gen: Ipratropium                    | Bn: ইপ্রাট্রোপিয়াম                | Brand:                           | Cat: Respiratory/Asthma
+[152] Gen: Formoterol                     | Bn: ফরমোটেরল                       | Brand:                           | Cat: Respiratory/Asthma
+[153] Gen: Fluticasone (inhaled)          | Bn: ফ্লুটিকাসোন (ইনহেলার)          | Brand:                           | Cat: Respiratory/Asthma
+[154] Gen: Beclomethasone (inhaled)       | Bn: বেক্লোমেথাসোন (ইনহেলার)        | Brand:                           | Cat: Respiratory/Asthma
+[155] Gen: Terbutaline                    | Bn: টারবিউটালিন                    | Brand:                           | Cat: Respiratory/Asthma
+[156] Gen: Fexofenadine                   | Bn: ফেক্সোফেনাডিন                  | Brand:                           | Cat: Antihistamines (Extended)
+[157] Gen: Desloratadine                  | Bn: ডেসলোরাটাডিন                   | Brand:                           | Cat: Antihistamines (Extended)
+[158] Gen: Hydroxyzine                    | Bn: হাইড্রক্সিজিন                  | Brand:                           | Cat: Antihistamines (Extended)
+[159] Gen: Meclizine                      | Bn: মেক্লিজিন                      | Brand:                           | Cat: Antihistamines (Extended)
+[160] Gen: Phenylephrine                  | Bn: ফিনাইলএফ্রিন                   | Brand:                           | Cat: Common Cold/Flu (Extended)
+[161] Gen: Bromhexine                     | Bn: ব্রমহেক্সিন                    | Brand:                           | Cat: Common Cold/Flu (Extended)
+[162] Gen: Ambroxol                       | Bn: অ্যামব্রক্সল                   | Brand:                           | Cat: Common Cold/Flu (Extended)
+[163] Gen: Ranitidine                     | Bn: র‍্যানিটিডিন                   | Brand:                           | Cat: GI/Other (Extended)
+[164] Gen: Pantoprazole                   | Bn: প্যান্টোপ্রাজল                 | Brand:                           | Cat: GI/Other (Extended)
+[165] Gen: Esomeprazole                   | Bn: এসোমিপ্রাজল                    | Brand:                           | Cat: GI/Other (Extended)
+[166] Gen: Aluminum hydroxide             | Bn: অ্যালুমিনিয়াম হাইড্রক্সাইড    | Brand:                           | Cat: GI/Other (Extended)
+[167] Gen: Magnesium hydroxide            | Bn: ম্যাগনেসিয়াম হাইড্রক্সাইড     | Brand:                           | Cat: GI/Other (Extended)
+[168] Gen: Lactulose                      | Bn: ল্যাকটুলোজ                     | Brand:                           | Cat: GI/Other (Extended)
+[169] Gen: Bisacodyl                      | Bn: বিসাকোডিল                      | Brand:                           | Cat: GI/Other (Extended)
+[170] Gen: Sucralfate                     | Bn: সুক্রালফেট                     | Brand:                           | Cat: GI/Other (Extended)
+[171] Gen: Dicyclomine                    | Bn: ডাইসাইক্লোমিন                  | Brand:                           | Cat: GI/Other (Extended)
+[172] Gen: Sertraline                     | Bn: সারট্রালিন                     | Brand:                           | Cat: Psychiatric - Antidepressants
+[173] Gen: Fluoxetine                     | Bn: ফ্লুওক্সেটিন                   | Brand:                           | Cat: Psychiatric - Antidepressants
+[174] Gen: Amitriptyline                  | Bn: অ্যামিট্রিপটাইলিন              | Brand:                           | Cat: Psychiatric - Antidepressants
+[175] Gen: Escitalopram                   | Bn: এসসিটালোপ্রাম                  | Brand:                           | Cat: Psychiatric - Antidepressants
+[176] Gen: Venlafaxine                    | Bn: ভেনলাফ্যাক্সিন                 | Brand:                           | Cat: Psychiatric - Antidepressants
+[177] Gen: Bupropion                      | Bn: বুপ্রোপিয়ন                    | Brand:                           | Cat: Psychiatric - Antidepressants
+[178] Gen: Mirtazapine                    | Bn: মির্টাজাপিন                    | Brand:                           | Cat: Psychiatric - Antidepressants
+[179] Gen: Duloxetine                     | Bn: ডুলোক্সেটিন                    | Brand:                           | Cat: Psychiatric - Antidepressants
+[180] Gen: Diazepam                       | Bn: ডায়াজিপাম                     | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[181] Gen: Lorazepam                      | Bn: লোরাজিপাম                      | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[182] Gen: Alprazolam                     | Bn: আলপ্রাজোলাম                    | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[183] Gen: Clonazepam                     | Bn: ক্লোনাজিপাম                    | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[184] Gen: Zolpidem                       | Bn: জোলপিডেম                       | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[185] Gen: Buspirone                      | Bn: বুসপিরোন                       | Brand:                           | Cat: Psychiatric - Anxiolytics/Sedatives
+[186] Gen: Haloperidol                    | Bn: হ্যালোপেরিডল                   | Brand:                           | Cat: Psychiatric - Antipsychotics
+[187] Gen: Olanzapine                     | Bn: অলানজাপিন                      | Brand:                           | Cat: Psychiatric - Antipsychotics
+[188] Gen: Risperidone                    | Bn: রিসপেরিডোন                     | Brand:                           | Cat: Psychiatric - Antipsychotics
+[189] Gen: Quetiapine                     | Bn: কুইটিয়াপিন                    | Brand:                           | Cat: Psychiatric - Antipsychotics
+[190] Gen: Sodium valproate               | Bn: সোডিয়াম ভালপ্রোয়েট           | Brand:                           | Cat: Anticonvulsants
+[191] Gen: Phenytoin                      | Bn: ফেনিটোইন                       | Brand:                           | Cat: Anticonvulsants
+[192] Gen: Carbamazepine                  | Bn: কার্বামাজেপিন                  | Brand:                           | Cat: Anticonvulsants
+[193] Gen: Lamotrigine                    | Bn: ল্যামোট্রিজিন                  | Brand:                           | Cat: Anticonvulsants
+[194] Gen: Levetiracetam                  | Bn: লেভেটিরাসিটাম                  | Brand:                           | Cat: Anticonvulsants
+[195] Gen: Phenobarbital                  | Bn: ফেনোবারবিটাল                   | Brand:                           | Cat: Anticonvulsants
+[196] Gen: Topiramate                     | Bn: টোপিরামেট                      | Brand:                           | Cat: Anticonvulsants
+[197] Gen: Gabapentin                     | Bn: গ্যাবাপেন্টিন                  | Brand:                           | Cat: Anticonvulsants
+[198] Gen: Pregabalin                     | Bn: প্রেগাবালিন                    | Brand:                           | Cat: Anticonvulsants
+[199] Gen: Lithium                        | Bn: লিথিয়াম                       | Brand:                           | Cat: Mood Stabilizers
+[200] Gen: Combined oral contraceptive    | Bn: কম্বাইন্ড ওরাল কন্ট্রাসেপটিভ   | Brand:                           | Cat: Hormonal/Contraceptives
+[201] Gen: Progestin-only pill            | Bn: প্রোজেস্টিন-ওনলি পিল           | Brand:                           | Cat: Hormonal/Contraceptives
+[202] Gen: Medroxyprogesterone injection  | Bn: মেড্রোক্সিপ্রোজেস্টেরন ইনজেকশন | Brand:                           | Cat: Hormonal/Contraceptives
+[203] Gen: Levonorgestrel (emergency contraception) | Bn: লেভোনরজেস্ট্রেল (জরুরি গর্ভনিরোধক) | Brand:                           | Cat: Hormonal/Contraceptives
+[204] Gen: Estrogen (HRT)                 | Bn: ইস্ট্রোজেন (এইচআরটি)           | Brand:                           | Cat: Hormonal/Contraceptives
+[205] Gen: Clomiphene                     | Bn: ক্লোমিফিন                      | Brand:                           | Cat: Hormonal/Contraceptives
+[206] Gen: Progesterone (supplement)      | Bn: প্রোজেস্টেরন সাপ্লিমেন্ট       | Brand:                           | Cat: Obstetric-Specific
+[207] Gen: Oxytocin                       | Bn: অক্সিটোসিন                     | Brand:                           | Cat: Obstetric-Specific
+[208] Gen: Misoprostol                    | Bn: মিসোপ্রোস্টল                   | Brand:                           | Cat: Obstetric-Specific
+[209] Gen: Magnesium sulfate              | Bn: ম্যাগনেসিয়াম সালফেট           | Brand:                           | Cat: Obstetric-Specific
+[210] Gen: Atosiban                       | Bn: অ্যাটোসিবান                    | Brand:                           | Cat: Obstetric-Specific
+[211] Gen: Hydrocortisone cream           | Bn: হাইড্রোকর্টিসোন ক্রিম          | Brand:                           | Cat: Dermatological
+[212] Gen: Clobetasol                     | Bn: ক্লোবেটাসল                     | Brand:                           | Cat: Dermatological
+[213] Gen: Isotretinoin                   | Bn: আইসোট্রেটিনয়িন                | Brand:                           | Cat: Dermatological
+[214] Gen: Tretinoin (topical)            | Bn: ট্রেটিনোইন (স্থানীয়)          | Brand:                           | Cat: Dermatological
+[215] Gen: Clotrimazole cream             | Bn: ক্লোট্রিমাজল ক্রিম             | Brand:                           | Cat: Dermatological
+[216] Gen: Permethrin                     | Bn: পারমেথ্রিন                     | Brand:                           | Cat: Dermatological
+[217] Gen: Benzoyl peroxide               | Bn: বেনজোয়াইল পারঅক্সাইড          | Brand:                           | Cat: Dermatological
+[218] Gen: Salicylic acid (topical)       | Bn: সালিসাইলিক এসিড (স্থানীয়)     | Brand:                           | Cat: Dermatological
+[219] Gen: Vitamin B12                    | Bn: ভিটামিন বি১২                   | Brand:                           | Cat: Vitamins/Minerals (General)
+[220] Gen: Vitamin C                      | Bn: ভিটামিন সি                     | Brand:                           | Cat: Vitamins/Minerals (General)
+[221] Gen: Vitamin E                      | Bn: ভিটামিন ই                      | Brand:                           | Cat: Vitamins/Minerals (General)
+[222] Gen: Vitamin K                      | Bn: ভিটামিন কে                     | Brand:                           | Cat: Vitamins/Minerals (General)
+[223] Gen: Biotin                         | Bn: বায়োটিন                       | Brand:                           | Cat: Vitamins/Minerals (General)
+[224] Gen: Zinc supplement (adult)        | Bn: জিংক সাপ্লিমেন্ট (প্রাপ্তবয়স্ক) | Brand:                           | Cat: Vitamins/Minerals (General)
+[225] Gen: Magnesium supplement           | Bn: ম্যাগনেসিয়াম সাপ্লিমেন্ট      | Brand:                           | Cat: Vitamins/Minerals (General)
+[226] Gen: Copper supplement              | Bn: কপার সাপ্লিমেন্ট               | Brand:                           | Cat: Vitamins/Minerals (General)
+[227] Gen: Multivitamin (adult)           | Bn: মাল্টিভিটামিন (প্রাপ্তবয়স্ক)  | Brand:                           | Cat: Vitamins/Minerals (General)
+[228] Gen: Methotrexate                   | Bn: মেথোট্রেক্সেট                  | Brand:                           | Cat: Chemotherapy/Immunosuppressants
+[229] Gen: Cyclophosphamide               | Bn: সাইক্লোফসফামাইড                | Brand:                           | Cat: Chemotherapy/Immunosuppressants
+[230] Gen: Azathioprine                   | Bn: অ্যাজাথায়োপ্রিন               | Brand:                           | Cat: Chemotherapy/Immunosuppressants
+[231] Gen: Tacrolimus                     | Bn: টাক্রোলিমাস                    | Brand:                           | Cat: Chemotherapy/Immunosuppressants
+[232] Gen: Mycophenolate                  | Bn: মাইকোফেনোলেট                   | Brand:                           | Cat: Chemotherapy/Immunosuppressants
+[233] Gen: Sumatriptan                    | Bn: সুমাট্রিপটান                   | Brand:                           | Cat: Migraine
+[234] Gen: Ergotamine                     | Bn: এরগোটামিন                      | Brand:                           | Cat: Migraine
+[235] Gen: Baclofen                       | Bn: ব্যাক্লোফেন                    | Brand:                           | Cat: Muscle Relaxants
+[236] Gen: Cyclobenzaprine                | Bn: সাইক্লোবেনজাপ্রিন              | Brand:                           | Cat: Muscle Relaxants
+[237] Gen: Methocarbamol                  | Bn: মেথোকার্বামল                   | Brand:                           | Cat: Muscle Relaxants
+[238] Gen: Lidocaine                      | Bn: লিডোকেইন                       | Brand:                           | Cat: Anesthetics
+[239] Gen: Bupivacaine                    | Bn: বুপিভাকেইন                     | Brand:                           | Cat: Anesthetics
+[240] Gen: Chloramphenicol eye drops      | Bn: ক্লোরামফেনিকল চোখের ড্রপ       | Brand:                           | Cat: Eye/ENT
+[241] Gen: Xylometazoline (nasal spray)   | Bn: জাইলোমেটাজোলিন (নাসাল স্প্রে)  | Brand:                           | Cat: Eye/ENT
+[242] Gen: Ciprofloxacin ear drops        | Bn: সিপ্রোফ্লক্সাসিন কানের ড্রপ    | Brand:                           | Cat: Eye/ENT
+[243] Gen: Timolol eye drops              | Bn: টিমোলল চোখের ড্রপ              | Brand:                           | Cat: Eye/ENT
+[244] Gen: Tropicamide (eye drops)        | Bn: ট্রোপিকামাইড (চোখের ড্রপ)      | Brand:                           | Cat: Eye/ENT
+[245] Gen: Povidone-iodine                | Bn: পোভিডোন-আয়োডিন                | Brand:                           | Cat: Antiseptics/Topical
+[246] Gen: Chlorhexidine                  | Bn: ক্লোরহেক্সিডিন                 | Brand:                           | Cat: Antiseptics/Topical
+[247] Gen: Neem                           | Bn: নিম                            | Brand:                           | Cat: Herbal/Alternative
+[248] Gen: Turmeric (supplement dose)     | Bn: হলুদ (সাপ্লিমেন্ট মাত্রা)      | Brand:                           | Cat: Herbal/Alternative
+[249] Gen: Ginger (supplement dose)       | Bn: আদা (সাপ্লিমেন্ট মাত্রা)       | Brand:                           | Cat: Herbal/Alternative
+[250] Gen: Fenugreek                      | Bn: মেথি                           | Brand:                           | Cat: Herbal/Alternative
+[251] Gen: Fennel                         | Bn: মৌরি                           | Brand:                           | Cat: Herbal/Alternative
+[252] Gen: Tdap vaccine                   | Bn: টিডিএপি টিকা                   | Brand:                           | Cat: Vaccines
+[253] Gen: Influenza vaccine (inactivated) | Bn: ইনফ্লুয়েঞ্জা টিকা (নিষ্ক্রিয়) | Brand:                           | Cat: Vaccines
+[254] Gen: MMR vaccine (live)             | Bn: এমএমআর টিকা (জীবিত)            | Brand:                           | Cat: Vaccines
+[255] Gen: Paracetamol + Caffeine (combo) | Bn: প্যারাসিটামল + ক্যাফেইন        | Brand:                           | Cat: Combination OTC Products
+[256] Gen: Cetirizine + Pseudoephedrine (combo) | Bn: সেটিরিজিন + সিউডোএফেড্রিন      | Brand:                           | Cat: Combination OTC Products
+[257] Gen: Loratadine + Pseudoephedrine (combo) | Bn: লোরাটাডিন + সিউডোএফেড্রিন      | Brand:                           | Cat: Combination OTC Products
+[258] Gen: Antacid combo (Al-Mg-Simethicone) | Bn: অ্যান্টাসিড কম্বো              | Brand:                           | Cat: Combination OTC Products
+[259] Gen: Dextromethorphan + Guaifenesin (cough syrup) | Bn: কাশির সিরাপ কম্বো              | Brand:                           | Cat: Combination OTC Products
+[260] Gen: Omega-3 (Fish oil)             | Bn: ওমেগা-৩ (মাছের তেল)            | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[261] Gen: Probiotics (Lactobacillus)     | Bn: প্রোবায়োটিক                   | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[262] Gen: Iron polymaltose complex       | Bn: আয়রন পলিম্যালটোজ কমপ্লেক্স    | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[263] Gen: Vitamin B-complex              | Bn: ভিটামিন বি-কমপ্লেক্স           | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[264] Gen: Calcium + Vitamin D combo      | Bn: ক্যালসিয়াম + ভিটামিন ডি কম্বো | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[265] Gen: Multivitamin gummies           | Bn: মাল্টিভিটামিন গামি             | Brand:                           | Cat: Vitamins/Supplements (Daily Use)
+[266] Gen: Minoxidil (topical)            | Bn: মিনোক্সিডিল (স্থানীয়)         | Brand:                           | Cat: Hair/Skin (Cosmetic-Adjacent)
+[267] Gen: Finasteride                    | Bn: ফিনাস্টেরাইড                   | Brand:                           | Cat: Hair/Skin (Cosmetic-Adjacent)
+[268] Gen: Hydroquinone                   | Bn: হাইড্রোকুইনোন                  | Brand:                           | Cat: Hair/Skin (Cosmetic-Adjacent)
+[269] Gen: Adapalene                      | Bn: অ্যাডাপালিন                    | Brand:                           | Cat: Hair/Skin (Cosmetic-Adjacent)
+[270] Gen: Melatonin                      | Bn: মেলাটোনিন                      | Brand:                           | Cat: Sleep Aids
+[271] Gen: Zopiclone                      | Bn: জোপিক্লোন                      | Brand:                           | Cat: Sleep Aids
+[272] Gen: Orlistat                       | Bn: অরলিস্ট্যাট                    | Brand:                           | Cat: Weight Management
+[273] Gen: Phentermine                    | Bn: ফেন্টারমিন                     | Brand:                           | Cat: Weight Management
+[274] Gen: Diclofenac gel (topical)       | Bn: ডাইক্লোফেনাক জেল               | Brand:                           | Cat: Topical Pain Relief
+[275] Gen: Menthol/methyl salicylate balm | Bn: মেন্থল/মিথাইল স্যালিসাইলেট বাম | Brand:                           | Cat: Topical Pain Relief
+[276] Gen: Capsaicin cream                | Bn: ক্যাপসাইসিন ক্রিম              | Brand:                           | Cat: Topical Pain Relief
+[277] Gen: Pancreatin                     | Bn: প্যানক্রিয়াটিন                | Brand:                           | Cat: Digestive Aids
+[278] Gen: Activated charcoal             | Bn: অ্যাক্টিভেটেড চারকোল           | Brand:                           | Cat: Digestive Aids
+[279] Gen: Ispaghula husk (Isabgol)       | Bn: ইসবগুলের ভুসি                  | Brand:                           | Cat: Digestive Aids
+[280] Gen: Nasal saline spray             | Bn: নাসাল স্যালাইন স্প্রে          | Brand:                           | Cat: Nasal/Allergy (Extended)
+[281] Gen: Oxymetazoline nasal spray      | Bn: অক্সিমেটাজোলিন নাসাল স্প্রে    | Brand:                           | Cat: Nasal/Allergy (Extended)
+[282] Gen: Beclomethasone nasal spray     | Bn: বেক্লোমেথাসোন নাসাল স্প্রে     | Brand:                           | Cat: Nasal/Allergy (Extended)
+[283] Gen: Mupirocin (topical)            | Bn: মুপিরোসিন (স্থানীয়)           | Brand:                           | Cat: Topical Antibiotics
+[284] Gen: Fusidic acid (topical)         | Bn: ফুসিডিক এসিড (স্থানীয়)        | Brand:                           | Cat: Topical Antibiotics
+[285] Gen: Vitamin D drops (infant)       | Bn: ভিটামিন ডি ড্রপ (শিশু)         | Brand:                           | Cat: Pediatric-Dosing Drugs (Extended)
+[286] Gen: Rabeprazole                    | Bn: রাবিপ্রাজল                     | Brand:                           | Cat: GI/Other (Extended)
+[287] Gen: Menthol lozenges               | Bn: মেন্থল লজেঞ্জ                  | Brand:                           | Cat: Common Cold/Flu (Extended)
+[288] Gen: Telmisartan                    | Bn: টেলমিসারটান                    | Brand:                           | Cat: Cardiovascular
+[289] Gen: Perindopril                    | Bn: পেরিনডোপ্রিল                   | Brand:                           | Cat: Cardiovascular
+[290] Gen: Dapagliflozin                  | Bn: ড্যাপাগ্লিফ্লোজিন              | Brand:                           | Cat: Antidiabetics (Extended)
+[291] Gen: Liraglutide                    | Bn: লিরাগ্লুটাইড                   | Brand:                           | Cat: Antidiabetics (Extended)
+[292] Gen: Trazodone                      | Bn: ট্রাজোডোন                      | Brand:                           | Cat: Psychiatric - Antidepressants
+[293] Gen: Vortioxetine                   | Bn: ভরটিওক্সেটিন                   | Brand:                           | Cat: Psychiatric - Antidepressants
+[294] Gen: Fosfomycin                     | Bn: ফসফোমাইসিন                     | Brand:                           | Cat: Antibiotics (Extended)
+[295] Gen: Ivabradine                     | Bn: আইভাব্রাডিন                    | Brand:                           | Cat: Cardiovascular
+[296] Gen: Ranolazine                     | Bn: রানোলাজিন                      | Brand:                           | Cat: Cardiovascular
+[297] Gen: Colchicine                     | Bn: কলচিসিন                        | Brand:                           | Cat: Gout/Uric Acid
+[298] Gen: Allopurinol                    | Bn: অ্যালোপিউরিনল                  | Brand:                           | Cat: Gout/Uric Acid
+[299] Gen: Methylergometrine              | Bn: মিথাইলএরগোমেট্রিন              | Brand:                           | Cat: Obstetric-Specific
+[300] Gen: Carboprost                     | Bn: কার্বোপ্রস্ট                   | Brand:                           | Cat: Obstetric-Specific
+[301] Gen: Tranexamic acid                | Bn: ট্রানেক্সামিক এসিড             | Brand:                           | Cat: Obstetric-Specific
+[302] Gen: Ferrous fumarate               | Bn: ফেরাস ফিউমারেট                 | Brand:                           | Cat: Antenatal Supplements

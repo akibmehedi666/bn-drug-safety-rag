@@ -1,0 +1,2123 @@
+{
+  "counts": {
+    "safe": 119,
+    "caution": 115,
+    "unsafe": 68
+  },
+  "drugs": [
+    {
+      "id": 1,
+      "name": "ফেরাস সালফেট (আয়রন) (Ferrous sulfate)",
+      "generic": "Ferrous sulfate",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ, নিয়মিত গর্ভকালীন সাপ্লিমেন্ট (Generally safe; standard antenatal supplement)"
+    },
+    {
+      "id": 2,
+      "name": "ফলিক এসিড (Folic acid)",
+      "generic": "Folic acid",
+      "rating": "safe",
+      "pw": "নিরাপদ এবং সুপারিশকৃত (নিউরাল টিউব ত্রুটি প্রতিরোধ করে) (Safe and recommended (prevents neural tube defects))"
+    },
+    {
+      "id": 3,
+      "name": "ক্যালসিয়াম কার্বনেট (Calcium carbonate)",
+      "generic": "Calcium carbonate",
+      "rating": "safe",
+      "pw": "নিরাপদ, নিয়মিত সাপ্লিমেন্ট (Safe; standard supplementation)"
+    },
+    {
+      "id": 4,
+      "name": "ভিটামিন ডি৩ (Cholecalciferol)",
+      "generic": "Cholecalciferol",
+      "rating": "safe",
+      "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe within recommended doses)"
+    },
+    {
+      "id": 5,
+      "name": "পাইরিডক্সিন (ভিটামিন বি৬) (Pyridoxine)",
+      "generic": "Pyridoxine",
+      "rating": "safe",
+      "pw": "নিরাপদ; গর্ভকালীন বমি বমি ভাবের প্রথম সারির চিকিৎসা (Safe; first-line for nausea/vomiting in pregnancy)"
+    },
+    {
+      "id": 6,
+      "name": "মেটোক্লোপ্রামাইড (Metoclopramide)",
+      "generic": "Metoclopramide",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বলে বিবেচিত (Generally considered safe; used for hyperemesis)"
+    },
+    {
+      "id": 7,
+      "name": "অনডানসেট্রন (Ondansetron)",
+      "generic": "Ondansetron",
+      "rating": "caution",
+      "pw": "প্রথম ত্রৈমাসিকে ক্লেফট প্যালেট ঝুঁকি নিয়ে সীমিত/মিশ্র তথ্য (Limited/mixed data on cleft palate risk with 1st-trimester use)"
+    },
+    {
+      "id": 8,
+      "name": "প্রোমেথাজিন (Promethazine)",
+      "generic": "Promethazine",
+      "rating": "caution",
+      "pw": "দীর্ঘদিনের ব্যবহারের রেকর্ড; প্রসবকালে সতর্কতা প্রয়োজন (Long track record; caution at term (neonatal sedation))"
+    },
+    {
+      "id": 9,
+      "name": "প্যারাসিটামল (Acetaminophen)",
+      "generic": "Acetaminophen",
+      "rating": "safe",
+      "pw": "নিরাপদ; গর্ভাবস্থায় প্রথম সারির ব্যথা-জ্বরের ওষুধ (Safe; first-line analgesic/antipyretic in pregnancy)"
+    },
+    {
+      "id": 10,
+      "name": "আইবুপ্রোফেন (Ibuprofen)",
+      "generic": "Ibuprofen",
+      "rating": "unsafe",
+      "pw": "তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid in 3rd trimester (premature ductus closure))"
+    },
+    {
+      "id": 11,
+      "name": "অ্যাসপিরিন (কম মাত্রা) (Acetylsalicylic acid)",
+      "generic": "Acetylsalicylic acid",
+      "rating": "unsafe",
+      "pw": "কম মাত্রায় ক্লিনিক্যালি ব্যবহৃত; উচ্চ মাত্রা এড়িয়ে চলুন (Low-dose used clinically (pre-eclampsia prevention); high-dose avoided)"
+    },
+    {
+      "id": 12,
+      "name": "ডাইক্লোফেনাক (Diclofenac)",
+      "generic": "Diclofenac",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester (NSAID class effect))"
+    },
+    {
+      "id": 13,
+      "name": "অ্যামোক্সিসিলিন (Amoxicillin)",
+      "generic": "Amoxicillin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used in pregnancy)"
+    },
+    {
+      "id": 14,
+      "name": "অ্যাজিথ্রোমাইসিন (Azithromycin)",
+      "generic": "Azithromycin",
+      "rating": "safe",
+      "pw": "অ্যান্টিবায়োটিক প্রয়োজন হলে সাধারণত নিরাপদ (Generally considered safe when antibiotic needed)"
+    },
+    {
+      "id": 15,
+      "name": "সেফালেক্সিন (Cephalexin)",
+      "generic": "Cephalexin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 16,
+      "name": "নাইট্রোফুরানটয়িন (Nitrofurantoin)",
+      "generic": "Nitrofurantoin",
+      "rating": "unsafe",
+      "pw": "প্রসবের কাছাকাছি সময়ে সাধারণত এড়িয়ে চলা হয় (Generally avoided near term (neonatal hemolysis risk))"
+    },
+    {
+      "id": 17,
+      "name": "সিপ্রোফ্লক্সাসিন (Ciprofloxacin)",
+      "generic": "Ciprofloxacin",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়িয়ে চলা হয় (Generally avoided (fluoroquinolone cartilage concerns))"
+    },
+    {
+      "id": 18,
+      "name": "ডক্সিসাইক্লিন (Doxycycline)",
+      "generic": "Doxycycline",
+      "rating": "unsafe",
+      "pw": "এড়িয়ে চলা হয় (টেট্রাসাইক্লিন শ্রেণি) (Avoided (tetracycline class - teeth/bone effects))"
+    },
+    {
+      "id": 19,
+      "name": "মেট্রোনিডাজল (Metronidazole)",
+      "generic": "Metronidazole",
+      "rating": "caution",
+      "pw": "প্রথম ত্রৈমাসিকে সতর্কতা (Caution in 1st trimester; used later if needed)"
+    },
+    {
+      "id": 20,
+      "name": "কো-ট্রাইমক্সাজল (Sulfamethoxazole/Trimethoprim)",
+      "generic": "Sulfamethoxazole/Trimethoprim",
+      "rating": "unsafe",
+      "pw": "প্রসবের কাছাকাছি সময়ে এড়িয়ে চলা হয় (Avoided near term (kernicterus risk))"
+    },
+    {
+      "id": 21,
+      "name": "ল্যাবেটালল (Labetalol)",
+      "generic": "Labetalol",
+      "rating": "safe",
+      "pw": "নিরাপদ; গর্ভকালীন উচ্চ রক্তচাপের প্রথম সারির ওষুধ (Considered safe; first-line for pregnancy hypertension)"
+    },
+    {
+      "id": 22,
+      "name": "মিথাইলডোপা (Methyldopa)",
+      "generic": "Methyldopa",
+      "rating": "safe",
+      "pw": "দীর্ঘদিনের নিরাপত্তা রেকর্ড (Long safety record; first-line agent)"
+    },
+    {
+      "id": 23,
+      "name": "নিফেডিপিন (Nifedipine)",
+      "generic": "Nifedipine",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used)"
+    },
+    {
+      "id": 24,
+      "name": "এনালাপ্রিল (Enalapril)",
+      "generic": "Enalapril",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (এসিই ইনহিবিটর) (CONTRAINDICATED (ACE inhibitor - fetal renal toxicity))"
+    },
+    {
+      "id": 25,
+      "name": "মেটফরমিন (Metformin)",
+      "generic": "Metformin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe; used for gestational diabetes)"
+    },
+    {
+      "id": 26,
+      "name": "ইনসুলিন (Insulin (various))",
+      "generic": "Insulin (various)",
+      "rating": "safe",
+      "pw": "নিরাপদ; চিকিৎসার মানদণ্ড (Safe; standard of care)"
+    },
+    {
+      "id": 27,
+      "name": "সিউডোএফেড্রিন (Pseudoephedrine)",
+      "generic": "Pseudoephedrine",
+      "rating": "caution",
+      "pw": "প্রথম ত্রৈমাসিকে সতর্কতা (Caution 1st trimester (gastroschisis association))"
+    },
+    {
+      "id": 28,
+      "name": "ডেক্সট্রোমেথরফান (Dextromethorphan)",
+      "generic": "Dextromethorphan",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; স্বল্পমেয়াদে কম ঝুঁকিপূর্ণ (Limited data; generally low risk short-term)"
+    },
+    {
+      "id": 29,
+      "name": "গুয়াইফেনেসিন (Guaifenesin)",
+      "generic": "Guaifenesin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকিপূর্ণ (Limited data; generally low risk)"
+    },
+    {
+      "id": 30,
+      "name": "সেটিরিজিন (Cetirizine)",
+      "generic": "Cetirizine",
+      "rating": "safe",
+      "pw": "দ্বিতীয় প্রজন্মের অ্যান্টিহিস্টামিন; ভালো তথ্য (Second-gen antihistamine; reassuring data)"
+    },
+    {
+      "id": 31,
+      "name": "লোরাটাডিন (Loratadine)",
+      "generic": "Loratadine",
+      "rating": "safe",
+      "pw": "সাধারণত ভালো তথ্য (Generally reassuring data)"
+    },
+    {
+      "id": 32,
+      "name": "ক্লোরফেনিরামিন মালিয়েট (Chlorpheniramine maleate)",
+      "generic": "Chlorpheniramine maleate",
+      "rating": "safe",
+      "pw": "দীর্ঘদিনের ব্যবহারের রেকর্ড (Long track record, generally safe)"
+    },
+    {
+      "id": 33,
+      "name": "ডাইফেনহাইড্রামিন (Diphenhydramine)",
+      "generic": "Diphenhydramine",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally considered safe short-term)"
+    },
+    {
+      "id": 34,
+      "name": "প্যারাসিটামল সিরাপ (শিশু) (Acetaminophen (Pediatric))",
+      "generic": "Acetaminophen (Pediatric)",
+      "rating": "safe",
+      "pw": "N/A - শিশুর জন্য (N/A - pediatric dosing, not maternal)"
+    },
+    {
+      "id": 35,
+      "name": "অ্যামোক্সিসিলিন সাসপেনশন (শিশু) (Amoxicillin (Pediatric))",
+      "generic": "Amoxicillin (Pediatric)",
+      "rating": "safe",
+      "pw": "N/A - শিশুর ডোজিং প্রশ্ন (N/A - pediatric dosing question)"
+    },
+    {
+      "id": 36,
+      "name": "খাবার স্যালাইন (ওআরএস) (Oral rehydration salts)",
+      "generic": "Oral rehydration salts",
+      "rating": "safe",
+      "pw": "নিরাপদ - সিস্টেমিকভাবে শোষিত হয় না (Safe - not systemically absorbed)"
+    },
+    {
+      "id": 37,
+      "name": "জিংক সালফেট (Zinc sulfate)",
+      "generic": "Zinc sulfate",
+      "rating": "safe",
+      "pw": "শিশুর থেরাপিউটিক মাত্রায় নিরাপদ (Safe at pediatric therapeutic doses)"
+    },
+    {
+      "id": 38,
+      "name": "ভিটামিন এ (রেটিনল) (Retinol)",
+      "generic": "Retinol",
+      "rating": "unsafe",
+      "pw": "সতর্কতা - উচ্চ মাত্রা টেরাটোজেনিক (CAUTION - high-dose is teratogenic; follow WHO/BD protocols exactly)"
+    },
+    {
+      "id": 39,
+      "name": "ওমিপ্রাজল (Omeprazole)",
+      "generic": "Omeprazole",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally considered safe)"
+    },
+    {
+      "id": 40,
+      "name": "লোপেরামাইড (Loperamide)",
+      "generic": "Loperamide",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকিপূর্ণ (Limited data; generally low risk short-term)"
+    },
+    {
+      "id": 41,
+      "name": "ডমপেরিডন (Domperidone)",
+      "generic": "Domperidone",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় নিরাপত্তা তথ্য সীমিত (Limited safety data in pregnancy)"
+    },
+    {
+      "id": 42,
+      "name": "সাইমেথিকন (Simethicone)",
+      "generic": "Simethicone",
+      "rating": "safe",
+      "pw": "নিরাপদ - সিস্টেমিকভাবে শোষিত হয় না (Safe - not systemically absorbed)"
+    },
+    {
+      "id": 43,
+      "name": "ন্যাপ্রোক্সেন (Naproxen)",
+      "generic": "Naproxen",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester)"
+    },
+    {
+      "id": 44,
+      "name": "মেফেনামিক এসিড (Mefenamic acid)",
+      "generic": "Mefenamic acid",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়িয়ে চলুন (Avoid, especially 3rd trimester)"
+    },
+    {
+      "id": 45,
+      "name": "কিটোরোলাক (Ketorolac)",
+      "generic": "Ketorolac",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)"
+    },
+    {
+      "id": 46,
+      "name": "ইনডোমেথাসিন (Indomethacin)",
+      "generic": "Indomethacin",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (বিশেষ পর্যবেক্ষণে ব্যবহৃত) (Avoided (used only for specific tocolysis under monitoring))"
+    },
+    {
+      "id": 47,
+      "name": "সেলেকক্সিব (Celecoxib)",
+      "generic": "Celecoxib",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)"
+    },
+    {
+      "id": 48,
+      "name": "পিরোক্সিকাম (Piroxicam)",
+      "generic": "Piroxicam",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)"
+    },
+    {
+      "id": 49,
+      "name": "মেলোক্সিকাম (Meloxicam)",
+      "generic": "Meloxicam",
+      "rating": "unsafe",
+      "pw": "বিশেষত তৃতীয় ত্রৈমাসিকে এড়ানো হয় (Avoided, especially 3rd trimester)"
+    },
+    {
+      "id": 50,
+      "name": "কোডিন (Codeine)",
+      "generic": "Codeine",
+      "rating": "caution",
+      "pw": "সতর্কতা (নবজাতকের শ্বাসকষ্টের ঝুঁকি) (Caution (neonatal respiratory depression risk near term))"
+    },
+    {
+      "id": 51,
+      "name": "মরফিন (Morphine)",
+      "generic": "Morphine",
+      "rating": "caution",
+      "pw": "গুরুতর ব্যথায় সতর্কতার সাথে ব্যবহৃত (Used cautiously for severe pain; caution near delivery)"
+    },
+    {
+      "id": 52,
+      "name": "পেথিডিন (Pethidine)",
+      "generic": "Pethidine",
+      "rating": "caution",
+      "pw": "প্রসবকালে ব্যবহৃত; নবজাতকের ঝুঁকি সতর্কতা (Used in labor; caution re: neonatal respiratory depression)"
+    },
+    {
+      "id": 53,
+      "name": "ফেন্টানিল (Fentanyl)",
+      "generic": "Fentanyl",
+      "rating": "caution",
+      "pw": "অ্যানেস্থেসিয়া/প্রসবকালে তত্ত্বাবধানে ব্যবহৃত (Used in anesthesia/labor under monitoring)"
+    },
+    {
+      "id": 54,
+      "name": "অক্সিকোডোন (Oxycodone)",
+      "generic": "Oxycodone",
+      "rating": "caution",
+      "pw": "সতর্কতা; ওপিওয়েড শ্রেণির ঝুঁকি (Caution; opioid class risks)"
+    },
+    {
+      "id": 55,
+      "name": "ট্রামাডল (Tramadol)",
+      "generic": "Tramadol",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 56,
+      "name": "অ্যাম্পিসিলিন (Ampicillin)",
+      "generic": "Ampicillin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 57,
+      "name": "অ্যামোক্সিসিলিন-ক্লাভুলানেট (Amoxicillin-clavulanate)",
+      "generic": "Amoxicillin-clavulanate",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 58,
+      "name": "ফ্লুক্লোক্সাসিলিন (Flucloxacillin)",
+      "generic": "Flucloxacillin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 59,
+      "name": "পেনিসিলিন ভি (Penicillin V)",
+      "generic": "Penicillin V",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 60,
+      "name": "পিপারাসিলিন-টাজোব্যাকটাম (Piperacillin-tazobactam)",
+      "generic": "Piperacillin-tazobactam",
+      "rating": "safe",
+      "pw": "গুরুতর সংক্রমণে ব্যবহৃত; নিরাপদ বিবেচিত (Used for severe infections; considered safe)"
+    },
+    {
+      "id": 61,
+      "name": "সেফুরোক্সিম (Cefuroxime)",
+      "generic": "Cefuroxime",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 62,
+      "name": "সেফিক্সিম (Cefixime)",
+      "generic": "Cefixime",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 63,
+      "name": "সেফট্রায়াক্সোন (Ceftriaxone)",
+      "generic": "Ceftriaxone",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe; commonly used)"
+    },
+    {
+      "id": 64,
+      "name": "সেফডিনির (Cefdinir)",
+      "generic": "Cefdinir",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 65,
+      "name": "এরিথ্রোমাইসিন (Erythromycin)",
+      "generic": "Erythromycin",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 66,
+      "name": "ক্লারিথ্রোমাইসিন (Clarithromycin)",
+      "generic": "Clarithromycin",
+      "rating": "caution",
+      "pw": "কিছু তথ্য উদ্বেগ রয়েছে; সতর্কতা (Some data concerns; caution)"
+    },
+    {
+      "id": 67,
+      "name": "রোক্সিথ্রোমাইসিন (Roxithromycin)",
+      "generic": "Roxithromycin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 68,
+      "name": "লেভোফ্লক্সাসিন (Levofloxacin)",
+      "generic": "Levofloxacin",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))"
+    },
+    {
+      "id": 69,
+      "name": "অফ্লক্সাসিন (Ofloxacin)",
+      "generic": "Ofloxacin",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))"
+    },
+    {
+      "id": 70,
+      "name": "মক্সিফ্লক্সাসিন (Moxifloxacin)",
+      "generic": "Moxifloxacin",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (Generally avoided (fluoroquinolone class))"
+    },
+    {
+      "id": 71,
+      "name": "টেট্রাসাইক্লিন (Tetracycline)",
+      "generic": "Tetracycline",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয় (দাঁত/হাড়ের প্রভাব) (Avoided (teeth/bone effects))"
+    },
+    {
+      "id": 72,
+      "name": "মিনোসাইক্লিন (Minocycline)",
+      "generic": "Minocycline",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয় (Avoided (tetracycline class))"
+    },
+    {
+      "id": 73,
+      "name": "ক্লিন্ডামাইসিন (Clindamycin)",
+      "generic": "Clindamycin",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 74,
+      "name": "ভ্যানকোমাইসিন (Vancomycin)",
+      "generic": "Vancomycin",
+      "rating": "safe",
+      "pw": "গুরুতর সংক্রমণে ব্যবহৃত (Used for severe infections; generally considered safe)"
+    },
+    {
+      "id": 75,
+      "name": "লাইনজোলিড (Linezolid)",
+      "generic": "Linezolid",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 76,
+      "name": "জেন্টামাইসিন (Gentamicin)",
+      "generic": "Gentamicin",
+      "rating": "caution",
+      "pw": "পর্যবেক্ষণে ব্যবহৃত (দীর্ঘমেয়াদে শ্রবণ ঝুঁকি) (Used with monitoring (ototoxicity risk with prolonged use))"
+    },
+    {
+      "id": 77,
+      "name": "অ্যামিকাসিন (Amikacin)",
+      "generic": "Amikacin",
+      "rating": "caution",
+      "pw": "পর্যবেক্ষণে ব্যবহৃত (Used with monitoring (ototoxicity risk))"
+    },
+    {
+      "id": 78,
+      "name": "রিফাম্পিসিন (Rifampicin)",
+      "generic": "Rifampicin",
+      "rating": "safe",
+      "pw": "গর্ভাবস্থায় যক্ষ্মায় ব্যবহৃত; নিরাপদ বিবেচিত (Used for TB in pregnancy; generally considered safe)"
+    },
+    {
+      "id": 79,
+      "name": "আইসোনিয়াজিড (Isoniazid)",
+      "generic": "Isoniazid",
+      "rating": "caution",
+      "pw": "যক্ষ্মায় ব্যবহৃত; পাইরিডক্সিনের সাথে দিন (Used for TB; give with pyridoxine to prevent neuropathy)"
+    },
+    {
+      "id": 80,
+      "name": "পাইরাজিনামাইড (Pyrazinamide)",
+      "generic": "Pyrazinamide",
+      "rating": "caution",
+      "pw": "ডব্লিউএইচও নিয়ম অনুযায়ী যক্ষ্মায় ব্যবহৃত (Used for TB in pregnancy per WHO regimen)"
+    },
+    {
+      "id": 81,
+      "name": "ইথামবুটল (Ethambutol)",
+      "generic": "Ethambutol",
+      "rating": "safe",
+      "pw": "গর্ভাবস্থায় যক্ষ্মায় ব্যবহৃত (Used for TB in pregnancy; considered safe)"
+    },
+    {
+      "id": 82,
+      "name": "ফ্লুকোনাজল (Fluconazole)",
+      "generic": "Fluconazole",
+      "rating": "unsafe",
+      "pw": "উচ্চ মাত্রা এড়ানো হয়; কম মাত্রায় সাধারণত গ্রহণযোগ্য (High-dose avoided (teratogenic); low-dose short course generally ok)"
+    },
+    {
+      "id": 83,
+      "name": "ক্লোট্রিমাজল (Clotrimazole)",
+      "generic": "Clotrimazole",
+      "rating": "safe",
+      "pw": "নিরাপদ (স্থানীয় ব্যবহার) (Safe (topical/vaginal))"
+    },
+    {
+      "id": 84,
+      "name": "নিস্ট্যাটিন (Nystatin)",
+      "generic": "Nystatin",
+      "rating": "safe",
+      "pw": "নিরাপদ (শোষিত হয় না) (Safe (not absorbed))"
+    },
+    {
+      "id": 85,
+      "name": "ইট্রাকোনাজল (Itraconazole)",
+      "generic": "Itraconazole",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (Generally avoided)"
+    },
+    {
+      "id": 86,
+      "name": "টার্বিনাফাইন (Terbinafine)",
+      "generic": "Terbinafine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 87,
+      "name": "গ্রিসিওফালভিন (Griseofulvin)",
+      "generic": "Griseofulvin",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয় (Avoided (teratogenic in animal studies))"
+    },
+    {
+      "id": 88,
+      "name": "কিটোকোনাজল (Ketoconazole)",
+      "generic": "Ketoconazole",
+      "rating": "unsafe",
+      "pw": "মুখে খাওয়ার ফর্ম সাধারণত এড়ানো হয় (Oral form generally avoided)"
+    },
+    {
+      "id": 89,
+      "name": "অ্যাসাইক্লোভির (Acyclovir)",
+      "generic": "Acyclovir",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 90,
+      "name": "ওসেলটামিভির (Oseltamivir)",
+      "generic": "Oseltamivir",
+      "rating": "safe",
+      "pw": "গর্ভাবস্থায় ফ্লুতে ব্যবহৃত; নিরাপদ বিবেচিত (Considered safe; used for flu in pregnancy)"
+    },
+    {
+      "id": 91,
+      "name": "ভ্যালাসাইক্লোভির (Valacyclovir)",
+      "generic": "Valacyclovir",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 92,
+      "name": "জিডোভুডিন (Zidovudine)",
+      "generic": "Zidovudine",
+      "rating": "safe",
+      "pw": "এইচআইভি প্রতিরোধে ব্যবহৃত; সাধারণত নিরাপদ (Used in pregnancy for HIV PMTCT; generally safe)"
+    },
+    {
+      "id": 93,
+      "name": "লামিভুডিন (Lamivudine)",
+      "generic": "Lamivudine",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় এইচআইভি/হেপাটাইটিস বি চিকিৎসায় ব্যবহৃত (Used in pregnancy for HIV/Hepatitis B per protocol)"
+    },
+    {
+      "id": 94,
+      "name": "টেনোফোভির (Tenofovir)",
+      "generic": "Tenofovir",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় এইচআইভি/হেপাটাইটিস বি চিকিৎসায় ব্যবহৃত (Used in pregnancy for HIV/Hepatitis B per protocol)"
+    },
+    {
+      "id": 95,
+      "name": "এফাভিরেঞ্জ (Efavirenz)",
+      "generic": "Efavirenz",
+      "rating": "caution",
+      "pw": "প্রথম ত্রৈমাসিকে সতর্কতা ঐতিহাসিকভাবে; বর্তমান নির্দেশনা যাচাই করুন (Historically cautioned in 1st trimester; current guidance evolving - verify current WHO stance)"
+    },
+    {
+      "id": 96,
+      "name": "রিবাভাইরিন (Ribavirin)",
+      "generic": "Ribavirin",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (টেরাটোজেনিক) (CONTRAINDICATED (teratogenic))"
+    },
+    {
+      "id": 97,
+      "name": "ক্লোরোকুইন (Chloroquine)",
+      "generic": "Chloroquine",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 98,
+      "name": "কুইনাইন (Quinine)",
+      "generic": "Quinine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (high-dose risk))"
+    },
+    {
+      "id": 99,
+      "name": "আর্টেমিসিনিন কম্বিনেশন থেরাপি (Artemisinin combination therapy)",
+      "generic": "Artemisinin combination therapy",
+      "rating": "caution",
+      "pw": "দ্বিতীয়/তৃতীয় ত্রৈমাসিকে ব্যবহৃত; প্রথমে সতর্কতা (Used in 2nd/3rd trimester; caution in 1st)"
+    },
+    {
+      "id": 100,
+      "name": "মেফ্লোকুইন (Mefloquine)",
+      "generic": "Mefloquine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 101,
+      "name": "অ্যালবেন্ডাজল (Albendazole)",
+      "generic": "Albendazole",
+      "rating": "unsafe",
+      "pw": "প্রথম ত্রৈমাসিকে এড়ানো হয় (Avoided in 1st trimester)"
+    },
+    {
+      "id": 102,
+      "name": "মেবেন্ডাজল (Mebendazole)",
+      "generic": "Mebendazole",
+      "rating": "unsafe",
+      "pw": "প্রথম ত্রৈমাসিকে এড়ানো হয় (Avoided in 1st trimester)"
+    },
+    {
+      "id": 103,
+      "name": "আইভারমেকটিন (Ivermectin)",
+      "generic": "Ivermectin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 104,
+      "name": "প্রাজিকোয়ান্টেল (Praziquantel)",
+      "generic": "Praziquantel",
+      "rating": "safe",
+      "pw": "ডব্লিউএইচও প্রয়োজনে নিরাপদ বিবেচনা করে (WHO considers safe when needed)"
+    },
+    {
+      "id": 105,
+      "name": "ডাইইথাইলকার্বামাজিন (Diethylcarbamazine)",
+      "generic": "Diethylcarbamazine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 106,
+      "name": "লোসারটান (Losartan)",
+      "generic": "Losartan",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (এআরবি) (CONTRAINDICATED (ARB - fetal renal toxicity like ACEi))"
+    },
+    {
+      "id": 107,
+      "name": "অ্যামলোডিপিন (Amlodipine)",
+      "generic": "Amlodipine",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 108,
+      "name": "অ্যাটেনোলল (Atenolol)",
+      "generic": "Atenolol",
+      "rating": "caution",
+      "pw": "সতর্কতা (বৃদ্ধি সীমাবদ্ধতার ঝুঁকি) (Caution (IUGR risk with prolonged use))"
+    },
+    {
+      "id": 109,
+      "name": "প্রোপ্রানোলল (Propranolol)",
+      "generic": "Propranolol",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used cautiously; monitor neonate for hypoglycemia)"
+    },
+    {
+      "id": 110,
+      "name": "ডিগক্সিন (Digoxin)",
+      "generic": "Digoxin",
+      "rating": "safe",
+      "pw": "নিরাপদ; ভ্রূণের অ্যারিদমিয়ায় ব্যবহৃত (Generally safe; used for fetal arrhythmia)"
+    },
+    {
+      "id": 111,
+      "name": "অ্যামিওডারোন (Amiodarone)",
+      "generic": "Amiodarone",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয় (ভ্রূণের থাইরয়েড প্রভাব) (Avoided (fetal thyroid effects))"
+    },
+    {
+      "id": 112,
+      "name": "ভেরাপামিল (Verapamil)",
+      "generic": "Verapamil",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 113,
+      "name": "ফুরোসেমাইড (Furosemide)",
+      "generic": "Furosemide",
+      "rating": "caution",
+      "pw": "প্রয়োজনে ব্যবহৃত; সতর্কতা (Used when needed; caution)"
+    },
+    {
+      "id": 114,
+      "name": "হাইড্রোক্লোরোথিয়াজাইড (Hydrochlorothiazide)",
+      "generic": "Hydrochlorothiazide",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 115,
+      "name": "স্পাইরোনোল্যাকটোন (Spironolactone)",
+      "generic": "Spironolactone",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয় (অ্যান্টি-অ্যান্ড্রোজেনিক প্রভাব) (Avoided (anti-androgenic effects))"
+    },
+    {
+      "id": 116,
+      "name": "আইসোসরবাইড ডাইনাইট্রেট (Isosorbide dinitrate)",
+      "generic": "Isosorbide dinitrate",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 117,
+      "name": "নাইট্রোগ্লিসারিন (Nitroglycerin)",
+      "generic": "Nitroglycerin",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (also used as tocolytic))"
+    },
+    {
+      "id": 118,
+      "name": "ক্লোনিডিন (Clonidine)",
+      "generic": "Clonidine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 119,
+      "name": "ডক্সাজোসিন (Doxazosin)",
+      "generic": "Doxazosin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 120,
+      "name": "ম্যানিটল (Mannitol)",
+      "generic": "Mannitol",
+      "rating": "caution",
+      "pw": "নির্দিষ্ট ক্ষেত্রে সতর্কতার সাথে ব্যবহৃত (Used with caution in specific indications)"
+    },
+    {
+      "id": 121,
+      "name": "টরসেমাইড (Torsemide)",
+      "generic": "Torsemide",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 122,
+      "name": "অ্যাটোরভাস্ট্যাটিন (Atorvastatin)",
+      "generic": "Atorvastatin",
+      "rating": "unsafe",
+      "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)"
+    },
+    {
+      "id": 123,
+      "name": "সিমভাস্ট্যাটিন (Simvastatin)",
+      "generic": "Simvastatin",
+      "rating": "unsafe",
+      "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)"
+    },
+    {
+      "id": 124,
+      "name": "রোসুভাস্ট্যাটিন (Rosuvastatin)",
+      "generic": "Rosuvastatin",
+      "rating": "unsafe",
+      "pw": "সাধারণত গর্ভাবস্থায় এড়ানো হয় (Generally avoided in pregnancy)"
+    },
+    {
+      "id": 125,
+      "name": "ওয়ারফারিন (Warfarin)",
+      "generic": "Warfarin",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (ভ্রূণের বিকৃতির ঝুঁকি) (CONTRAINDICATED (warfarin embryopathy))"
+    },
+    {
+      "id": 126,
+      "name": "হেপারিন (Heparin)",
+      "generic": "Heparin",
+      "rating": "safe",
+      "pw": "নিরাপদ (প্লাসেন্টা অতিক্রম করে না) (Safe (doesn't cross placenta))"
+    },
+    {
+      "id": 127,
+      "name": "এনোক্সাপারিন (Enoxaparin)",
+      "generic": "Enoxaparin",
+      "rating": "safe",
+      "pw": "নিরাপদ; গর্ভাবস্থায় পছন্দনীয় (Safe; preferred anticoagulant in pregnancy)"
+    },
+    {
+      "id": 128,
+      "name": "অ্যাপিক্সাবান (Apixaban)",
+      "generic": "Apixaban",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)"
+    },
+    {
+      "id": 129,
+      "name": "রিভারোক্সাবান (Rivaroxaban)",
+      "generic": "Rivaroxaban",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)"
+    },
+    {
+      "id": 130,
+      "name": "ড্যাবিগাট্রান (Dabigatran)",
+      "generic": "Dabigatran",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; পর্যাপ্ত তথ্য নেই (Avoided; insufficient data)"
+    },
+    {
+      "id": 131,
+      "name": "ক্লোপিডোগ্রেল (Clopidogrel)",
+      "generic": "Clopidogrel",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 132,
+      "name": "গ্লিবেনক্লামাইড (Glibenclamide)",
+      "generic": "Glibenclamide",
+      "rating": "caution",
+      "pw": "কখনো ব্যবহৃত; নবজাতকের ঝুঁকি সতর্কতা (Sometimes used; caution re: neonatal hypoglycemia)"
+    },
+    {
+      "id": 133,
+      "name": "গ্লিমেপিরাইড (Glimepiride)",
+      "generic": "Glimepiride",
+      "rating": "unsafe",
+      "pw": "সাধারণত এড়ানো হয় (Generally avoided; limited data)"
+    },
+    {
+      "id": 134,
+      "name": "সিটাগ্লিপটিন (Sitagliptin)",
+      "generic": "Sitagliptin",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)"
+    },
+    {
+      "id": 135,
+      "name": "এমপাগ্লিফ্লোজিন (Empagliflozin)",
+      "generic": "Empagliflozin",
+      "rating": "unsafe",
+      "pw": "গর্ভাবস্থায় এড়ানো হয় (Avoided in pregnancy)"
+    },
+    {
+      "id": 136,
+      "name": "পাইওগ্লিটাজোন (Pioglitazone)",
+      "generic": "Pioglitazone",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)"
+    },
+    {
+      "id": 137,
+      "name": "অ্যাকারবোজ (Acarbose)",
+      "generic": "Acarbose",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 138,
+      "name": "লেভোথাইরক্সিন (Levothyroxine)",
+      "generic": "Levothyroxine",
+      "rating": "safe",
+      "pw": "নিরাপদ ও অপরিহার্য; মাত্রা বাড়াতে হতে পারে (Safe and essential; dose often needs increasing)"
+    },
+    {
+      "id": 139,
+      "name": "কার্বিমাজল (Carbimazole)",
+      "generic": "Carbimazole",
+      "rating": "unsafe",
+      "pw": "সতর্কতা (প্রথম ত্রৈমাসিকে টেরাটোজেনিক) (Caution (teratogenic 1st trimester - aplasia cutis))"
+    },
+    {
+      "id": 140,
+      "name": "প্রোপাইলথায়োইউরাসিল (Propylthiouracil)",
+      "generic": "Propylthiouracil",
+      "rating": "caution",
+      "pw": "প্রথম ত্রৈমাসিকে পছন্দনীয়; যকৃতের ঝুঁকি (Preferred over carbimazole in 1st trimester; hepatotoxicity risk)"
+    },
+    {
+      "id": 141,
+      "name": "প্রেডনিসোলন (Prednisolone)",
+      "generic": "Prednisolone",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)"
+    },
+    {
+      "id": 142,
+      "name": "ডেক্সামেথাসোন (Dexamethasone)",
+      "generic": "Dexamethasone",
+      "rating": "caution",
+      "pw": "ভ্রূণের ফুসফুস পরিপক্কতায় ব্যবহৃত (Used for fetal lung maturity; caution long-term)"
+    },
+    {
+      "id": 143,
+      "name": "বিটামেথাসোন (Betamethasone)",
+      "generic": "Betamethasone",
+      "rating": "caution",
+      "pw": "ভ্রূণের ফুসফুস পরিপক্কতায় ব্যবহৃত (Used for fetal lung maturity)"
+    },
+    {
+      "id": 144,
+      "name": "হাইড্রোকর্টিসোন (Hydrocortisone (systemic))",
+      "generic": "Hydrocortisone (systemic)",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে নিরাপদ (Safe short-term)"
+    },
+    {
+      "id": 145,
+      "name": "মিথাইলপ্রেডনিসোলন (Methylprednisolone)",
+      "generic": "Methylprednisolone",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)"
+    },
+    {
+      "id": 146,
+      "name": "ট্রায়ামসিনোলন (Triamcinolone)",
+      "generic": "Triamcinolone",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)"
+    },
+    {
+      "id": 147,
+      "name": "সালবিউটামল (Salbutamol)",
+      "generic": "Salbutamol",
+      "rating": "safe",
+      "pw": "নিরাপদ; গর্ভাবস্থায় হাঁপানির প্রথম সারির ওষুধ (Safe; first-line for asthma in pregnancy)"
+    },
+    {
+      "id": 148,
+      "name": "বুডেসোনাইড (ইনহেলার) (Budesonide (inhaled))",
+      "generic": "Budesonide (inhaled)",
+      "rating": "safe",
+      "pw": "নিরাপদ; পছন্দনীয় ইনহেলড স্টেরয়েড (Safe; preferred inhaled steroid)"
+    },
+    {
+      "id": 149,
+      "name": "মন্টেলুকাস্ট (Montelukast)",
+      "generic": "Montelukast",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 150,
+      "name": "থিওফাইলিন (Theophylline)",
+      "generic": "Theophylline",
+      "rating": "caution",
+      "pw": "সতর্কতা; সংকীর্ণ থেরাপিউটিক সীমা (Caution; narrow therapeutic index)"
+    },
+    {
+      "id": 151,
+      "name": "ইপ্রাট্রোপিয়াম (Ipratropium)",
+      "generic": "Ipratropium",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally safe)"
+    },
+    {
+      "id": 152,
+      "name": "ফরমোটেরল (Formoterol)",
+      "generic": "Formoterol",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতার সাথে ব্যবহার (Limited data; cautious use)"
+    },
+    {
+      "id": 153,
+      "name": "ফ্লুটিকাসোন (ইনহেলার) (Fluticasone (inhaled))",
+      "generic": "Fluticasone (inhaled)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally safe)"
+    },
+    {
+      "id": 154,
+      "name": "বেক্লোমেথাসোন (ইনহেলার) (Beclomethasone (inhaled))",
+      "generic": "Beclomethasone (inhaled)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally safe)"
+    },
+    {
+      "id": 155,
+      "name": "টারবিউটালিন (Terbutaline)",
+      "generic": "Terbutaline",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (also used as tocolytic))"
+    },
+    {
+      "id": 156,
+      "name": "ফেক্সোফেনাডিন (Fexofenadine)",
+      "generic": "Fexofenadine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; দ্বিতীয় প্রজন্মের বিকল্প (Limited data; second-gen alternative)"
+    },
+    {
+      "id": 157,
+      "name": "ডেসলোরাটাডিন (Desloratadine)",
+      "generic": "Desloratadine",
+      "rating": "safe",
+      "pw": "সীমিত তথ্য; সাধারণত ভালো (Limited data; generally reassuring)"
+    },
+    {
+      "id": 158,
+      "name": "হাইড্রক্সিজিন (Hydroxyzine)",
+      "generic": "Hydroxyzine",
+      "rating": "caution",
+      "pw": "সতর্কতা; ঘুম আনার প্রভাব (Caution; sedating antihistamine)"
+    },
+    {
+      "id": 159,
+      "name": "মেক্লিজিন (Meclizine)",
+      "generic": "Meclizine",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 160,
+      "name": "ফিনাইলএফ্রিন (Phenylephrine)",
+      "generic": "Phenylephrine",
+      "rating": "caution",
+      "pw": "সতর্কতা; সীমিত তথ্য (Caution; limited data on efficacy/safety)"
+    },
+    {
+      "id": 161,
+      "name": "ব্রমহেক্সিন (Bromhexine)",
+      "generic": "Bromhexine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)"
+    },
+    {
+      "id": 162,
+      "name": "অ্যামব্রক্সল (Ambroxol)",
+      "generic": "Ambroxol",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)"
+    },
+    {
+      "id": 163,
+      "name": "র‍্যানিটিডিন (Ranitidine)",
+      "generic": "Ranitidine",
+      "rating": "caution",
+      "pw": "দ্রষ্টব্য: ২০২০ সাল থেকে অনেক বাজারে প্রত্যাহার করা হয়েছে - বর্তমান স্থানীয় প্রাপ্যতা যাচাই করুন (NOTE: withdrawn in many markets since 2020 (NDMA contamination) - verify current local availability/status)"
+    },
+    {
+      "id": 164,
+      "name": "প্যান্টোপ্রাজল (Pantoprazole)",
+      "generic": "Pantoprazole",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 165,
+      "name": "এসোমিপ্রাজল (Esomeprazole)",
+      "generic": "Esomeprazole",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 166,
+      "name": "অ্যালুমিনিয়াম হাইড্রক্সাইড (Aluminum hydroxide)",
+      "generic": "Aluminum hydroxide",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 167,
+      "name": "ম্যাগনেসিয়াম হাইড্রক্সাইড (Magnesium hydroxide)",
+      "generic": "Magnesium hydroxide",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 168,
+      "name": "ল্যাকটুলোজ (Lactulose)",
+      "generic": "Lactulose",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 169,
+      "name": "বিসাকোডিল (Bisacodyl)",
+      "generic": "Bisacodyl",
+      "rating": "safe",
+      "pw": "স্বল্পমেয়াদে সাধারণত নিরাপদ (Generally safe short-term)"
+    },
+    {
+      "id": 170,
+      "name": "সুক্রালফেট (Sucralfate)",
+      "generic": "Sucralfate",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (ন্যূনতম শোষণ) (Considered safe (minimal absorption))"
+    },
+    {
+      "id": 171,
+      "name": "ডাইসাইক্লোমিন (Dicyclomine)",
+      "generic": "Dicyclomine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 172,
+      "name": "সারট্রালিন (Sertraline)",
+      "generic": "Sertraline",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থা/স্তন্যদানে পছন্দনীয় এসএসআরআই (Preferred SSRI in pregnancy/breastfeeding)"
+    },
+    {
+      "id": 173,
+      "name": "ফ্লুওক্সেটিন (Fluoxetine)",
+      "generic": "Fluoxetine",
+      "rating": "caution",
+      "pw": "ব্যবহৃত তবে দীর্ঘ অর্ধায়ু (Used but longer half-life; some neonatal adaptation syndrome)"
+    },
+    {
+      "id": 174,
+      "name": "অ্যামিট্রিপটাইলিন (Amitriptyline)",
+      "generic": "Amitriptyline",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution, older TCA)"
+    },
+    {
+      "id": 175,
+      "name": "এসসিটালোপ্রাম (Escitalopram)",
+      "generic": "Escitalopram",
+      "rating": "caution",
+      "pw": "সারট্রালিনের মতো; সাধারণত ব্যবহৃত (Similar to sertraline; generally used)"
+    },
+    {
+      "id": 176,
+      "name": "ভেনলাফ্যাক্সিন (Venlafaxine)",
+      "generic": "Venlafaxine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 177,
+      "name": "বুপ্রোপিয়ন (Bupropion)",
+      "generic": "Bupropion",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 178,
+      "name": "মির্টাজাপিন (Mirtazapine)",
+      "generic": "Mirtazapine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 179,
+      "name": "ডুলোক্সেটিন (Duloxetine)",
+      "generic": "Duloxetine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 180,
+      "name": "ডায়াজিপাম (Diazepam)",
+      "generic": "Diazepam",
+      "rating": "caution",
+      "pw": "সতর্কতা (নবজাতকের শিথিলতা সিন্ড্রোম) (Caution (floppy infant syndrome; avoid near term))"
+    },
+    {
+      "id": 181,
+      "name": "লোরাজিপাম (Lorazepam)",
+      "generic": "Lorazepam",
+      "rating": "caution",
+      "pw": "ডায়াজিপামের মতো সতর্কতা (Caution similar to diazepam)"
+    },
+    {
+      "id": 182,
+      "name": "আলপ্রাজোলাম (Alprazolam)",
+      "generic": "Alprazolam",
+      "rating": "caution",
+      "pw": "সতর্কতা; বেনজোডায়াজিপাইন ঝুঁকি (Caution; benzodiazepine class risks)"
+    },
+    {
+      "id": 183,
+      "name": "ক্লোনাজিপাম (Clonazepam)",
+      "generic": "Clonazepam",
+      "rating": "caution",
+      "pw": "সতর্কতা; বেনজোডায়াজিপাইন ঝুঁকি (Caution; benzodiazepine class risks)"
+    },
+    {
+      "id": 184,
+      "name": "জোলপিডেম (Zolpidem)",
+      "generic": "Zolpidem",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; স্বল্পমেয়াদী সতর্কতা (Limited data; short-term caution)"
+    },
+    {
+      "id": 185,
+      "name": "বুসপিরোন (Buspirone)",
+      "generic": "Buspirone",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 186,
+      "name": "হ্যালোপেরিডল (Haloperidol)",
+      "generic": "Haloperidol",
+      "rating": "caution",
+      "pw": "প্রয়োজনে সতর্কতার সাথে ব্যবহৃত (Used with caution when necessary)"
+    },
+    {
+      "id": 187,
+      "name": "অলানজাপিন (Olanzapine)",
+      "generic": "Olanzapine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution; metabolic monitoring)"
+    },
+    {
+      "id": 188,
+      "name": "রিসপেরিডোন (Risperidone)",
+      "generic": "Risperidone",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 189,
+      "name": "কুইটিয়াপিন (Quetiapine)",
+      "generic": "Quetiapine",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution)"
+    },
+    {
+      "id": 190,
+      "name": "সোডিয়াম ভালপ্রোয়েট (Sodium valproate)",
+      "generic": "Sodium valproate",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (উচ্চ টেরাটোজেনিক ঝুঁকি) (CONTRAINDICATED (high teratogenic risk - neural tube defects))"
+    },
+    {
+      "id": 191,
+      "name": "ফেনিটোইন (Phenytoin)",
+      "generic": "Phenytoin",
+      "rating": "unsafe",
+      "pw": "সতর্কতা (ভ্রূণের হাইডানটোইন সিন্ড্রোম) (Caution (fetal hydantoin syndrome))"
+    },
+    {
+      "id": 192,
+      "name": "কার্বামাজেপিন (Carbamazepine)",
+      "generic": "Carbamazepine",
+      "rating": "unsafe",
+      "pw": "সতর্কতা (নিউরাল টিউব ত্রুটির ঝুঁকি) (Caution (neural tube defect risk))"
+    },
+    {
+      "id": 193,
+      "name": "ল্যামোট্রিজিন (Lamotrigine)",
+      "generic": "Lamotrigine",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় পছন্দনীয় (Preferred anticonvulsant in pregnancy)"
+    },
+    {
+      "id": 194,
+      "name": "লেভেটিরাসিটাম (Levetiracetam)",
+      "generic": "Levetiracetam",
+      "rating": "safe",
+      "pw": "পছন্দনীয়, ক্রমবর্ধমান নিরাপত্তা তথ্য (Preferred, growing safety data)"
+    },
+    {
+      "id": 195,
+      "name": "ফেনোবারবিটাল (Phenobarbital)",
+      "generic": "Phenobarbital",
+      "rating": "caution",
+      "pw": "সতর্কতা (পুরনো এইডি, কিছু ঝুঁকি) (Caution (older AED, some risk))"
+    },
+    {
+      "id": 196,
+      "name": "টোপিরামেট (Topiramate)",
+      "generic": "Topiramate",
+      "rating": "caution",
+      "pw": "সতর্কতা (ক্লেফট ঠোঁট/তালু ঝুঁকি) (Caution (cleft lip/palate risk, low birth weight))"
+    },
+    {
+      "id": 197,
+      "name": "গ্যাবাপেন্টিন (Gabapentin)",
+      "generic": "Gabapentin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 198,
+      "name": "প্রেগাবালিন (Pregabalin)",
+      "generic": "Pregabalin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 199,
+      "name": "লিথিয়াম (Lithium)",
+      "generic": "Lithium",
+      "rating": "unsafe",
+      "pw": "সতর্কতা (হৃদযন্ত্রের ত্রুটির ঝুঁকি); পর্যবেক্ষণ প্রয়োজন (Caution (cardiac defects - Ebstein's anomaly); needs monitoring)"
+    },
+    {
+      "id": 200,
+      "name": "কম্বাইন্ড ওরাল কন্ট্রাসেপটিভ (Combined oral contraceptive)",
+      "generic": "Combined oral contraceptive",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থা নিশ্চিত হলে বন্ধ করুন (Not used once pregnant - discontinue if pregnancy confirmed)"
+    },
+    {
+      "id": 201,
+      "name": "প্রোজেস্টিন-ওনলি পিল (Progestin-only pill)",
+      "generic": "Progestin-only pill",
+      "rating": "caution",
+      "pw": "N/A - গর্ভাবস্থায় ব্যবহারের জন্য নয় (N/A - contraceptive, not for use once pregnant)"
+    },
+    {
+      "id": 202,
+      "name": "মেড্রোক্সিপ্রোজেস্টেরন ইনজেকশন (Medroxyprogesterone injection)",
+      "generic": "Medroxyprogesterone injection",
+      "rating": "caution",
+      "pw": "N/A - গর্ভনিরোধক (N/A - contraceptive)"
+    },
+    {
+      "id": 203,
+      "name": "লেভোনরজেস্ট্রেল (জরুরি গর্ভনিরোধক) (Levonorgestrel (emergency contraception))",
+      "generic": "Levonorgestrel (emergency contraception)",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় ব্যবহারের জন্য নয় (Not for use once pregnant)"
+    },
+    {
+      "id": 204,
+      "name": "ইস্ট্রোজেন (এইচআরটি) (Estrogen (HRT))",
+      "generic": "Estrogen (HRT)",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় প্রযোজ্য নয় (Not applicable/used in pregnancy context)"
+    },
+    {
+      "id": 205,
+      "name": "ক্লোমিফিন (Clomiphene)",
+      "generic": "Clomiphene",
+      "rating": "caution",
+      "pw": "N/A - উর্বরতা ওষুধ, গর্ভাবস্থা নিশ্চিত হলে বন্ধ (N/A - fertility drug, discontinued once pregnancy confirmed)"
+    },
+    {
+      "id": 206,
+      "name": "প্রোজেস্টেরন সাপ্লিমেন্ট (Progesterone (supplement))",
+      "generic": "Progesterone (supplement)",
+      "rating": "safe",
+      "pw": "লুটিয়াল সাপোর্ট/অকাল প্রসব প্রতিরোধে ব্যবহৃত (Used for luteal support/preterm labor prevention; considered safe)"
+    },
+    {
+      "id": 207,
+      "name": "অক্সিটোসিন (Oxytocin)",
+      "generic": "Oxytocin",
+      "rating": "caution",
+      "pw": "প্রসব প্ররোচনা/ত্বরান্বিতকরণে পর্যবেক্ষণে ব্যবহৃত (Used for labor induction/augmentation under monitoring)"
+    },
+    {
+      "id": 208,
+      "name": "মিসোপ্রোস্টল (Misoprostol)",
+      "generic": "Misoprostol",
+      "rating": "unsafe",
+      "pw": "প্রসব প্ররোচনা/রক্তক্ষরণ ব্যবস্থাপনায় ব্যবহৃত; অনির্দেশিত ব্যবহার বিপজ্জনক (Used for labor induction/PPH management OR can cause abortion if misused - HIGH RISK if unsupervised)"
+    },
+    {
+      "id": 209,
+      "name": "ম্যাগনেসিয়াম সালফেট (Magnesium sulfate)",
+      "generic": "Magnesium sulfate",
+      "rating": "caution",
+      "pw": "প্রি-এক্লাম্পসিয়া/একলাম্পসিয়া খিঁচুনি প্রতিরোধে ব্যবহৃত (Used for pre-eclampsia/eclampsia seizure prevention; standard of care)"
+    },
+    {
+      "id": 210,
+      "name": "অ্যাটোসিবান (Atosiban)",
+      "generic": "Atosiban",
+      "rating": "caution",
+      "pw": "অকাল প্রসব বিলম্বে ব্যবহৃত (Used as tocolytic for preterm labor)"
+    },
+    {
+      "id": 211,
+      "name": "হাইড্রোকর্টিসোন ক্রিম (Hydrocortisone cream)",
+      "generic": "Hydrocortisone cream",
+      "rating": "safe",
+      "pw": "নিরাপদ (স্থানীয় ব্যবহার) (Safe topical)"
+    },
+    {
+      "id": 212,
+      "name": "ক্লোবেটাসল (Clobetasol)",
+      "generic": "Clobetasol",
+      "rating": "caution",
+      "pw": "ব্যাপক ব্যবহারে সতর্কতা (Caution with extensive use)"
+    },
+    {
+      "id": 213,
+      "name": "আইসোট্রেটিনয়িন (Isotretinoin)",
+      "generic": "Isotretinoin",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (গুরুতর টেরাটোজেনিক) (CONTRAINDICATED (severe teratogen))"
+    },
+    {
+      "id": 214,
+      "name": "ট্রেটিনোইন (স্থানীয়) (Tretinoin (topical))",
+      "generic": "Tretinoin (topical)",
+      "rating": "unsafe",
+      "pw": "সতর্কতা; ন্যূনতম শোষণ তবে এড়ানো হয় (Caution; minimal absorption but avoided)"
+    },
+    {
+      "id": 215,
+      "name": "ক্লোট্রিমাজল ক্রিম (Clotrimazole cream)",
+      "generic": "Clotrimazole cream",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 216,
+      "name": "পারমেথ্রিন (Permethrin)",
+      "generic": "Permethrin",
+      "rating": "safe",
+      "pw": "স্ক্যাবিস/উকুন চিকিৎসায় নিরাপদ বিবেচিত (Considered safe for scabies/lice treatment)"
+    },
+    {
+      "id": 217,
+      "name": "বেনজোয়াইল পারঅক্সাইড (Benzoyl peroxide)",
+      "generic": "Benzoyl peroxide",
+      "rating": "safe",
+      "pw": "নিরাপদ বিবেচিত (স্থানীয়) (Considered safe topical)"
+    },
+    {
+      "id": 218,
+      "name": "সালিসাইলিক এসিড (স্থানীয়) (Salicylic acid (topical))",
+      "generic": "Salicylic acid (topical)",
+      "rating": "caution",
+      "pw": "সীমিত/ছোট এলাকায় ব্যবহার কম ঝুঁকিপূর্ণ (Limited/small-area use generally considered low risk)"
+    },
+    {
+      "id": 219,
+      "name": "ভিটামিন বি১২ (Vitamin B12)",
+      "generic": "Vitamin B12",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 220,
+      "name": "ভিটামিন সি (Vitamin C)",
+      "generic": "Vitamin C",
+      "rating": "safe",
+      "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)"
+    },
+    {
+      "id": 221,
+      "name": "ভিটামিন ই (Vitamin E)",
+      "generic": "Vitamin E",
+      "rating": "safe",
+      "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)"
+    },
+    {
+      "id": 222,
+      "name": "ভিটামিন কে (Vitamin K)",
+      "generic": "Vitamin K",
+      "rating": "safe",
+      "pw": "নিরাপদ; নবজাতকদের নিয়মিত দেওয়া হয় (Safe; given to newborns routinely)"
+    },
+    {
+      "id": 223,
+      "name": "বায়োটিন (Biotin)",
+      "generic": "Biotin",
+      "rating": "safe",
+      "pw": "স্বাভাবিক মাত্রায় নিরাপদ (Safe at normal doses)"
+    },
+    {
+      "id": 224,
+      "name": "জিংক সাপ্লিমেন্ট (প্রাপ্তবয়স্ক) (Zinc supplement (adult))",
+      "generic": "Zinc supplement (adult)",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 225,
+      "name": "ম্যাগনেসিয়াম সাপ্লিমেন্ট (Magnesium supplement)",
+      "generic": "Magnesium supplement",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 226,
+      "name": "কপার সাপ্লিমেন্ট (Copper supplement)",
+      "generic": "Copper supplement",
+      "rating": "safe",
+      "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe at recommended doses)"
+    },
+    {
+      "id": 227,
+      "name": "মাল্টিভিটামিন (প্রাপ্তবয়স্ক) (Multivitamin (adult))",
+      "generic": "Multivitamin (adult)",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 228,
+      "name": "মেথোট্রেক্সেট (Methotrexate)",
+      "generic": "Methotrexate",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (গুরুতর টেরাটোজেনিক) (CONTRAINDICATED (severe teratogen, abortifacient))"
+    },
+    {
+      "id": 229,
+      "name": "সাইক্লোফসফামাইড (Cyclophosphamide)",
+      "generic": "Cyclophosphamide",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (CONTRAINDICATED)"
+    },
+    {
+      "id": 230,
+      "name": "অ্যাজাথায়োপ্রিন (Azathioprine)",
+      "generic": "Azathioprine",
+      "rating": "caution",
+      "pw": "অটোইমিউন রোগে সতর্কতার সাথে ব্যবহৃত (Used cautiously in autoimmune conditions; relatively safer option)"
+    },
+    {
+      "id": 231,
+      "name": "টাক্রোলিমাস (Tacrolimus)",
+      "generic": "Tacrolimus",
+      "rating": "caution",
+      "pw": "প্রতিস্থাপনের পর সতর্কতার সাথে ব্যবহৃত (Used cautiously post-transplant)"
+    },
+    {
+      "id": 232,
+      "name": "মাইকোফেনোলেট (Mycophenolate)",
+      "generic": "Mycophenolate",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (টেরাটোজেনিক) (CONTRAINDICATED (teratogenic))"
+    },
+    {
+      "id": 233,
+      "name": "সুমাট্রিপটান (Sumatriptan)",
+      "generic": "Sumatriptan",
+      "rating": "safe",
+      "pw": "তুলনামূলকভাবে নিরাপদ বিবেচিত (Considered relatively safe)"
+    },
+    {
+      "id": 234,
+      "name": "এরগোটামিন (Ergotamine)",
+      "generic": "Ergotamine",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (জরায়ু সংকোচনকারী) (CONTRAINDICATED (uterotonic, vasoconstrictive))"
+    },
+    {
+      "id": 235,
+      "name": "ব্যাক্লোফেন (Baclofen)",
+      "generic": "Baclofen",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 236,
+      "name": "সাইক্লোবেনজাপ্রিন (Cyclobenzaprine)",
+      "generic": "Cyclobenzaprine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 237,
+      "name": "মেথোকার্বামল (Methocarbamol)",
+      "generic": "Methocarbamol",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 238,
+      "name": "লিডোকেইন (Lidocaine)",
+      "generic": "Lidocaine",
+      "rating": "safe",
+      "pw": "নিরাপদ; সাধারণভাবে ব্যবহৃত (Safe; commonly used)"
+    },
+    {
+      "id": 239,
+      "name": "বুপিভাকেইন (Bupivacaine)",
+      "generic": "Bupivacaine",
+      "rating": "safe",
+      "pw": "নিরাপদ; প্রসবকালীন এপিডুরালে ব্যবহৃত (Safe; commonly used in labor epidurals)"
+    },
+    {
+      "id": 240,
+      "name": "ক্লোরামফেনিকল চোখের ড্রপ (Chloramphenicol eye drops)",
+      "generic": "Chloramphenicol eye drops",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topically)"
+    },
+    {
+      "id": 241,
+      "name": "জাইলোমেটাজোলিন (নাসাল স্প্রে) (Xylometazoline (nasal spray))",
+      "generic": "Xylometazoline (nasal spray)",
+      "rating": "caution",
+      "pw": "স্বল্পমেয়াদী ব্যবহারে সতর্কতা (Short-term use caution)"
+    },
+    {
+      "id": 242,
+      "name": "সিপ্রোফ্লক্সাসিন কানের ড্রপ (Ciprofloxacin ear drops)",
+      "generic": "Ciprofloxacin ear drops",
+      "rating": "unsafe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়, ন্যূনতম শোষণ) (Generally safe topically (minimal systemic absorption))"
+    },
+    {
+      "id": 243,
+      "name": "টিমোলল চোখের ড্রপ (Timolol eye drops)",
+      "generic": "Timolol eye drops",
+      "rating": "caution",
+      "pw": "সতর্কতার সাথে ব্যবহৃত (Used with caution (some systemic absorption possible))"
+    },
+    {
+      "id": 244,
+      "name": "ট্রোপিকামাইড (চোখের ড্রপ) (Tropicamide (eye drops))",
+      "generic": "Tropicamide (eye drops)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topically)"
+    },
+    {
+      "id": 245,
+      "name": "পোভিডোন-আয়োডিন (Povidone-iodine)",
+      "generic": "Povidone-iodine",
+      "rating": "caution",
+      "pw": "দীর্ঘমেয়াদী/বড় এলাকায় ব্যবহারে সতর্কতা (Caution with prolonged/large-area use (iodine absorption, fetal thyroid))"
+    },
+    {
+      "id": 246,
+      "name": "ক্লোরহেক্সিডিন (Chlorhexidine)",
+      "generic": "Chlorhexidine",
+      "rating": "safe",
+      "pw": "নিরাপদ বিবেচিত (স্থানীয়) (Considered safe topical)"
+    },
+    {
+      "id": 247,
+      "name": "নিম (Neem)",
+      "generic": "Neem",
+      "rating": "caution",
+      "pw": "সীমিত/কোনো আনুষ্ঠানিক তথ্য নেই - সতর্কতা প্রয়োজন (Limited/no formal safety data - caution advised)"
+    },
+    {
+      "id": 248,
+      "name": "হলুদ (সাপ্লিমেন্ট মাত্রা) (Turmeric (supplement dose))",
+      "generic": "Turmeric (supplement dose)",
+      "rating": "caution",
+      "pw": "রান্নায় ব্যবহার নিরাপদ; উচ্চ মাত্রার সাপ্লিমেন্টে সীমিত তথ্য (Culinary use safe; high-dose supplement use has limited data)"
+    },
+    {
+      "id": 249,
+      "name": "আদা (সাপ্লিমেন্ট মাত্রা) (Ginger (supplement dose))",
+      "generic": "Ginger (supplement dose)",
+      "rating": "safe",
+      "pw": "মাঝারি ব্যবহারে বমি বমি ভাবের জন্য সাধারণত নিরাপদ (Generally considered safe for nausea in moderate use)"
+    },
+    {
+      "id": 250,
+      "name": "মেথি (Fenugreek)",
+      "generic": "Fenugreek",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় সতর্কতা (জরায়ু উদ্দীপক প্রভাব) (Caution in pregnancy (uterine stimulant properties reported))"
+    },
+    {
+      "id": 251,
+      "name": "মৌরি (Fennel)",
+      "generic": "Fennel",
+      "rating": "caution",
+      "pw": "রান্নায় ব্যবহার নিরাপদ; উচ্চ মাত্রায় সতর্কতা (Culinary use safe; high-dose supplement caution)"
+    },
+    {
+      "id": 252,
+      "name": "টিডিএপি টিকা (Tdap vaccine)",
+      "generic": "Tdap vaccine",
+      "rating": "safe",
+      "pw": "প্রতিটি গর্ভাবস্থায় সুপারিশকৃত (Recommended during pregnancy (each pregnancy))"
+    },
+    {
+      "id": 253,
+      "name": "ইনফ্লুয়েঞ্জা টিকা (নিষ্ক্রিয়) (Influenza vaccine (inactivated))",
+      "generic": "Influenza vaccine (inactivated)",
+      "rating": "safe",
+      "pw": "গর্ভাবস্থায় সুপারিশকৃত (Recommended during pregnancy)"
+    },
+    {
+      "id": 254,
+      "name": "এমএমআর টিকা (জীবিত) (MMR vaccine (live))",
+      "generic": "MMR vaccine (live)",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (জীবিত টিকা) (CONTRAINDICATED during pregnancy (live vaccine))"
+    },
+    {
+      "id": 255,
+      "name": "প্যারাসিটামল + ক্যাফেইন (Paracetamol + Caffeine (combo))",
+      "generic": "Paracetamol + Caffeine (combo)",
+      "rating": "safe",
+      "pw": "প্যারাসিটামলের মতো সতর্কতা; ক্যাফেইন সীমিত করুন (Same caution as paracetamol; limit caffeine intake)"
+    },
+    {
+      "id": 256,
+      "name": "সেটিরিজিন + সিউডোএফেড্রিন (Cetirizine + Pseudoephedrine (combo))",
+      "generic": "Cetirizine + Pseudoephedrine (combo)",
+      "rating": "safe",
+      "pw": "সিউডোএফেড্রিনের কারণে সতর্কতা (Caution due to pseudoephedrine component)"
+    },
+    {
+      "id": 257,
+      "name": "লোরাটাডিন + সিউডোএফেড্রিন (Loratadine + Pseudoephedrine (combo))",
+      "generic": "Loratadine + Pseudoephedrine (combo)",
+      "rating": "safe",
+      "pw": "সিউডোএফেড্রিনের কারণে সতর্কতা (Caution due to pseudoephedrine component)"
+    },
+    {
+      "id": 258,
+      "name": "অ্যান্টাসিড কম্বো (Antacid combo (Al-Mg-Simethicone))",
+      "generic": "Antacid combo (Al-Mg-Simethicone)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally safe)"
+    },
+    {
+      "id": 259,
+      "name": "কাশির সিরাপ কম্বো (Dextromethorphan + Guaifenesin (cough syrup))",
+      "generic": "Dextromethorphan + Guaifenesin (cough syrup)",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সাধারণত কম ঝুঁকি (Limited data; generally low risk)"
+    },
+    {
+      "id": 260,
+      "name": "ওমেগা-৩ (মাছের তেল) (Omega-3 (Fish oil))",
+      "generic": "Omega-3 (Fish oil)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ; প্রায়ই সুপারিশকৃত (Generally safe; often recommended)"
+    },
+    {
+      "id": 261,
+      "name": "প্রোবায়োটিক (Probiotics (Lactobacillus))",
+      "generic": "Probiotics (Lactobacillus)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ বিবেচিত (Generally considered safe)"
+    },
+    {
+      "id": 262,
+      "name": "আয়রন পলিম্যালটোজ কমপ্লেক্স (Iron polymaltose complex)",
+      "generic": "Iron polymaltose complex",
+      "rating": "safe",
+      "pw": "ফেরাস লবণের নিরাপদ বিকল্প বিবেচিত (Considered safe alternative to ferrous salts)"
+    },
+    {
+      "id": 263,
+      "name": "ভিটামিন বি-কমপ্লেক্স (Vitamin B-complex)",
+      "generic": "Vitamin B-complex",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 264,
+      "name": "ক্যালসিয়াম + ভিটামিন ডি কম্বো (Calcium + Vitamin D combo)",
+      "generic": "Calcium + Vitamin D combo",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 265,
+      "name": "মাল্টিভিটামিন গামি (Multivitamin gummies)",
+      "generic": "Multivitamin gummies",
+      "rating": "safe",
+      "pw": "সুপারিশকৃত মাত্রায় নিরাপদ (Safe at recommended doses)"
+    },
+    {
+      "id": 266,
+      "name": "মিনোক্সিডিল (স্থানীয়) (Minoxidil (topical))",
+      "generic": "Minoxidil (topical)",
+      "rating": "unsafe",
+      "pw": "সতর্কতা - গর্ভাবস্থায় এড়িয়ে চলুন (Caution - avoid in pregnancy (limited safety data))"
+    },
+    {
+      "id": 267,
+      "name": "ফিনাস্টেরাইড (Finasteride)",
+      "generic": "Finasteride",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ - গর্ভবতী নারীদের জন্য বিপজ্জনক (CONTRAINDICATED for women who are/may become pregnant (fetal harm to male fetus))"
+    },
+    {
+      "id": 268,
+      "name": "হাইড্রোকুইনোন (Hydroquinone)",
+      "generic": "Hydroquinone",
+      "rating": "caution",
+      "pw": "সতর্কতা; গর্ভাবস্থায় ব্যাপক ব্যবহার এড়িয়ে চলুন (Caution; avoid extensive use in pregnancy)"
+    },
+    {
+      "id": 269,
+      "name": "অ্যাডাপালিন (Adapalene)",
+      "generic": "Adapalene",
+      "rating": "unsafe",
+      "pw": "সতর্কতা; গর্ভাবস্থায় এড়ানো হয় (Caution; topical retinoid, avoided in pregnancy)"
+    },
+    {
+      "id": 270,
+      "name": "মেলাটোনিন (Melatonin)",
+      "generic": "Melatonin",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 271,
+      "name": "জোপিক্লোন (Zopiclone)",
+      "generic": "Zopiclone",
+      "rating": "caution",
+      "pw": "সতর্কতা; নিদ্রাকারক শ্রেণির ঝুঁকি (Caution; sedative-hypnotic class risks)"
+    },
+    {
+      "id": 272,
+      "name": "অরলিস্ট্যাট (Orlistat)",
+      "generic": "Orlistat",
+      "rating": "caution",
+      "pw": "গর্ভাবস্থায় সুপারিশ করা হয় না (Not recommended in pregnancy)"
+    },
+    {
+      "id": 273,
+      "name": "ফেন্টারমিন (Phentermine)",
+      "generic": "Phentermine",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (গর্ভাবস্থায়) (CONTRAINDICATED in pregnancy)"
+    },
+    {
+      "id": 274,
+      "name": "ডাইক্লোফেনাক জেল (Diclofenac gel (topical))",
+      "generic": "Diclofenac gel (topical)",
+      "rating": "unsafe",
+      "pw": "কম শোষণ; তবুও তৃতীয় ত্রৈমাসিকে সতর্কতা (Minimal absorption; generally considered lower risk than oral, but caution 3rd trimester)"
+    },
+    {
+      "id": 275,
+      "name": "মেন্থল/মিথাইল স্যালিসাইলেট বাম (Menthol/methyl salicylate balm)",
+      "generic": "Menthol/methyl salicylate balm",
+      "rating": "caution",
+      "pw": "ব্যাপক ব্যবহারে সতর্কতা (Caution with extensive use (salicylate absorption))"
+    },
+    {
+      "id": 276,
+      "name": "ক্যাপসাইসিন ক্রিম (Capsaicin cream)",
+      "generic": "Capsaicin cream",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally considered safe topical)"
+    },
+    {
+      "id": 277,
+      "name": "প্যানক্রিয়াটিন (Pancreatin)",
+      "generic": "Pancreatin",
+      "rating": "safe",
+      "pw": "নিরাপদ বলে বিবেচিত (Considered safe)"
+    },
+    {
+      "id": 278,
+      "name": "অ্যাক্টিভেটেড চারকোল (Activated charcoal)",
+      "generic": "Activated charcoal",
+      "rating": "safe",
+      "pw": "মাঝেমধ্যে ব্যবহারে সাধারণত নিরাপদ (Generally safe for occasional use)"
+    },
+    {
+      "id": 279,
+      "name": "ইসবগুলের ভুসি (Ispaghula husk (Isabgol))",
+      "generic": "Ispaghula husk (Isabgol)",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 280,
+      "name": "নাসাল স্যালাইন স্প্রে (Nasal saline spray)",
+      "generic": "Nasal saline spray",
+      "rating": "safe",
+      "pw": "নিরাপদ - প্রথম পছন্দ (Safe - first-line option)"
+    },
+    {
+      "id": 281,
+      "name": "অক্সিমেটাজোলিন নাসাল স্প্রে (Oxymetazoline nasal spray)",
+      "generic": "Oxymetazoline nasal spray",
+      "rating": "caution",
+      "pw": "স্বল্পমেয়াদী ব্যবহারে সতর্কতা (Short-term use caution (rebound congestion))"
+    },
+    {
+      "id": 282,
+      "name": "বেক্লোমেথাসোন নাসাল স্প্রে (Beclomethasone nasal spray)",
+      "generic": "Beclomethasone nasal spray",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally safe)"
+    },
+    {
+      "id": 283,
+      "name": "মুপিরোসিন (স্থানীয়) (Mupirocin (topical))",
+      "generic": "Mupirocin (topical)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topical)"
+    },
+    {
+      "id": 284,
+      "name": "ফুসিডিক এসিড (স্থানীয়) (Fusidic acid (topical))",
+      "generic": "Fusidic acid (topical)",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (স্থানীয়) (Generally safe topical)"
+    },
+    {
+      "id": 285,
+      "name": "ভিটামিন ডি ড্রপ (শিশু) (Vitamin D drops (infant))",
+      "generic": "Vitamin D drops (infant)",
+      "rating": "caution",
+      "pw": "N/A - শিশুর সাপ্লিমেন্ট (N/A - pediatric supplementation)"
+    },
+    {
+      "id": 286,
+      "name": "রাবিপ্রাজল (Rabeprazole)",
+      "generic": "Rabeprazole",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (Generally considered safe)"
+    },
+    {
+      "id": 287,
+      "name": "মেন্থল লজেঞ্জ (Menthol lozenges)",
+      "generic": "Menthol lozenges",
+      "rating": "safe",
+      "pw": "নিরাপদ (Safe)"
+    },
+    {
+      "id": 288,
+      "name": "টেলমিসারটান (Telmisartan)",
+      "generic": "Telmisartan",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (এআরবি শ্রেণি) (CONTRAINDICATED (ARB class))"
+    },
+    {
+      "id": 289,
+      "name": "পেরিনডোপ্রিল (Perindopril)",
+      "generic": "Perindopril",
+      "rating": "unsafe",
+      "pw": "নিষিদ্ধ (এসিই ইনহিবিটর শ্রেণি) (CONTRAINDICATED (ACE inhibitor class))"
+    },
+    {
+      "id": 290,
+      "name": "ড্যাপাগ্লিফ্লোজিন (Dapagliflozin)",
+      "generic": "Dapagliflozin",
+      "rating": "unsafe",
+      "pw": "গর্ভাবস্থায় এড়ানো হয় (Avoided in pregnancy)"
+    },
+    {
+      "id": 291,
+      "name": "লিরাগ্লুটাইড (Liraglutide)",
+      "generic": "Liraglutide",
+      "rating": "unsafe",
+      "pw": "গর্ভাবস্থায় এড়ানো হয়; সীমিত তথ্য (Avoided in pregnancy; limited data)"
+    },
+    {
+      "id": 292,
+      "name": "ট্রাজোডোন (Trazodone)",
+      "generic": "Trazodone",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 293,
+      "name": "ভরটিওক্সেটিন (Vortioxetine)",
+      "generic": "Vortioxetine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 294,
+      "name": "ফসফোমাইসিন (Fosfomycin)",
+      "generic": "Fosfomycin",
+      "rating": "safe",
+      "pw": "নিরাপদ বিবেচিত; গর্ভাবস্থায় মূত্রনালীর সংক্রমণে ব্যবহৃত (Considered safe; used for UTI in pregnancy)"
+    },
+    {
+      "id": 295,
+      "name": "আইভাব্রাডিন (Ivabradine)",
+      "generic": "Ivabradine",
+      "rating": "unsafe",
+      "pw": "এড়ানো হয়; সীমিত তথ্য (Avoided; limited data)"
+    },
+    {
+      "id": 296,
+      "name": "রানোলাজিন (Ranolazine)",
+      "generic": "Ranolazine",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 297,
+      "name": "কলচিসিন (Colchicine)",
+      "generic": "Colchicine",
+      "rating": "unsafe",
+      "pw": "সতর্কতা; উচ্চ মাত্রায় কিছু ঝুঁকি (Caution; some teratogenicity concerns at high dose)"
+    },
+    {
+      "id": 298,
+      "name": "অ্যালোপিউরিনল (Allopurinol)",
+      "generic": "Allopurinol",
+      "rating": "caution",
+      "pw": "সীমিত তথ্য; সতর্কতা (Limited data; caution)"
+    },
+    {
+      "id": 299,
+      "name": "মিথাইলএরগোমেট্রিন (Methylergometrine)",
+      "generic": "Methylergometrine",
+      "rating": "unsafe",
+      "pw": "শুধুমাত্র প্রসবের পরে ব্যবহৃত (প্রসবের আগে নিষিদ্ধ) (Used ONLY postpartum (contraindicated before delivery - uterotonic))"
+    },
+    {
+      "id": 300,
+      "name": "কার্বোপ্রস্ট (Carboprost)",
+      "generic": "Carboprost",
+      "rating": "caution",
+      "pw": "শুধুমাত্র প্রসবোত্তর রক্তক্ষরণ নিয়ন্ত্রণে ব্যবহৃত (Used ONLY postpartum for hemorrhage control)"
+    },
+    {
+      "id": 301,
+      "name": "ট্রানেক্সামিক এসিড (Tranexamic acid)",
+      "generic": "Tranexamic acid",
+      "rating": "safe",
+      "pw": "রক্তক্ষরণ নিয়ন্ত্রণে ব্যবহৃত; নিরাপদ বিবেচিত (Used for bleeding control incl. postpartum hemorrhage; considered safe)"
+    },
+    {
+      "id": 302,
+      "name": "ফেরাস ফিউমারেট (Ferrous fumarate)",
+      "generic": "Ferrous fumarate",
+      "rating": "safe",
+      "pw": "সাধারণত নিরাপদ (বিকল্প আয়রন লবণ) (Generally safe; standard antenatal supplement (alternative iron salt))"
+    }
+  ]
+}
