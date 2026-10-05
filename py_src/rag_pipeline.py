@@ -37,12 +37,31 @@ def format_drug_chunk(drug: dict) -> str:
 
 
 def get_embedding_model(model_name: str = DEFAULT_MODEL):
-    """Lazy-load the multilingual SentenceTransformer embedding model."""
+    """Lazy-load the multilingual SentenceTransformer embedding model, or TF-IDF fallback."""
     global _model
     if _model is None:
-        from sentence_transformers import SentenceTransformer
-        print(f"Loading embedding model: {model_name}...")
-        _model = SentenceTransformer(model_name)
+        try:
+            from sentence_transformers import SentenceTransformer
+            print(f"Loading embedding model: {model_name}...")
+            _model = SentenceTransformer(model_name)
+        except Exception as e:
+            print(f"[Fallback Notice] SentenceTransformer not available ({e}). Using Scikit-Learn TF-IDF encoder.")
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            class TfidfFallbackModel:
+                def __init__(self):
+                    self.vectorizer = None
+                def encode(self, texts, normalize_embeddings=True, show_progress_bar=False):
+                    if self.vectorizer is None:
+                        self.vectorizer = TfidfVectorizer(ngram_range=(1, 2), max_features=1024)
+                        mat = self.vectorizer.fit_transform(texts).toarray()
+                    else:
+                        mat = self.vectorizer.transform(texts).toarray()
+                    if normalize_embeddings:
+                        norms = np.linalg.norm(mat, axis=1, keepdims=True)
+                        norms[norms == 0] = 1e-10
+                        mat = mat / norms
+                    return mat
+            _model = TfidfFallbackModel()
     return _model
 
 
@@ -72,8 +91,11 @@ def build_or_load_index(corpus_path: str = CORPUS_FILE, embeddings_path: str = E
         chunks = [format_drug_chunk(drug) for drug in corpus]
         embeddings = model.encode(chunks, show_progress_bar=False, normalize_embeddings=True)
         _embeddings = np.array(embeddings, dtype=np.float32)
-        np.save(embeddings_path, _embeddings)
-        print(f"Embeddings saved to {embeddings_path} (shape: {_embeddings.shape})")
+        try:
+            np.save(embeddings_path, _embeddings)
+            print(f"Embeddings saved to {embeddings_path} (shape: {_embeddings.shape})")
+        except Exception:
+            pass
 
     return corpus, _embeddings
 
@@ -170,9 +192,9 @@ def generate_answer_gemini(prompt: str, model: str = None) -> str:
     models_to_try = [
         os.getenv("GEMINI_MODEL"),
         model,
-        "gemini-2.5-flash",
-        "gemini-flash-latest",
+        "gemini-3.5-flash-lite",
         "gemini-3.5-flash",
+        "gemini-flash-latest",
         "gemini-3.8-flash"
     ]
     models_to_try = [m for m in dict.fromkeys(models_to_try) if m]
@@ -252,9 +274,9 @@ def generate_direct_llm_answer(query: str, model: str = None) -> str:
     if gemini_key and gemini_key != "":
         candidate_models = [model] if model else [
             os.getenv("GEMINI_MODEL"),
-            "gemini-2.5-flash",
-            "gemini-flash-latest",
+            "gemini-3.5-flash-lite",
             "gemini-3.5-flash",
+            "gemini-flash-latest",
             "gemini-3.8-flash"
         ]
         candidate_models = [m for m in dict.fromkeys(candidate_models) if m]

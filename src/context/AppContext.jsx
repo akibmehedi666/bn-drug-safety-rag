@@ -109,16 +109,32 @@ export const AppProvider = ({ children }) => {
     }));
   };
 
-  const addTrackerItem = (nameEn, nameBn, time) => {
+  const removeTrackerItem = (id) => {
+    setTrackerItems(prev => prev.filter(item => item.id !== id));
+  };
+
+  const addTrackerItem = (nameEn, nameBn, time, nutrientKey = null) => {
     const newItem = {
       id: Date.now(),
       nameEn,
       nameBn: nameBn || nameEn,
       time: time || 'morning',
+      nutrientKey: nutrientKey || null,
       done: false
     };
     setTrackerItems(prev => [...prev, newItem]);
   };
+
+  const adherencePct = trackerItems.length > 0 
+    ? Math.round((trackerItems.filter(i => i.done).length / trackerItems.length) * 100)
+    : 0;
+
+  const prenatalSupplementSuggestions = [
+    { id: 'folic_acid', nameEn: 'Folic Acid 5mg', nameBn: 'ফলিক এসিড ৫ মিগ্রা', time: 'morning', nutrientKey: 'folic_acid' },
+    { id: 'iron_cap', nameEn: 'Iron & Folic Acid Capsule', nameBn: 'আয়রন ও ফলিক এসিড ক্যাপসুল', time: 'evening', nutrientKey: 'iron' },
+    { id: 'calcium_vit_d', nameEn: 'Calcium 500mg + Vitamin D3', nameBn: 'ক্যালসিয়াম + ভিটামিন ডি৩', time: 'night', nutrientKey: 'calcium' },
+    { id: 'vitamin_d', nameEn: 'Vitamin D3 Drops / Cap', nameBn: 'ভিটামিন ডি৩ ক্যাপসুল', time: 'afternoon', nutrientKey: 'vitamin_d' }
+  ];
 
   const getDrugSuggestions = (query, limit = 8) => {
     if (!query || !query.trim()) return [];
@@ -419,7 +435,10 @@ export const AppProvider = ({ children }) => {
       trackerItems,
       toggleTrackerItem,
       addTrackerItem,
+      removeTrackerItem,
       streakDays,
+      adherencePct,
+      prenatalSupplementSuggestions,
       searchQuery,
       setSearchQuery,
       activeDrug,
