@@ -43,7 +43,12 @@ def load_known_drugs_from_corpus(corpus_path: str = None) -> list:
             if gen and gen.lower() not in FORMULATION_STOP_WORDS:
                 terms.add(gen.lower())
             if bn and bn.lower() not in FORMULATION_STOP_WORDS:
-                terms.add(bn.lower())
+                bn_clean = bn.lower()
+                terms.add(bn_clean)
+                if bn_clean.endswith("সোন"):
+                    terms.add(bn_clean[:-3] + "সন")
+                elif bn_clean.endswith("সন"):
+                    terms.add(bn_clean[:-2] + "সোন")
             if brands:
                 for b in brands.split("/"):
                     b_clean = b.strip().lower()
@@ -53,6 +58,10 @@ def load_known_drugs_from_corpus(corpus_path: str = None) -> list:
                 w_lower = word.lower()
                 if w_lower not in FORMULATION_STOP_WORDS:
                     terms.add(w_lower)
+                    if w_lower.endswith("সোন"):
+                        terms.add(w_lower[:-3] + "সন")
+                    elif w_lower.endswith("সন"):
+                        terms.add(w_lower[:-2] + "সোন")
             drugs_list.append({"generic": gen or full_name, "terms": list(terms)})
         return drugs_list
     except Exception:

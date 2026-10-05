@@ -100,7 +100,13 @@ def retrieve(query: str, top_k: int = 3, corpus_path: str = CORPUS_FILE, embeddi
         full_search = f"{name} {brands}"
         # Clean tokens to match drug mentions
         terms = [re.sub(r"[^\w\u0980-\u09FF]", "", w) for w in full_search.split()]
-        terms = [t for t in terms if len(t) >= 3]
+        expanded = list(terms)
+        for t in terms:
+            if t.endswith("সোন"):
+                expanded.append(t[:-3] + "সন")
+            elif t.endswith("সন"):
+                expanded.append(t[:-2] + "সোন")
+        terms = [t for t in expanded if len(t) >= 3]
         lexical_boost = 0.75 if any(t in q_lower for t in terms) else 0.0
         final_score = float(dense_similarities[idx] + lexical_boost)
         combined_scores.append((final_score, idx))
@@ -161,12 +167,12 @@ def generate_answer_gemini(prompt: str, model: str = None) -> str:
 
     client = genai.Client(api_key=api_key)
     models_to_try = [
-        model,
         os.getenv("GEMINI_MODEL"),
-        "gemini-3.8-flash",
-        "gemini-3.5-flash",
+        model,
         "gemini-2.5-flash",
-        "gemini-flash-latest"
+        "gemini-flash-latest",
+        "gemini-3.5-flash",
+        "gemini-3.8-flash"
     ]
     models_to_try = [m for m in dict.fromkeys(models_to_try) if m]
 
@@ -245,10 +251,10 @@ def generate_direct_llm_answer(query: str, model: str = None) -> str:
     if gemini_key and gemini_key != "":
         candidate_models = [model] if model else [
             os.getenv("GEMINI_MODEL"),
-            "gemini-3.8-flash",
-            "gemini-3.5-flash",
             "gemini-2.5-flash",
-            "gemini-flash-latest"
+            "gemini-flash-latest",
+            "gemini-3.5-flash",
+            "gemini-3.8-flash"
         ]
         candidate_models = [m for m in dict.fromkeys(candidate_models) if m]
 
